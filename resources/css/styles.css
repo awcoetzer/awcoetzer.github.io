@@ -1,0 +1,116 @@
+/*************************/
+/* HEADER */
+/*************************/
+.header {
+
+}
+
+
+
+/*************************/
+/* HERO */
+/*************************/
+.section-hero {
+  height: 90vh;
+  background-color: red;
+}
+
+.hero {
+  margin: 0 auto;
+  padding: var(--space-48);
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--space-48);
+}
+
+
+.hero-text-box {
+
+}
+
+.hero-text {
+
+}
+
+.pre-heading {
+
+}
+
+.hero-description {
+
+}
+
+.btn--hero {
+
+}
+
+
+/*************************/
+/* GOALS */
+/*************************/
+.goals {
+  padding: var(--space-96) 0;
+}
+
+.card-box {
+ display: flex;
+}
+
+.card {
+  margin-right: -1rem;
+  border-radius: var(--radius-5);
+  background-color: var(--bg-color);
+  transition: box-shadow 0.15s ease-in, transform 0.15s ease-in;
+  box-shadow: -0.5rem 0 1.2rem -0.5rem #111, 0 0 0 2px #333 ;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card:hover {
+  box-shadow: 0 0 1.2rem 0 var(--clr-tint-1), 0 0 0 2px var(--clr-main);
+  transform: translateX(-2rem);
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-text-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card-heading {
+  margin-bottom: var(--space-24);
+}
+
+.card-description {
+  margin-top: auto;
+  font-size: var(--font-14);
+  line-height: var(--line-height-17);
+}
+
+
+/*************************/
+/* ABOUT */
+/*************************/
+.section-about {
+
+}
+
+/*************************/
+/* FEATURED */
+/*************************/
+.section-featured {
+
+}
+
+/*************************/
+/* FOOTER */
+/*************************/
+.footer {
+
+}
