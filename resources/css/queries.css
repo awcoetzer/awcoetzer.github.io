@@ -1,0 +1,208 @@
+/*************************/
+/* Smaller Laptops (1344) */
+/*************************/
+
+@media only screen and (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+/*************************/
+/* Tablet Landscape (1200) */
+/*************************/
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .hero {
+    column-gap: var(--space-24);
+  }
+
+  .card-heading {
+    font-size: var(--font-24);
+  }
+}
+
+/*************************/
+/* Tablet Landscape (944) */
+/*************************/
+
+@media only screen and (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .main-nav-list {
+    gap: var(--space-12);
+  }
+
+  .section-hero {
+    padding: var(--space-48) 0 var(--space-96);
+  }
+
+  .hero {
+    padding: 0 var(--space-96);
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: var(--space-24);
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: var(--space-16) var(--space-32);
+  }
+
+  .hero-img-box {
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img {
+    width: 40%;
+  }
+
+  .footer-box {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: start;
+  }
+
+  .profile-col {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/*************************/
+/* Tablet Landscape (744) */
+/*************************/
+
+@media only screen and (max-width: 46.5em) {
+  .heading-primary {
+    font-size: var(--font-36);
+  }
+  .heading-secondary {
+    font-size: var(--font-32);
+  }
+  .heading-tertiary {
+    font-size: var(--font-24);
+  }
+
+  .header {
+    padding: 0 var(--space-24);
+  }
+
+  .hero-img {
+    width: 50%;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: var(--space-16) var(--space-16);
+  }
+
+  .container {
+    padding: 0 var(--space-24);
+  }
+
+  .card-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .card::before {
+    border-radius: 0 0 20%;
+  }
+}
+
+/*************************/
+/* Tablet Landscape (544) */
+/*************************/
+
+@media only screen and (max-width: 34em) {
+  .header {
+    padding: 0 var(--space-24);
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav-list {
+    gap: 0;
+  }
+
+  .hero {
+    padding: 0 var(--space-24);
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: var(--space-24);
+  }
+
+  .btn--hero-full,
+  .btn--hero-full:link,
+  .btn--hero-full:visited {
+    width: 100%;
+    margin-bottom: var(--space-24);
+  }
+
+  .btn--hero-outline,
+  .btn--hero-outline:link,
+  .btn--hero-outline:visited {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .card-box {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img-box {
+    grid-row: 1;
+  }
+
+  .about-img {
+    width: 50%;
+  }
+
+  .featured-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .featured-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .featured-img {
+    width: 60%;
+  }
+
+  .footer-box {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: var(--space-48);
+  }
+
+  .address-col {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .profile-col {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+}
