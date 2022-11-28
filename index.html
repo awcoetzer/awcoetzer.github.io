@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
-    <link rel="icon" href="" />
+    <link
+      rel="icon"
+      href="./resources/images/favicon/computer-illustration-64x64.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +18,7 @@
     <link rel="stylesheet" href="./resources/css/general.css" />
     <link rel="stylesheet" href="./resources/css/main.css" />
     <link rel="stylesheet" href="./resources/css/queries.css" />
-    <title>Andre Coetzer &mdash; Developer In The Making</title>
+    <title>Andre Coetzer &mdash; A Developers Journey</title>
   </head>
 
   <body>
@@ -33,6 +36,9 @@
           </li>
           <li class="main-nav-item">
             <a href="#featured" class="btn main-nav-link">Featured</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -56,10 +62,10 @@
                 not dreaming about coding, I'm probably learning how to code.
                 Welcome to my coding journey
               </p>
-              <a href="#" class="btn btn--hero-full margin-right-sm"
+              <a href="#featured" class="btn btn--hero-full margin-right-sm"
                 >Check out my projects</a
               >
-              <a href="#" class="btn btn--hero-outline">Contact</a>
+              <a href="#footer" class="btn btn--hero-outline">Contact</a>
             </div>
           </div>
 
@@ -273,7 +279,95 @@
     <!------------------------->
     <!-- FOOTER -->
     <!------------------------->
-    <footer class="footer"></footer>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <div class="profile-col">
+            <figure class="footer-profile">
+              <img
+                src="./resources/images/main/profile-pic/me.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img"
+              />
+            </figure>
+
+            <div class="social-icons-box">
+              <ul class="social-icons-list">
+                <li class="social-icons-item">
+                  <a href="#" class="social-icons-link">
+                    <ion-icon
+                      name="logo-discord"
+                      class="social-icon"
+                    ></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy; <span id="copyright">2022</span> Andre Coetzer. All
+                rights reserved
+              </p>
+            </div>
+          </div>
+
+          <div class="address-col">
+            <span class="pre-heading footer-pre-heading">Address & Contacts</span>
+            <address class="address-text-box">
+              <p class="address">
+                Sofia, Bulgaria
+              </p>
+              <a href="mailto:awcoetzer@outlook.com" class="email">
+                awcoetzer@outlook.com
+              </a>
+            </address>
+          </div>
+
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#journey" class="footer-list-link">My Journey</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#about" class="footer-list-link">About</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#featured" class="footer-list-link">Featured</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">HTML</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">CSS</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">JavaScript</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">React</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#" class="footer-list-link">Node.js</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./resources/javascript/app.js"></script>
     <script
