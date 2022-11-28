@@ -1,21 +1,25 @@
 ////////////////////////////////////////
 // Making background blurred
 
-const heroEl = document.querySelector('.hero-text-box');
+const sectionHeroEl = document.querySelector('.section-hero');
+const headerEl = document.querySelector('.header');
 
 const obs = new IntersectionObserver((entries) => {
   const ent = entries[0];
-  console.log(ent)
 
   if (ent.isIntersecting === false) {
-    document.body.classList.add('bg-blur');
+    document.body.classList.add('sticky');
   } else {
-    document.body.classList.remove('bg-blur');
+    document.body.classList.remove('sticky');
   }
 }, {
   root:null,
-  threshold: 1,
-  // rootMargin: '-200px',
+  threshold: 0,
+  rootMargin: '-80px',
 })
 
-obs.observe(heroEl)
+obs.observe(sectionHeroEl)
+
+////////////////////////////////////////
+// Making the header sticky
+

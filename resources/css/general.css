@@ -5,24 +5,16 @@
 
   /* Color */
   /* Background */
-  --bg-color: #1e293b;
-  --bg-shade: #06080c;
+  --bg-color: #94a3b8;
 
   /* Main */
-  /* --clr-main: #a3e635; */
-  --clr-main: #f43f5e;
+  --clr-main: #0f172a;
 
-  /* Tints */
-  --clr-tint-1: #ace949;
-  --clr-tint-2: #d1f39a;
-
-  /* Shades */
-  --clr-shade-1: #93cf30;
-  --clr-shade-2: #52731b;
+  /* Accent */
+  --clr-accent: ;
 
   /* Greys */
-  --clr-grey-light: #fff;
-  --clr-grey-dark: #bbb;
+  --clr-grey: #0f172a;
 
   /* Font Sizes */
   --font-10: 1rem;
@@ -75,34 +67,19 @@
   --space-96: 9.6rem;
   --space-128: 12.8rem;
 
-  /* Padding */
-  /* Container */
-  --padding-container-16: 0 1.6rem;
-  --padding-container-24: 0 2.4rem;
-  --padding-container-30: 0 3rem;
-  --padding-container-32: 0 3.2rem;
-  --padding-container-48: 0 4.8rem;
-  --padding-container-8: 0 8rem;
-  --padding-container-96: 0 9.6rem;
-
-  /* Buttons */
-  --padding-btn-sm: 0.25rem 1rem;
-  --padding-btn-md: 0.5rem 2rem;
-  --padding-btn-lg: 1rem 3rem;
-
   /* Border */
   --border-1: 0.1rem solid var(--bg-shade);
-  --border-1: 0.3rem solid var(--bg-shade);
+  --border-3: 0.3rem solid var(--bg-shade);
 
   /* Border Radius */
+  --radius-2: 0.2rem;
   --radius-5: 0.5rem;
   --radius-100: 10rem;
   --radius-round: 50%;
-
-  /* Shadows */
-  --shadow-sm: 0 1.2rem 3.2rem 0 var(--bg-shade);
-  --shadow-md: 0 1.6rem 4.8rem 0 var(--bg-shade);
-  --shadow-lg: 0 2.4rem 6.4rem 0 var(--bg-shade);
+}
+::selection {
+  background-color: var(--clr-grey);
+  color: var(--bg-color);
 }
 
 * {
@@ -113,6 +90,7 @@
 
 html {
   font-size: 65.2%;
+  scroll-behavior: smooth;
 }
 
 /*************************/
@@ -124,37 +102,8 @@ body {
   font-size: var(--font-16);
   font-weight: var(--weight-400);
   line-height: var(--line-height-1);
-  color: var(--clr-grey-light);
-  background: top / cover no-repeat url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') fixed;
-  /* background-color: var(--bg-color); */
-  transition: all 0.25s ease-in;
-  backdrop-filter: blur(5px);
-}
-
-body::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsla(220, 33%, 4%, 0.5);
-  z-index: -1;
-}
-
-.bg-blur {
-  backdrop-filter: blur(80px);
-}
-
-.bg-blur::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsla(220, 33%, 4%, 0.9);
-  z-index: -1;
+  color: var(--clr-grey-light);;
+  background-color: var(--bg-color);
 }
 
 /*************************/
@@ -220,50 +169,73 @@ body::after {
 }
 .heading-secondary {
   margin-bottom: var(--space-96);
-  font-size: var(--font-32);
+  font-size: var(--font-36);
 }
 .heading-tertiary {
+  font-size: var(--font-30);
   margin-bottom: var(--space-24);
 }
 
 /* NAVIGATION */
-.main-nav {
-  padding: 2.4rem  4.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .main-nav-list {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: content;
   align-items: center;
-  gap: var(--space-32);
+  gap: var(--space-24);
 }
 
 .main-nav-item {
+  position: relative;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
-.main-nav-link {
+.main-nav-link, 
+.main-nav-link:link, 
+.main-nav-link:visited {
+  color: var(--clr-grey);
+}
+
+.main-nav-link:hover, 
+.main-nav-link:active {
+  color: var(--bg-color);
+}
+
+.main-nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--radius-2);
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: var(--clr-grey);
+  transition: transform 0.15s ease-in;
+  z-index: -1;
+}
+
+.main-nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* BUTTONS */
 .btn,
 .btn:link,
 .btn:visited {
+  position: relative;
   display: inline-block;
-  padding: var(--padding-btn-md);
-  border: none;
-  border-radius: var(--radius-100);
-  font-size: var(--font-12);
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--font-14);
   font-weight: var(--weight-500);
   text-decoration: none;
   text-transform: uppercase;
   line-height: var(--line-height-17);
   letter-spacing: var(--letter-space-p1);
-  color: var(--clr-grey-light);
-  transition: all 0.15s ease-in;
   cursor: pointer;
 }
 
@@ -275,7 +247,7 @@ body::after {
   display: inline-block;
   font-size: var(--font-16);
   text-decoration: none;
-  color: var(--clr-grey-light);
+  color: var(--clr-grey);
 }
 
 .link:hover, 
