@@ -173,7 +173,7 @@ body {
 }
 .heading-tertiary {
   font-size: var(--font-30);
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--space-32);
 }
 
 /* NAVIGATION */
