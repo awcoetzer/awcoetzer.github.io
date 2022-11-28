@@ -148,7 +148,7 @@ body {
 .pre-heading {
   display: inline-block;
   margin-bottom: var(--space-12);
-  font-size: var(--font-12);
+  font-size: var(--font-14);
   font-weight: var(--weight-500);
   text-transform: uppercase;
   line-height: var(--line-height-17);
@@ -262,6 +262,10 @@ strong {
 /*************************/
 /* HELPER CLASSES */
 /*************************/
+
+.margin-right-sm {
+  margin-right: var(--space-16);
+}
 
 .center-text {
   text-align: center;
