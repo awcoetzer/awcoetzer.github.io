@@ -1,22 +1,34 @@
+/*
+
+  Notes: 
+        - Add focus state for accessibility reasons, 
+        - Make the Mobile nav for responsive purposes,
+        - Fix responsive spacing on mobile devices,
+        - Play with colors and try to divide the sections for better 
+        readability,
+
+*/
+
+/*
+
+  Section: General CSS
+  Purpose: To style site wide properties
+
+  Author: Andre coetzer
+
+*/
+
 :root {
-  /* Typeface */
   --typeface-sans: "Inter", sans-serif;
   --typeface-mono: "Source Code", monospace;
 
-  /* Color */
-  /* Background */
-  --bg-color: #94a3b8;
+  --bg-color: #22205a;
 
-  /* Main */
-  --clr-main: #0f172a;
+  --clr-main: #312e81;
+  --clr-tint: #46438e;
+  --clr-accent: #fff;
+  --clr-grey-dark: #ff8500;
 
-  /* Accent */
-  --clr-accent: #ef4444;
-
-  /* Greys */
-  --clr-grey: #0f172a;
-
-  /* Font Sizes */
   --font-10: 1rem;
   --font-12: 1.2rem;
   --font-14: 1.4rem;
@@ -34,26 +46,20 @@
   --font-86: 8.6rem;
   --font-98: 9.8rem;
 
-  /* Font Weight */
   --weight-400: 400;
   --weight-500: 500;
   --weight-700: 700;
 
-  /* Line Height */
   --line-height-1: 1;
   --line-height-17: 1.7;
   --line-height-11: 1.1;
 
-  /* Letter Spacing */
-  /* Negative */
   --letter-space-n05: -0.5px;
   --letter-space-n1: -1px;
 
-  /* Positive */
   --letter-space-p05: 0.5px;
   --letter-space-p1: 1px;
 
-  /* Spacing */
   --space-2: 0.2rem;
   --space-4: 0.4rem;
   --space-8: 0.8rem;
@@ -67,18 +73,17 @@
   --space-96: 9.6rem;
   --space-128: 12.8rem;
 
-  /* Border */
   --border-1: 0.1rem solid var(--bg-shade);
   --border-3: 0.3rem solid var(--bg-shade);
 
-  /* Border Radius */
   --radius-2: 0.2rem;
   --radius-5: 0.5rem;
   --radius-100: 10rem;
   --radius-round: 50%;
 }
+
 ::selection {
-  background-color: var(--clr-grey);
+  background-color: var(--clr-main);
   color: var(--bg-color);
 }
 
@@ -93,31 +98,31 @@ html {
   scroll-behavior: smooth;
 }
 
-/*************************/
-/* BODY */
-/*************************/
 body {
   position: relative;
   font-family: var(--typeface-sans);
   font-size: var(--font-16);
   font-weight: var(--weight-400);
   line-height: var(--line-height-1);
-  color: var(--clr-grey-light);;
+  color: var(--clr-grey-dark);
   background-color: var(--bg-color);
 }
 
-/*************************/
-/* REUSABLE COMPONENTS */
-/*************************/
+/*
 
-/* CONTAINER */
+  Section: Repeating Code
+  Purpose: Code that is repeat throughout the site is added here
+
+  Author: Andre coetzer
+
+*/
+
 .container {
   margin: 0 auto;
   padding: 0 var(--space-48);
   max-width: 120rem;
 }
 
-/* GRIDS */
 .grid {
   display: grid;
   column-gap: var(--space-48);
@@ -144,7 +149,7 @@ body {
   align-items: center;
 }
 
-/* HEADINGS */
+.pre-heading-hero,
 .pre-heading {
   display: inline-block;
   margin-bottom: var(--space-12);
@@ -153,6 +158,10 @@ body {
   text-transform: uppercase;
   line-height: var(--line-height-17);
   letter-spacing: var(--letter-space-p1);
+}
+
+.pre-heading {
+  color: ;
 }
 
 .heading-primary,
@@ -176,7 +185,6 @@ body {
   margin-bottom: var(--space-32);
 }
 
-/* NAVIGATION */
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -194,7 +202,7 @@ body {
 }
 
 .main-nav-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -203,7 +211,7 @@ body {
   height: 100%;
   transform: scaleX(0);
   transform-origin: right;
-  background-color: var(--clr-grey);
+  background-color: var(--clr-grey-dark);
   transition: transform 0.15s ease-in;
   z-index: 0;
 }
@@ -213,18 +221,17 @@ body {
   transform-origin: left;
 }
 
-.main-nav-link, 
-.main-nav-link:link, 
+.main-nav-link,
+.main-nav-link:link,
 .main-nav-link:visited {
-  color: var(--clr-grey);
+  color: var(--clr-grey-dark);
 }
 
-.main-nav-link:hover, 
+.main-nav-link:hover,
 .main-nav-link:active {
   color: var(--bg-color);
 }
 
-/* BUTTONS */
 .btn,
 .btn:link,
 .btn:visited {
@@ -240,29 +247,31 @@ body {
   cursor: pointer;
 }
 
-/* LINKS */
-
-.link, 
-.link:link, 
+.link,
+.link:link,
 .link:visited {
   display: inline-block;
   font-size: var(--font-16);
   text-decoration: none;
-  color: var(--clr-grey);
+  color: var(--clr-grey-dark);
 }
 
-.link:hover, 
+.link:hover,
 .link:active {
-
 }
 
 strong {
   font-weight: var(--weight-500);
 }
 
-/*************************/
-/* HELPER CLASSES */
-/*************************/
+/*
+
+  Section: Helper Classes
+  Purpose: Classes which act as helper classes are style here
+
+  Author: Andre coetzer
+
+*/
 
 .margin-right-sm {
   margin-right: var(--space-16);
@@ -270,4 +279,670 @@ strong {
 
 .center-text {
   text-align: center;
+}
+
+/*
+
+  Section: Header
+  Purpose: To syle the header
+
+  Author: Andre coetzer
+
+*/
+
+.header {
+  padding: 0 var(--space-48);
+  height: 9.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-main);
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--space-64);
+  background-color: var(--clr-accent);
+  box-shadow: 0 0 1rem -0.4rem hsla(222, 47%, 11%, 0.4);
+  z-index: 9999;
+}
+
+/*
+
+  Section: Hero
+  Purpose: To syle the hero
+
+  Author: Andre coetzer
+
+*/
+
+.section-hero {
+  position: relative;
+  padding: var(--space-96) 0;
+  background-color: var(--clr-main);
+}
+
+.sticky .section-hero {
+  margin-top: var(--space-96);
+}
+
+.hero {
+  margin: 0 auto;
+  padding: 0 var(--space-48);
+  max-width: 130rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--space-48);
+}
+
+.hero-text-box {
+}
+
+.hero-text {
+}
+
+.apostraphe {
+  color: var(--clr-accent);
+  cursor: pointer;
+}
+
+.hero-description {
+  font-size: var(--font-18);
+  line-height: var(--line-height-17);
+  margin-bottom: var(--space-24);
+}
+
+.btn--hero-full,
+.btn--hero-full:link,
+.btn--hero-full:visited {
+  border-radius: var(--radius-2);
+  font-size: var(--font-18);
+  color: var(--clr-grey-dark);
+  background-color: var(--bg-color);
+  transition: transform 0.15s ease-in, box-shadow 0.15s ease-in;
+  box-shadow: 0 0.8rem 0.5rem -0.5rem hsla(222, 47%, 11%, 0.4);
+}
+
+.btn--hero-full:hover,
+.btn--hero-full:active {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.8rem 1rem 0 hsla(222, 47%, 11%, 0.2);
+}
+
+.btn--hero-outline,
+.btn--hero-outline:link,
+.btn--hero-outline:visited {
+  border-radius: var(--radius-2);
+  font-size: var(--font-18);
+  color: var(--clr-grey-dark);
+  background-color: var(--clr-main);
+  transition: transform 0.15s ease-in, box-shadow 0.15s ease-in;
+  box-shadow: 0 0 0 1px, 0 0.8rem 0.5rem -0.5rem hsla(222, 47%, 11%, 0.4);
+}
+
+.btn--hero-outline:hover,
+.btn--hero-outline:active {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0 0 1px, 0 0.8rem 0.5rem -0.5rem hsla(222, 47%, 11%, 0.2);
+}
+
+.hero-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img {
+  width: 80%;
+}
+
+/*
+
+  Section: Journey
+  Purpose: To syle the hero
+
+  Author: Andre coetzer
+
+*/
+
+.section-journey {
+  position: relative;
+  padding: var(--space-96) 0;
+  background-color: var(--bg-color);
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-12);
+}
+
+.card {
+  position: relative;
+  /* margin-right: -1rem; */
+  border-radius: var(--radius-5);
+  background-color: var(--bg-color);
+  transition: color 0.25s ease-in, transform 0.15s ease-in,
+    box-shadow 0.15s ease-in;
+  box-shadow: 0 0 0 0.2rem var(--clr-main),
+    0 0.8rem 0.5rem -0.5rem hsla(222, 46%, 11%, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card:hover {
+  color: var(--bg-color);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0 0 0.2rem var(--clr-main),
+    0 0.8rem 1rem 0 hsla(222, 47%, 11%, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 20%;
+  transform: scale(0);
+  transform-origin: top left;
+  background-color: var(--clr-main);
+  transition: transform 0.25s ease-in;
+  z-index: -1;
+}
+
+.card:hover::before {
+  transform: scale(1);
+}
+
+.card-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: var(--space-12);
+}
+
+.card-text-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card-heading {
+  margin-top: var(--space-32);
+  font-size: var(--font-30);
+  font-weight: var(--weight-500);
+}
+
+.link--cards {
+  margin-top: var(--space-48);
+}
+
+/*
+
+  Section: About
+  Purpose: To syle the hero
+
+  Author: Andre coetzer
+
+*/
+
+.section-about {
+  position: relative;
+  padding: var(--space-96) 0;
+  background-color: var(--bg-color);
+}
+
+.about-text-box {
+}
+
+.about-text {
+  font-size: var(--font-18);
+  line-height: var(--line-height-17);
+}
+
+.about-text:last-child {
+  margin-top: 2.4rem;
+}
+
+.about-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  width: 80%;
+}
+
+/*
+
+  Section: Featured
+  Purpose: To syle the hero
+
+  Author: Andre coetzer
+
+*/
+
+.section-featured {
+  position: relative;
+  padding: var(--space-96) 0;
+  background-color: var(--bg-color);
+}
+
+.under-contruction {
+  padding: 0.5rem;
+  display: block;
+  color: #fff;
+  background-color: var(--clr-accent);
+}
+
+.featured {
+  opacity: 0.2;
+}
+
+.featured-text-box {
+}
+
+.featured-description {
+  font-size: var(--font-18);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
+}
+
+.featured-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured-img {
+  width: 80%;
+}
+
+/*
+
+  Section: Footer
+  Purpose: To syle the hero
+
+  Author: Andre coetzer
+
+*/
+
+.footer {
+  position: relative;
+  padding: var(--space-128) 0;
+  border-top: 1px solid var(--clr-main);
+  background-color: var(--bg-color);
+}
+
+.footer-box {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+  gap: 4.4rem;
+}
+
+.profile-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-pre-heading {
+  font-weight: var(--weight-700);
+}
+
+.footer-profile {
+}
+
+.footer-profile-img {
+  height: 12.8rem;
+  border-radius: 50%;
+  margin-bottom: var(--space-24);
+}
+
+.copyright-text {
+  margin-top: auto;
+}
+
+.copyright {
+  font-size: var(--font-14);
+}
+
+.address-col {
+}
+
+.address-text-box {
+  margin-top: var(--space-24);
+}
+
+.address {
+  font-size: var(--font-16);
+  font-style: normal;
+  margin-bottom: var(--space-24);
+}
+
+.email,
+.email:link,
+.email:visited {
+  padding-bottom: var(--space-8);
+  font-size: var(--font-16);
+  font-weight: var(--weight-500);
+  font-style: normal;
+  text-decoration: none;
+  color: var(--clr-grey-dark);
+}
+
+.email:hover,
+.email:active {
+  border-bottom: 1px solid var(--clr-grey-dark);
+}
+
+.page-links-col {
+}
+
+.footer-list {
+  margin-top: var(--space-24);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.footer-list-item {
+}
+
+.footer-list-link,
+.footer-list-link:link,
+.footer-list-link:visited {
+  padding-bottom: var(--space-8);
+  font-size: var(--font-16);
+  font-weight: var(--weight-500);
+  font-style: normal;
+  text-decoration: none;
+  color: var(--clr-grey-dark);
+}
+
+.footer-list-link:hover,
+.footer-list-link:active {
+  border-bottom: 1px solid var(--clr-grey-dark);
+}
+
+.site-links-col {
+}
+
+
+
+/*
+
+  Section: Media Queries
+  Purpose: To syle the break points of the site
+
+  Author: Andre coetzer
+
+*/
+
+/*
+
+  Query for: Smaller Laptops
+  Size-px: 1344
+  Size-em: 84
+
+*/
+
+@media only screen and (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+/*
+
+  Query for: Tablet Landscape
+  Size-px: 1200
+  Size-em: 74
+
+*/
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .hero {
+    column-gap: var(--space-24);
+  }
+
+  .card-heading {
+    font-size: var(--font-24);
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: var(--space-16) var(--space-16);
+  }
+}
+
+/*
+
+  Query for: Tablet Portrait
+  Size-px: 944
+  Size-em: 59
+
+*/
+
+@media only screen and (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .main-nav-list {
+    gap: var(--space-12);
+  }
+
+  .sticky .header {
+    top: 100%;
+    left: 0;
+    transform: translate(0, -100%);
+    width: 100%;
+    height: var(--space-96);
+  }
+
+  .section-hero {
+    padding: var(--space-48) 0 var(--space-96);
+  }
+
+  .hero {
+    padding: 0 var(--space-96);
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: var(--space-24);
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: var(--space-16) var(--space-16);
+  }
+
+  .hero-img-box {
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img {
+    width: 40%;
+  }
+
+  .footer-box {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: start;
+  }
+
+  .profile-col {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/*
+
+  Query for: Smaller Tablets
+  Size-px: 744
+  Size-em: 46.5
+
+*/
+
+@media only screen and (max-width: 46.5em) {
+  .heading-primary {
+    font-size: var(--font-36);
+  }
+  .heading-secondary {
+    font-size: var(--font-32);
+  }
+  .heading-tertiary {
+    font-size: var(--font-24);
+  }
+
+  .header {
+    padding: 0 var(--space-24);
+  }
+
+  .hero-img {
+    width: 50%;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: var(--space-16) var(--space-16);
+  }
+
+  .container {
+    padding: 0 var(--space-24);
+  }
+
+  .card-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .card::before {
+    border-radius: 0 0 20%;
+  }
+}
+
+/*
+
+  Query for: Mobile Devices
+  Size-px: 544
+  Size-em: 34
+
+*/
+
+@media only screen and (max-width: 34em) {
+  .header {
+    padding: 0 var(--space-24);
+  }
+
+  .sticky .header {
+    top: 100%;
+    left: 0;
+    transform: translate(0, -100%);
+    width: 100%;
+    height: var(--space-96);
+  }
+
+  @keyframes header {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav-list {
+    gap: 0;
+  }
+
+  .hero {
+    padding: 0 var(--space-24);
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: var(--space-24);
+  }
+
+  .btn--hero-full,
+  .btn--hero-full:link,
+  .btn--hero-full:visited {
+    width: 100%;
+    margin-bottom: var(--space-24);
+  }
+
+  .btn--hero-outline,
+  .btn--hero-outline:link,
+  .btn--hero-outline:visited {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .card-box {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img-box {
+    grid-row: 1;
+  }
+
+  .about-img {
+    width: 50%;
+  }
+
+  .featured-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .featured-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .featured-img {
+    width: 60%;
+  }
+
+  .footer-box {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: var(--space-48);
+  }
+
+  .address-col {
+    text-align: center;
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .profile-col {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
 }
