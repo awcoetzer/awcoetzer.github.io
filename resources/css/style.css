@@ -944,6 +944,7 @@ strong {
   .sticky .header {
     padding: var(--space-64);
     background-color: transparent;
+    box-shadow: none;
   }
 
   .main-nav {
