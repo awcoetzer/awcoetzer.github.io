@@ -1,7 +1,9 @@
 /*
 
   Notes: 
-        - Make the Mobile nav for responsive purposes,
+        - Make The rest of the pages,
+        - Link Footer links to to all pages, including home,
+        - Fix the focus state
 
 */
 
@@ -86,7 +88,7 @@
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--clr-accent);
+  box-shadow: 0 0 0 4px var(--clr-accent) !important;
 }
 
 * {
@@ -273,6 +275,62 @@ body {
   display: none;
 }
 
+/* 
+
+  Breadcrumb Navigation
+
+*/
+
+.breadcrumb-nav {
+  display: flex;
+  margin-bottom: var(--space-12);
+}
+
+.breadcrumb-list {
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-5);
+  width: fit-content;
+  list-style: none;
+  display: flex;
+  gap: var(--space-12);
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.breadcrumb-item {
+
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '\2022';
+  display: inline-block;
+
+}
+
+.breadcrumb-icon {
+  width: var(--font-14);
+  height: var(--font-14);
+}
+
+.breadcrumb-link,
+.breadcrumb-link:link,
+.breadcrumb-link:visited {
+  display: inline-block;
+  font-size: var(--font-14);
+  font-weight: var(--weight-500);
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-p1);
+  color: var(--clr-grey);
+  transition: transform 0.15s ease-in;
+}
+
+.breadcrumb-link:hover,
+.breadcrumb-link:active {
+  color: var(--clr-accent);
+  transform: translateY(-20%);
+}
+
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -360,7 +418,11 @@ strong {
 */
 
 .margin-right-sm {
-  margin-right: var(--space-16);
+  margin-right: var(--space-16) !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: var(--space-64) !important;
 }
 
 .center-text {
@@ -397,6 +459,18 @@ strong {
 
 /*
 
+  Section: All Sections
+  Purpose: To syle all sections
+
+  Author: Andre coetzer
+
+*/
+.section {
+  padding: var(--space-96) 0;
+}
+
+/*
+
   Section: Hero
   Purpose: To syle the hero
 
@@ -406,7 +480,6 @@ strong {
 
 .section-hero {
   position: relative;
-  padding: var(--space-96) 0;
   /* background-color: var(--clr-main); */
 }
 
@@ -502,6 +575,15 @@ strong {
 
 /*
 
+  Page: Index
+  Purpose: To syle the page HTML
+
+  Author: Andre coetzer
+
+*/
+
+/*
+
   Section: Journey
   Purpose: To syle the hero
 
@@ -511,7 +593,6 @@ strong {
 
 .section-journey {
   position: relative;
-  padding: var(--space-96) 0;
   background-color: var(--bg-color);
 }
 
@@ -526,6 +607,7 @@ strong {
 .card-link,
 .card-link:link,
 .card-link:visited {
+  display: inline-block;
   font-size: var(--font-18);
   text-decoration: none;
   color: var(--clr-grey);
@@ -567,7 +649,7 @@ strong {
   position: relative;
   border-radius: var(--radius-5);
   background-color: var(--bg-color);
-  transition: color 0.25s ease-in, transform 0.15s ease-in,
+  transition: transform 0.15s ease-in,
     box-shadow 0.15s ease-in;
   box-shadow: 0 0 0 0.2rem var(--clr-tint),
     0 0.8rem 0.5rem -0.5rem var(--clr-shade);
@@ -613,7 +695,7 @@ strong {
 .card-text-box {
   display: flex;
   flex-direction: column;
-  padding: 1.2rem;
+  padding: var(--space-12);
 }
 
 .pre-heading--cards {
@@ -634,7 +716,6 @@ strong {
 
 .section-about {
   position: relative;
-  padding: var(--space-96) 0;
   background-color: var(--bg-color);
 }
 
@@ -671,7 +752,6 @@ strong {
 
 .section-featured {
   position: relative;
-  padding: var(--space-96) 0;
   background-color: var(--bg-color);
 }
 
@@ -818,6 +898,171 @@ strong {
 
 /*
 
+  Section: Projects
+  Purpose: To style the notes sections
+
+  Author: Andre coetzer
+
+*/
+.section-projects {
+  background-color: var(--bg-color);
+}
+
+/*
+
+  Section: Note Cards
+  Purpose: To style the notes sections
+
+  Author: Andre coetzer
+
+*/
+.section-notes {
+  background-color: var(--bg-color);
+}
+
+.note-box {
+
+}
+
+.note-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-12);
+}
+
+.note-link,
+.note-link:link,
+.note-link:visited {
+  font-size: var(--font-18);
+  text-decoration: none;
+  color: var(--clr-grey);
+}
+
+.note-link:hover,
+.note-link:active {
+
+}
+
+.note-card {
+  position: relative;
+  border-radius: var(--radius-5);
+  background-color: var(--bg-color);
+  transition: transform 0.15s ease-in,
+    box-shadow 0.15s ease-in;
+  box-shadow: 0 0 0 0.2rem var(--clr-tint),
+    0 0.8rem 0.5rem -0.5rem var(--clr-shade);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.note-card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0 0 0.2rem var(--clr-accent),
+    0 0.8rem 1rem 0 hsla(222, 47%, 11%, 0.2);
+}
+
+.note-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* transform: scale(2); */
+  background-image: linear-gradient(
+    to bottom right,
+    hsla(242, 36%, 41%, 0.2),
+    hsla(242, 36%, 41%, 0)
+  );
+  transition: all 0.25s ease-in;
+  z-index: -1;
+}
+
+.note-card-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: var(--space-12);
+  transition: transform 0.35s ease-in;
+}
+
+.note-card:hover .note-card-icon {
+  transform: rotateY(1turn);
+}
+
+.note-text-box {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-12);
+}
+
+.pre-heading--notes {
+  transition: transform 0.15s ease-in;
+}
+.note-card:hover .pre-heading--notes {
+  transform: translateX(1%);
+}
+
+.heading-notes {
+
+}
+
+
+/*
+
+  Page: HTML
+  Purpose: To syle the page HTML
+
+  Author: Andre coetzer
+
+*/
+#html-under-construction {
+  opacity: 0.2;
+}
+
+.html-letters {
+  font-weight: var(--weight-500);
+  color: var(--clr-accent);
+}
+
+/*
+
+  Page: CSS
+  Purpose: To syle the page HTML
+
+  Author: Andre coetzer
+
+*/
+
+/*
+
+  Page: JAVASCRIPT
+  Purpose: To syle the page HTML
+
+  Author: Andre coetzer
+
+*/
+
+/*
+
+  Page: REACT
+  Purpose: To syle the page HTML
+
+  Author: Andre coetzer
+
+*/
+
+/*
+
+  Page: NODE.JS
+  Purpose: To syle the page HTML
+
+  Author: Andre coetzer
+
+*/
+
+/*
+
   Section: Media Queries
   Purpose: To syle the break points of the site
 
@@ -886,6 +1131,10 @@ strong {
 
   .section-hero::before {
     height: 30%;
+  }
+
+  .breadcrumb-nav {
+    justify-content: center;
   }
 
   .hero {
@@ -1048,6 +1297,10 @@ strong {
   .mobile-active .mobile-nav-icon[name="menu-outline"] {
     display: none;
   }
+
+  .note-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /*
@@ -1125,19 +1378,7 @@ strong {
 
   */
 
-  .section-hero {
-    padding: var(--space-64) 0;
-  }
-
-  .section-journey {
-    padding: var(--space-64) 0;
-  }
-
-  .section-about {
-    padding: var(--space-64) 0;
-  }
-
-  .section-featured {
+  .section {
     padding: var(--space-64) 0;
   }
 
@@ -1152,6 +1393,10 @@ strong {
 
   .sticky .header {
     padding: var(--space-48);
+  }
+
+  .note-cards {
+    grid-template-columns: 1fr;
   }
 }
 
