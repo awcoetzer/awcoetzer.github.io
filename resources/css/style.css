@@ -163,7 +163,7 @@ body {
 }
 
 .pre-heading {
-  display: inline-block;
+  display: block;
   margin-bottom: var(--space-12);
   font-size: var(--font-14);
   font-weight: var(--weight-500);
@@ -975,6 +975,10 @@ strong {
 }
 
 .note-box {
+}
+
+.note-box:not(:last-child) {
+  margin-bottom: var(--space-80);
 }
 
 .note-cards {
