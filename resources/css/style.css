@@ -216,10 +216,17 @@ body {
   margin-bottom: var(--space-32);
 }
 
+/* 
+
+  Main Navigation
+
+*/
+
+
 .main-nav-list {
   list-style: none;
   display: flex;
-  justify-content: content;
+  justify-content: center;
   align-items: center;
   gap: var(--space-24);
   z-index: 1;
@@ -493,6 +500,20 @@ strong {
 .highlight {
   font-weight: var(--weight-500);
   color: var(--clr-accent);
+}
+
+.current-page .card {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0 0 0.2rem var(--clr-accent),
+    0 0.8rem 1rem 0 hsla(222, 47%, 11%, 0.2);
+}
+
+.current-page .card-icon {
+  transform: rotateY(1turn);
+}
+
+.current-page .pre-heading--cards {
+  transform: translateX(1%);
 }
 
 /*
