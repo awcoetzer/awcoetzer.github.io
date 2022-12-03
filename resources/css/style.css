@@ -1,6 +1,8 @@
 /*
 
   Notes: 
+  - Give footer a label
+  - Import prism.js
 
 */
 
@@ -125,6 +127,12 @@ body {
   margin: 0 auto;
   padding: 0 var(--space-48);
   max-width: 120rem;
+}
+
+.container--blog {
+  margin: 0 auto;
+  padding: 0 var(--space-48);
+  max-width: 100rem;
 }
 
 .grid {
@@ -551,7 +559,7 @@ strong {
   Author: Andre coetzer
 
 */
-.section {
+.section-padding {
   padding: var(--space-96) 0;
 }
 
@@ -598,9 +606,6 @@ strong {
 }
 
 .hero-text-box {
-}
-
-.hero-text {
 }
 
 .apostrophe {
@@ -974,18 +979,6 @@ strong {
 
 /*
 
-  Section: Projects
-  Purpose: To style the notes sections
-
-  Author: Andre coetzer
-
-*/
-.section-projects {
-  background-color: var(--bg-color);
-}
-
-/*
-
   Section: Note Cards
   Purpose: To style the notes sections
 
@@ -1086,48 +1079,230 @@ strong {
 
 /*
 
-  Page: HTML
-  Purpose: To syle the page HTML
+  Section: Section Blog Padding
+  Purpose: To syle the each sections spacing within the actual notes page
 
   Author: Andre coetzer
 
 */
+.section-padding--blog {
+  padding: var(--space-48) 0;
+}
 
 /*
 
-  Page: CSS
-  Purpose: To syle the page HTML
+  Section: Blog Hero
+  Purpose: To syle the Notes Hero Section
 
   Author: Andre coetzer
 
 */
+.section-blog-hero {
+  
+}
+
+.sticky .section-blog-hero {
+  margin-top: var(--space-96);
+}
+
+.blog-hero {
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 0 var(--space-48);
+  display: grid;
+  grid-template-columns: 25fr 75fr;
+  justify-items: center;
+  align-items: center;
+  gap: var(--space-24);
+}
+
+.blog-hero-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.blog-hero-img {
+  width: 100%;
+}
+
+.blog-hero-text-box {
+  
+}
 
 /*
 
-  Page: JAVASCRIPT
+  Page: Section Blog Content
   Purpose: To syle the page HTML
 
   Author: Andre coetzer
 
 */
+
+.section-blog {
+  background-color: var(--bg-color);
+}
+.blog {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-24);
+}
+
+.lectures {
+  /* border: 1px solid green; */
+}
+
+.lecture-text-box {
+  margin-bottom: var(--space-48);
+}
+
+.lecture-text-box:not(:first-child) {
+  margin-top: var(--space-96);
+}
+
+.heading-secondary--lecture {
+  margin-bottom: 0;
+}
+
+.heading-tertiary--lecture {
+  margin-bottom: 0;
+}
+
+.lecture-text {
+  margin-bottom: var(--space-48);
+  font-size: var(--font-18);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
+}
+
+.lecture-text:not(:first-child) {
+  margin-top: var(--space-48);
+}
+
+.code-example {
+  position: relative;
+}
+
+.code-example::before {
+  content: 'Code Example';
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-5);
+  width: fit-content;
+  height: fit-content;
+  transform: translate(20%, -60%);
+  font-size: var(--font-12);
+  font-weight: var(--weight-500);
+  text-transform: uppercase;
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-p1);
+  background-color: var(--bg-color);
+  box-shadow: 0 0 0 3px;
+  z-index: 999;
+}
+
+.lecture-code-box {
+
+}
+
+.lecture-code {
+
+}
+
 
 /*
 
-  Page: REACT
-  Purpose: To syle the page HTML
+  Section: Table of Contents
+  Purpose: To style the toc
 
   Author: Andre coetzer
 
 */
 
-/*
+.toc {
+  border-radius: var(--radius-5);
+  box-shadow: 0 0 0 3px var(--clr-shade);
+}
 
-  Page: NODE.JS
-  Purpose: To syle the page HTML
+.toc-box {
 
-  Author: Andre coetzer
+}
 
-*/
+.toc-btn {
+  width: 100%;
+  padding: var(--space-12) var(--space-8);
+  border: none;
+  border-radius: var(--radius-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-12);
+  background: hsla(0, 0%, 100%, 0.1);
+  cursor: pointer;
+  margin-bottom: var(--space-24);
+}
+
+.toc-btn:hover {
+  background: hsla(0, 0%, 100%, 0.2);
+}
+
+.toc-btn-heading {
+  color: var(--clr-grey);
+  margin-bottom: 0;
+}
+
+.toc-icon {
+  width: var(--font-24);
+  height: var(--font-24);
+  color: var(--clr-grey);
+}
+
+.toc-icon[name="caret-up-outline"] {
+  display: none;
+}
+
+.toc-hidden-box {
+  display: none;
+}
+
+.toc-open .toc-hidden-box {
+  display: block;
+}
+
+.toc-open .toc-icon[name="caret-up-outline"] {
+  display: block;
+}
+
+.toc-open .toc-icon[name="caret-down-outline"] {
+  display: none;
+}
+
+.toc-list {
+  padding-left: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16  );
+}
+
+.toc-item {
+
+}
+
+.link--toc, 
+.link--toc:link,
+.link--toc:visited {
+  display: inline-block;
+  text-transform: none;
+}
+
+.link--toc:hover,
+.link--toc:active {
+
+}
+
 
 /*
 
@@ -1396,7 +1571,7 @@ strong {
 
   */
 
-  .section {
+  .section-padding {
     padding: var(--space-64) 0;
   }
 

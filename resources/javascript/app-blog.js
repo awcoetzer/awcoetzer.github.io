@@ -1,7 +1,7 @@
 ////////////////////////////////////////
 // Making the header sticky
 
-const sectionHeroEl = document.querySelector('.section-hero');
+const sectionHeroEl = document.querySelector('.section-blog-hero');
 const headerEl = document.querySelector('.header');
 
 const obs = new IntersectionObserver((entries) => {
@@ -33,10 +33,11 @@ mobileBtnEl.addEventListener('click', () => {
 // Making the toc clickable to display its contents
 
 const tocEl = document.querySelector('.toc');
-console.log(tocEl)
-// tocEl.addEventListener('click', () => {
-//   document.body.classList.toggle('mobile-active');
-// })
+const tocBtnEl = document.querySelector('.toc-btn');
+
+tocBtnEl.addEventListener('click', () => {
+  tocEl.classList.toggle('toc-open');
+})
 
 ////////////////////////////////////////
 // Copyright Date Changer, it updates the date automatically
