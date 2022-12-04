@@ -99,8 +99,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: var(--space-16);
-  height: var(--space-16);
+  width: var(--space-8);
+  height: var(--space-8);
 }
 
 ::-webkit-scrollbar-track {
@@ -110,7 +110,7 @@
 
 ::-webkit-scrollbar-thumb {
   position: relative;
-  border: 3px solid var(--clr-grey);
+  border: thin solid var(--clr-grey);
   border-radius: var(--radius-100);
 }
 
