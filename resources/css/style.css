@@ -111,7 +111,7 @@
 ::-webkit-scrollbar-thumb {
   position: relative;
   border: thin solid var(--clr-grey);
-  border-radius: var(--radius-100);
+  border-radius: var(--radius-5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -541,6 +541,12 @@ strong {
 
 .current-page .pre-heading--cards {
   transform: translateX(1%);
+}
+
+.hide {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
 }
 
 /*
@@ -1118,7 +1124,19 @@ strong {
 
 */
 .section-blog-hero {
-  
+  position: relative;
+}
+
+.section-blog-hero::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  width: 100%;
+  height: 70%;
+  background-color: var(--bg-color);
+  clip-path: polygon(100% 20%, 0 100%, 100% 100%);
+  z-index: -1;
 }
 
 .sticky .section-blog-hero {
@@ -1131,28 +1149,15 @@ strong {
   padding: 0 var(--space-48);
   display: grid;
   grid-template-columns: 25fr 75fr;
-  justify-items: center;
+  justify-items: start;
   align-items: center;
   gap: var(--space-24);
-}
-
-.blog-hero::before {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: 0;
-  width: 100%;
-  height: 70%;
-  background-color: var(--bg-color);
-  clip-path: polygon(100% 20%, 0 100%, 100% 100%);
-  z-index: -1;
 }
 
 .blog-hero-img-box {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .blog-hero-img {
@@ -1160,12 +1165,11 @@ strong {
 }
 
 .blog-hero-text-box {
-  
 }
 
 /*
 
-  Page: Section Blog Content
+  Section: Section Blog Content
   Purpose: To syle the page HTML
 
   Author: Andre coetzer
@@ -1180,7 +1184,6 @@ strong {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: var(--space-24);
-
 }
 
 .lectures {
@@ -1220,7 +1223,7 @@ strong {
 }
 
 .code-example::before {
-  content: 'Code Example';
+  content: "Code Example";
   position: absolute;
   top: 0;
   left: 0;
@@ -1240,13 +1243,10 @@ strong {
 }
 
 .lecture-code-box {
-
 }
 
 .lecture-code {
-
 }
-
 
 /*
 
@@ -1258,12 +1258,12 @@ strong {
 */
 
 .toc {
+  align-self: start;
   border-radius: var(--radius-5);
   box-shadow: 0 0 0 3px var(--clr-shade);
 }
 
 .toc-box {
-
 }
 
 .toc-btn {
@@ -1276,9 +1276,10 @@ strong {
   align-items: center;
   gap: var(--space-12);
   background: var(--clr-main);
+  transition: background-color 0.15s ease-in;
   cursor: pointer;
-  margin-bottom: var(--space-24);
   box-shadow: 0 0 0 3px var(--clr-shade);
+  margin-bottom: var(--space-24);
 }
 
 .toc-btn:hover {
@@ -1320,14 +1321,13 @@ strong {
   padding-left: var(--space-24);
   display: flex;
   flex-direction: column;
-  gap: var(--space-16  );
+  gap: var(--space-16);
 }
 
 .toc-item {
-
 }
 
-.link--toc, 
+.link--toc,
 .link--toc:link,
 .link--toc:visited {
   display: inline-block;
@@ -1336,9 +1336,72 @@ strong {
 
 .link--toc:hover,
 .link--toc:active {
+}
+
+/*
+
+  section: Blog Navigation
+  Purpose: To syle the blog previous & next links
+
+  Author: Andre coetzer
+
+*/
+
+.section-blog-nav {
+  background-color: var(--bg-color);
+}
+
+.blog-nav {
+  margin: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-48);
+}
+
+.prev-next-blog-link,
+.prev-next-blog-link:link,
+.prev-next-blog-link:visited {
+  padding: var(--space-12);
+  border: 3px solid var(--clr-shade);
+  border-radius: var(--radius-5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-16);
+  color: var(--clr-grey);
+  background-color: var(--clr-main);
+  text-decoration: none;
+  transition: background-color 0.15s ease-in;
+  cursor: pointer;
+}
+
+.prev-next-blog-link:hover,
+.prev-next-blog-link:active {
+  background-color: var(--clr-tint);
+}
+
+.prev-next-blog-link:not(:first-child) {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.prev-next-icon {
+  width: var(--font-24);
+  height: var(--font-24);
+}
+
+.prev-next-text-box {
 
 }
 
+.pre-heading--prev-next {
+  border-bottom: 1px solid var(--clr-grey);
+  margin-bottom: var(--space-8);
+}
+
+.prev-next-blog-name {
+  font-size: var(--font-12);
+}
 
 /*
 
@@ -1363,6 +1426,9 @@ strong {
   }
 
   .section-hero::before {
+    height: 60%;
+  }
+  .section-blog-hero::before {
     height: 60%;
   }
 }
@@ -1409,6 +1475,10 @@ strong {
   }
 
   .section-hero::before {
+    height: 30%;
+  }
+
+  .section-blog-hero::before {
     height: 30%;
   }
 
@@ -1593,7 +1663,6 @@ strong {
   .blog-hero-text-box {
     text-align: center;
   }
-
 }
 
 /*
@@ -1702,6 +1771,11 @@ strong {
   }
   .toc {
     grid-row: 1;
+    margin-bottom: var(--space-48);
+  }
+
+  .section-blog-nav {
+    padding: 0 0 var(--space-96);
   }
 }
 
@@ -1747,6 +1821,10 @@ strong {
   }
 
   .section-hero::before {
+    height: 20%;
+  }
+
+  .section-blog-hero::before {
     height: 20%;
   }
 
@@ -1828,5 +1906,9 @@ strong {
 
   .blog-hero-img {
     width: 100%;
+  }
+
+  .blog-nav {
+    gap: var(--space-24);
   }
 }
