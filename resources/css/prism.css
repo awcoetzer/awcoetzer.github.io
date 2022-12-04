@@ -1,5 +1,8 @@
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript&plugins=normalize-whitespace+toolbar+copy-to-clipboard */
+
+
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
@@ -21,15 +24,16 @@ pre[class*="language-"] {
   hyphens: none;
 }
 pre[class*="language-"] {
-  padding: 1em;
+  padding: 1.6rem;
   border-radius: var(--radius-5);
   margin: 0.5em 0;
-  overflow: auto;
+  overflow-x: auto;
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
+
   /* background:hsl(0, 0%, 18%); */
-  box-shadow: 0 0 0 3px hsla(0, 0%, 0%, 0.3);
+  border: 3px solid hsla(0, 0%, 0%, 0.3);
 }
 :not(pre) > code[class*="language-"] {
   padding: 0.1em;
@@ -128,12 +132,13 @@ div.code-toolbar > .toolbar > .toolbar-item > button {
   font: inherit;
   text-transform: uppercase;
   line-height: normal;
-  overflow: visible;
+  overflow: hidden;
   padding: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: pointer;
+  
 }
 div.code-toolbar > .toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar > .toolbar-item > button,
@@ -145,6 +150,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
   background: rgba(224, 224, 224, 0.2);
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
+  
 }
 div.code-toolbar > .toolbar > .toolbar-item > a:focus,
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,
