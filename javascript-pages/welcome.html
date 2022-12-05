@@ -42,15 +42,18 @@
   </header>
 
   <main>
-    
+
     <!-- !Section: Notes Hero -->
     <section class="section-padding--blog section-blog-hero">
       <div class="blog-hero">
-        <figure class="blog-hero-img-box">
-          <a href="./javascript.html" class="blog-hero-image-link">
-            <img src="../resources/images/javascript/nail-illustration.png" alt="" class="blog-hero-img" />
-          </a>
-        </figure>
+        <picture class="blog-hero-img-box">
+            <source srcset="../resources/images/javascript/nail-illustration.webp" type="image/webp">
+            <source srcset="../resources/images/javascript/nail-illustration-min.png" type="image/png">
+
+            <img src="../resources/images/javascript/nail-illustration-min.png"
+              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+              class="blog-hero-img" />
+        </picture>
 
         <div class="blog-hero-text-box">
 
@@ -258,7 +261,8 @@
           </figure>
           <div class="social-icons">
             <!-- !Discord -->
-            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank" data-title="Discord">
+            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
+              data-title="Discord">
               <ion-icon name="logo-discord" class="social-icon"></ion-icon>
             </a>
 

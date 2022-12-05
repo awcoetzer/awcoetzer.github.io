@@ -46,6 +46,7 @@
   </header>
 
   <main>
+
     <!-- !Section: Hero -->
     <section class="section-padding section-hero">
       <div class="hero">
@@ -78,9 +79,12 @@
           <a href="#notes" class="btn btn--hero-full">My Notes</a>
         </div>
 
-        <figure class="hero-img-box">
-          <img src="../resources/images/html/gems-outline-illustation.png" alt="" class="hero-img" />
-        </figure>
+        <picture class="hero-img-box">
+          <source srcset="../resources/images/html/gems-outline-illustation.webp" type="image/webp">
+          <source srcset="../resources/images/html/gems-outline-illustation-min.png" type="image/webp">
+
+          <img src="../resources/images/html/gems-outline-illustation-min.png" alt="Gem inside a metal casing outline illustration. Done by Andre Coetzer" class="hero-img" />
+        </picture>
       </div>
     </section>
 
@@ -172,7 +176,8 @@
 
         <span class="pre-heading pre-heading--box">
           Course:
-          <a href="https://www.udemy.com/course/the-complete-guide-to-html/" target="_blank" class="link link--pre-heading">
+          <a href="https://www.udemy.com/course/the-complete-guide-to-html/" target="_blank"
+            class="link link--pre-heading">
             The Complete Guide to HTML
           </a>
         </span>
@@ -316,10 +321,13 @@
 
         <!-- !Profile -->
         <div class="profile-col">
-          <figure class="footer-profile">
-            <img src="../resources/images/main/profile-pic/me.jpg"
+          <picture class="footer-profile">
+            <source srcset="../resources/images/main/profile-pic/me-reduced.webp" type="image/webp">
+            <source srcset="../resources/images/main/profile-pic/me-reduced-min.jpg" type="image/jpg">
+
+            <img src="../resources/images/main/profile-pic/me-reduced-min.jpg"
               alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </figure>
+          </picture>
           <div class="social-icons">
             <!-- !Discord -->
             <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"

@@ -74,9 +74,12 @@
           <a href="#notes" class="btn btn--hero-full">My Notes</a>
         </div>
 
-        <figure class="hero-img-box">
-          <img src="../resources/images/javascript/nail-illustration.png" alt="" class="hero-img" />
-        </figure>
+        <picture class="hero-img-box">
+          <source srcset="../resources/images/javascript/nail-illustration.webp" type="image/webp">
+          <source srcset="../resources/images/javascript/nail-illustration-min.png" type="image/png">
+
+          <img src="../resources/images/javascript/nail-illustration-min.png" alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer" class="hero-img" />
+        </picture>
       </div>
     </section>
 
@@ -443,12 +446,14 @@
 
         <!-- !Profile -->
         <div class="profile-col">
-          <figure class="footer-profile">
-            <img src="../resources/images/main/profile-pic/me.jpg"
-              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </figure>
-          <div class="social-icons">
+          <picture class="footer-profile">
+            <source srcset="../resources/images/main/profile-pic/me-reduced.webp" type="image/webp">
+            <source srcset="../resources/images/main/profile-pic/me-reduced-min.jpg" type="image/jpg">
 
+            <img src="../resources/images/main/profile-pic/me-reduced-min.jpg"
+              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
+          </picture>
+          <div class="social-icons">
             <!-- !Discord -->
             <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
               data-title="Discord">
