@@ -57,13 +57,13 @@
           <nav class="breadcrumb-nav">
             <ul class="breadcrumb-list">
               <li class="breadcrumb-item">
-                <a href="../index.html" class="breadcrumb-link">Home</a>
+                <a href="../index.html" class="link link--breadcrumb">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="./javascript.html" class="breadcrumb-link">JavaScript</a>
+                <a href="./javascript.html" class="link link--breadcrumb">JavaScript</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="./welcome.html" class="breadcrumb-link">Welcome</a>
+                <a href="./welcome.html" class="link link--breadcrumb">Welcome</a>
               </li>
             </ul>
           </nav>
@@ -77,6 +77,40 @@
     <section class="section-padding--blog section-blog">
       <div class="container--blog">
         <div class="blog">
+
+          <!-- !Table of Contents -->
+          <nav class="toc">
+            <div class="toc-box">
+              <button class="toc-btn">
+                <span class="pre-heading toc-btn-heading">Table of Contents</span>
+                <ion-icon name="add-outline" class="toc-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
+              </button>
+
+              <div class="toc-hidden-box">
+                <ul class="toc-list">
+                  <li class="toc-item">
+                    <a href="#csap" class="link link--toc">Course structure and projects</a>
+                  </li>
+                  <li class="toc-item">
+                    <a href="#rbys" class="link link--toc">Read before you start</a>
+                  </li>
+                  <li class="toc-item">
+                    <a href="#wbys" class="link link--toc">Watch before you start</a>
+                  </li>
+                  <li class="toc-item">
+                    <a href="#mgtvoc" class="link link--toc">Migration guide to v2 + old course</a>
+                  </li>
+                  <li class="toc-item">
+                    <a href="#suoce" class="link link--toc">
+                      Setting up our code editor
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
           <!-- !Lectures -->
           <div class="lectures">
 
@@ -88,21 +122,9 @@
               </h2>
 
               <p class="lecture-text">
-                Write here
+                Really not much of a notes section here, though this lecture shows all that will be covered within the
+                course including some exciting projects.
               </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box">
-                    <code class="lecture-code language-javascript">
-                      ////////////////////////////////////////////////////////////////////////
-                      // Example Code notice-block
-  
-                      const myName = 'Example Code'
-  
-                      console.log('myName')
-                    </code>
-                  </pre>
-              </div>
             </div>
 
             <!-- !Lecture 2 -->
@@ -113,21 +135,10 @@
               </h2>
 
               <p class="lecture-text">
-                Write here
+                This is where we can find the course materials <a
+                  href="https://github.com/jonasschmedtmann/complete-javascript-course" class="link link--inline"
+                  target="_blank">Complete JavaScript Course</a>
               </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box">
-                    <code class="lecture-code language-javascript">
-                      ////////////////////////////////////////////////////////////////////////
-                      // Example Code notice-block
-  
-                      const myName = 'Example Code'
-  
-                      console.log('myName')
-                    </code>
-                  </pre>
-              </div>
             </div>
 
             <!-- !Lecture 3 -->
@@ -227,38 +238,7 @@
             </div>
           </div>
 
-          <!-- !Table of Contents -->
-          <nav class="toc">
-            <div class="toc-box">
-              <button class="toc-btn">
-                <span class="pre-heading toc-btn-heading">Table of Contents</span>
-                <ion-icon name="add-outline" class="toc-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
-              </button>
 
-              <div class="toc-hidden-box">
-                <ul class="toc-list">
-                  <li class="toc-item">
-                    <a href="#csap" class="link link--toc">Course structure and projects</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#rbys" class="link link--toc">Read before you start</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#wbys" class="link link--toc">Watch before you start</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#mgtvoc" class="link link--toc">Migration guide to v2 + old course</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#suoce" class="link link--toc">
-                      Setting up our code editor
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
         </div>
       </div>
     </section>
@@ -268,17 +248,31 @@
   <footer id="footer" class="footer">
     <div class="container">
       <div class="footer-box">
+
         <!-- !Profile -->
         <div class="profile-col">
           <figure class="footer-profile">
             <img src="../resources/images/main/profile-pic/me.jpg"
               alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
           </figure>
+          <div class="social-icons">
+            <!-- !Discord -->
+            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank" data-title="Discord">
+              <ion-icon name="logo-discord" class="social-icon"></ion-icon>
+            </a>
+
+            <!-- !Github -->
+            <a href="https://github.com/acoetzer" class="social-link" target="_blank" data-title="GitHub">
+              <ion-icon name="logo-github" class="social-icon"></ion-icon>
+            </a>
+
+            <!-- !Email -->
+            <a href="mailto:awcoetzer@outlook.com" class="social-link" target="_blank" data-title="Email">
+              <ion-icon name="mail-outline" class="social-icon"></ion-icon>
+            </a>
+          </div>
           <address class="address-text-box">
             <p class="address">Sofia, Bulgaria</p>
-            <a href="mailto:awcoetzer@outlook.com" class="link email">
-              awcoetzer@outlook.com
-            </a>
           </address>
           <div class="copyright-text center-text">
             <p class="copyright">
@@ -293,13 +287,13 @@
           <span class="pre-heading footer-pre-heading">Page Links</span>
           <ul class="footer-list">
             <li class="footer-list-item">
-              <a href="#" class="link footer-list-link">Go to the Top &uarr;</a>
+              <a href="#" class="link link--footer">Go to the Top &uarr;</a>
             </li>
             <li class="footer-list-item">
-              <a href="#journey" class="link footer-list-link">Journey</a>
+              <a href="#journey" class="link link--footer">Journey</a>
             </li>
             <li class="footer-list-item">
-              <a href="#notes" class="link footer-list-link">Notes</a>
+              <a href="#notes" class="link link--footer">Notes</a>
             </li>
           </ul>
         </div>
@@ -309,22 +303,22 @@
           <span class="pre-heading footer-pre-heading">Site Map</span>
           <ul class="footer-list">
             <li class="footer-list-item">
-              <a href="../index.html" class="link footer-list-link">Home</a>
+              <a href="../index.html" class="link link--footer">Home</a>
             </li>
             <li class="footer-list-item">
-              <a href="./html.html" class="link footer-list-link">HTML</a>
+              <a href="./html.html" class="link link--footer">HTML</a>
             </li>
             <li class="footer-list-item">
-              <a href="../css-pages/css.html" class="link footer-list-link">CSS</a>
+              <a href="../css-pages/css.html" class="link link--footer">CSS</a>
             </li>
             <li class="footer-list-item">
-              <a href="../javascript-pages/javascript.html" class="link footer-list-link">JavaScript</a>
+              <a href="../javascript-pages/javascript.html" class="link link--footer">JavaScript</a>
             </li>
             <li class="footer-list-item">
-              <a href="../react-pages/react.html" class="link footer-list-link">React</a>
+              <a href="../react-pages/react.html" class="link link--footer">React</a>
             </li>
             <li class="footer-list-item">
-              <a href="../node-pages/node.html" class="link footer-list-link">Node.js</a>
+              <a href="../node-pages/node.html" class="link link--footer">Node.js</a>
             </li>
           </ul>
         </div>
