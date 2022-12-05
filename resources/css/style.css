@@ -1,17 +1,16 @@
 /*
 
-  Notes: 
-  - Give footer a label
-  - Import prism.js
+  TODO - Give footer a label
+  TODO - Import prism.js
 
 */
 
 /*
 
-  Section: General CSS
-  Purpose: To style site wide properties
+  !Section: General CSS
+  !Purpose: To style site wide properties
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -136,10 +135,10 @@ body {
 
 /*
 
-  Section: Repeating Code
-  Purpose: Code that is repeat throughout the site is added here
+  !Section: Repeating Code
+  !Purpose: Code that is repeat throughout the site is added here
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -246,7 +245,7 @@ body {
 
 /* 
 
-  Main Navigation
+  !Main Navigation 
 
 */
 
@@ -316,7 +315,7 @@ body {
 
 /* 
 
-  Mobile Navigation
+  !Mobile Navigation
 
 */
 .mobile-nav {
@@ -343,7 +342,7 @@ body {
 
 /* 
 
-  Breadcrumb Navigation
+  !Breadcrumb Navigation
 
 */
 
@@ -501,10 +500,10 @@ strong {
 
 /*
 
-  Section: Helper Classes
-  Purpose: Classes which act as helper classes are style here
+  !Section: Helper Classes
+  !Purpose: Classes which act as helper classes are style here
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -551,10 +550,10 @@ strong {
 
 /*
 
-  Section: Header
-  Purpose: To syle the header
+  !Section: Header
+  !Purpose: To syle the header
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -579,10 +578,10 @@ strong {
 
 /*
 
-  Section: All Sections
-  Purpose: To syle all sections
+  !Section: All Sections
+  !Purpose: To syle all sections
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 .section-padding {
@@ -591,10 +590,10 @@ strong {
 
 /*
 
-  Section: Hero
-  Purpose: To syle the hero
+  !Section: Hero
+  !Purpose: To syle the hero
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -692,19 +691,19 @@ strong {
 
 /*
 
-  Page: Index
-  Purpose: To syle the page HTML
+  !Page: Index
+  !Purpose: To syle the page HTML
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
 /*
 
-  Section: Journey
-  Purpose: To syle the hero
+  !Section: Journey
+  !Purpose: To syle the hero
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -823,10 +822,10 @@ strong {
 
 /*
 
-  Section: About
-  Purpose: To syle the hero
+  !Section: About
+  !Purpose: To syle the hero
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -859,10 +858,10 @@ strong {
 
 /*
 
-  Section: Featured
-  Purpose: To syle the hero
+  !Section: Featured
+  !Purpose: To syle the hero
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -894,10 +893,10 @@ strong {
 
 /*
 
-  Section: Footer
-  Purpose: To syle the hero
+  !Section: Footer
+  !Purpose: To syle the hero
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -1005,10 +1004,10 @@ strong {
 
 /*
 
-  Section: Note Cards
-  Purpose: To style the notes sections
+  !Section: Note Cards
+  !Purpose: To style the notes sections
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 .section-notes {
@@ -1105,10 +1104,10 @@ strong {
 
 /*
 
-  Section: Section Blog Padding
-  Purpose: To syle the each sections spacing within the actual notes page
+  !Section: Section Blog Padding
+  !Purpose: To syle the each sections spacing within the actual notes page
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 .section-padding--blog {
@@ -1117,10 +1116,10 @@ strong {
 
 /*
 
-  Section: Blog Hero
-  Purpose: To syle the Notes Hero Section
+  !Section: Blog Hero
+  !Purpose: To syle the Notes Hero Section
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 .section-blog-hero {
@@ -1169,10 +1168,10 @@ strong {
 
 /*
 
-  Section: Section Blog Content
-  Purpose: To syle the page HTML
+  !Section: Section Blog Content
+  !Purpose: To syle the page HTML
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -1238,7 +1237,7 @@ strong {
   line-height: var(--line-height-17);
   letter-spacing: var(--letter-space-p1);
   background-color: var(--bg-color);
-  box-shadow: 0 0 0 3px;
+  box-shadow: 0 0 0 2px;
   z-index: 999;
 }
 
@@ -1250,17 +1249,17 @@ strong {
 
 /*
 
-  Section: Table of Contents
-  Purpose: To style the toc
+  !Section: Table of Contents
+  !Purpose: To style the toc
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
 .toc {
   align-self: start;
   border-radius: var(--radius-5);
-  box-shadow: 0 0 0 3px var(--clr-shade);
+  box-shadow: 0 0 0 2px var(--clr-shade);
 }
 
 .toc-box {
@@ -1278,7 +1277,7 @@ strong {
   background: var(--clr-main);
   transition: background-color 0.15s ease-in;
   cursor: pointer;
-  box-shadow: 0 0 0 3px var(--clr-shade);
+  box-shadow: 0 0 0 2px var(--clr-shade);
   margin-bottom: var(--space-24);
 }
 
@@ -1297,24 +1296,25 @@ strong {
   color: var(--clr-grey);
 }
 
-.toc-icon[name="sad"] {
+.toc-icon[name="remove-outline"] {
   display: none;
 }
 
 .toc-hidden-box {
   display: none;
+  padding: 1rem 0.5rem;
 }
 
 .toc-open .toc-hidden-box {
   display: block;
 }
 
-.toc-open .toc-icon[name="sad"] {
-  display: block;
+.toc-open .toc-icon[name="add-outline"] {
+  display: none;
 }
 
-.toc-open .toc-icon[name="happy"] {
-  display: none;
+.toc-open .toc-icon[name="remove-outline"] {
+  display: block;
 }
 
 .toc-list {
@@ -1340,10 +1340,10 @@ strong {
 
 /*
 
-  section: Blog Navigation
-  Purpose: To syle the blog previous & next links
+  !section: Blog Navigation
+  !Purpose: To syle the blog previous & next links
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
@@ -1362,7 +1362,7 @@ strong {
 .prev-next-blog-link:link,
 .prev-next-blog-link:visited {
   padding: var(--space-12);
-  border: 3px solid var(--clr-shade);
+  border: var(--space-2) solid var(--clr-shade);
   border-radius: var(--radius-5);
   display: flex;
   justify-content: flex-start;
@@ -1391,7 +1391,6 @@ strong {
 }
 
 .prev-next-text-box {
-
 }
 
 .pre-heading--prev-next {
@@ -1405,18 +1404,18 @@ strong {
 
 /*
 
-  Section: Media Queries
-  Purpose: To syle the break points of the site
+  !Section: Media Queries
+  !Purpose: To syle the break points of the site
 
-  Author: Andre coetzer
+  !Author: Andre coetzer
 
 */
 
 /*
 
-  Query for: Smaller Laptops
-  Size-px: 1344
-  Size-em: 84
+  !Query for: Smaller Laptops
+  !Size-px: 1344
+  !Size-em: 84
 
 */
 
@@ -1435,9 +1434,9 @@ strong {
 
 /*
 
-  Query for: Tablet Landscape
-  Size-px: 1200
-  Size-em: 74
+  !Query for: Tablet Landscape
+  !Size-px: 1200
+  !Size-em: 74
 
 */
 
@@ -1459,9 +1458,9 @@ strong {
 
 /*
 
-  Query for: Tablet Portrait
-  Size-px: 944
-  Size-em: 59
+  !Query for: Tablet Portrait
+  !Size-px: 944
+  !Size-em: 59
 
 */
 
@@ -1530,7 +1529,7 @@ strong {
 
   /* 
   
-    Mobile Navigation
+    !Mobile Navigation
   
   */
   .header {
@@ -1667,9 +1666,9 @@ strong {
 
 /*
 
-  Query for: Smaller Tablets
-  Size-px: 744
-  Size-em: 46.5
+  !Query for: Smaller Tablets
+  !Size-px: 744
+  !Size-em: 46.5
 
 */
 
@@ -1686,7 +1685,7 @@ strong {
 
   /* 
   
-    Section spacing
+    !Section spacing
 
   */
 
@@ -1750,7 +1749,7 @@ strong {
 
   /* 
   
-    Mobile Navigation
+    !Mobile Navigation
 
   */
   .header {
@@ -1781,9 +1780,9 @@ strong {
 
 /*
 
-  Query for: Mobile Devices
-  Size-px: 544
-  Size-em: 34
+  !Query for: Mobile Devices
+  !Size-px: 544
+  !Size-em: 34
 
 */
 
