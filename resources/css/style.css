@@ -198,29 +198,6 @@ body {
   letter-spacing: var(--letter-space-p1);
 }
 
-.pre-heading--link,
-.pre-heading--link:link,
-.pre-heading--link:visited {
-  display: inline-block;
-  border-bottom: 1px solid var(--clr-grey);
-  font-size: var(--font-14);
-  font-weight: var(--weight-500);
-  text-transform: none;
-  text-decoration: none;
-  line-height: var(--line-height-17);
-  letter-spacing: var(--letter-space-p1);
-  color: var(--clr-grey);
-  transition: border-bottom 0.15s ease-in, color 0.15s ease-in,
-    transform 0.15s ease-in;
-}
-
-.pre-heading--link:hover,
-.pre-heading--link:active {
-  border-bottom: 1px solid transparent;
-  color: var(--clr-accent);
-  transform: translateY(-10%);
-}
-
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -417,6 +394,12 @@ body {
 .breadcrumb-icon {
   width: var(--font-14);
   height: var(--font-14);
+}
+
+.link--pre-heading {
+  border-bottom: 1px solid var(--clr-grey);
+  font-size: var(--font-14);
+  color: var(--clr-grey);
 }
 
 .link--toc {
