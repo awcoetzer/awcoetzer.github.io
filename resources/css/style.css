@@ -857,7 +857,8 @@ strong {
   background-color: var(--bg-color);
 }
 
-.footer {}
+.footer {
+}
 
 .footer-box {
   display: grid;
@@ -891,13 +892,13 @@ strong {
 }
 
 .social-icons {
- display: flex;
- justify-content: center;
- align-items: center;
- gap: var(--space-24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-24);
 }
 
-.social-link, 
+.social-link,
 .social-link:link,
 .social-link:visited {
   position: relative;
@@ -933,9 +934,7 @@ strong {
 .social-icon {
   width: var(--font-24);
   height: var(--font-24);
-  
 }
-
 
 .address-text-box {
   text-align: center;
@@ -1188,7 +1187,7 @@ strong {
 }
 
 .lectures {
-  grid-column: 1 /span 1;
+  grid-column: 1 / span 1;
   grid-row: 1;
   overflow-x: auto;
 }
@@ -1776,12 +1775,12 @@ strong {
     gap: var(--space-24);
   }
   .toc {
-    grid-column: 1 /span 1;
+    grid-column: 1 / span 1;
     grid-row: 1;
     margin-bottom: var(--space-48);
   }
   .lectures {
-    grid-column: 1 /span 1;
+    grid-column: 1 / span 1;
     grid-row: 2;
     overflow-x: auto;
   }
