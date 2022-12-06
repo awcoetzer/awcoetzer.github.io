@@ -339,6 +339,41 @@ body {
 
 /* 
 
+!Back to Top Button 
+
+*/
+
+.btt-btn {
+  width: var(--space-48);
+  height: var(--space-48);
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  border: 2px solid hsla(0, 0%, 100%, 0.2);
+  border-radius: var(--radius-5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: hsla(0, 0%, 100%, 0.2);
+  background-color: transparent;
+  transition: border 0.15s ease-in, color 0.15s ease-in, transform 0.15s ease-in;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.btt-btn:hover {
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-accent);
+  transform: translateY(-5%);
+}
+
+.btt-icon {
+  width: var(--font-24);
+  height: var(--font-24);
+}
+
+/* 
+
   !Breadcrumb Navigation & 
   !Links
 

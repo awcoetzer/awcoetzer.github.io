@@ -3,6 +3,7 @@
 
 const sectionHeroEl = document.querySelector(".section-blog-hero");
 const headerEl = document.querySelector(".header");
+const bttBtnEl = document.querySelector(".btt-btn");
 
 const obs = new IntersectionObserver(
   (entries) => {
@@ -10,8 +11,10 @@ const obs = new IntersectionObserver(
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
+      bttBtnEl.style.display = "flex";
     } else {
       document.body.classList.remove("sticky");
+      bttBtnEl.style.display = "none";
     }
   },
   {
