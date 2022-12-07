@@ -437,8 +437,8 @@ body {
   color: var(--clr-grey);
 }
 
-.link--toc {
-  border-bottom: 1px solid var(--clr-grey);
+.link--toc{
+  border-bottom: 1px solid transparent;
   font-size: var(--font-14);
   color: var(--clr-grey);
 }
@@ -1236,7 +1236,7 @@ strong {
   margin-top: var(--space-96);
 }
 
-.heading-secondary--lecture {
+.heading-tertiary--lecture {
   margin-bottom: 0;
 }
 
