@@ -1205,89 +1205,6 @@ strong {
 
 /*
 
-  !Section: Section Blog Content
-  !Purpose: To syle the page HTML
-
-  !Author: Andre coetzer
-
-*/
-
-.section-blog {
-  background-color: var(--bg-color);
-}
-.blog {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: var(--space-24);
-}
-
-.lectures {
-  grid-column: 1 / span 1;
-  grid-row: 1;
-  overflow-x: auto;
-}
-
-.lecture-text-box {
-  margin-bottom: var(--space-48);
-}
-
-.lecture-text-box:not(:first-child) {
-  margin-top: var(--space-96);
-}
-
-.heading-tertiary--lecture {
-  margin-bottom: 0;
-}
-
-.heading-tertiary--lecture {
-  margin-bottom: 0;
-}
-
-.lecture-text {
-  margin-bottom: var(--space-48);
-  font-size: var(--font-18);
-  line-height: var(--line-height-17);
-  letter-spacing: var(--letter-space-n05);
-}
-
-.lecture-text:not(:first-child) {
-  margin-top: var(--space-48);
-}
-
-.code-example {
-  margin: 0 var(--space-4);
-  position: relative;
-}
-
-.code-example::before {
-  content: "Code Example";
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: var(--space-4) var(--space-8);
-  border-radius: var(--radius-5);
-  width: fit-content;
-  height: fit-content;
-  transform: translate(20%, -60%);
-  font-size: var(--font-12);
-  font-weight: var(--weight-500);
-  text-transform: uppercase;
-  line-height: var(--line-height-17);
-  letter-spacing: var(--letter-space-p1);
-  background-color: var(--bg-color);
-  box-shadow: 0 0 0 2px;
-  z-index: 999;
-}
-
-.lecture-code-box {
-}
-
-.lecture-code {
-}
-
-/*
-
   !Section: Table of Contents
   !Purpose: To style the toc
 
@@ -1378,6 +1295,155 @@ strong {
 
 .link--toc:hover,
 .link--toc:active {
+}
+
+/*
+
+  !Section: Section Blog Content
+  !Purpose: To syle the page HTML
+
+  !Author: Andre coetzer
+
+*/
+
+.section-blog {
+  background-color: var(--bg-color);
+}
+.blog {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-24);
+}
+
+.lectures {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  overflow-x: auto;
+}
+
+.lecture-text-box {
+  margin-bottom: var(--space-48);
+}
+
+.lecture-text-box:not(:first-child) {
+  margin-top: var(--space-96);
+}
+
+.lecture-text {
+  margin-bottom: var(--space-24);
+  font-size: var(--font-18);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
+}
+
+.lecture-steps {
+  margin: var(--space-48) var(--space-16);
+  padding: var(--space-8);
+  border-radius: var(--radius-5);
+  list-style: none;
+  display: flex;
+  gap: var(--space-24);
+  background-color: var(--clr-main);
+}
+
+.lecture-steps--item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.lecture-steps--pre-heading {
+  color: var(--clr-grey);
+}
+
+.lecture-steps--item-description {
+  font-size: var(--font-14);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
+  color: var(--clr-accent);
+}
+
+.code-example {
+  margin: var(--space-48) var(--space-16) var(--space-24);
+  position: relative;
+}
+
+.code-example::before {
+  content: "Code Example";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-5);
+  width: fit-content;
+  height: fit-content;
+  transform: translate(20%, -60%);
+  font-size: var(--font-12);
+  font-weight: var(--weight-500);
+  text-transform: uppercase;
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-p1);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right, 
+    #f87171, 
+    #fb923c,
+    #fbbf24,
+    #facc15,
+    #a3e635,
+    #4ade80,
+    #34d399,
+    #2dd4bf,
+    #22d3ee,
+    #38bdf8,
+    #60a5fa,
+    #818cf8,
+    #a78bfa,
+    #c084fc,
+    #e879f9,
+    #f472b6,
+    #fb7185
+  );
+  background-size: 400%;
+  animation: code-gradient 5s alternate-reverse infinite;
+  z-index: 999;
+}
+
+@keyframes code-gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.code-example::after {
+  content: "Code Example";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-5);
+  width: fit-content;
+  height: fit-content;
+  transform: translate(20%, -60%);
+  font-size: var(--font-12);
+  font-weight: var(--weight-500);
+  text-transform: uppercase;
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-p1);
+  color: transparent;
+  background-color: var(--clr-shade);
+  z-index: 99;
+}
+
+.lecture-code-box {
+}
+
+.lecture-code {
 }
 
 /*
@@ -1957,5 +2023,9 @@ strong {
 
   .blog-nav {
     gap: var(--space-24);
+  }
+
+  .lecture-steps {
+    flex-direction: column;
   }
 }
