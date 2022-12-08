@@ -805,8 +805,30 @@
                 let, const and var
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    let age = 33;
+                    const birthYear = 1989;
+                    var outOfDate = true; // var is legacy
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                In JavaScript there are 3 ways of declaring variables. That being let, const and the legacy way var. The difference between let and const is that let is mutable and const is not. This means that let can change its value or even data type to something completely different and its legal in JavaScript.
+              </p>
+
+              <p class="lecture-text">
+                Const however cannot do this and is not mutable. There for you cannot reassign or mutate the value or data type inside a const variable. it's basically constant. You also shouldnt leave a const variable undefined.
+              </p>
+
+              <p class="lecture-text">
+                How do we know which to use? When it comes to best practice its best to only use const, unless you know the value will change later in your code. It's also a best practice to not introduce too many mutable variables into your code as this can lead to hard to find bugs.
+              </p>
+
+              <p class="lecture-text">
+                Var on ther hands should be avoided and no longer used as its the legacy way of declaring a variable. It's to know how it works, just incase you run into one of them in the wild.
               </p>
 
               <!-- !End of Lecture 13 -->
