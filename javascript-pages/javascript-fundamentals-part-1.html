@@ -614,9 +614,9 @@
                 </pre>
               </div>
 
+              <!-- !End of Lecture 10 Assignment -->
             </div>
 
-            <!-- !End of Lecture 10 Assignment -->
 
             <!-- !Lecture 11 -->
             <div id="lecture-11" class="lecture-text-box">
@@ -626,7 +626,8 @@
               </h3>
 
               <p class="lecture-text">
-                As seen above, each section has an assignment, you can view the results inside the console. Note that after each section check the assignment .pdf to see what assignment is given.
+                As seen above, each section has an assignment, you can view the results inside the console. Note that
+                after each section check the assignment .pdf to see what assignment is given.
               </p>
 
               <!-- !End of Lecture 11 -->
@@ -639,11 +640,162 @@
                 Data Types
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                    <code class="lecture-code language-javascript">
+                      // An object
+                      let me = {
+                        name: 'Andre';
+                        age: 33;
+                      }
+
+                      // Primitive 
+                      let firstName = 'Andre';
+                      let age = 33;
+                    </code>
+                  </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                In JavaScript, every value is either an object or a primitive. There are 7 primitive data types. Number,
+                Strings, Boolean, Undefined, Null, Symbol and Big Int.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Number Data Type
+                    let age = 33; // is actually 33.0
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                The Number data type, is always a floating point number, even though we dont see a decimal, it is there.
+                unlike other programming languages we dont need to specify whether a number is a float or int.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // String Data Type
+                    let firstName = 'Andre'; // Single qoutation marks
+                    let firstName = "Andre"; // Double qoutation marks
+                    let firstName = `Andre`; // String template literals
+                    
+                    let firstName = "Andre'; // Mixing not allowed!
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Strings take a sequence of characters within its qoutation marks. The qoutation marks can be either
+                double or single but you cannot mix them.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Boolean Data Type
+                    let isStudying = true;
+                    let isSleeping = false;
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Booleans consist of only 2 values, true or false. This data type is used for decision making in our
+                code.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Undefined Data Type
+                    let lastName;
+
+                    console.log(lastName)
+                    console.log(typeof lastName)
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                An undefined data type is when a variable takes the type undefined when it has an empty value. Just to
+                add, undefined is both a value and a data type. We can see this by the code above.
+              </p>
+
+              <p class="lecture-text">
+                Small note on typeof, as we will see later it is a operator and is used to see the type a value is.
+              </p>
+
+              <p class="lecture-text">
+                Null is very similar to undefined, though not the same. More on this later in the course.
+              </p>
+
+              <p class="lecture-text">
+                Symbol, is a value that will never change, again more on this later.
+              </p>
+
+              <p class="lecture-text">
+                Big Int, the same as number but allows for larger numbers. More on this later in the course.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // JavaScript as a dynamic language
+                    let javascript = true;
+                    console.log(javascript);
+
+                    javascript = 'YES!'
+                    console.log(javascript)
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                JavaScript is a dynamic language, as seen above we do not need to declare the variable twice, though
+                just reassign the value.
               </p>
 
               <!-- !End of Lecture 12 -->
+            </div>
+
+            <!-- !Lecture 12 Assignment -->
+            <div id="lecture-12-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 12 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-descrition">
+                    Declare a variable called 'isIsland' and set its value according to your country. The variable
+                    should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Log the types of 'isIsland', 'population', 'country' and 'language' to the console
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Working with the last assignment in mind
+                    const isIsland = false;
+                    let language;
+
+                    console.log(typeof country, typeof population, typeof isIsland, typeof language);
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 12 Assignment -->
             </div>
 
             <!-- !Lecture 13 -->
