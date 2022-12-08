@@ -32,10 +32,20 @@ console.log(javascript);
 
 javascript = 'YES!'
 console.log(javascript)
+console.log('');
 
-// Lecture 11 - Assignment
-console.log('LECTURE 11 -  ASSIGNMENT');
+// Lecture 12 - Assignment
+console.log('LECTURE 12 -  ASSIGNMENT');
 const isIsland = false;
 let language;
 
 console.log(typeof country, typeof population, typeof isIsland, typeof language);
+console.log('');
+
+// Lecture 13 - Assignment
+console.log('LECTURE 13 -  ASSIGNMENT');
+language = 'Bulgarian'
+
+console.log(language);
+
+console.log('');
