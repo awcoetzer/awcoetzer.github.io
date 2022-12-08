@@ -1323,12 +1323,14 @@ strong {
 }
 
 .lecture-text-box {
-  margin-bottom: var(--space-48);
+  margin-bottom: var(--space-64);
+  padding-bottom: var(--space-64);
+  border-bottom: 1px solid var(--clr-main);
 }
 
-.lecture-text-box:not(:first-child) {
+/* .lecture-text-box:not(:first-child) {
   margin-top: var(--space-96);
-}
+} */
 
 .lecture-text {
   margin-bottom: var(--space-24);
@@ -1362,6 +1364,24 @@ strong {
   line-height: var(--line-height-17);
   letter-spacing: var(--letter-space-n05);
   color: var(--clr-accent);
+}
+
+.lecture-list {
+  margin: var(--space-48) var(--space-16);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.lecture-list--item {
+
+}
+
+.lecture-list--item-descrition {
+  font-size: var(--font-18);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
 }
 
 .code-example {

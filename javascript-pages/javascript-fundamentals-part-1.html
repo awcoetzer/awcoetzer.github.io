@@ -373,11 +373,14 @@
               </div>
 
               <p class="lecture-text">
-                Javascript allows for both frontend programming as well as backend using technologies such as Node.js. JavaScript is has its libraries such as React, Angular and Vue which are ever changing and also sometimes easiers to use than plain JavaScript.
+                Javascript allows for both frontend programming as well as backend using technologies such as Node.js.
+                JavaScript is has its libraries such as React, Angular and Vue which are ever changing and also
+                sometimes easiers to use than plain JavaScript.
               </p>
 
               <p class="lecture-text">
-                That's not all, there is also React Native and Ionic that can be used for Desktop applications as well as mobile. The possibilties is almost endless.
+                That's not all, there is also React Native and Ionic that can be used for Desktop applications as well
+                as mobile. The possibilties is almost endless.
               </p>
 
               <!-- !End of Lecture 8 -->
@@ -391,7 +394,81 @@
               </h3>
 
               <p class="lecture-text">
-                Write here
+                Linking a .js file works similar to that of linking a css file. The only difference is that it is best
+                practice to add the javascript file just before the end of the body HTML element whereas .css file is
+                linked within the head HTML element. You could however write an internal script, just like an internal
+                style for css, however its not preferred for cleaner code.
+              </p>
+
+              <p class="lecture-text">
+                An internal script would look something like the following below.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+
+                      &lt;head&gt;
+                        &lt;!-- The Internal Method -- &gt;
+                        &lt;script&gt;
+                          // JavaScript In here
+                          console.log('Hello');
+                        &lt;/script&gt;
+                      &lt;/head&gt;
+
+                      &lt;body&gt;
+                      &lt;/body&gt;
+
+                    &lt;/html&gt;
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                While if external, it would require you to make a app.js file and then you to link it to your HTML
+                document like the following below.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+
+                      &lt;head&gt;
+                      &lt;/head&gt;
+                      
+                      &lt;body&gt;
+
+                        &lt;!-- The External Method -- &gt;
+                        &lt;script src="./resource/javascript/app.js"&gt;&lt;/script&gt;
+                      &lt;/body&gt;
+
+                    &lt;/html&gt;
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                To add to this section, now that we will not be working in the console, to log values to the console
+                directly, we can still use the console to output some values using a command in javascript called
+                <em>console.log()</em> as shown below.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // To log something to the console
+                    console.log('👋 This is how to log to the console!');
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                If you view the console you should see a similar message displayed. Of course we did this using an
+                external .js file which we the linked to this page.
               </p>
 
               <!-- !End of Lecture 9 -->
@@ -404,12 +481,142 @@
                 Values and Variables
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    'Andre' // This is a value
+                    
+                    console.log('Andre');
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                Above is what is known as a value in JavaScript. A value is the smallest unit of information inside of
+                JavaScript. Though to can see this value, we would need to log this to the console.
               </p>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    let firstName = 'Andre';
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Above is called declaring a variable, where firstName is the variables name, it's then assigned a value
+                and holds information inside it. A variable is much like a box in the real world, where you can place a
+                book inside the box and label the box book for example. This works much the same way.
+              </p>
+
+              <p class="lecture-text">
+                The variable will take whatever value or data you palce inside it and store it in your computers memory
+                so that if you want to use it at a later date, you can. To use a variable, all you need to do is call on
+                that variables name, Instead of writing out the literal value.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    console.log(firstName);
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                When it comes to naming variables there are a few naming conventions as well as hard rules to follow. So
+                far we have been using what is known as camel casing, where the first word and letter is lowercase and
+                all subsequent words are capitalized there after. Another method is called snake casing and is very
+                prominent with in the Ruby community. Snake casing seperates each word with a underscore.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Camel Casing
+                    let firstName;
+
+                    // Snake Casing
+                    let first_name;
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Variables names cannot start with a number, this is seen as something illegal within JavaScript. THough
+                it can contain a number, just not as the first letter. In fact variable can only contain the following,
+                numbers, letters, underscores and the dollar symbol.
+              </p>
+
+              <p class="lecture-text">
+                Respectfully, variiable names cannot be the same as reserved keywords within JavaScript. An example of
+                that would be the keyword new. There is one keyword that is not illegal but by convention is not used by
+                itself when naming variables and that is the keyword name.
+              </p>
+
+              <p class="lecture-text">
+                Futhermore, Variables as per convention should not start with a capital letter, as these variables are
+                use for something called object oriented programming. Adding to this, variables should also not be in
+                all uppercase letters, as these are reserved for constants that we know will never change.
+              </p>
+
+              <p class="lecture-text">
+                Lastly, variables should be descriptive, for example below.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Non descriptive naming
+                    let job1 = 'Graphic Designer'
+                    let job2 = 'Web Developer'
+
+                    // More descriptive naming
+                    let firstJob = 'Graphic Designer'
+                    let secondJob = 'Web Developer'
+                  </code>
+                </pre>
+              </div>
               <!-- !End of Lecture 10 -->
             </div>
+
+            <!-- !Lecture 10 Assignment -->
+            <div id="lecture-10-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 10 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-descrition">
+                    Declare variables called 'country', 'continent' and 'population' and
+                    assign their values according to your own country (population in millions)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Log their values to the console
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const country = 'Bulgaria';
+                    const continent = 'Europe';
+                    let population = 6899000; // Dont put spaces
+
+                    console.log(`${country} ${continent} ${population}`)
+                  </code>
+                </pre>
+              </div>
+
+            </div>
+
+            <!-- !End of Lecture 10 Assignment -->
 
             <!-- !Lecture 11 -->
             <div id="lecture-11" class="lecture-text-box">
@@ -798,6 +1005,10 @@
   </footer>
 
   <!-- !Scripts -->
+  <!-- !Course Section Script -->
+  <script src="../resources/javascript/javascript-fundamentals-part-1.js"></script>
+
+  <!-- !Standard Scripts -->
   <script src="../resources/javascript/app-blog.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
