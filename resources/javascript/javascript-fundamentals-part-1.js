@@ -49,3 +49,68 @@ language = 'Bulgarian'
 console.log(language);
 
 console.log('');
+
+// Lecture 14
+console.log('LECTURE 14');
+
+console.log(2 + 1)
+console.log(3 - 2)
+console.log(4 * 2)
+console.log(6 / 2)
+console.log(2 ** 2)
+console.log(3 % 2)
+
+const now = 2022;
+const ageAndre = now - 1989;
+const ageSammy = now - 1991;
+console.log(ageAndre, ageSammy)
+
+const myText1 = 'I love'
+const myText2 = 'JavaScript'
+console.log(myText1 + ' ' + myText2)
+
+let x = 10 + 20;
+x += 10; // which means x = x + 10
+x -= 5; // which means x = x - 10
+console.log(x)
+
+x++
+console.log(x)
+
+x--
+console.log(x)
+
+let age1 = 18;
+let age2 = 33;
+let age3 = 33;
+
+console.log(age1 > age2);
+console.log(age1 < age2);
+console.log(age2 >= age3);
+console.log(age2 <= age3);
+console.log('');
+
+
+// Lecture 14 - Assignment
+console.log('LECTURE 14 - ASSIGNMENT');
+let halfOfPopulation = population / 2;
+console.log(halfOfPopulation)
+
+console.log(population);
+population++
+console.log(population)
+
+let finland = 6000000;
+console.log(population > finland);
+
+let averagePopulation = 33000000;
+console.log(population < averagePopulation);
+
+// String Concatenation
+let description = country + ' is in ' + continent + ", and it's " + population + ' people speak ' + language;
+console.log(description);
+
+// String template literals
+let description2 = `${country} is in ${continent}, and it's ${population} people speak ${language}` 
+console.log(description2);
+console.log('');
