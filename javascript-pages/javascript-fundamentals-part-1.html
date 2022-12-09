@@ -1239,11 +1239,88 @@
                 Taking decisions &mdash; if and else statements
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // If statement
+                    if (condition) {
+                      console.log(something)
+                    } else if (condition) {
+                      console.log(something else)
+                    } else {
+                      console.log(nothing)
+                    }
+
+                    // Whats known as a control structure
+                    if (condition) {
+                      console.log(something)
+                    } else {
+                      console.log(nothing)
+                    }
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                Above is an example of an if statement, an if statement is used to make decisions. Let's start by making
+                a decision with JavaScript by making a program that let's us know whether or not a person is old enough
+                to get their drivers license and if not, how many years until they are allowed.
               </p>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    let age = 20;
+
+                    if (age >= 18) {
+                      console.log('Is allowed to drive 🚗')
+                    } else {
+                      const yearsLeft = age - 18;
+                      console.log(`Sorry, you have to wait ${yearsLeft} years before to can get your drivers license`)
+                    }
+                  </code>
+                </pre>
+              </div>
+
               <!-- !End of Lecture 18 -->
+            </div>
+
+            <!-- !Lecture 18 Assignment -->
+            <div id="lecture-18-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 18 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    If your country's population is greater that 33 million, log a string like this to the console:
+                    'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22
+                    million below average' (the 22 is the average of 33 minus the country's population)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    After checking the result, change the population temporarily to 13 and then to 130. See the
+                    different results, and set the population back to original
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    if (population > averagePopulation) {
+                      console.log(`${country} population is above average.`)
+                    } else {
+                      console.log(`${country} population is ${averagePopulation - population} below the average population`)
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 18 Assignment -->
             </div>
 
             <!-- !Lecture 19 -->

@@ -172,3 +172,28 @@ let description3 = `${country} is in ${continent}, and it's ${population} people
 console.log(description3)
 
 console.log("");
+
+// Lecture 18
+console.log("LECTURE 18");
+
+let age = 20;
+
+if (age >= 18) {
+  console.log('Is allowed to drive 🚗')
+} else {
+  const yearsLeft = age - 18;
+  console.log(`Sorry, you have to wait ${yearsLeft} years before to can get your drivers license`)
+}
+
+console.log("");
+
+// Lecture 18 - Assignment
+console.log("LECTURE 18 -  ASSIGNMENT");
+
+if (population > averagePopulation) {
+  console.log(`${country} population is above average.`)
+} else {
+  console.log(`${country} population is ${averagePopulation - population} below the average population`)
+}
+
+console.log("");
