@@ -590,7 +590,7 @@
 
               <ol class="lecture-list">
                 <li class="lecture-list--item">
-                  <p class="lecture-list--item-descrition">
+                  <p class="lecture-list--item-description">
                     Declare variables called 'country', 'continent' and 'population' and
                     assign their values according to your own country (population in millions)
                   </p>
@@ -772,7 +772,7 @@
 
               <ol class="lecture-list">
                 <li class="lecture-list--item">
-                  <p class="lecture-list--item-descrition">
+                  <p class="lecture-list--item-description">
                     Declare a variable called 'isIsland' and set its value according to your country. The variable
                     should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
                   </p>
@@ -851,7 +851,7 @@
 
               <ol class="lecture-list">
                 <li class="lecture-list--item">
-                  <p class="lecture-list--item-descrition">
+                  <p class="lecture-list--item-description">
                     Set the value of 'language' to the language spoken where you live (some countries have multiple
                     languages, but just choose one)
                   </p>
@@ -931,9 +931,9 @@
               <div class="code-example">
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
-                    let x = 10 + 5;
+                    let x = 10 + 20;
                     x += 10; // which means x = x + 10
-                    x -= 10; // which means x = x - 10
+                    x -= 10; // which means x = x - 5
 
                     // Incremental
                     x++; // which means x = x + 1
@@ -1002,7 +1002,7 @@
 
               <ol class="lecture-list">
                 <li class="lecture-list--item">
-                  <p class="lecture-list--item-descrition">
+                  <p class="lecture-list--item-description">
                     If your country split in half, and each half would contain half the population, then how many people
                     would live in each half?
                   </p>
@@ -1067,7 +1067,27 @@
               </h3>
 
               <p class="lecture-text">
-                Write here
+                Different operators in JavaScript have higher precedence over others. We can see that here in the <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table"
+                  target="_blank" class="link link--inline">precedence table</a> provided by MDN. On the table we can
+                see the mathematical operators have a higher precedence over the assignment operator. This explains why
+                x had a value of 30, and that is because the mathematical operator had precedence over the assignment
+                operator.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    let x = y = 25 - 10 - 5; // Both equal 10 10
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Certain operators also work from right to left, as in the example above, both x and y will equate to 10.
+                If we break it down we understand that the equation happens first, then the value of that expression is
+                assigned to the variable y which is then assigned to the variable x because it works from right to left.
+                If this was reversed the entire statement and expression would not work.
               </p>
 
               <!-- !End of Lecture 15 -->
@@ -1081,8 +1101,69 @@
               </h3>
 
               <p class="lecture-text">
-                Write here
+                Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula:
+                BMI = mass /height ** 2 = mass / (height * height) (mass in kg and height in meter)
               </p>
+
+              <span class="pre-heading">Your Tasks:</span>
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Store Mark's and John's mass and height in variables
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Calculate both their BMIs using the formula (you can even implement both versions)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI
+                    than John.
+                  </p>
+                </li>
+              </ol>
+
+              <span class="pre-heading">Test Data:</span>
+              <ul class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95m tall.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76m tall.
+                  </p>
+                </li>
+              </ul>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Data 1
+                    /*
+                    const weightMark = 78;
+                    const heightMark = 1.69;
+                    const weightJohn = 92;
+                    const heightJohn = 1.95;
+                    */
+
+                    // Data 2
+                    const weightMark = 95;
+                    const heightMark = 1.88;
+                    const weightJohn = 85;
+                    const heightJohn = 1.76;
+
+                    const bmiMark = weightMark / heightMark ** 2;
+                    const bmiJohn = weightJohn / (heightJohn * heightJohn);
+                    const markHigherBMI = bmiMark > bmiJohn ? "Mark's is higher" : "John's is higher";
+
+                    console.log(`Mark's BMI is ${bmiMark}, John's BMI is ${bmiJohn} and is Mark's BMI higher than John's? : ${markHigherBMI}`);
+                  </code>
+                </pre>
+              </div>
 
               <!-- !End of Lecture 16 -->
             </div>
