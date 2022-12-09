@@ -208,3 +208,26 @@ if (bmiMark > bmiJohn) {
 }
 
 console.log("");
+
+// Coding challenge - 2
+console.log("Coding challenge - 2");
+
+const inputYear = '1991';
+
+console.log(Number(inputYear));
+console.log(String(23), 23);
+
+console.log(Number('Andre')); // will result in NaN
+console.log(typeof NaN)
+
+console.log('5' + 3 + '2')
+
+console.log('5' - 3 - '2')
+
+let n = '1' + 1;
+n -= 1;
+console.log(n)
+
+console.log(2 + 3 + 4 + '5')
+console.log('10' - '4' - '2' - 2 + '5')
+console.log("");
