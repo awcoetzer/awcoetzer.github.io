@@ -209,8 +209,8 @@ if (bmiMark > bmiJohn) {
 
 console.log("");
 
-// Coding challenge - 2
-console.log("Coding challenge - 2");
+// Lecture 20
+console.log("LECTURE 20");
 
 const inputYear = '1991';
 
@@ -230,4 +230,16 @@ console.log(n)
 
 console.log(2 + 3 + 4 + '5')
 console.log('10' - '4' - '2' - 2 + '5')
+
+console.log("");
+
+// Lecture 20 - Assignment
+console.log("LECTURE 20 - ASSIGNMENT");
+
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2);
+
 console.log("");

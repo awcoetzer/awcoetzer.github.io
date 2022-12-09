@@ -1344,7 +1344,8 @@
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-                    Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+                    Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is
+                    higher than John's (23.9)!"
                   </p>
                 </li>
               </ol>
@@ -1372,15 +1373,19 @@
               </h3>
 
               <p class="lecture-text">
-                In programming, converting between data types is something that happens often. Whether it is from a string to number or vice versa. In JavaScript we call this Type conversion and Type coercion, the difference between the 2 being the first is explicit while the second is implicit.
+                In programming, converting between data types is something that happens often. Whether it is from a
+                string to number or vice versa. In JavaScript we call this Type conversion and Type coercion, the
+                difference between the 2 being the first is explicit while the second is implicit.
               </p>
 
               <p class="lecture-text">
-                Type conversion is a manual conversion of a type, while Type coercion is JavaScript automatically converting the type.
+                Type conversion is a manual conversion of a type, while Type coercion is JavaScript automatically
+                converting the type.
               </p>
 
               <p class="lecture-text">
-                There is really only 3 types that can be converted to, that being Number, String and Boolean. When it comes to Boolean, this is what is known as Truthy and Falsy Values, which will see later on.
+                There is really only 3 types that can be converted to, that being Number, String and Boolean. When it
+                comes to Boolean, this is what is known as Truthy and Falsy Values, which will see later on.
               </p>
 
               <div class="code-example">
@@ -1398,7 +1403,9 @@
               </div>
 
               <p class="lecture-text">
-                Above is an example of Type conversion where we manually convert the types using functions. One thing to take note of is the result of NaN, if we look at the typeof NaN, it results in a number, even though it stands for Not a Number.
+                Above is an example of Type conversion where we manually convert the types using functions. One thing to
+                take note of is the result of NaN, if we look at the typeof NaN, it results in a number, even though it
+                stands for Not a Number.
               </p>
 
               <div class="code-example">
@@ -1425,14 +1432,67 @@
               </div>
 
               <p class="lecture-text">
-                With Type coercion, JavaScript automatically converts the type based on some operators. When the expression contains a + JavaScript will convert the type to a string, if its a - it will convert the expression to a number, the same for * and / as those are the only way those operators can work.
+                With Type coercion, JavaScript automatically converts the type based on some operators. When the
+                expression contains a + JavaScript will convert the type to a string, if its a - it will convert the
+                expression to a number, the same for * and / as those are the only way those operators can work.
               </p>
 
               <p class="lecture-text">
-                When understood correctly, coercion will allows us to use a lot less code, all we need to do is trust that JavaScript will convert the type correctly.
+                When understood correctly, coercion will allows us to use a lot less code, all we need to do is trust
+                that JavaScript will convert the type correctly.
               </p>
 
               <!-- !End of Lecture 20 -->
+            </div>
+
+            <!-- !Lecture 20 Assignment -->
+            <div id="lecture-20-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 20 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Predict the result of these 5 operations without executing them:
+                  </p>
+                  <p class="lecture-list--item-description">
+                    '9' - '5';
+                  </p>
+                  <p class="lecture-list--item-description">
+                    '19' - '13' + '17';
+                  </p>
+                  <p class="lecture-list--item-description">
+                    '19' - '13' + 17;
+                  </p>
+                  <p class="lecture-list--item-description">
+                    '123' < 57;
+                  </p>
+                  <p class="lecture-list--item-description">
+                    5 + 6 + '4' + 9 - 4 - 2;
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Execute the operations to check if you were right
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    console.log('9' - '5'); // 4
+                    console.log('19' - '13' + '17'); // 617
+                    console.log('19' - '13' + 17); // 23
+                    console.log('123' < 57); // false
+                    console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 20 Assignment -->
             </div>
 
             <!-- !Lecture 21 -->
