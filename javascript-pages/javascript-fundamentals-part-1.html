@@ -1175,11 +1175,61 @@
                 Strings and template literals
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const myName = 'Andre';
+                    
+                    // String concatenation
+                    console.log('Hello, my name is ' + myName);
+
+                    // String template literals
+                    console.log(`Hello, my name is ${myName}`)
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                String template literals allows you to not do string concatenation anymore. You can now inject the
+                variable directly into your string. You can imagine this is very useful in creating cleaner and more
+                understanding code.
+              </p>
+
+              <p class="lecture-text">
+                A template literal or string template literal is different to the quotation marks as it uses the back
+                tick character. A lot of developers prefer this over the quotation marks as they don't need to worry
+                about which to use. Though there could be performance issues if you just use template literals.
               </p>
 
               <!-- !End of Lecture 17 -->
+            </div>
+
+            <!-- !Lecture 17 Assignment -->
+            <div id="lecture-17-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 17 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Recreate the 'description' variable from the last assignment, this time using the template literal
+                    syntax.
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // String template literals
+                    let description3 = `${country} is in ${continent}, and it's ${population} people speak ${language}`;
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 17 Assignment -->
             </div>
 
             <!-- !Lecture 18 -->

@@ -150,3 +150,25 @@ const markHigherBMI = bmiMark > bmiJohn ? "Mark's is higher" : "John's is higher
 console.log(`Mark's BMI is ${bmiMark}, John's BMI is ${bmiJohn} and is Mark's BMI higher than John's? : ${markHigherBMI}`);
 
 console.log("");
+
+// Lecture 17
+console.log("LECTURE 17");
+
+const myName = 'Andre';
+
+// String concatenation
+console.log('Hello, my name is ' + myName);
+
+// String template literals
+console.log(`Hello, my name is ${myName}`)
+console.log("");
+
+
+// Lecture 17 - Assignment
+console.log("LECTURE 17 - ASSIGNMENT");
+// String template literals
+let description3 = `${country} is in ${continent}, and it's ${population} people speak ${language}`;
+
+console.log(description3)
+
+console.log("");
