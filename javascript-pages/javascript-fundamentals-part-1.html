@@ -1731,13 +1731,35 @@
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
                     // Logical operators
+                    something && something // The AND Logical Operator
+                    something || something // The OR Logical Operator
+                    !something // The NOT Logical Operator
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                Write here
+                This is how the syntax looks, the theory behind it falls under boolean logic. Though, we can build a
+                small program that checks to see if a person is able to drive, and if not lets them know someone else
+                should drive.
               </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Logical operators
+                    const hasLicense = true;
+                    const hasGoodVision = true;
+                    const isDrunk = false;
+                    
+                    if (hasLicense && hasGoodVision && !isDrunk) {
+                      console.log('Is able to drive, YAY!');
+                    } else {
+                      console.log('Someone else should drive..');
+                    };
+                  </code>
+                </pre>
+              </div>
 
               <!-- !End of Lecture 24 -->
             </div>
@@ -1745,6 +1767,212 @@
             <!-- !Lecture 24 Assignment -->
             <div id="lecture-24-a" class="lecture-text-box">
               <span class="pre-heading"> Lecture 24 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Comment out the previous code so the prompt doesn't get in the way.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks
+                    english, has less than 50 million people and is not an island.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Write an if statement to help Sarah figure out if your country is right for her. You will need to
+                    write a condition that accounts for all of Sarah's criteria. Take your time with this, and check
+                    part of the solution if necessary.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log
+                    'Portugal does not meet your criteria :('
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Probably your country does not meet all the criteria. So go back and temporarily change some
+                    variables in order to make the condition true (unless you live in Canada :D)
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const maxPopulation = 50000000;
+
+                    if (language === 'english' && population < maxPopulation && !isIsland) {
+                      console.log(`You should live in ${country}`);
+                    } else {
+                      console.log(`Sorry, ${country} does not meet your criteria!`);
+                    };
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 24 Assignment -->
+            </div>
+
+            <!-- !Lecture 25 -->
+            <div id="lecture-25" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 25 </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Coding challenge &mdash; 3
+              </h3>
+
+              <p class="lecture-text">
+                There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner
+                with the highest average score wins a trophy!
+              </p>
+
+              <span class="pre-heading">Your Tasks:</span>
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Calculate the average score for each team, using the test data below.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Compare the team's average scores to determine the winner of the competition, and print it to the
+                    console. Don't forget that there can be a draw, so test for that as well (draw means they have the
+                    same average score)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it
+                    has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use
+                    a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same
+                    score and both have a score greater or equal 100 points.Otherwise, no team wins the trophy
+                  </p>
+                </li>
+              </ol>
+
+              <span class="pre-heading">Test Data:</span>
+              <ul class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+                  </p>
+                </li>
+              </ul>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 25 -->
+            </div>
+
+            <!-- !Lecture 26 -->
+            <div id="lecture-26" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 26 </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                The switch statement
+              </h3>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const day = 'tuesday';
+
+                    switch (day) {
+                      case 'monday':
+                        console.log('mow the lawn')
+                      break;
+                      case 'tuesday' :
+                        console.log('clean the pool')
+                      break;
+                      case 'wednesday':
+                      case 'thursday':
+                        console.log('singing lessons')
+                      break;
+                      case 'friday':
+                        console.log('pizza night')
+                      break;
+                      case 'saturday':
+                      case 'sunday':
+                        console.log('relax')
+                      break;
+                    default:
+                      console.log("Ok, that's not in the list")
+                    };
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                A switch statement is an alternative to writing an if statement, just with less repeated code. It's
+                useful if you wish compare one value to multiple different options.
+              </p>
+
+              <p class="lecture-text">
+                Taking a look at the syntax, most is self explanatory. Some key elements to note is that you can combine
+                cases together and the default keyword is like the else statement.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const day = 'tuesday';
+
+                    if (day === 'monday') {
+                      console.log('mow the lawn');
+                    } else if (day === 'tuesday') {
+                      console.log('clean the pool')
+                    } else if (day === 'wednesday' || day === 'thursday') {
+                      console.log('singing lessons')
+                    } else if (day === 'friday') {
+                      console.log('pizza night')
+                    } else if (day === 'saturday' || day === 'sunday') {
+                      console.log('relax')
+                    } else {
+                      console.log("Ok, that's not in the list")
+                    };
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                The same as the switch statement just in the form of an if statement, we can clearly see the repeated
+                code. However, that being said the switch statement is not really used anymore and people prefer to use
+                the if statement.
+              </p>
+
+              <!-- !End of Lecture 26 -->
+            </div>
+
+            <!-- !Lecture 26 Assignment -->
+            <div id="lecture-26-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 26 &mdash; Assignment </span>
               <h3 class="heading-tertiary heading-tertiary--lecture">
                 Practice Assignment
               </h3>
@@ -1765,40 +1993,12 @@
               <div class="code-example">
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
-                        
+
                   </code>
                 </pre>
               </div>
 
-              <!-- !End of Lecture 24 Assignment -->
-            </div>
-
-            <!-- !Lecture 25 -->
-            <div id="lecture-25" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 25 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge &mdash; 3
-              </h3>
-
-              <p class="lecture-text">
-                Write here
-              </p>
-
-              <!-- !End of Lecture 25 -->
-            </div>
-
-            <!-- !Lecture 26 -->
-            <div id="lecture-26" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 26 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                The switch statement
-              </h3>
-
-              <p class="lecture-text">
-                Write here
-              </p>
-
-              <!-- !End of Lecture 26 -->
+              <!-- !End of Lecture 26 Assignment -->
             </div>
 
             <!-- !Lecture 27 -->
@@ -1808,8 +2008,39 @@
                 Statements and expressions
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    3 + 4 // Is known as an expression
+                    '1991' // Also an expression
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                When talking about statements and expressions, an expression is essentially something that returns a
+                value, whether it be a math equation like 1 + 1 or a number, string. Its a piece of code that produces a
+                value.
+              </p>
+
+              <p class="lecture-text">
+                A statement is a larger piece of code that does not produce a value, but a sequence of actions, such as
+                an if statement.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // String literal
+                    console.log(`A string template literal ${expression}`)
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                The reason its important to understand the difference is because JavaScript requires us to know where to
+                place them. A good example of this would be the string template literals. It expects something that can
+                produce a value, however you cant place a statement within in.
               </p>
 
               <!-- !End of Lecture 27 -->
@@ -1822,23 +2053,117 @@
                 The conditional ternary operator
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Ternary operator
+                    const someAge = 23;
+                    someAge >= 18 ? 'Drink Wine' : 'Drink juice box';
+
+                    console.log(someAge);
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                The Ternary operator is an expression and not a statement. It only accepts one line of code and returns
+                a value.
               </p>
 
               <!-- !End of Lecture 28 -->
+            </div>
+
+            <!-- !Lecture 28 Assignment -->
+            <div id="lecture-28-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 28 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                <code class="lecture-code language-javascript">
+
+                </code>
+              </pre>
+              </div>
+
+              <!-- !End of Lecture 28 Assignment -->
             </div>
 
             <!-- !Lecture 29 -->
             <div id="lecture-29" class="lecture-text-box">
               <span class="pre-heading"> Lecture 29 </span>
               <h3 class="heading-tertiary heading-tertiary--lecture">
-                Code challenge &mdash; 4
+                Coding challenge &mdash; 4
               </h3>
 
               <p class="lecture-text">
-                Write here
+                Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his
+                country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the
+                tip is 20%.
               </p>
+
+              <span class="pre-heading">Your Tasks:</span>
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not
+                    allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Print a string to the console containing the bill value, the tip, and the final value 
+                    (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
+                    316.25”
+                  </p>
+                </li>
+              </ol>
+
+              <span class="pre-heading">Test Data:</span>
+              <ul class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Data 1: Test for bill values 275, 40 and 430
+                  </p>
+                </li>
+              </ul>
+
+              <span class="pre-heading">hints:</span>
+              <ul class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+                  </p>
+                </li>
+              </ul>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+
+                  </code>
+                </pre>
+              </div>
 
               <!-- !End of Lecture 29 -->
             </div>

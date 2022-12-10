@@ -296,3 +296,104 @@ console.log("LECTURE 22 -  ASSIGNMENT");
 // }
 
 console.log("");
+
+// Lecture 24
+console.log("LECTURE 24");
+
+const hasLicense = true;
+const hasGoodVision = true;
+const isDrunk = false;
+
+if (hasLicense && hasGoodVision && !isDrunk) {
+  console.log('Is able to drive, YAY!');
+} else {
+  console.log('Someone else should drive..');
+};
+
+console.log("");
+
+// Lecture 24 - Assignment
+console.log("LECTURE 24 - ASSIGNMENT");
+
+const maxPopulation = 50000000;
+
+if (language === 'english' && population < maxPopulation && !isIsland) {
+  console.log(`You should live in ${country}`);
+} else {
+  console.log(`Sorry, ${country} does not meet your criteria!`);
+};
+
+console.log("");
+
+// Coding Challenge - 3
+console.log("CODING CHALLENGE - 3");
+
+
+console.log("");
+
+// Lecture 26
+console.log("LECTURE 26");
+
+const day = 'tuesday';
+
+switch (day) {
+  case 'monday':
+    console.log('mow the lawn')
+  break;
+  case 'tuesday' :
+    console.log('clean the pool')
+  break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('singing lessons')
+  break;
+  case 'friday':
+    console.log('pizza night')
+  break;
+  case 'saturday':
+  case 'sunday':
+    console.log('relax')
+  break;
+  default:
+    console.log("Ok, that's not in the list")
+};
+
+// Lecture 26 - Challenge
+console.log("LECTURE 26 - Challenge");
+
+if (day === 'monday') {
+  console.log('mow the lawn');
+} else if (day === 'tuesday') {
+  console.log('clean the pool')
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('singing lessons')
+} else if (day === 'friday') {
+  console.log('pizza night')
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('relax')
+} else {
+  console.log("Ok, that's not in the list")
+};
+
+console.log("");
+
+// Lecture 26 - Assignment
+console.log("LECTURE 26 - ASSIGNMENT");
+
+console.log("");
+
+// Lecture 28
+console.log("LECTURE 28");
+
+console.log("");
+
+// Lecture 28 - Assignment
+console.log("LECTURE 28 - ASSIGNMENT");
+
+console.log("");
+
+// Coding Challenge - 4
+console.log("CODING CHALLENGE - 4");
+
+
+console.log("");
