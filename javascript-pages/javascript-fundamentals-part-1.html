@@ -1467,11 +1467,10 @@
                     '19' - '13' + 17;
                   </p>
                   <p class="lecture-list--item-description">
-                    '123' < 57;
-                  </p>
-                  <p class="lecture-list--item-description">
-                    5 + 6 + '4' + 9 - 4 - 2;
-                  </p>
+                    '123' < 57; </p>
+                      <p class="lecture-list--item-description">
+                        5 + 6 + '4' + 9 - 4 - 2;
+                      </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
@@ -1502,11 +1501,103 @@
                 Truthy and falsy values
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Falsy values
+                    console.log( 0, '', undefined, null, NaN, false);
+
+                    console.log(Boolean(0));
+                    console.log(Boolean(' '));
+                    console.log(Boolean(undefined));
+                    console.log(Boolean(null));
+                    console.log(Boolean(NaN));
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                In JavaScript there is only 5 so called falsy values, the 6th being false of course, everything else is
+                truthy. The understanding of falsy values is that its not false unless converted to a boolean.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Falsy values
+                    console.log(Boolean(''));
+
+                    // Truthy values
+                    console.log(Boolean('Am i falsy?'));
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                A truthy value is any value that is not falsy, an example of this is string that is not empty. We can
+                and have seen whether something is truthy or falsy by using the boolean function. However we never
+                really use this function as these truthy or falsy values are implicit and happens with coercion.
+              </p>
+
+              <p class="lecture-text">
+                The question is, when does JavaScript do type coercion towards booleans, and btw we spoke before about
+                type conversion having 3 types it converts to, String, Number and Boolean. The function above Boolean()
+                is the manual type conversion to booleans.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    let hasMoney = 0;
+
+                    if (hasMoney) {
+                     console.log('Don't spend it all!');
+                    }  else {
+                     console.log('Get a job!') // This will be the outcome
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                To answer the question, JavaScript does coercion in 2 scenarios, when using a logic operator, or in a
+                logical context like the statement above. The above statement will execute the else block, but why? We
+                haven't specified what is and what is not true, though through Truthy and Falsy JavaScript already knows
+                what is true and what is false.
               </p>
 
               <!-- !End of Lecture 21 -->
+            </div>
+
+            <!-- !Lecture 21 Assignment -->
+            <div id="lecture-21-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 21 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 21 Assignment -->
             </div>
 
             <!-- !Lecture 22 -->

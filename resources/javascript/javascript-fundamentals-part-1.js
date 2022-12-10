@@ -243,3 +243,30 @@ console.log('123' < 57);
 console.log(5 + 6 + '4' + 9 - 4 - 2);
 
 console.log("");
+
+// Lecture 21
+console.log("LECTURE 21");
+
+console.log( 0, ' ', undefined, null, NaN, false);
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+ // Falsy values
+ console.log(Boolean(''));
+
+ // Truthy values
+ console.log(Boolean('Am i falsy?'));
+
+ let hasMoney = 0;
+
+ if (hasMoney) {
+  console.log("Don't spend it all!");
+ }  else {
+  console.log('Get a job!')
+ }
+
+console.log("");
