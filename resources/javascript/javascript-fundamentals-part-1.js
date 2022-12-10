@@ -270,3 +270,29 @@ console.log(Boolean(NaN));
  }
 
 console.log("");
+
+// Lecture 22
+console.log("LECTURE 22");
+
+console.log('1' === 1);
+console.log(1 === 1);
+
+console.log('1' == 1);
+console.log(1 == 1);
+
+console.log("");
+
+// Lecture 22 - Assignment
+console.log("LECTURE 22 -  ASSIGNMENT");
+
+// const numNeighbours = prompt('How many neighbour countries does your country have?')
+
+// if (Number(numNeighbours) === 1) {
+//   console.log('Only 1 border');
+// } else if (numNeighbours > 1) {
+//   console.log('More than 1 border');
+// } else {
+//   console.log('No border');
+// }
+
+console.log("");

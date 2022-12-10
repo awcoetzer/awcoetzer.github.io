@@ -1569,37 +1569,6 @@
               <!-- !End of Lecture 21 -->
             </div>
 
-            <!-- !Lecture 21 Assignment -->
-            <div id="lecture-21-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 21 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box">
-                  <code class="lecture-code language-javascript">
-                    
-                  </code>
-                </pre>
-              </div>
-
-              <!-- !End of Lecture 21 Assignment -->
-            </div>
-
             <!-- !Lecture 22 -->
             <div id="lecture-22" class="lecture-text-box">
               <span class="pre-heading"> Lecture 22 </span>
@@ -1607,11 +1576,122 @@
                 Equality Operators == vs. ====
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Equality operators
+                    === // Strict equality operator
+                    == // Loose equality operator
+                    
+                    // Different operators
+                    !== // Strict not equality operator
+                    != // Loose not equality operator
+                  </code>
+                </pre>
+              </div>
+
               <p class="lecture-text">
-                Write here
+                Equality operators are part of the comparison operators and provide a boolean value. The only difference
+                between each equality operator is Strict vs Loose.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    // Strict
+                    console.log('1' === 1)
+                    console.log(1 === 1)
+                    
+                    // Loose
+                    console.log('1' == 1);
+                    console.log(1 == 1);
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Looking at the example above we see that with strict, no coercion takes places, whereas with loose
+                JavaScript does a type coercion and matches something called the unicode values together.
+              </p>
+
+              <p class="lecture-text">
+                For best practice we should also try to use the strict equality, as when using loose can result in
+                unwanted bugs.
               </p>
 
               <!-- !End of Lecture 22 -->
+            </div>
+
+            <!-- !Lecture 22 Assignment -->
+            <div id="lecture-22-a" class="lecture-text-box">
+              <span class="pre-heading"> Lecture 22 &mdash; Assignment </span>
+              <h3 class="heading-tertiary heading-tertiary--lecture">
+                Practice Assignment
+              </h3>
+
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Declare a variable 'numNeighbours' based on a prompt input like this: prompt('How many neighbour
+                    countries does your country have?');
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Use an else-if block to log 'More than 1 border' in case 'numNeighbours' is greater than 1
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Use an else block to log 'No borders' (this block will be executed when 'numNeighbours' is 0 or any
+                    other value)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Test the code with different values of 'numNeighbours', including 1 and 0.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Change == to ===, and test the code again, with the same values of 'numNeighbours'. Notice what
+                    happens when there is exactly 1 border! Why is this happening?
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Finally, convert 'numNeighbours' to a number, and watch what happens now when you input 1
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Reflect on why we should use the === operator and type conversion in this situation
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const numNeighbours = prompt('How many neighbour countries does your country have?')
+
+                    if (Number(numNeighbours) === 1) {
+                      console.log('Only 1 border');
+                    } else if (numNeighbours > 1) {
+                      console.log('More than 1 border');
+                    } else {
+                      console.log('No border');
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <!-- !End of Lecture 22 Assignment -->
             </div>
 
             <!-- !Lecture 23 -->
