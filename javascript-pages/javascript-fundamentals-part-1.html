@@ -1983,11 +1983,6 @@
 
                   </p>
                 </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
               </ol>
 
               <div class="code-example">
@@ -2057,17 +2052,15 @@
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
                     // Ternary operator
-                    const someAge = 23;
-                    someAge >= 18 ? 'Drink Wine' : 'Drink juice box';
-
-                    console.log(someAge);
+                    const someAge = 17;
+                    someAge >= 18 ? console.log('Drink Wine') : console.log('Drink juice box');
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
                 The Ternary operator is an expression and not a statement. It only accepts one line of code and returns
-                a value.
+                a value. THis means that it can be used within a string template literal.
               </p>
 
               <!-- !End of Lecture 28 -->
@@ -2083,22 +2076,26 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    If your country's population is greater than 33 million, use the ternary operator to log a string
+                    like this to the console: 'Portugal's population is above average'. Otherwise, simply log
+                    'Portugal's population is below average'. Notice how only one word changes between these two
+                    sentences!
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    After checking the result, change the population temporarily to 13 and then to 130. See the
+                    different results, and set the population back to original
                   </p>
                 </li>
               </ol>
 
               <div class="code-example">
                 <pre class="lecture-code-box">
-                <code class="lecture-code language-javascript">
-
-                </code>
-              </pre>
+                  <code class="lecture-code language-javascript">
+                    population >= averagePopulation ? console.log(`${country} is above the average population`) : console.log(`${country} is below the average population`);
+                  </code>
+                </pre>
               </div>
 
               <!-- !End of Lecture 28 Assignment -->
@@ -2122,13 +2119,14 @@
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
                     Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not
-                    allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+                    allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else
+                    statement, and then try to convert it to a ternary operator!)
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-                    Print a string to the console containing the bill value, the tip, and the final value 
-                    (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
+                    Print a string to the console containing the bill value, the tip, and the final value
+                    (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
                     316.25”
                   </p>
                 </li>
@@ -2152,8 +2150,7 @@
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-                    Value X is between 50 and 300, if it's >= 50 && <= 300 😉
-                  </p>
+                    Value X is between 50 and 300, if it's >= 50 && <= 300 😉 </p>
                 </li>
               </ul>
 

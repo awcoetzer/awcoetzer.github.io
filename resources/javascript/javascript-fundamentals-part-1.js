@@ -384,6 +384,8 @@ console.log("");
 
 // Lecture 28
 console.log("LECTURE 28");
+const someAge = 17;
+someAge >= 18 ? console.log('Drink Wine') : console.log('Drink juice box');
 
 console.log("");
 
@@ -395,5 +397,6 @@ console.log("");
 // Coding Challenge - 4
 console.log("CODING CHALLENGE - 4");
 
+population >= averagePopulation ? console.log(`${country} is above the average population`) : console.log(`${country} is below the average population`);
 
 console.log("");
