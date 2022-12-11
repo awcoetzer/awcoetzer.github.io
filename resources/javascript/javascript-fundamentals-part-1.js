@@ -453,5 +453,3 @@ console.log(tip)
 console.log(`The bill amount was ${bill}, the tip will amount to ${tip} and the total is ${bill + tip}`);
 
 console.log("");
-
-
