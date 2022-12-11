@@ -1884,7 +1884,26 @@
               <div class="code-example">
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
+                    // const dolphinsAverage = (96 + 108 + 89) / 3;
+                    // const koalasAverage = (88 + 91 + 110) / 3;
 
+                    // const dolphinsAverage = (97 + 112 + 101) / 3;
+                    // const koalasAverage = (109 + 95 + 123) / 3;
+
+                    const dolphinsAverage = (97 + 112 + 101) / 3;
+                    const koalasAverage = (109 + 95 + 106) / 3;
+
+                    console.log(dolphinsAverage, koalasAverage)
+
+                    if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+                      console.log('Dolphins have won')
+                    } else if (koalasAverage > dolphinsAverage  && koalasAverage >= 100) {
+                      console.log("Koalas have won")
+                    } else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+                      console.log("It's a draw")
+                    } else {
+                      console.log('None have won')
+                    };
                   </code>
                 </pre>
               </div>
@@ -1907,21 +1926,21 @@
                     switch (day) {
                       case 'monday':
                         console.log('mow the lawn')
-                      break;
+                        break;
                       case 'tuesday' :
                         console.log('clean the pool')
-                      break;
+                        break;
                       case 'wednesday':
                       case 'thursday':
                         console.log('singing lessons')
-                      break;
+                        break;
                       case 'friday':
                         console.log('pizza night')
-                      break;
+                        break;
                       case 'saturday':
                       case 'sunday':
                         console.log('relax')
-                      break;
+                        break;
                     default:
                       console.log("Ok, that's not in the list")
                     };
@@ -1980,7 +1999,25 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    Use a switch statement to log the following string for the given 'language':
+                  </p>
+                  <p class="lecture-list--item-description">
+                    chinese or mandarin: 'MOST number of native speakers!'
+                  </p>
+                  <p class="lecture-list--item-description">
+                    spanish: '2nd place in number of native speakers'
+                  </p>
+                  <p class="lecture-list--item-description">
+                    english: '3rd place'
+                  </p>
+                  <p class="lecture-list--item-description">
+                    hindi: 'Number 4'
+                  </p>
+                  <p class="lecture-list--item-description">
+                    arabic: '5th most spoken language'
+                  </p>
+                  <p class="lecture-list--item-description">
+                    for all other simply log 'Great language too :D'
                   </p>
                 </li>
               </ol>
@@ -1988,7 +2025,23 @@
               <div class="code-example">
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
-
+                    switch (language) {
+                      case 'chinese':
+                      case 'mandarin':
+                        console.log('MOST number of native speakers');
+                        break;
+                      case 'spanish':
+                        console.log('2nd place in number of native speakers');
+                        break;
+                      case 'english':
+                        console.log('3rd place')
+                        break;
+                      case 'arabic':
+                        console.log('5th most spoken language');
+                        break;
+                      default:
+                        console.log('Great language too');
+                    }
                   </code>
                 </pre>
               </div>
