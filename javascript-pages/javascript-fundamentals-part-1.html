@@ -2210,7 +2210,11 @@
               <div class="code-example">
                 <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
+                    const bill = 430;
+                    const tip = bill >= 50 && bill <= 300 ? (bill * 15) / 100 : (bill * 20) / 100;
 
+                    console.log(tip)
+                    console.log(`The bill amount was ${bill}, the tip will amount to ${tip} and the total is ${bill + tip}`);
                   </code>
                 </pre>
               </div>
@@ -2226,7 +2230,7 @@
               </h3>
 
               <p class="lecture-text">
-                Write here
+                Not much to take notes on but just a deeper dive into the history of JavaScript/ ECMA and JavaSCript Next which is considered the modern JavaScript. Goes on to mention about how every year ECMA will release a new or update version of JavaScript and how the course will adapt to adding new changes into the course.
               </p>
 
               <!-- !End of Lecture 30 -->

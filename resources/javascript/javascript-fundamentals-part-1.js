@@ -446,4 +446,12 @@ console.log("");
 // Coding Challenge - 4
 console.log("🟣 CODING CHALLENGE - 4");
 
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? (bill * 15) / 100 : (bill * 20) / 100;
+
+console.log(tip)
+console.log(`The bill amount was ${bill}, the tip will amount to ${tip} and the total is ${bill + tip}`);
+
 console.log("");
+
+
