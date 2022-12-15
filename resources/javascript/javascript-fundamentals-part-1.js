@@ -1,10 +1,10 @@
 // Lecture 9
-console.log("🟡 LECTURE 9");
+console.log("🦞 LECTURE 9");
 console.log("👋 This is how to log to the console!");
 console.log("");
 
 // Lecture 10
-console.log("🟡 LECTURE 10");
+console.log("🦞 LECTURE 10");
 console.log("Andre");
 
 let firstName = "Andre";
@@ -12,7 +12,7 @@ console.log(firstName);
 console.log("");
 
 // Lecture 10 - Assignment
-console.log("🟢 LECTURE 10 - ASSIGNMENT");
+console.log("🦀 LECTURE 10 - ASSIGNMENT");
 const country = "Bulgaria";
 const continent = "Europe";
 let population = 6899000;
@@ -21,7 +21,7 @@ console.log(`${country}, ${continent}, ${population}`);
 console.log("");
 
 // Lecture 11
-console.log("🟡 LECTURE 11");
+console.log("🦞 LECTURE 11");
 let lastName;
 
 console.log(lastName);
@@ -35,7 +35,7 @@ console.log(javascript);
 console.log("");
 
 // Lecture 12 - Assignment
-console.log("🟢 LECTURE 12 -  ASSIGNMENT");
+console.log("🦀 LECTURE 12 -  ASSIGNMENT");
 const isIsland = false;
 let language;
 
@@ -48,7 +48,7 @@ console.log(
 console.log("");
 
 // Lecture 13 - Assignment
-console.log("🟢 LECTURE 13 -  ASSIGNMENT");
+console.log("🦀 LECTURE 13 -  ASSIGNMENT");
 language = "Bulgarian";
 
 console.log(language);
@@ -56,7 +56,7 @@ console.log(language);
 console.log("");
 
 // Lecture 14
-console.log("🟡 LECTURE 14");
+console.log("🦞 LECTURE 14");
 
 console.log(2 + 1);
 console.log(3 - 2);
@@ -96,7 +96,7 @@ console.log(age2 <= age3);
 console.log("");
 
 // Lecture 14 - Assignment
-console.log("🟢 LECTURE 14 - ASSIGNMENT");
+console.log("🦀 LECTURE 14 - ASSIGNMENT");
 let halfOfPopulation = population / 2;
 console.log(halfOfPopulation);
 
@@ -127,7 +127,7 @@ console.log(description2);
 console.log("");
 
 // Coding Challenge - 1
-console.log("🟣 CODING CHALLENGE - 1");
+console.log("🦑 CODING CHALLENGE - 1");
 
 // Data 1
 /*
@@ -155,7 +155,7 @@ console.log(
 console.log("");
 
 // Lecture 17
-console.log("🟡 LECTURE 17");
+console.log("🦞 LECTURE 17");
 
 const myName = "Andre";
 
@@ -167,7 +167,7 @@ console.log(`Hello, my name is ${myName}`);
 console.log("");
 
 // Lecture 17 - Assignment
-console.log("🟢 LECTURE 17 - ASSIGNMENT");
+console.log("🦀 LECTURE 17 - ASSIGNMENT");
 // String template literals
 let description3 = `${country} is in ${continent}, and it's ${population} people speak ${language}`;
 
@@ -176,7 +176,7 @@ console.log(description3);
 console.log("");
 
 // Lecture 18
-console.log("🟡 LECTURE 18");
+console.log("🦞 LECTURE 18");
 
 let age = 20;
 
@@ -192,7 +192,7 @@ if (age >= 18) {
 console.log("");
 
 // Lecture 18 - Assignment
-console.log("🟢 LECTURE 18 -  ASSIGNMENT");
+console.log("🦀 LECTURE 18 -  ASSIGNMENT");
 
 if (population > averagePopulation) {
   console.log(`${country} population is above average.`);
@@ -207,7 +207,7 @@ if (population > averagePopulation) {
 console.log("");
 
 // Coding challenge - 2
-console.log("🟣 Coding challenge - 2");
+console.log("🦑 Coding challenge - 2");
 
 if (bmiMark > bmiJohn) {
   console.log(`Mark's BMI(${bmiMark}) is higher than John's BMI(${bmiJohn})`);
@@ -218,7 +218,7 @@ if (bmiMark > bmiJohn) {
 console.log("");
 
 // Lecture 20
-console.log("🟡 LECTURE 20");
+console.log("🦞 LECTURE 20");
 
 const inputYear = "1991";
 
@@ -242,7 +242,7 @@ console.log("10" - "4" - "2" - 2 + "5");
 console.log("");
 
 // Lecture 20 - Assignment
-console.log("🟢 LECTURE 20 - ASSIGNMENT");
+console.log("🦀 LECTURE 20 - ASSIGNMENT");
 
 console.log("9" - "5");
 console.log("19" - "13" + "17");
@@ -253,7 +253,7 @@ console.log(5 + 6 + "4" + 9 - 4 - 2);
 console.log("");
 
 // Lecture 21
-console.log("🟡 LECTURE 21");
+console.log("🦞 LECTURE 21");
 
 console.log(0, " ", undefined, null, NaN, false);
 
@@ -280,7 +280,7 @@ if (hasMoney) {
 console.log("");
 
 // Lecture 22
-console.log("🟡 LECTURE 22");
+console.log("🦞 LECTURE 22");
 
 console.log("1" === 1);
 console.log(1 === 1);
@@ -291,7 +291,7 @@ console.log(1 == 1);
 console.log("");
 
 // Lecture 22 - Assignment
-console.log("🟢 LECTURE 22 -  ASSIGNMENT");
+console.log("🦀 LECTURE 22 -  ASSIGNMENT");
 
 // const numNeighbours = prompt('How many neighbour countries does your country have?')
 
@@ -306,7 +306,7 @@ console.log("🟢 LECTURE 22 -  ASSIGNMENT");
 console.log("");
 
 // Lecture 24
-console.log("🟡 LECTURE 24");
+console.log("🦞 LECTURE 24");
 
 const hasLicense = true;
 const hasGoodVision = true;
@@ -321,7 +321,7 @@ if (hasLicense && hasGoodVision && !isDrunk) {
 console.log("");
 
 // Lecture 24 - Assignment
-console.log("🟢 LECTURE 24 - ASSIGNMENT");
+console.log("🦀 LECTURE 24 - ASSIGNMENT");
 
 const maxPopulation = 50000000;
 
@@ -334,7 +334,7 @@ if (language === "english" && population < maxPopulation && !isIsland) {
 console.log("");
 
 // Coding Challenge - 3
-console.log("🟣 CODING CHALLENGE - 3");
+console.log("🦑 CODING CHALLENGE - 3");
 
 // const dolphinsAverage = (96 + 108 + 89) / 3;
 // const koalasAverage = (88 + 91 + 110) / 3;
@@ -360,7 +360,7 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 console.log("");
 
 // Lecture 26
-console.log("🟡 LECTURE 26");
+console.log("🦞 LECTURE 26");
 
 const day = "tuesday";
 
@@ -387,7 +387,7 @@ switch (day) {
 }
 
 // Lecture 26 - Challenge
-console.log("🔴 LECTURE 26 - Challenge");
+console.log("🐟 LECTURE 26 - Challenge");
 
 if (day === "monday") {
   console.log("mow the lawn");
@@ -406,7 +406,7 @@ if (day === "monday") {
 console.log("");
 
 // Lecture 26 - Assignment
-console.log("🟢 LECTURE 26 - ASSIGNMENT");
+console.log("🦀 LECTURE 26 - ASSIGNMENT");
 
 switch (language) {
   case "chinese":
@@ -429,14 +429,14 @@ switch (language) {
 console.log("");
 
 // Lecture 28
-console.log("🟡 LECTURE 28");
+console.log("🦞 LECTURE 28");
 const someAge = 17;
 someAge >= 18 ? console.log("Drink Wine") : console.log("Drink juice box");
 
 console.log("");
 
 // Lecture 28 - Assignment
-console.log("🟢 LECTURE 28 - ASSIGNMENT");
+console.log("🦀 LECTURE 28 - ASSIGNMENT");
 population >= averagePopulation
   ? console.log(`${country} is above the average population`)
   : console.log(`${country} is below the average population`);
@@ -444,7 +444,7 @@ population >= averagePopulation
 console.log("");
 
 // Coding Challenge - 4
-console.log("🟣 CODING CHALLENGE - 4");
+console.log("🦑 CODING CHALLENGE - 4");
 
 const bill = 430;
 const tip = bill >= 50 && bill <= 300 ? (bill * 15) / 100 : (bill * 20) / 100;
