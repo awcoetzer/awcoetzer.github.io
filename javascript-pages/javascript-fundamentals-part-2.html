@@ -218,11 +218,14 @@
               </div>
 
               <p class="lecture-text">
-                Activating strict mode allows writing more secure code, it will become a lot harder to make errors while writing the code. Activating strict mode should always be the first line, if anything is before that apart from comments, strict mode will not work.
+                Activating strict mode allows writing more secure code, it will become a lot harder to make errors while
+                writing the code. Activating strict mode should always be the first line, if anything is before that
+                apart from comments, strict mode will not work.
               </p>
 
               <p class="lecture-text">
-                Strict mode displays in your console possible errors such as variables that haven't been assigned, as well as possible use of reserved keywords within JavaScript. Always use strict mode.
+                Strict mode displays in your console possible errors such as variables that haven't been assigned, as
+                well as possible use of reserved keywords within JavaScript. Always use strict mode.
               </p>
 
               <!-- !End of Lecture 32 -->
@@ -236,19 +239,64 @@
               </h3>
 
               <p class="lecture-text">
-                Text here
+                A function is a piece of code we can reuse over and over again.  In this sense, functions helps us keep
+                our code DRY, which is an acronym for, Don't Repeat Yourself. Functions act much like a variable,
+                storing lines of code inside. 
               </p>
 
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // Function
+                    function logger() {
+                      console.log("Hello, my name is Andre");
+                    }
+                    
+                    logger();
+                    logger();
+                    logger();
+                    
+                    const test = logger();
+                    console.log(typeof test)
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                The area inside the function where the code is written is known as the function body. To invoke or use
+                the function, you simple call, run or invoke the function name and do not forget the parenthesis. 
+              </p>
+
+              <p class="lecture-text">
+                It's worth noting, the above function will not return a value, even you had to capture it, the variable
+                would be undefined.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Function with parameters and return
+                    function juicer(nApples, nOranges) {
+                      const juice = `Your juice is ${nApples} apples and ${nOranges} Oranges!`;
+                      return juice;
+                    }
+                    const myJuice = juicer(3, 4);
+                    console.log(myJuice);
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                A function can take information and return information, this is done through the function's parameters,
+                which allows for input. Parameters are placed within the parenthesis of the function. In this case, the
+                parameters are nApples and nOranges, which take a number value, can take any value however it depends on
+                what the function does.
+              </p>
+
+              <p class="lecture-text">
+                The return keyword returns a value, unlike logging this directly to the console, we need to capture it
+                with a variable. If we just had to call the function, we still would not see the value, unless captured.
+                Once the return keyword has taken place, the code will not run any further.
               </p>
 
               <!-- !End of Lecture 33 -->
@@ -264,12 +312,15 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    Write a function called 'describeCountry' which takes three parameters: 'country', 'population' and
+                    'capitalCity'. Based on this input, the function returns a string with this format: 'Finland has 6
+                    million people and its capital city is Helsinki'
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    Call this function 3 times, with input data for 3 different countries. Store the returned values in
+                    3 different variables, and log them to the console
                   </p>
                 </li>
               </ol>
@@ -277,7 +328,18 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-
+                    function describeCountry (country, population, capitalCity) {
+                      const myCountry = `${country} has ${population} million people and it's capital is ${capitalCity}`;
+                      return myCountry;
+                    }
+                    
+                    const bulgaria = describeCountry('Bulgaria', 7.4, 'Sofia');
+                    const southAfrica = describeCountry('South Africa', 60, 'Pretoria, Bloemfontein and Cape Town');
+                    const columbia = describeCountry('Columbia', 50, 'Bogota');
+                    
+                    console.log(bulgaria);
+                    console.log(southAfrica);
+                    console.log(columbia);
                   </code>
                 </pre>
               </div>

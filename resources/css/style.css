@@ -1939,6 +1939,10 @@ strong {
     grid-template-columns: 1fr;
   }
 
+  .section-blog-nav {
+    padding: 0 0 var(--space-96);
+  }
+
   .blog {
     grid-template-columns: 1fr;
     gap: var(--space-24);
@@ -1952,10 +1956,6 @@ strong {
     grid-column: 1 / span 1;
     grid-row: 2;
     overflow-x: auto;
-  }
-
-  .section-blog-nav {
-    padding: 0 0 var(--space-96);
   }
 }
 
