@@ -289,8 +289,12 @@
               <p class="lecture-text">
                 A function can take information and return information, this is done through the function's parameters,
                 which allows for input. Parameters are placed within the parenthesis of the function. In this case, the
-                parameters are nApples and nOranges, which take a number value, can take any value however it depends on
-                what the function does.
+                parameters are nApples and nOranges, which take a value known as an argument. 
+              </p>
+
+              <p class="lecture-text">
+                So, when declaring a function, the parameters are called parameters, while when invoking the function
+                and adding a value to where the parameters were, is called an argument.
               </p>
 
               <p class="lecture-text">
@@ -354,20 +358,69 @@
                 Functions declarations vs. expressions
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // Declaring a function
+
+                    const age1 = calcAge1(1989); // invoking function before declaration
+
+                    function calcAge1 (birthYear) {
+                      console.log('Declaring a function')
+                      return 2023 - birthYear;
+                    }
+
+                    console.log(age1);
+
+                    // Function expression
+
+                    const calcAge2 = function (birthYear) {
+                      console.log('Function expression')
+                      return 2023 - birthYear;
+                    }
+
+                    const age2 = calcAge2(1989);
+
+                    console.log(age2);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                When we declare a function, we initialize the function with the function keyword and then provide it a
+                name. Whereas, when we do function expressions, we save the function to a variable. 
+              </p>
+
+              <p class="lecture-text">
+                The function's expression's name is the variable name, this means the function defined inside the
+                variable is known as an anonymous function because it has no name. This also points out that a function
+                is not a type but an expression and, as we know, an expression returns a value. When invoking a function
+                expression, we still need to assign it to a variable, much the same way as when we declare a function.
+              </p>
+
+              <p class="lecture-text">
+                If everything works similarly, just written differently, what are the differences?
+              </p>
+
+              <p class="lecture-text">
+                When declaring a function, you can call the function even before it has been declared. Meaning, your
+                function does not have to be at the top of the page. A Function expression, however, does not allow
+                this. You first need the expression before you can invoke the function, forcing you to write your
+                function at the top of the page. 
+              </p>
+
+              <p class="lecture-text">
+                This brings us to a question of which to use?
+              </p>
+
+              <p class="lecture-text">
+                It comes down to personal preference, if you like declaring functions, then use that, if you prefer
+                function expressions and writing your functions at the top of the page, then use that.
+              </p>
+
+              <p class="lecture-text">
+                Function expressions seem more organized, keeping both values and functions inside variables and first
+                declaring a function before invoking it, forcing a written structure.
               </p>
 
               <!-- !End of Lecture 34 -->
@@ -383,12 +436,27 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    The world population is 7900 million people. Create a function declaration called
+                    'percentageOfWorld1' which receives a 'population' value, and returns the percentage of the world
+                    population that the given population represents. For example, China has 1441 million people, so it's
+                    about 18.2% of the world population
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    To calculate the percentage, divide the given 'population' value by 7900 and then multiply by 100
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Call 'percentageOfWorld1' for 3 populations of countries of your choice, store the results into
+                    variables, and log them to the console
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                    Create a function expression which does the exact same thing, called 'percentageOfWorld2', and also
+                    call it with 3 country populations (can be the same populations)
                   </p>
                 </li>
               </ol>
@@ -396,7 +464,43 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-
+                    // Declaring functions
+                    function percentageOfWorld1(population) {
+                      return (population / 7900) * 100;
+                    }
+                    
+                    const jamaicaPopulation = percentageOfWorld1(3);
+                    const bulgariaPopulation = percentageOfWorld1(7.4);
+                    const southAfricaPopulation = percentageOfWorld1(60);
+                    
+                    console.log(
+                      `Jamaica's population is ${jamaicaPopulation.toFixed(2)}% of the world's population`
+                    );
+                    console.log(
+                      `Bulgaria's population is ${bulgariaPopulation.toFixed(2)}% of the world's population`
+                    );
+                    console.log(
+                      `South Africa's population is ${southAfricaPopulation.toFixed(2)}% of the world's population`
+                    );
+                    
+                    // Function expressions
+                    const percentageOfWorld2 = function () {
+                      return (population / 7900) * 100;
+                    };
+                    
+                    const americaPopulation = percentageOfWorld1(332);
+                    const canadaPopulation = percentageOfWorld1(37);
+                    const mexicoPopulation = percentageOfWorld1(129);
+                    
+                    console.log(
+                      `America's population is ${americaPopulation.toFixed(2)}% of the world's population`
+                    );
+                    console.log(
+                      `Canada's population is ${canadaPopulation.toFixed(2)}% of the world's population`
+                    );
+                    console.log(
+                      `Mexico's population is ${mexicoPopulation.toFixed(2)}% of the world's population`
+                    );
                   </code>
                 </pre>
               </div>
@@ -411,20 +515,27 @@
                 Arrow functions
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // Arrow function
+                    const calcAge3 = (birthYear) => {
+                      console.log('Arrow function')
+                      return 2023 - birthYear;
+                    } 
+                    const age3 = calcAge3(1989);
+
+                    console.log(age3);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
                 text here
+              </p>
+
+              <p class="lecture-text">
+                Text here
               </p>
 
               <!-- !End of Lecture 35 -->
