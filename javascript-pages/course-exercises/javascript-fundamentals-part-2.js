@@ -157,3 +157,130 @@ console.log('');
 console.log('🦀 LECTURE 35 - ASSIGNMENT');
 
 console.log('');
+
+// Lecture 36
+console.log('🦞 LECTURE 36');
+
+console.log('');
+
+// Lecture 36 - Assignment
+console.log('🦀 LECTURE 36 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 37
+console.log('🦞 LECTURE 37');
+
+console.log('');
+
+// Coding challenge - 1
+console.log('🦑 CODING CHALLENGE - 1');
+
+console.log('');
+
+// Lecture 39
+console.log('🦞 LECTURE 39');
+
+console.log('');
+
+// Lecture 39 - Assignment
+console.log('🦀 LECTURE 39 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 40
+console.log('🦞 LECTURE 40');
+
+console.log('');
+
+// Lecture 40 - Assignment
+console.log('🦀 LECTURE 40 - ASSIGNMENT');
+
+console.log('');
+
+
+// Coding Challenge - 2
+console.log('🦑 CODING CHALLENGE - 2');
+
+console.log('');
+
+
+// Lecture 42
+console.log('🦞 LECTURE 42');
+
+console.log('');
+
+// Lecture 42 - Assignment
+console.log('🦀 LECTURE 42 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 43
+console.log('🦞 LECTURE 43');
+
+console.log('');
+
+// Lecture 43 - Assignment
+console.log('🦀 LECTURE 43 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 44
+console.log('🦞 LECTURE 44');
+
+console.log('');
+
+// Lecture 44 - Assignment
+console.log('🦀 LECTURE 44 - ASSIGNMENT');
+
+console.log('');
+
+// Coding Challenge - 3
+console.log('🦞 LECTURE 40');
+
+console.log('');
+
+// Lecture 46
+console.log('🦞 LECTURE 46');
+
+console.log('');
+
+// Lecture 46 - Assignment
+console.log('🦀 LECTURE 46 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 47
+console.log('🦞 LECTURE 47');
+
+console.log('');
+
+// Lecture 47 - Assignment
+console.log('🦀 LECTURE 47 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 48
+console.log('🦞 LECTURE 48');
+
+console.log('');
+
+// Lecture 48 - Assignment
+console.log('🦀 LECTURE 48 - ASSIGNMENT');
+
+console.log('');
+
+// Lecture 49
+console.log('🦞 LECTURE 49');
+
+console.log('');
+
+// Lecture 49 - Assignment
+console.log('🦀 LECTURE 49 - ASSIGNMENT');
+
+console.log('');
+
+// Coding Challenge - 4
+console.log('🦑 CODING CHALLENGE - 4');
+
+console.log('');
