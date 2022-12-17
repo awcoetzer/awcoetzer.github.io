@@ -519,23 +519,45 @@
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Arrow function
-                    const calcAge3 = (birthYear) => {
-                      console.log('Arrow function')
-                      return 2023 - birthYear;
-                    } 
+                    const calcAge3 = birthYear => 2023 - birthYear;
                     const age3 = calcAge3(1989);
-
-                    console.log(age3);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                Arrow functions is a shorter syntax for function expressions they do not support the 'this' keyword, as we will see later in the course.
               </p>
 
               <p class="lecture-text">
-                Text here
+                Arrow functions, that have but one parameter and a single line of code, are known as one-liner functions. We do not need to place parenthesis around the parameter, nor use the 'return' keyword, as it is implicit.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box">
+                  <code class="lecture-code language-javascript">
+                    const yearsBeforeRetirement = (birthYear, firstName) => {
+                    const age = 2023 - birthYear;
+                    const retirement = 65 - age;
+
+                    return `${firstName}'s retirement is in ${retirement} years`;
+                    };
+
+                    console.log(yearsBeforeRetirement(1989, 'Andre'));
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                In the above example, the arrow function has more than a single parameter, so we need to use parenthesis. We also require code block brackets as there is more than a single line of code. The 'return' keyword is also required, as it is no longer a one-liner function.
+              </p>
+
+              <p class="lecture-text">
+                Again, we ask, which function to use?
+              </p>
+
+              <p class="lecture-text">
+                The answer is still function expressions. As mentioned earlier that arrow functions are great as one-liner functions, but they don't support the 'this' keyword which is given to a function associated with objects (methods).
               </p>
 
               <!-- !End of Lecture 35 -->
@@ -551,12 +573,7 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
+                     Recreate the last assignment, but this time create an arrow function called'percentageOfWorld3'
                   </p>
                 </li>
               </ol>
@@ -564,7 +581,17 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
+                    const percentageOfWorld3 = (population) => (population / 7900) * 100;
 
+                    const columbiaPopulation = percentageOfWorld1(50);
+                    const swedenPopulation = percentageOfWorld1(10.4);
+                    const japanPopulation = percentageOfWorld1(126.17);
+
+                    console.log(`
+                    Columbia's population is ${columbiaPopulation}% of the world's population,
+                    Sweden's population is ${swedenPopulation}% of the world's population,
+                    Japan's population is ${japanPopulation}% of the world's population.
+                    `);
                   </code>
                 </pre>
               </div>
