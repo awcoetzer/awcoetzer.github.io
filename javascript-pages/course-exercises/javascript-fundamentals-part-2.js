@@ -175,6 +175,14 @@ console.log('');
 //////////////////// Lecture 36 - Assignment ////////////////////
 console.log('🦀 LECTURE 36 - ASSIGNMENT');
 
+const describePopulation = function (country, population) {
+  return `${country} has ${population} million people, which is ${percentageOfWorld1(population)}% of the world`
+}
+
+console.log(describePopulation('Bahamas', 397))
+console.log(describePopulation('India', 1350))
+console.log(describePopulation('Brazil', 215))
+
 console.log('');
 
 //////////////////// Lecture 37 ////////////////////
