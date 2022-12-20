@@ -883,20 +883,84 @@
                 Introduction to arrays
               </h3>
 
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Creating arrays
+
+                    const friend1 = 'Scott';
+                    const friend2 = 'Frank';
+                    const friend3 = 'Jack';
+
+                    // Array literal
+                    const friends = ['Scott', 'Frank', 'Jack'];
+
+                    // Creating an array using a function
+                    const arr = new Array(1989, 1990, 1991, 1992);
+                  </code>
+                </pre>
+              </div>
+              
               <p class="lecture-text">
-                Text here
+                Arrays are what is known as data structures in JavaScript. JavaScript has but 2 data structures, arrays and objects, though arrays are objects as we will learn later on, they just a special kind of object as they have their own methods, as we learn about methods, is that functions associated with objects become methods.
+              </p>
+
+              <p class="lecture-text">
+                There are many ways to create an array, as seen above. The first example is what is known as an array literal, and is the easiest syntax for creating arrays. While the bottom is using functions to create an array.
               </p>
 
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // Retrieving an indexed array
+
+                    console.log(friends[0]);
+                    console.log(friends.length);
+                    console.log(friends[friends.length -1]);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                The way we can retrieve a value from an array, is by using brackets with the index value starting at 0. The brackets within arrays [ ... ] can hold an expression, as we know, expressions return a value.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Mutating arrays elements
+
+                    friends[2] = 'Sammy'; // This is allowed
+                    friends = ['Bob', 'Maria', 'Justin'] // This is not allowed
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Array values, are mutable, though you cannot change the entire array. Even though the array was assigned to a const variable, it's it still mutable. In JavaScript, values that are not mutable with a const variable are primitive values, arrays are not a type but a data structure.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    const firstName = 'Andre';
+
+                    const andre = [
+                      firstName,
+                      'Coetzer',
+                      33,
+                      'Developer',
+                      friends,
+                    ]
+
+                    console.log(andre)
+                    console.log(`${andre[0]}'s best friend is ${andre[andre.length -1][0]}`)
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                An array can hold different types of values, it can even nest other arrays or data structures inside of it. To select values within nested arrays, we simply use multiple brackets.
               </p>
 
               <!-- !End of Lecture 39 -->

@@ -226,34 +226,66 @@ console.log('');
 //////////////////// Coding challenge - 1 ////////////////////
 console.log('🦑 CODING CHALLENGE - 1');
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 // Test data 1
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 54, 49);
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    return `Dolphin's win (${avgDolphins} vs. ${avgKoalas})`;
-  } else if (avgKoalas >= 2 * avgDolphins) { 
-    return `Koala's win (${avgKoalas} vs. ${avgDolphins})`;
-  } else {
-    return `No one won...`
-  };
-};
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     return `Dolphin's win (${avgDolphins} vs. ${avgKoalas})`;
+//   } else if (avgKoalas >= 2 * avgDolphins) { 
+//     return `Koala's win (${avgKoalas} vs. ${avgDolphins})`;
+//   } else {
+//     return `No one won...`
+//   };
+// };
 
-console.log(checkWinner(scoreDolphins, scoreKoalas));
+// console.log(checkWinner(scoreDolphins, scoreKoalas));
 
 // Test data 2
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(23, 34, 27);
 
-console.log(checkWinner(scoreDolphins, scoreKoalas));
+// console.log(checkWinner(scoreDolphins, scoreKoalas));
 
 console.log('');
 
 //////////////////// Lecture 39 ////////////////////
 console.log('🦞 LECTURE 39');
+// Creating arrays
+
+const friend1 = 'Scott';
+const friend2 = 'Frank';
+const friend3 = 'Jack';
+
+// Array literal
+const friends = ['Scott', 'Frank', 'Jack'];
+
+// Creating an array using a function
+const arr = new Array(1989, 1990, 1991, 1992);
+
+console.log(friends);
+console.log(friends[0]);
+console.log(friends.length);
+console.log(friends[friends.length -1]);
+
+friends[2] = 'Sammy';
+console.log(friends)
+
+const firstName = 'Andre';
+
+const andre = [
+  firstName,
+  'Coetzer',
+  33,
+  'Developer',
+  friends,
+]
+
+console.log(andre)
+console.log(`${andre[0]}'s best friend is ${andre[andre.length -1][0]}`)
 
 console.log('');
 
