@@ -1169,20 +1169,80 @@
               </h3>
 
               <p class="lecture-text">
-                Text here
+                Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
               </p>
+
+              <span class="pre-heading">Your Tasks:</span>
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     And now let's use arrays! So create an array 'bills' containing the test data below.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     <strong>Bonus</strong>: Create an array 'total' containing the total values, so the bill + tip.
+                  </p>
+                </li>
+              </ol>
+
+              <span class="pre-heading">Test Data:</span>
+              <ul class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     125, 555 and 44
+                  </p>
+                </li>
+              </ul>
+
+              <span class="pre-heading">Hints:</span>
+              <ul class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                      Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉.
+                  </p>
+                </li>
+              </ul>
 
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const calcTip = function (bill) {
+                      return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+                    };
+
+                    console.log(calcTip(100));
+
+                    const bills = [125, 555, 44];
+
+                    const tips = [
+                      calcTip(bills[0]),
+                      calcTip(bills[1]),
+                      calcTip(bills[2])
+                    ];
+
+                    console.log(tips);
+
+                    const total = [
+                      bills[0] + tips[0],
+                      bills[1] + tips[1],
+                      bills[2] + tips[2]
+                    ];
+
+                    console.log(total);
                   </code>
                 </pre>
               </div>
-
-              <p class="lecture-text">
-                text here
-              </p>
 
               <!-- !End of Lecture 41 -->
             </div>
