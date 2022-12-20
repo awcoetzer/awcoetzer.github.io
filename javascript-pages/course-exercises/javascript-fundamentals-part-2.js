@@ -420,34 +420,50 @@ console.log('');
 //////////////////// Lecture 42 ////////////////////
 console.log('🦞 LECTURE 42');
 
-const firstName = 'Andre';
-const friends = ['Scott', 'Frank', 'Jack'];
+// const firstName = 'Andre';
+// const friends = ['Scott', 'Frank', 'Jack'];
 
-// The array version
-const andreArr = [
-  firstName,
-  'Coetzer',
-  33,
-  'Developer',
-  friends,
-];
+// // The array version
+// const andreArr = [
+//   firstName,
+//   'Coetzer',
+//   33,
+//   'Developer',
+//   friends,
+// ];
 
-// The object version
-const andreObj = {
-  firstName: firstName,
-  lastName: 'Coetzer',
-  age: 2023 - 1989,
-  job: 'Developer',
-  friends: friends
-};
+// // The object version
+// const andreObj = {
+//   firstName: firstName,
+//   lastName: 'Coetzer',
+//   age: 2023 - 1989,
+//   job: 'Developer',
+//   friends: friends
+// };
 
-console.log(andreObj);
-console.log(andreObj.firstName);
+// console.log(andreObj);
+// console.log(andreObj.firstName);
 
 console.log('');
 
 //////////////////// Lecture 42 - Assignment ////////////////////
 console.log('🦀 LECTURE 42 - ASSIGNMENT');
+
+const myCountry = {
+  country: 'Republic of Bulgaria',
+  capital: 'Sofia',
+  language: 'Bulgarian',
+  population: 7.4,
+  neighbours: [
+    'Greece',
+    'Republic of Macedonia',
+    'Romania',
+    'Serbia',
+    'Turkey'
+  ]
+};
+
+console.log(myCountry.country);
 
 console.log('');
 
