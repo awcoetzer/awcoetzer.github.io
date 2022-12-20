@@ -292,30 +292,73 @@ console.log('');
 //////////////////// Lecture 39 - Assignment ////////////////////
 console.log('🦀 LECTURE 39 - ASSIGNMENT');
 
-const populations = [7, 60, 320, 50];
+// const populations = [7, 60, 320, 50];
 
-console.log(populations.length === 4);
-console.log(populations);
+// console.log(populations.length === 4);
+// console.log(populations);
 
-function percentageOfWorld1 (population) {
-  const percentage = (population / 7900) * 100;
+// function percentageOfWorld1 (population) {
+//   const percentage = (population / 7900) * 100;
 
-  return percentage.toFixed(2);
-};
+//   return percentage.toFixed(2);
+// };
 
-const percentages = [
-  percentageOfWorld1(populations[0]),
-  percentageOfWorld1(populations[1]),
-  percentageOfWorld1(populations[2]),
-  percentageOfWorld1(populations[3])
-];
+// const percentages = [
+//   percentageOfWorld1(populations[0]),
+//   percentageOfWorld1(populations[1]),
+//   percentageOfWorld1(populations[2]),
+//   percentageOfWorld1(populations[3])
+// ];
 
-console.log(percentages)
+// console.log(percentages)
 
 console.log('');
 
 //////////////////// Lecture 40 ////////////////////
 console.log('🦞 LECTURE 40');
+
+// Example 1
+
+const burger = [
+  'Patty',
+];
+
+console.log(burger);
+
+// To add an element to the end of an array
+burger.push('Bottom Bun');
+console.log(burger);
+
+// To add an element to the start of an array
+burger.unshift('Top Bun');
+console.log(burger);
+
+// Example 2
+
+// To remove an element to the end of an array
+burger.pop();
+console.log(burger);
+
+// To remove an element to the start of an array
+burger.shift();
+console.log(burger);
+
+// Example 3
+
+const findWaldo = [
+  'not Waldo',
+  'not Waldo',
+  'not Waldo',
+  'Waldo',
+  'not Waldo',
+  'not Waldo'
+];
+
+// checking the index value of waldo
+console.log(findWaldo.indexOf('Waldo'));
+
+// checking if waldo is in the array
+console.log(findWaldo.includes('Waldo'));
 
 console.log('');
 

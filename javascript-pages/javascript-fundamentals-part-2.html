@@ -1025,20 +1025,74 @@
                 Basic array operations (Methods)
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // Let's make a burger
+                    const burger = [
+                      'Patty',
+                    ]
+
+                    console.log(burger);
+
+                    // To add an element to the end of an array
+                    burger.push('Bottom Bun')
+                    console.log(burger);
+
+                    // To add an element to the start of an array
+                    burger.unshift('Top Bun')
+                    console.log(burger);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                With arrays, we have what is known as array methods or array operations. The first is '.push( ... )'. This will allow us to push further elements to the end of the array. We then have '.unshift( ... )' which adds elements to the front of the array.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Oh no! Our burger's bun is stale, lets remove it
+
+                    // To remove an element to the end of an array
+                    burger.pop();
+                    console.log(burger);
+
+                    // To remove an element to the start of an array
+                    burger.shift();
+                    console.log(burger);
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                We then have the reverse of putting in, and that is removing elements from arrays. '.pop( ... )' removes from the end of an array, also returns the removed element. '.shift( ... )' removes from the beginning.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    const findWaldo = [
+                      'not Waldo',
+                      'not Waldo',
+                      'not Waldo',
+                      'Waldo',
+                      'not Waldo',
+                      'not Waldo'
+                    ];
+
+                    // checking the index value of waldo
+                    console.log(findWaldo.indexOf('Waldo'));
+
+                    // checking if waldo is in the array
+                    console.log(findWaldo.includes('Waldo'));
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                The above methods are very useful, they help you find or understand if an element is within an array. '.index( ... )' return the index position of an element, while the more modern way of doing it, '.include( ... )' returns a boolean value. The '.include( ... )' also uses strict equality and is more useful in the real world.
               </p>
 
               <!-- !End of Lecture 40 -->
