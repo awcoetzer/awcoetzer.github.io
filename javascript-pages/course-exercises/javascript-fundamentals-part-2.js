@@ -449,6 +449,95 @@ console.log('');
 //////////////////// Lecture 42 - Assignment ////////////////////
 console.log('🦀 LECTURE 42 - ASSIGNMENT');
 
+// const myCountry = {
+//   country: 'Republic of Bulgaria',
+//   capital: 'Sofia',
+//   language: 'Bulgarian',
+//   population: 7.4,
+//   neighbours: [
+//     'Greece',
+//     'Republic of Macedonia',
+//     'Romania',
+//     'Serbia',
+//     'Turkey'
+//   ]
+// };
+
+// console.log(myCountry.country);
+
+console.log('');
+
+//////////////////// Lecture 43 ////////////////////
+console.log('🦞 LECTURE 43');
+
+// Example 1
+
+// const firstName = 'Andre';
+// const friends = ['Scott', 'Frank', 'Jack'];
+
+// const andreObj = {
+//   firstName: firstName,
+//   lastName: 'Coetzer',
+//   age: 2023 - 1989,
+//   job: 'Developer',
+//   friends: friends
+// };
+
+// // Dot notation
+// console.log(andreObj.job);
+
+// // Bracket notation
+// console.log(andreObj['job']);
+
+// // Brackets allow for expressions
+// const nameKey = 'Name';
+
+// console.log(andreObj['first' + nameKey]);
+// console.log(andreObj['last' + nameKey]);
+
+// // Example 2
+
+// // const interestedIn = prompt('What would you like to know about Andre?, You can choose from firstName, lastName, age, job, friends');
+
+// // console.log(andreObj.interestedIn) // Will result in undefined
+// // console.log(andreObj[interestedIn]) // Will compute the value
+
+// // if (andreObj[interestedIn]) {
+// //   console.log(andreObj[interestedIn]);
+// // } else {
+// //   console.log('Unknown property');
+// // };
+
+// // Example 3
+
+// andreObj.location = 'Bulgaria';
+// andreObj['website'] = 'https://acoetzer.github.io';
+
+// console.log(andreObj);
+
+console.log('');
+
+//////////////////// Lecture 43 - Challenge ////////////////////
+console.log('🐟 LECTURE 43 - CHALLENGE');
+
+// const firstName = 'Andre';
+// const friends = ['Scott', 'Frank', 'Jack'];
+
+// const andreObj = {
+//   firstName: firstName,
+//   lastName: 'Coetzer',
+//   age: 2023 - 1989,
+//   job: 'Developer',
+//   friends: friends
+// };
+
+// console.log(`${andreObj.firstName} has ${andreObj.friends.length} friends and his best friend is ${andreObj.friends[0]}`);
+
+console.log('');
+
+//////////////////// Lecture 43 - Assignment ////////////////////
+console.log('🦀 LECTURE 43 - ASSIGNMENT');
+
 const myCountry = {
   country: 'Republic of Bulgaria',
   capital: 'Sofia',
@@ -463,17 +552,15 @@ const myCountry = {
   ]
 };
 
-console.log(myCountry.country);
+console.log(`The ${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
 
-console.log('');
+console.log(myCountry.population)
 
-//////////////////// Lecture 43 ////////////////////
-console.log('🦞 LECTURE 43');
+myCountry.population += 2;
+console.log(myCountry.population);
 
-console.log('');
-
-//////////////////// Lecture 43 - Assignment ////////////////////
-console.log('🦀 LECTURE 43 - ASSIGNMENT');
+myCountry['population'] -= 2;
+console.log(myCountry.population);
 
 console.log('');
 

@@ -1350,21 +1350,102 @@
                 Dot vs. bracket notation
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const firstName = 'Andre';
+                    const friends = ['Scott', 'Frank', 'Jack'];
+                                      
+                    const andreObj = {
+                      firstName: firstName,
+                      lastName: 'Coetzer',
+                      age: 2023 - 1989,
+                      job: 'Developer',
+                      friends: friends
+                    };
+                    
+                    // Dot notation
+                    console.log(andreObj.job);
+                    
+                    // Bracket notation
+                    console.log(andreObj['job']);
+                    
+                    // Brackets allow for expressions
+                    const nameKey = 'Name';
+                    
+                    console.log(andreObj['first' + nameKey]);
+                    console.log(andreObj['last' + nameKey]);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                This is how we can retrieve data from objects. The difference between Dot and Bracket is that the bracket notation allows for expressions. We can prove this by looking at the operator precedence table, where they refer to the Dot notation as Member Access and the Bracket notation as the computed Member Access.
               </p>
+
+              <p class="lecture-text">
+                This is important when trying to understand which to use, and it's simple, when you need to compute something, use the bracket notation and when not use the dot notation.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    const interestedIn = prompt('What would you like to know about Andre?, You can choose from firstName, lastName, age, job, friends');
+
+                    console.log(andreObj.interestedIn) // Will result in undefined
+                    console.log(andreObj[interestedIn]) // Will compute the value
+
+                    if (andreObj[interestedIn]) {
+                      console.log(andreObj[interestedIn]);
+                    } else {
+                      console.log('Unknown property');
+                    };
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                If we had to take user input and place it as a property, it will not compute the value, whereas the brackets first evaluate the expression and then returns the value.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    andreObj.location = 'Bulgaria';
+                    andreObj['website'] = 'https://acoetzer.github.io';
+
+                    console.log(andreObj);
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                We can also assign new properties to an object using both Dot and Bracket Notation.
+              </p>
+
+              <span class="pre-heading"> Challenge </span>
+              <p class="lecture-text">
+                Write a dynamic sentence using an object. Example &mdash; Andre has 3 friends, and his best friend is Whoever.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    const firstName = 'Andre';
+                    const friends = ['Scott', 'Frank', 'Jack'];
+
+                    const andreObj = {
+                      firstName: firstName,
+                      lastName: 'Coetzer',
+                      age: 2023 - 1989,
+                      job: 'Developer',
+                      friends: friends
+                    };
+
+                    console.log(`${andreObj.firstName} has ${andreObj.friends.length} friends and his best friend is ${andreObj.friends[0]}`);
+                  </code>
+                </pre>
+              </div>
 
               <!-- !End of Lecture 43 -->
             </div>
@@ -1379,12 +1460,12 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation.
                   </p>
                 </li>
               </ol>
@@ -1392,7 +1473,29 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-
+                    const myCountry = {
+                      country: 'Republic of Bulgaria',
+                      capital: 'Sofia',
+                      language: 'Bulgarian',
+                      population: 7.4,
+                      neighbours: [
+                        'Greece',
+                        'Republic of Macedonia',
+                        'Romania',
+                        'Serbia',
+                        'Turkey'
+                      ]
+                    };
+                    
+                    console.log(`The ${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
+                    
+                    console.log(myCountry.population)
+                    
+                    myCountry.population += 2;
+                    console.log(myCountry.population);
+                    
+                    myCountry['population'] -= 2;
+                    console.log(myCountry.population);
                   </code>
                 </pre>
               </div>
