@@ -319,51 +319,70 @@ console.log('🦞 LECTURE 40');
 
 // Example 1
 
-const burger = [
-  'Patty',
-];
+// const burger = [
+//   'Patty',
+// ];
 
-console.log(burger);
+// console.log(burger);
 
-// To add an element to the end of an array
-burger.push('Bottom Bun');
-console.log(burger);
+// // To add an element to the end of an array
+// burger.push('Bottom Bun');
+// console.log(burger);
 
-// To add an element to the start of an array
-burger.unshift('Top Bun');
-console.log(burger);
+// // To add an element to the start of an array
+// burger.unshift('Top Bun');
+// console.log(burger);
 
-// Example 2
+// // Example 2
 
-// To remove an element to the end of an array
-burger.pop();
-console.log(burger);
+// // To remove an element to the end of an array
+// burger.pop();
+// console.log(burger);
 
-// To remove an element to the start of an array
-burger.shift();
-console.log(burger);
+// // To remove an element to the start of an array
+// burger.shift();
+// console.log(burger);
 
-// Example 3
+// // Example 3
 
-const findWaldo = [
-  'not Waldo',
-  'not Waldo',
-  'not Waldo',
-  'Waldo',
-  'not Waldo',
-  'not Waldo'
-];
+// const findWaldo = [
+//   'not Waldo',
+//   'not Waldo',
+//   'not Waldo',
+//   'Waldo',
+//   'not Waldo',
+//   'not Waldo'
+// ];
 
-// checking the index value of waldo
-console.log(findWaldo.indexOf('Waldo'));
+// // checking the index value of waldo
+// console.log(findWaldo.indexOf('Waldo'));
 
-// checking if waldo is in the array
-console.log(findWaldo.includes('Waldo'));
+// // checking if waldo is in the array
+// console.log(findWaldo.includes('Waldo'));
 
 console.log('');
 
 //////////////////// Lecture 40 - Assignment ////////////////////
 console.log('🦀 LECTURE 40 - ASSIGNMENT');
+
+const neighbours = [
+  'Canada',
+  'Mexico'
+];
+console.log(neighbours);
+
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+  console.log('Probably not a European country.')
+}
+
+neighbours[neighbours.indexOf('Canada')] = 'Conodo';
+console.log(neighbours);
 
 console.log('');
 
