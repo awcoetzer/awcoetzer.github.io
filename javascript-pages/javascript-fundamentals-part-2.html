@@ -1254,20 +1254,50 @@
                 Introduction to objects
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const firstName = 'Andre';
+                    const friends = ['Scott', 'Frank', 'Jack'];
+
+                    // The array version
+                    const andreArr = [
+                      firstName,
+                      'Coetzer',
+                      33,
+                      'Developer',
+                      friends,
+                    ];
+
+                    // The object version
+                    const andreObj = {
+                      firstName: firstName,
+                      lastName: 'Coetzer',
+                      age: 2023 - 1989,
+                      job: 'Developer',
+                      friends: friends
+                    };
+
+                    console.log(andreObj);
+                    console.log(andreObj.firstName);
                   </code>
                 </pre>
               </div>
+              
+              <p class="lecture-text">
+                When it comes to objects, they answer a problem we have with arrays, which is knowing where data is. When it comes to arrays, we intuitively have to know with what the first index corresponds with. Is it the first name, the last name or the age if the array was about a person, however with objects we have what is known as key value pairs.
+              </p>
 
               <p class="lecture-text">
-                text here
+                We can essentially assign a key to a value, which means we don't have to worry about ordering our data structure, whereas with arrays we do. Each key is also known as a property.
+              </p>
+
+              <p class="lecture-text">
+                There are multiple ways to make objects, much like the array, but the object literal is the easiest way. 
+              </p>
+
+              <p class="lecture-text">
+                The big difference between objects and arrays are, an array is more for structured data, while objects are not. Structure is more important for arrays and not objects.
               </p>
 
               <!-- !End of Lecture 42 -->
