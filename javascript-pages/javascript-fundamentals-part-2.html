@@ -976,12 +976,17 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations'.
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    Log to the console whether the array has 4 elements or not (true or false).
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values.
                   </p>
                 </li>
               </ol>
@@ -989,7 +994,23 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
+                    const populations = [7, 60, 320, 50];
 
+                    console.log(populations.length === 4);
+                    console.log(populations);
+
+                    function percentageOfWorld1 (population) {
+                      const percentage = (population / 7900) * 100;
+
+                      return percentage.toFixed(2);
+                    };
+
+                    const percentages = [
+                      percentageOfWorld1(populations[0]),
+                      percentageOfWorld1(populations[1]),
+                      percentageOfWorld1(populations[2]),
+                      percentageOfWorld1(populations[3])
+                    ];
                   </code>
                 </pre>
               </div>

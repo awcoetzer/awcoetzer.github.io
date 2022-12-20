@@ -256,41 +256,61 @@ console.log('');
 console.log('🦞 LECTURE 39');
 // Creating arrays
 
-const friend1 = 'Scott';
-const friend2 = 'Frank';
-const friend3 = 'Jack';
+// const friend1 = 'Scott';
+// const friend2 = 'Frank';
+// const friend3 = 'Jack';
 
 // Array literal
-const friends = ['Scott', 'Frank', 'Jack'];
+// const friends = ['Scott', 'Frank', 'Jack'];
 
 // Creating an array using a function
-const arr = new Array(1989, 1990, 1991, 1992);
+// const arr = new Array(1989, 1990, 1991, 1992);
 
-console.log(friends);
-console.log(friends[0]);
-console.log(friends.length);
-console.log(friends[friends.length -1]);
+// console.log(friends);
+// console.log(friends[0]);
+// console.log(friends.length);
+// console.log(friends[friends.length -1]);
 
-friends[2] = 'Sammy';
-console.log(friends)
+// friends[2] = 'Sammy';
+// console.log(friends)
 
-const firstName = 'Andre';
+// const firstName = 'Andre';
 
-const andre = [
-  firstName,
-  'Coetzer',
-  33,
-  'Developer',
-  friends,
-]
+// const andre = [
+//   firstName,
+//   'Coetzer',
+//   33,
+//   'Developer',
+//   friends,
+// ]
 
-console.log(andre)
-console.log(`${andre[0]}'s best friend is ${andre[andre.length -1][0]}`)
+// console.log(andre)
+// console.log(`${andre[0]}'s best friend is ${andre[andre.length -1][0]}`)
 
 console.log('');
 
 //////////////////// Lecture 39 - Assignment ////////////////////
 console.log('🦀 LECTURE 39 - ASSIGNMENT');
+
+const populations = [7, 60, 320, 50];
+
+console.log(populations.length === 4);
+console.log(populations);
+
+function percentageOfWorld1 (population) {
+  const percentage = (population / 7900) * 100;
+
+  return percentage.toFixed(2);
+};
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3])
+];
+
+console.log(percentages)
 
 console.log('');
 
