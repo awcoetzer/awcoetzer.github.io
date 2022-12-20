@@ -30,11 +30,11 @@ console.log('🦞 LECTURE 33');
 // const test = logger();
 // console.log(typeof test);
 
-// /*
-//   Juicer function that allows for demonstration
-//   of how functions can accept information and
-//   return information.
-// */
+/*
+  Juicer function that allows for demonstration
+  of how functions can accept information and
+  return information.
+*/
 // function juicer(nApples, nOranges) {
 //   const juice = `Your juice is ${nApples} apples and ${nOranges} Oranges!`;
 //   return juice;
@@ -81,7 +81,7 @@ console.log('🦞 LECTURE 34');
 
 // console.log(age1);
 
-// // Function expression
+// Function expression
 
 // const calcAge2 = function (birthYear) {
 //   console.log('Function expression');
@@ -171,19 +171,19 @@ console.log('');
 console.log('🦞 LECTURE 36');
 
 // cutting the fruit into pieces
-const fruitPieces = function (fruit) {
-  return fruit * 6;
-}
+// const fruitPieces = function (fruit) {
+//   return fruit * 6;
+// }
 
 // juicing the fruiting together using the pieces
-const juicer = function (apples, oranges) {
-  const applePieces = fruitPieces(apples);
-  const orangePieces = fruitPieces(oranges);
+// const juicer = function (apples, oranges) {
+//   const applePieces = fruitPieces(apples);
+//   const orangePieces = fruitPieces(oranges);
 
-  return `Your juice was made with ${applePieces} apple pieces and ${orangePieces} orange pieces.`
-}
+//   return `Your juice was made with ${applePieces} apple pieces and ${orangePieces} orange pieces.`
+// }
 
-console.log(juicer(3, 2));
+// console.log(juicer(3, 2));
 
 console.log('');
 
@@ -202,6 +202,24 @@ console.log('');
 
 //////////////////// Lecture 37 ////////////////////
 console.log('🦞 LECTURE 37');
+
+const calcAge = function (birthYear) {
+  return 2023 - birthYear;
+}
+
+const yearsBeforeRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement >= 1) {
+    return `${firstName} has ${retirement} years before retirement`;
+  } else {
+    return -1;
+  };
+};
+
+console.log(yearsBeforeRetirement(1989, 'Andre'))
+console.log(yearsBeforeRetirement(1945, 'John'))
 
 console.log('');
 

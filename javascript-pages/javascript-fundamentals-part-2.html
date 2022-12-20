@@ -691,20 +691,85 @@
                 Reviewing functions
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const calcAge = function (birthYear) {
+                      return 2023 - birthYear;
+                    }
+
+                    const yearsBeforeRetirement = function (birthYear, firstName) {
+                      const age = calcAge(birthYear);
+                      const retirement = 65 - age;
+
+                      if (retirement >= 1) {
+                        return `${firstName} has ${retirement} years before retirement`;
+                      } else {
+                        return -1; // no value
+                      };
+                    };
+
+                    console.log(yearsBeforeRetirement(1989, 'Andre'))
+                    console.log(yearsBeforeRetirement(1945, 'John'))
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                As we review functions, it's important to note that parameters are like local variables for the function. We can use the same parameter name in other function parameters without issues.
+              </p>
+
+              <p class="lecture-text">
+                In programming, -1 is used to denote that there is no value or meaning. 
+              </p>
+
+              <p class="lecture-text">
+                Once a return has executed, the function will stop. This is known as the function has returned.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code box">
+                  <code class="lecture-code language-javascript">
+                    // Function declaration
+                    function myFunc1 () {
+                      function body
+                    }
+
+                    // Function expression
+                    const myFunc2 = function () {
+                      function body
+                    }
+
+                    // Arrow function
+                    // One Liner
+                    const myfunc3 = parameter => parameter / 2;
+
+                    // Multiline
+                    const myFunc4 = (parameter1, parameter2) => {
+                      return ...
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                There are 3 types of functions, function declarations, function expressions and arrow functions. Function declaration can be invoked even before the function is declared, this giving you the freedom to place functions wherever in your code.
+              </p>
+
+              <p class="lecture-text">
+                A function expression cannot be invoked before it's declared, therefore having a more structure approached to coding. Arrow functions, being much the same as function expressions, just using shorter syntax, does not support the 'this keyword'.
+              </p>
+
+              <p class="lecture-text">
+                Arrow functions are great for one-liner functions, they can have no parenthesis and have implicit returns, making your code shorter and cleaner.
+              </p>
+
+              <p class="lecture-text">
+                Functions can receive data, transform data and return data. They can operate within other functions. When declaring a function a parameter is called a parameter, though when invoking the function and placing the value in the parameters, that is called the arguments.
+              </p>
+
+              <p class="lecture-text">
+                Parameters are also like local variables to that specific function. The code within a function is referred to as the function body.
               </p>
 
               <!-- !End of Lecture 37 -->
