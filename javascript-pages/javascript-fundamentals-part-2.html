@@ -1556,7 +1556,7 @@
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
                     const friends = ['Scott', 'Frank', 'Jack'];
-                                      
+
                     const andreObj = {
                       firstName: firstName,
                       lastName: 'Coetzer',
@@ -1572,7 +1572,7 @@
                         return `${this.firstName} is a ${this.age}-year-old ${this.job} who ${this.hasCooked ? 'has' : "has't"} cooked dinner today`;
                       }
                     };
-                    
+
                     andreObj.calcAge();
                     console.log(andreObj.getSummary());
                   </code>
@@ -1592,12 +1592,17 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Call the 'describe' method
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                      Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
                   </p>
                 </li>
               </ol>
@@ -1605,7 +1610,29 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-
+                    const myCountry = {
+                    country: 'Republic of Bulgaria',
+                    capital: 'Sofia',
+                    language: 'Bulgarian',
+                    population: 7.4,
+                    neighbours: [
+                      'Greece',
+                      'Republic of Macedonia',
+                      'Romania',
+                      'Serbia',
+                      'Turkey'
+                    ],
+                    describe: function () {
+                      return `The ${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+                    },
+                    checkIsland: function () {
+                      this.isIsland = this.neighbours.length === 0 ? true : false;
+                      return this.isIsland;
+                    }
+                  };
+                  
+                  console.log(myCountry.describe())
+                  console.log(myCountry.checkIsland())
                   </code>
                 </pre>
               </div>

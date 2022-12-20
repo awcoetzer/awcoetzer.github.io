@@ -590,32 +590,56 @@ console.log('');
 //////////////////// Lecture 44 - Challenge ////////////////////
 console.log('🐟 LECTURE 44 - CHALLENGE');
 
-const firstName = 'Andre';
-const friends = ['Scott', 'Frank', 'Jack'];
+// const firstName = 'Andre';
+// const friends = ['Scott', 'Frank', 'Jack'];
 
-const andreObj = {
-  firstName: firstName,
-  lastName: 'Coetzer',
-  birthYear: 1989,
-  calcAge: function () {
-    this.age = 2023 - this.birthYear;
-    return this.age
-  },
-  job: 'Developer',
-  friends: friends,
-  hasCooked: false,
-  getSummary: function () {
-    return `${this.firstName} is a ${this.age}-year-old ${this.job} who ${this.hasCooked ? 'has' : "has't"} cooked dinner today`;
-  }
-};
+// const andreObj = {
+//   firstName: firstName,
+//   lastName: 'Coetzer',
+//   birthYear: 1989,
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age
+//   },
+//   job: 'Developer',
+//   friends: friends,
+//   hasCooked: false,
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.age}-year-old ${this.job} who ${this.hasCooked ? 'has' : "has't"} cooked dinner today`;
+//   }
+// };
 
-andreObj.calcAge();
-console.log(andreObj.getSummary());
+// andreObj.calcAge();
+// console.log(andreObj.getSummary());
 
 console.log('');
 
 //////////////////// Lecture 44 - Assignment ////////////////////
 console.log('🦀 LECTURE 44 - ASSIGNMENT');
+
+const myCountry = {
+  country: 'Republic of Bulgaria',
+  capital: 'Sofia',
+  language: 'Bulgarian',
+  population: 7.4,
+  neighbours: [
+    'Greece',
+    'Republic of Macedonia',
+    'Romania',
+    'Serbia',
+    'Turkey'
+  ],
+  describe: function () {
+    return `The ${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+    return this.isIsland;
+  }
+};
+
+console.log(myCountry.describe())
+console.log(myCountry.checkIsland())
 
 
 
