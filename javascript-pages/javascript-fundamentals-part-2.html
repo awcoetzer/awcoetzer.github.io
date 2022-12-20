@@ -1486,14 +1486,14 @@
                         'Turkey'
                       ]
                     };
-                    
+
                     console.log(`The ${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
-                    
+
                     console.log(myCountry.population)
-                    
+
                     myCountry.population += 2;
                     console.log(myCountry.population);
-                    
+
                     myCountry['population'] -= 2;
                     console.log(myCountry.population);
                   </code>
@@ -1510,21 +1510,74 @@
                 Object methods
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const firstName = 'Andre';
+                    const friends = ['Scott', 'Frank', 'Jack'];
+
+                    const andreObj = {
+                      firstName: firstName,
+                      lastName: 'Coetzer',
+                      birthYear: 1989,
+                      calcAge: function () {
+                        this.age = 2023 - this.birthYear;
+                        return this.age
+                      },
+                      job: 'Developer',
+                      friends: friends
+                    };
+
+                    andreObj.calcAge(); // Need to run the method first
+                    console.log(andreObj.age);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                Any function that is associated with an object is known as a method. Which is why they say, all methods are functions, but not all function are methods.
               </p>
+
+              <p class="lecture-text">
+                A method is also just a property that holds a function, which is why we don't declare it but use a function expression.
+              </p>
+
+              <p class="lecture-text">
+                The 'this' keyword is a special variable for methods. The 'this' keyword points to the object it is in.
+              </p>
+
+              <span class="pre-heading"> Challenge </span>
+              <p class="lecture-text">
+                Write a method called getSummary that returns a summary of Andre like so &mdash; Andre is a 33-year-old developer who has or hasn't cooked dinner today.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    const firstName = 'Andre';
+                    const friends = ['Scott', 'Frank', 'Jack'];
+                                      
+                    const andreObj = {
+                      firstName: firstName,
+                      lastName: 'Coetzer',
+                      birthYear: 1989,
+                      calcAge: function () {
+                        this.age = 2023 - this.birthYear;
+                        return this.age
+                      },
+                      job: 'Developer',
+                      friends: friends,
+                      hasCooked: false,
+                      getSummary: function () {
+                        return `${this.firstName} is a ${this.age}-year-old ${this.job} who ${this.hasCooked ? 'has' : "has't"} cooked dinner today`;
+                      }
+                    };
+                    
+                    andreObj.calcAge();
+                    console.log(andreObj.getSummary());
+                  </code>
+                </pre>
+              </div>
 
               <!-- !End of Lecture 44 -->
             </div>

@@ -538,39 +538,86 @@ console.log('');
 //////////////////// Lecture 43 - Assignment ////////////////////
 console.log('🦀 LECTURE 43 - ASSIGNMENT');
 
-const myCountry = {
-  country: 'Republic of Bulgaria',
-  capital: 'Sofia',
-  language: 'Bulgarian',
-  population: 7.4,
-  neighbours: [
-    'Greece',
-    'Republic of Macedonia',
-    'Romania',
-    'Serbia',
-    'Turkey'
-  ]
-};
+// const myCountry = {
+//   country: 'Republic of Bulgaria',
+//   capital: 'Sofia',
+//   language: 'Bulgarian',
+//   population: 7.4,
+//   neighbours: [
+//     'Greece',
+//     'Republic of Macedonia',
+//     'Romania',
+//     'Serbia',
+//     'Turkey'
+//   ]
+// };
 
-console.log(`The ${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
+// console.log(`The ${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
 
-console.log(myCountry.population)
+// console.log(myCountry.population)
 
-myCountry.population += 2;
-console.log(myCountry.population);
+// myCountry.population += 2;
+// console.log(myCountry.population);
 
-myCountry['population'] -= 2;
-console.log(myCountry.population);
+// myCountry['population'] -= 2;
+// console.log(myCountry.population);
 
 console.log('');
 
 //////////////////// Lecture 44 ////////////////////
 console.log('🦞 LECTURE 44');
 
+// const firstName = 'Andre';
+// const friends = ['Scott', 'Frank', 'Jack'];
+
+// const andreObj = {
+//   firstName: firstName,
+//   lastName: 'Coetzer',
+//   birthYear: 1989,
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age
+//   },
+//   job: 'Developer',
+//   friends: friends
+// };
+
+// andreObj.calcAge(); // Need to run the method first
+// console.log(andreObj.age);
+
+console.log('');
+
+//////////////////// Lecture 44 - Challenge ////////////////////
+console.log('🐟 LECTURE 44 - CHALLENGE');
+
+const firstName = 'Andre';
+const friends = ['Scott', 'Frank', 'Jack'];
+
+const andreObj = {
+  firstName: firstName,
+  lastName: 'Coetzer',
+  birthYear: 1989,
+  calcAge: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age
+  },
+  job: 'Developer',
+  friends: friends,
+  hasCooked: false,
+  getSummary: function () {
+    return `${this.firstName} is a ${this.age}-year-old ${this.job} who ${this.hasCooked ? 'has' : "has't"} cooked dinner today`;
+  }
+};
+
+andreObj.calcAge();
+console.log(andreObj.getSummary());
+
 console.log('');
 
 //////////////////// Lecture 44 - Assignment ////////////////////
 console.log('🦀 LECTURE 44 - ASSIGNMENT');
+
+
 
 console.log('');
 
