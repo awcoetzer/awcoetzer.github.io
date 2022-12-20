@@ -607,19 +607,36 @@
               </h3>
 
               <p class="lecture-text">
-                Text here
+                In JavaScript, we can call other functions inside functions. We have been doing this to some degree using console.log( ... ).
               </p>
 
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // cutting the fruit into pieces
+                    const fruitPieces = function (fruit) {
+                      return fruit * 6;
+                    }
+
+                    // juicing the fruiting together using the pieces
+                    const juicer = function (apples, oranges) {
+                      const applePieces = fruitPieces(apples);
+                      const orangePieces = fruitPieces(oranges);
+
+                      return `Your juice was made with ${applePieces} apple pieces and ${orangePieces} orange pieces.`
+                    }
+
+                    console.log(juicer(3, 2));
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                Above, we could have done the calculation within the juicer function. Though to illustrate how functions can work inside other functions, this is a prime example.
+              </p>
+
+              <p class="lecture-text">
+                It also follows the principle, if this juice had many more arguments, then repeating this code would be better suited for a function. Always let your code be DRY.
               </p>
 
               <!-- !End of Lecture 36 -->
