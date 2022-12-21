@@ -1691,7 +1691,7 @@
                         return this.bmi
                       }
                     };
-                    
+
                     const john = {
                       fullName: 'John Smith',
                       mass: 92,
@@ -1701,12 +1701,12 @@
                         return this.bmi
                       }
                     };
-                    
+
                     mark.calcBMI()
                     john.calcBMI()
-                    
+
                     console.log(mark.bmi, john.bmi)
-                    
+
                     const bmiCompare = function (x, y) {
                       if (x.bmi > y.bmi) {
                         return `${x.fullName}'s BMI(${x.bmi}) is higher than ${y.fullName}'s BMI(${y.bmi})`
@@ -1714,7 +1714,7 @@
                         return `${y.fullName}'s BMI(${y.bmi}) is higher than ${x.fullName}'s BMI(${x.bmi})`
                       }
                     }
-                    
+
                     console.log(bmiCompare(mark, john));
                   </code>
                 </pre>
@@ -1731,19 +1731,27 @@
               </h3>
 
               <p class="lecture-text">
-                Text here
+                Looking back at the 'if statement'  we now know that that is a control structure, loops are much the same. Loops help us repeat repetitive tasks, for this we use what is known as a 'for loop'.
               </p>
 
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // Incremental
+                    for (let i = 0; i <= 10; i++) {
+                      console.log(`Iteration (${i})`);
+                    };
+
+                    // Decremental
+                    for (let i = 10; i >= 0; i--) {
+                      console.log(`Iteration (${i})`);
+                    }
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                The first example of a loop is a 'for loop', there is another known as the 'for ... in' loop, which will see later in the course. The 'for loop', consist of 3 parts, the declaration or variable assignment, the condition and the incremental or decremental.
               </p>
 
               <!-- !End of Lecture 46 -->

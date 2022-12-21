@@ -646,45 +646,58 @@ console.log('');
 //////////////////// Coding Challenge - 3 ////////////////////
 console.log('🦑 CODING CHALLENGE 3');
 
-const mark = {
-  fullName: 'Mark Miller',
-  mass: 78,
-  height: 1.69, 
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi
-  }
-};
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69, 
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi
+//   }
+// };
 
-const john = {
-  fullName: 'John Smith',
-  mass: 92,
-  height: 1.95, 
-  calcBMI: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi
-  }
-};
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 92,
+//   height: 1.95, 
+//   calcBMI: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi
+//   }
+// };
 
-mark.calcBMI()
-john.calcBMI()
+// mark.calcBMI()
+// john.calcBMI()
 
-console.log(mark.bmi, john.bmi)
+// console.log(mark.bmi, john.bmi)
 
-const bmiCompare = function (x, y) {
-  if (x.bmi > y.bmi) {
-    return `${x.fullName}'s BMI(${x.bmi}) is higher than ${y.fullName}'s BMI(${y.bmi})`
-  } else {
-    return `${y.fullName}'s BMI(${y.bmi}) is higher than ${x.fullName}'s BMI(${x.bmi})`
-  }
-}
+// const bmiCompare = function (x, y) {
+//   if (x.bmi > y.bmi) {
+//     return `${x.fullName}'s BMI(${x.bmi}) is higher than ${y.fullName}'s BMI(${y.bmi})`
+//   } else {
+//     return `${y.fullName}'s BMI(${y.bmi}) is higher than ${x.fullName}'s BMI(${x.bmi})`
+//   }
+// }
 
-console.log(bmiCompare(mark, john));
+// console.log(bmiCompare(mark, john));
 
 console.log('');
 
 //////////////////// Lecture 46 ////////////////////
 console.log('🦞 LECTURE 46');
+
+console.log('Incremental');
+// Incremental
+for (let i = 0; i <= 10; i++) {
+  console.log(`Iteration (${i})`);
+}
+
+console.log('');
+console.log('Decremental');
+// Decremental
+for (let i = 10; i >= 0; i--) {
+  console.log(`Iteration (${i})`);
+}
 
 console.log('');
 
