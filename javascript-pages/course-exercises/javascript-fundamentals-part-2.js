@@ -686,33 +686,108 @@ console.log('');
 //////////////////// Lecture 46 ////////////////////
 console.log('🦞 LECTURE 46');
 
-console.log('Incremental');
-// Incremental
-for (let i = 0; i <= 10; i++) {
-  console.log(`Iteration (${i})`);
-}
+// console.log('Incremental');
+// // Incremental
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`Iteration (${i})`);
+// }
 
-console.log('');
-console.log('Decremental');
-// Decremental
-for (let i = 10; i >= 0; i--) {
-  console.log(`Iteration (${i})`);
-}
+// console.log('');
+// console.log('Decremental');
+// // Decremental
+// for (let i = 10; i >= 0; i--) {
+//   console.log(`Iteration (${i})`);
+// }
 
 console.log('');
 
 //////////////////// Lecture 46 - Assignment ////////////////////
 console.log('🦀 LECTURE 46 - ASSIGNMENT');
 
+// for (let i = 1; i <= 50; i++) {
+//   console.log(`Voter number ${i} is currently voting`);
+// };
+
 console.log('');
 
 //////////////////// Lecture 47 ////////////////////
 console.log('🦞 LECTURE 47');
 
+// Example 1
+
+// const simpleArray = [
+//   'Text-1',
+//   'Text-2',
+//   'Text-3',
+//   23,
+//   true,
+//   'Text-4',
+//   1991,
+//   false,
+//   'Text-5'
+// ];
+
+// const simpleArray2 = [];
+
+// for (let i = 0; i <= simpleArray.length; i++) {
+//   console.log(`${simpleArray[i]} is a ${typeof simpleArray[i]}`);
+//   simpleArray2.push(typeof simpleArray[i]);
+// }
+
+// console.log(simpleArray)
+// console.log(simpleArray2)
+
+
+// // Example 2
+// const years = [1989, 1990, 1991, 1992];
+// const age = [];
+
+// for (let i = 0; i <= years.length; i++) {
+//   age.push(2023 - years[i]);
+// };
+
+// console.log(age);
+
+// // Example 3
+
+// console.log('----- Continue example -----')
+// for (let i = 0; i <= simpleArray.length; i++) {
+  
+//   if (typeof simpleArray[i] !== 'string') continue;
+//   console.log(simpleArray[i], typeof simpleArray[i]);
+// }
+
+// // Example 4
+
+// console.log('----- Break example -----')
+// for (let i = 0; i <= simpleArray.length; i++) {
+  
+//   if (typeof simpleArray[i] === 'boolean') break;
+//   console.log(simpleArray[i], typeof simpleArray[i]);
+// }
+
 console.log('');
 
 //////////////////// Lecture 47 - Assignment ////////////////////
 console.log('🦀 LECTURE 47 - ASSIGNMENT');
+
+const percentageOfWorld1 = function (population) {
+  return (population / 7900) * 100;
+}
+
+const populations = [7, 60, 320, 50];
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3])
+];
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorld1(populations[i]));
+  console.log(`Percentage 1: ${percentages[i]} Vs. Percentage 2: ${percentages2[i]}`)
+}
 
 console.log('');
 

@@ -1767,12 +1767,7 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
+                     There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'.
                   </p>
                 </li>
               </ol>
@@ -1780,7 +1775,9 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-
+                    for (let i = 1; i <= 50; i++) {
+                      console.log(`Voter number ${i} is currently voting`);
+                    };
                   </code>
                 </pre>
               </div>
@@ -1795,20 +1792,89 @@
                 Looping arrays, breaking and continuing
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const simpleArray = [
+                      'Text-1',
+                      'Text-2',
+                      'Text-3',
+                      23,
+                      true,
+                      'Text-4',
+                      1991,
+                      false,
+                      'Text-5'
+                    ];
+
+                    const simpleArray2 = [];
+
+                    for (let i = 0; i <= simpleArray.length; i++) {
+                      console.log(`${simpleArray[i]} is a ${typeof simpleArray[i]}`);
+                      simpleArray2.push(typeof simpleArray[i]);
+                    }
+
+                    console.log(simpleArray)
+                    console.log(simpleArray2)
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                The above is how we loop over a basic array. The variable name 'i' is a standard name for iteration variables within programming. Once getting into nested loops, which use 'j' and 'k' as those are the letter that are after the letter 'i'.
+              </p>
+
+              <p class="lecture-text">
+                The length of the loop is determined by the array length, and then we just increment the value by 1.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    const years = [1989, 1990, 1991, 1992];
+                    const age = [];
+
+                    for (let i = 0; i <= years.length; i++) {
+                      age.push(2023 - years[i]);
+                    };
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                Within the 'for loop', we can also create a new array by pushing each iteration to an already defined variable outside the loop, containing an empty array. Above is just another example of how a 'for loop' can be used.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    for (let i = 0; i <= simpleArray.length; i++) {
+  
+                      if (typeof simpleArray[i] !== 'string') continue;
+                      console.log(simpleArray[i], typeof simpleArray[i]);
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                The 'Continue' keyword allows us to break out the current iteration and move to the next. Above is an example, that it only logs certain data types.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    for (let i = 0; i <= simpleArray.length; i++) {
+  
+                      if (typeof simpleArray[i] === 'boolean') break;
+                      console.log(simpleArray[i], typeof simpleArray[i]);
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                The 'Break' keyword on the other hand breaks out of the loop entirely. Above, if a certain type is reached, it will completely stop the 'for loop ', in this instance, a number.
               </p>
 
               <!-- !End of Lecture 47 -->
@@ -1824,12 +1890,17 @@
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Let's bring back the 'populations' array from a previous assignment.
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is.
                   </p>
                 </li>
               </ol>
@@ -1837,7 +1908,23 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-
+                    const percentageOfWorld1 = function (population) {
+                      return (population / 7900) * 100;
+                    }
+                    
+                    const populations = [7, 60, 320, 50];
+                    const percentages = [
+                      percentageOfWorld1(populations[0]),
+                      percentageOfWorld1(populations[1]),
+                      percentageOfWorld1(populations[2]),
+                      percentageOfWorld1(populations[3])
+                    ];
+                    const percentages2 = [];
+                    
+                    for (let i = 0; i < populations.length; i++) {
+                      percentages2.push(percentageOfWorld1(populations[i]));
+                      console.log(`Percentage 1: ${percentages[i]} Vs. Percentage 2: ${percentages2[i]}`)
+                    }
                   </code>
                 </pre>
               </div>
