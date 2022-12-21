@@ -1911,7 +1911,7 @@
                     const percentageOfWorld1 = function (population) {
                       return (population / 7900) * 100;
                     }
-                    
+
                     const populations = [7, 60, 320, 50];
                     const percentages = [
                       percentageOfWorld1(populations[0]),
@@ -1920,7 +1920,7 @@
                       percentageOfWorld1(populations[3])
                     ];
                     const percentages2 = [];
-                    
+
                     for (let i = 0; i < populations.length; i++) {
                       percentages2.push(percentageOfWorld1(populations[i]));
                       console.log(`Percentage 1: ${percentages[i]} Vs. Percentage 2: ${percentages2[i]}`)
@@ -1939,20 +1939,37 @@
                 Looping backwards and loops in loops
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const myNumbers = [1, 2, 3, 4, 5];
+
+                    for (let i = myNumbers.length - 1; i >= 0; i--) {
+                      console.log(`Index Number: ${i}, Array Value: ${myNumbers[i]}`);
+                    }
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                To loop backwards over an array, we simply let 'i' equal to the array.length -1 and of course set the condition to be greater than or equal to 0 and lastly decrement the variable.
+              </p>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    for (let i = 1; i <= 3; i++) {
+                      console.log(`Exercise ${i}`);
+                      for (let j = 1; j <= 2; j++) {
+                        console.log(`Exercise ${i}, Rep ${j}`)
+                      }
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <p class="lecture-text">
+                To loop within a loop, we simply add a loop inside it.
               </p>
 
               <!-- !End of Lecture 48 -->

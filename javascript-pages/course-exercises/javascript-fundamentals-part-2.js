@@ -771,28 +771,45 @@ console.log('');
 //////////////////// Lecture 47 - Assignment ////////////////////
 console.log('🦀 LECTURE 47 - ASSIGNMENT');
 
-const percentageOfWorld1 = function (population) {
-  return (population / 7900) * 100;
-}
+// const percentageOfWorld1 = function (population) {
+//   return (population / 7900) * 100;
+// }
 
-const populations = [7, 60, 320, 50];
-const percentages = [
-  percentageOfWorld1(populations[0]),
-  percentageOfWorld1(populations[1]),
-  percentageOfWorld1(populations[2]),
-  percentageOfWorld1(populations[3])
-];
-const percentages2 = [];
+// const populations = [7, 60, 320, 50];
+// const percentages = [
+//   percentageOfWorld1(populations[0]),
+//   percentageOfWorld1(populations[1]),
+//   percentageOfWorld1(populations[2]),
+//   percentageOfWorld1(populations[3])
+// ];
+// const percentages2 = [];
 
-for (let i = 0; i < populations.length; i++) {
-  percentages2.push(percentageOfWorld1(populations[i]));
-  console.log(`Percentage 1: ${percentages[i]} Vs. Percentage 2: ${percentages2[i]}`)
-}
+// for (let i = 0; i < populations.length; i++) {
+//   percentages2.push(percentageOfWorld1(populations[i]));
+//   console.log(`Percentage 1: ${percentages[i]} Vs. Percentage 2: ${percentages2[i]}`)
+// }
 
 console.log('');
 
 //////////////////// Lecture 48 ////////////////////
 console.log('🦞 LECTURE 48');
+
+// Example 1
+
+const myNumbers = [1, 2, 3, 4, 5];
+
+for (let i = myNumbers.length - 1; i >= 0; i--) {
+  console.log(`Index Number: ${i}, Array Value: ${myNumbers[i]}`);
+}
+
+// Example 2
+
+for (let i = 1; i <= 3; i++) {
+  console.log(`Exercise ${i}`);
+  for (let j = 1; j <= 2; j++) {
+    console.log(`Exercise ${i}, Rep ${j}`)
+  }
+}
 
 console.log('');
 
