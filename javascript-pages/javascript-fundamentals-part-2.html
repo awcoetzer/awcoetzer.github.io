@@ -2126,34 +2126,24 @@
               </h3>
 
               <p class="lecture-text">
-
+                Let's improve Steven's tip calculator even more, this time using loops!
               </p>
 
               <span class="pre-heading">Your Tasks:</span>
               <ol class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    Create an array 'bills' containing all 10 test bill values.
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                    Create empty arrays for the tips and the totals ('tips' and 'totals').
                   </p>
                 </li>
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
+                    Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!.
                   </p>
                 </li>
               </ol>
@@ -2162,12 +2152,16 @@
               <ul class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                     22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
                   </p>
                 </li>
+              </ul>
+
+              <span class="pre-heading">Hints:</span>
+              <ul class="lecture-list">
                 <li class="lecture-list--item">
                   <p class="lecture-list--item-description">
-
+                      Call ‘calcTip ‘in the loop and use the push method to add values to the tips and totals arrays 😉
                   </p>
                 </li>
               </ul>
@@ -2175,7 +2169,51 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    const calcTip = function (bill) {
+                      return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+                    };
+
+                    const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+                    const tips = [];
+                    const total = [];
+
+                    for (let i = 0; i < bills.length; i++) {
+                      tips.push(calcTip(bills[i]));
+                      total.push(bills[i] + tips[i]);
+                      console.log(`Bill (${i + 1}) has a total of (${total[i]}) and the Tip was (${tips[i]}) and the Bill was (${bills[i]})`);
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <span class="pre-heading">Bonus:</span>
+              <p class="lecture-text">
+                 Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a difficult challenge (we haven't done this before)! Here is how to solve it:
+              </p>
+
+              <span class="pre-heading">Bonus Tasks:</span>
+              <ol class="lecture-list">
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together.
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
+                  </p>
+                </li>
+                <li class="lecture-list--item">
+                  <p class="lecture-list--item-description">
+                     Call the function with the 'totals' array
+                  </p>
+                </li>
+              </ol>
+
+              <div class="code-example">
+                <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    Code example here
                   </code>
                 </pre>
               </div>

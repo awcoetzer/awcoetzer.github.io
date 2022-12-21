@@ -862,35 +862,49 @@ console.log('');
 //////////////////// Lecture 49 - Assignment ////////////////////
 console.log('🦀 LECTURE 49 - ASSIGNMENT');
 
-const percentageOfWorld1 = function (population) {
-  return (population / 7900) * 100;
-}
+// const percentageOfWorld1 = function (population) {
+//   return (population / 7900) * 100;
+// }
 
-const populations = [7, 60, 320, 50];
+// const populations = [7, 60, 320, 50];
 
-console.log('')
-console.log('----- For Loop -----')
-const percentages2 = [];
+// console.log('')
+// console.log('----- For Loop -----')
+// const percentages2 = [];
 
-for (let i = 0; i < populations.length; i++) {
-  percentages2.push(percentageOfWorld1(populations[i]));
-  console.log(`Percentage 2: ${percentages2[i]}`)
-}
+// for (let i = 0; i < populations.length; i++) {
+//   percentages2.push(percentageOfWorld1(populations[i]));
+//   console.log(`Percentage 2: ${percentages2[i]}`)
+// }
 
-console.log('')
-console.log('----- While Loop -----')
-const percentages3 = [];
+// console.log('')
+// console.log('----- While Loop -----')
+// const percentages3 = [];
 
-let i = 0;
-while (i < populations.length) {
-  percentages3.push(percentageOfWorld1(populations[i]));
-  console.log(`Percentage 3: ${percentages3[i]}`);
-  i++
-}
+// let i = 0;
+// while (i < populations.length) {
+//   percentages3.push(percentageOfWorld1(populations[i]));
+//   console.log(`Percentage 3: ${percentages3[i]}`);
+//   i++
+// }
 
 console.log('');
 
 //////////////////// Coding Challenge - 4 ////////////////////
 console.log('🦑 CODING CHALLENGE - 4');
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const total = [];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  total.push(bills[i] + tips[i]);
+  console.log(`Bill (${i + 1}) has a total of (${total[i]}) and the Tip was (${tips[i]}) and the Bill was (${bills[i]})`);
+}
 
 console.log('');
