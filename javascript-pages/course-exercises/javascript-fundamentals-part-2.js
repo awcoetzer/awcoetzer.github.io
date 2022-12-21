@@ -835,32 +835,58 @@ console.log('🦞 LECTURE 49');
 
 // Example 1
 
-let i = 0;
+// let i = 0;
 
-while (i <= 10) {
-  console.log(`Loop (${i})`)
-  i++
-};
+// while (i <= 10) {
+//   console.log(`Loop (${i})`)
+//   i++
+// };
 
-// Example 2
+// // Example 2
 
-const diceMe = function (number) {
-  let dice = Math.trunc(Math.random() * number) + 1;
+// const diceMe = function (number) {
+//   let dice = Math.trunc(Math.random() * number) + 1;
 
-  while (dice !== number) {
-    console.log(`You Rolled a ${dice}`)
-    dice = Math.trunc(Math.random() * number) + 1;
+//   while (dice !== number) {
+//     console.log(`You Rolled a ${dice}`)
+//     dice = Math.trunc(Math.random() * number) + 1;
 
-    if (dice === number) console.log(`Yay!, You rolled a ${dice}, Game Over`);
-  }
-}
+//     if (dice === number) console.log(`Yay!, You rolled a ${dice}, Game Over`);
+//   }
+// }
 
-diceMe(5);
+// diceMe(5);
 
 console.log('');
 
 //////////////////// Lecture 49 - Assignment ////////////////////
 console.log('🦀 LECTURE 49 - ASSIGNMENT');
+
+const percentageOfWorld1 = function (population) {
+  return (population / 7900) * 100;
+}
+
+const populations = [7, 60, 320, 50];
+
+console.log('')
+console.log('----- For Loop -----')
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorld1(populations[i]));
+  console.log(`Percentage 2: ${percentages2[i]}`)
+}
+
+console.log('')
+console.log('----- While Loop -----')
+const percentages3 = [];
+
+let i = 0;
+while (i < populations.length) {
+  percentages3.push(percentageOfWorld1(populations[i]));
+  console.log(`Percentage 3: ${percentages3[i]}`);
+  i++
+}
 
 console.log('');
 
