@@ -816,22 +816,46 @@ console.log('');
 //////////////////// Lecture 48 - Assignment ////////////////////
 console.log('🦀 LECTURE 48 - ASSIGNMENT');
 
-const listOfNeighbours = [
-  ['Canada', 'Mexico'], 
-  ['Spain'], 
-  ['Norway', 'Sweden', 'Russia']
-];
+// const listOfNeighbours = [
+//   ['Canada', 'Mexico'], 
+//   ['Spain'], 
+//   ['Norway', 'Sweden', 'Russia']
+// ];
 
-for (let i = 0; i < listOfNeighbours.length; i++) {
-  for (let j = 0; j < listOfNeighbours[i].length; j++) {
-    console.log(`${listOfNeighbours[i][j]}`);
-  }
-}
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//   for (let j = 0; j < listOfNeighbours[i].length; j++) {
+//     console.log(`${listOfNeighbours[i][j]}`);
+//   }
+// }
 
 console.log('');
 
 //////////////////// Lecture 49 ////////////////////
 console.log('🦞 LECTURE 49');
+
+// Example 1
+
+let i = 0;
+
+while (i <= 10) {
+  console.log(`Loop (${i})`)
+  i++
+};
+
+// Example 2
+
+const diceMe = function (number) {
+  let dice = Math.trunc(Math.random() * number) + 1;
+
+  while (dice !== number) {
+    console.log(`You Rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * number) + 1;
+
+    if (dice === number) console.log(`Yay!, You rolled a ${dice}, Game Over`);
+  }
+}
+
+diceMe(5);
 
 console.log('');
 

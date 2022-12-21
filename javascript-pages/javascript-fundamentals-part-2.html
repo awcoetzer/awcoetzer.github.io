@@ -2008,7 +2008,7 @@
                       ['Spain'], 
                       ['Norway', 'Sweden', 'Russia']
                     ];
-                                      
+
                     for (let i = 0; i < listOfNeighbours.length; i++) {
                       for (let j = 0; j < listOfNeighbours[i].length; j++) {
                         console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
@@ -2028,20 +2028,38 @@
                 The while loop
               </h3>
 
-              <p class="lecture-text">
-                Text here
-              </p>
-
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example code here
+                    // basic while loop example
+
+                    let i = 0;
+
+                    while (i <= 10) {
+                      console.log(`Loop (${i})`)
+                      i++
+                    };
+
+                    // Dice game example
+
+                    const diceMe = function (number) {
+                      let dice = Math.trunc(Math.random() * number) + 1;
+                    
+                      while (dice !== number) {
+                        console.log(`You Rolled a ${dice}`)
+                        dice = Math.trunc(Math.random() * number) + 1;
+                      
+                        if (dice === number) console.log(`Yay!, You rolled a ${dice}, Game Over`);
+                      }
+                    }
+
+                    diceMe(5);
                   </code>
                 </pre>
               </div>
 
               <p class="lecture-text">
-                text here
+                A while loop does not require a counter, and is used when you do not know when the loop should end. That's when something is truly random. When we know when the loop should end, it's best to use a 'for loop'.
               </p>
 
               <!-- !End of Lecture 49 -->
