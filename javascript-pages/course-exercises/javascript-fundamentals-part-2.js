@@ -617,36 +617,69 @@ console.log('');
 //////////////////// Lecture 44 - Assignment ////////////////////
 console.log('🦀 LECTURE 44 - ASSIGNMENT');
 
-const myCountry = {
-  country: 'Republic of Bulgaria',
-  capital: 'Sofia',
-  language: 'Bulgarian',
-  population: 7.4,
-  neighbours: [
-    'Greece',
-    'Republic of Macedonia',
-    'Romania',
-    'Serbia',
-    'Turkey'
-  ],
-  describe: function () {
-    return `The ${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
-  },
-  checkIsland: function () {
-    this.isIsland = this.neighbours.length === 0 ? true : false;
-    return this.isIsland;
-  }
-};
+// const myCountry = {
+//   country: 'Republic of Bulgaria',
+//   capital: 'Sofia',
+//   language: 'Bulgarian',
+//   population: 7.4,
+//   neighbours: [
+//     'Greece',
+//     'Republic of Macedonia',
+//     'Romania',
+//     'Serbia',
+//     'Turkey'
+//   ],
+//   describe: function () {
+//     return `The ${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+//   },
+//   checkIsland: function () {
+//     this.isIsland = this.neighbours.length === 0 ? true : false;
+//     return this.isIsland;
+//   }
+// };
 
-console.log(myCountry.describe())
-console.log(myCountry.checkIsland())
-
-
+// console.log(myCountry.describe())
+// console.log(myCountry.checkIsland())
 
 console.log('');
 
 //////////////////// Coding Challenge - 3 ////////////////////
-console.log('🦞 LECTURE 40');
+console.log('🦑 CODING CHALLENGE 3');
+
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69, 
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi
+  }
+};
+
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95, 
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi
+  }
+};
+
+mark.calcBMI()
+john.calcBMI()
+
+console.log(mark.bmi, john.bmi)
+
+const bmiCompare = function (x, y) {
+  if (x.bmi > y.bmi) {
+    return `${x.fullName}'s BMI(${x.bmi}) is higher than ${y.fullName}'s BMI(${y.bmi})`
+  } else {
+    return `${y.fullName}'s BMI(${y.bmi}) is higher than ${x.fullName}'s BMI(${x.bmi})`
+  }
+}
+
+console.log(bmiCompare(mark, john));
 
 console.log('');
 
