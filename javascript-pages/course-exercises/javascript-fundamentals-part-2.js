@@ -796,25 +796,37 @@ console.log('🦞 LECTURE 48');
 
 // Example 1
 
-const myNumbers = [1, 2, 3, 4, 5];
+// const myNumbers = [1, 2, 3, 4, 5];
 
-for (let i = myNumbers.length - 1; i >= 0; i--) {
-  console.log(`Index Number: ${i}, Array Value: ${myNumbers[i]}`);
-}
+// for (let i = myNumbers.length - 1; i >= 0; i--) {
+//   console.log(`Index Number: ${i}, Array Value: ${myNumbers[i]}`);
+// }
 
-// Example 2
+// // Example 2
 
-for (let i = 1; i <= 3; i++) {
-  console.log(`Exercise ${i}`);
-  for (let j = 1; j <= 2; j++) {
-    console.log(`   Exercise ${i}, Rep ${j}`)
-  }
-}
+// for (let i = 1; i <= 3; i++) {
+//   console.log(`Exercise ${i}`);
+//   for (let j = 1; j <= 2; j++) {
+//     console.log(`   Exercise ${i}, Rep ${j}`)
+//   }
+// }
 
 console.log('');
 
 //////////////////// Lecture 48 - Assignment ////////////////////
 console.log('🦀 LECTURE 48 - ASSIGNMENT');
+
+const listOfNeighbours = [
+  ['Canada', 'Mexico'], 
+  ['Spain'], 
+  ['Norway', 'Sweden', 'Russia']
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(`${listOfNeighbours[i][j]}`);
+  }
+}
 
 console.log('');
 
