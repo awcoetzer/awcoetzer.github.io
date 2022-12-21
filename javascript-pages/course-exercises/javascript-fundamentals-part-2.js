@@ -893,18 +893,32 @@ console.log('');
 //////////////////// Coding Challenge - 4 ////////////////////
 console.log('🦑 CODING CHALLENGE - 4');
 
+// Example 1
+
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 };
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
-const total = [];
+const totals = [];
 
 for (let i = 0; i < bills.length; i++) {
   tips.push(calcTip(bills[i]));
-  total.push(bills[i] + tips[i]);
-  console.log(`Bill (${i + 1}) has a total of (${total[i]}) and the Tip was (${tips[i]}) and the Bill was (${bills[i]})`);
+  totals.push(bills[i] + tips[i]);
+  console.log(`Bill (${i + 1}) has a total of (${totals[i]}) and the Tip was (${tips[i]}) and the Bill was (${bills[i]})`);
 }
+
+// Example 2
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+console.log(calcAverage(totals))
 
 console.log('');

@@ -2213,7 +2213,15 @@
               <div class="code-example">
                 <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    Code example here
+                    const calcAverage = function (arr) {
+                      let sum = 0;
+                      for (let i = 0; i < arr.length; i++) {
+                        sum += arr[i];
+                      }
+                      return sum / arr.length;
+                    }
+                    
+                    console.log(calcAverage(totals))
                   </code>
                 </pre>
               </div>
