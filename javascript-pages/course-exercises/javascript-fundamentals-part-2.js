@@ -807,7 +807,7 @@ for (let i = myNumbers.length - 1; i >= 0; i--) {
 for (let i = 1; i <= 3; i++) {
   console.log(`Exercise ${i}`);
   for (let j = 1; j <= 2; j++) {
-    console.log(`Exercise ${i}, Rep ${j}`)
+    console.log(`   Exercise ${i}, Rep ${j}`)
   }
 }
 
