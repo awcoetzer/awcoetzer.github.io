@@ -1,398 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="When I'm not coding, I'm usually dreaming about coding. When I'm not dreaming about coding, I'm probably learning how to code. Welcome to my coding journey." />
+    <link
+      rel="icon"
+      href="./resources/images/favicon/computer-illustration-64x64.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./resources/css/style.css" />
+    <title>Andre Coetzer &mdash; A Developers Journey</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="When I'm not coding, I'm usually dreaming about coding. When I'm not dreaming about coding, I'm probably learning how to code. Welcome to my coding journey." />
-  <link rel="icon" href="./resources/images/favicon/computer-illustration-64x64.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./resources/css/style.css" />
-  <title>Andre Coetzer &mdash; A Developers Journey</title>
-</head>
+  <body>
+    <!-- !Section: Header -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="index.html" class="btn main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#journey" class="btn main-nav-link">Journey</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#about" class="btn main-nav-link">About</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#featured" class="btn main-nav-link">Featured</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-<body>
+      <button class="mobile-nav">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </button>
 
-  <!-- !Section: Header -->
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-item">
-          <a href="index.html" class="btn main-nav-link">Home</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#journey" class="btn main-nav-link">Journey</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#about" class="btn main-nav-link">About</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#featured" class="btn main-nav-link">Featured</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#footer" class="btn main-nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
+      <!-- !Back to Top btn -->
+      <a href="#" class="btt-btn">
+        <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
+      </a>
+    </header>
 
-    <button class="mobile-nav">
-      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-    </button>
+    <main>
+      <!-- !Section: Hero -->
+      <section class="section-padding section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <!-- !Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="index.html" class="link link--breadcrumb">
+                    Andre Coetzer
+                  </a>
+                </li>
+              </ul>
+            </nav>
 
-    <!-- !Back to Top btn -->
-    <a href="#" class="btt-btn">
-      <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
-    </a>
-  </header>
+            <h1 class="heading-primary">
+              A graphic designer
+              <span class="apostraphe">'</span>
+              s journey to becoming a developer
+            </h1>
+            <p class="hero-description">
+              When I'm not coding, I'm usually dreaming about coding. When I'm
+              not dreaming about coding, I'm probably learning how to code.
+              Welcome to my coding journey.
+            </p>
+            <a href="#featured" class="btn btn--hero-full margin-right-sm">
+              Check out my projects
+            </a>
+            <a href="#footer" class="btn btn--hero-outline">Contact</a>
+          </div>
 
-  <main>
+          <picture class="hero-img-box">
+            <source
+              srcset="./resources/images/main/hero/computer-illustration.webp"
+              type="image/webp" />
+            <source
+              srcset="
+                ./resources/images/main/hero/computer-illustration-min.png
+              "
+              type="image/png" />
 
-    <!-- !Section: Hero -->
-    <section class="section-padding section-hero">
-      <div class="hero">
-        <div class="hero-text-box">
+            <img
+              src="./resources/images/main/hero/computer-illustration-min.png"
+              alt="Retro computer illustration. Done by Andre Coetzer"
+              class="hero-img" />
+          </picture>
+        </div>
+      </section>
 
-          <!-- !Breadcrumb Navigation -->
-          <nav class="breadcrumb-nav">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="index.html" class="link link--breadcrumb">Andre Coetzer</a>
+      <!-- !Section: Journey -->
+      <section id="journey" class="section-padding section-journey">
+        <div class="container center-text">
+          <span class="pre-heading">My Journey</span>
+          <h2 class="heading-secondary">
+            Learning is a lifelong process and I'll never stop
+          </h2>
+        </div>
+
+        <div class="cards">
+          <div class="container">
+            <div class="card-box">
+              <!-- !Journey Card 1 -->
+              <a href="./html-pages/html.html" class="card-link">
+                <div class="card">
+                  <div class="card-text-box">
+                    <ion-icon name="logo-html5" class="card-icon"></ion-icon>
+                    <span class="pre-heading pre-heading--cards">
+                      HTML Notes
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- !Journey Card 2 -->
+              <a href="./css-pages/css.html" class="card-link">
+                <div class="card">
+                  <div class="card-text-box">
+                    <ion-icon name="logo-css3" class="card-icon"></ion-icon>
+                    <span class="pre-heading pre-heading--cards">
+                      CSS Notes
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- !Journey Card 3 -->
+              <a href="./javascript-pages/javascript.html" class="card-link">
+                <div class="card">
+                  <div class="card-text-box">
+                    <ion-icon
+                      name="logo-javascript"
+                      class="card-icon"></ion-icon>
+                    <span class="pre-heading pre-heading--cards">
+                      Javscript Notes
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- !Journey Card 4 -->
+              <a href="./react-pages/react.html" class="card-link">
+                <div class="card">
+                  <div class="card-text-box">
+                    <ion-icon name="logo-react" class="card-icon"></ion-icon>
+                    <span class="pre-heading pre-heading--cards">
+                      React Notes
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- !Journey Card 5 -->
+              <a href="./node-pages/node.html" class="card-link">
+                <div class="card">
+                  <div class="card-text-box">
+                    <ion-icon name="logo-nodejs" class="card-icon"></ion-icon>
+                    <span class="pre-heading pre-heading--cards">
+                      Node.js Notes
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- !ection: About -->
+      <section id="about" class="section-padding section-about">
+        <div class="container">
+          <span class="pre-heading">About</span>
+          <h2 class="heading-secondary">I'm a designer turned developer</h2>
+        </div>
+
+        <div class="about">
+          <div class="container grid grid--2-cols grid--center-v">
+            <div class="about-text-box">
+              <p class="about-text">
+                Hey there, the name's
+                <strong>Andre</strong>
+                , a junior web developer who is currently aiming towards full
+                stack development.
+              </p>
+              <p class="about-text">
+                I am always learning new things, and I believe it's never too
+                late to change careers or delve into something new. I find
+                myself determined to learn it all. Not only that, but I want to
+                be the best that I can be and hope to make an impact on people's
+                lives through code.
+              </p>
+            </div>
+
+            <picture class="about-img-box">
+              <source
+                srcset="
+                  ./resources/images/about/question-mark-in-stars-illustration.webp
+                "
+                type="image/webp" />
+              <source
+                srcset="
+                  ./resources/images/about/question-mark-in-stars-illustration-min.png
+                "
+                type="image/png" />
+
+              <img
+                src="./resources/images/about/question-mark-in-stars-illustration-min.png"
+                alt="Window showing space illustration. Done by Andre Coetzer"
+                class="about-img" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- !Section: Featured -->
+      <section id="featured" class="section-padding section-featured">
+        <div class="container">
+          <span class="notice-block">
+            <ion-icon name="warning-outline" class="notice-icon"></ion-icon>
+            <span class="notice-message">This is for future projects</span>
+          </span>
+          <span class="pre-heading">Featured</span>
+          <h2 class="heading-secondary">
+            Showcasing some of my most awesome projects
+          </h2>
+        </div>
+
+        <div class="featured under-construction">
+          <div class="container grid grid--2-cols grid--center-v">
+            <!-- !Project 1 -->
+            <div class="featured-text-box">
+              <span class="pre-heading">Future Awesome Project Title</span>
+              <h3 class="heading-tertiary">
+                Future awesome project description
+              </h3>
+              <p class="featured-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita corrupti nihil, libero amet officiis voluptate id
+                consequuntur aperiam perferendis ab. Saepe, amet minus animi
+                assumenda doloremque asperiores rerum dicta tenetur? Temporibus
+                iusto quidem sed, aspernatur expedita voluptate eius labore fuga
+                natus, perspiciatis obcaecati quaerat sit! In voluptate fugiat
+                suscipit labore consequatur temporibus! Dignissimos et tenetur,
+                aut quasi reprehenderit illo accusantium.
+              </p>
+            </div>
+
+            <picture class="featured-img-box">
+              <source
+                srcset="./resources/images/javascript/nail-illustration.webp"
+                type="image/webp" />
+              <source
+                srcset="./resources/images/javascript/nail-illustration-min.png"
+                type="image/png" />
+
+              <img
+                src="./resources/images/javascript/nail-illustration-min.png"
+                alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+                class="featured-img" />
+            </picture>
+
+            <!-- !Project 2 -->
+            <picture class="featured-img-box">
+              <source
+                srcset="./resources/images/javascript/nail-illustration.webp"
+                type="image/webp" />
+              <source
+                srcset="./resources/images/javascript/nail-illustration-min.png"
+                type="image/png" />
+
+              <img
+                src="./resources/images/javascript/nail-illustration-min.png"
+                alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+                class="featured-img" />
+            </picture>
+
+            <div class="featured-text-box">
+              <span class="pre-heading">Future Awesome Project Title</span>
+              <h3 class="heading-tertiary">
+                Future awesome project description
+              </h3>
+              <p class="featured-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita corrupti nihil, libero amet officiis voluptate id
+                consequuntur aperiam perferendis ab. Saepe, amet minus animi
+                assumenda doloremque asperiores rerum dicta tenetur? Temporibus
+                iusto quidem sed, aspernatur expedita voluptate eius labore fuga
+                natus, perspiciatis obcaecati quaerat sit! In voluptate fugiat
+                suscipit labore consequatur temporibus! Dignissimos et tenetur,
+                aut quasi reprehenderit illo accusantium.
+              </p>
+            </div>
+
+            <!-- !Project 3 -->
+            <div class="featured-text-box">
+              <span class="pre-heading">Future Awesome Project Title</span>
+              <h3 class="heading-tertiary">
+                Future awesome project description
+              </h3>
+              <p class="featured-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita corrupti nihil, libero amet officiis voluptate id
+                consequuntur aperiam perferendis ab. Saepe, amet minus animi
+                assumenda doloremque asperiores rerum dicta tenetur? Temporibus
+                iusto quidem sed, aspernatur expedita voluptate eius labore fuga
+                natus, perspiciatis obcaecati quaerat sit! In voluptate fugiat
+                suscipit labore consequatur temporibus! Dignissimos et tenetur,
+                aut quasi reprehenderit illo accusantium.
+              </p>
+            </div>
+
+            <picture class="featured-img-box">
+              <source
+                srcset="./resources/images/javascript/nail-illustration.webp"
+                type="image/webp" />
+              <source
+                srcset="./resources/images/javascript/nail-illustration-min.png"
+                type="image/png" />
+
+              <img
+                src="./resources/images/javascript/nail-illustration-min.png"
+                alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+                class="featured-img" />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- !Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <!-- !Profile -->
+          <div class="profile-col">
+            <picture class="footer-profile">
+              <source
+                srcset="./resources/images/main/profile-pic/me-reduced.webp"
+                type="image/webp" />
+              <source
+                srcset="./resources/images/main/profile-pic/me-reduced-min.jpg"
+                type="image/jpg" />
+
+              <img
+                src="./resources/images/main/profile-pic/me-reduced-min.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img" />
+            </picture>
+            <div class="social-icons">
+              <!-- !Discord -->
+              <a
+                href="https://discordapp.com/users/871093653660106812"
+                class="social-link"
+                target="_blank"
+                data-title="Discord">
+                <ion-icon name="logo-discord" class="social-icon"></ion-icon>
+              </a>
+
+              <!-- !Github -->
+              <a
+                href="https://github.com/acoetzer"
+                class="social-link"
+                target="_blank"
+                data-title="GitHub">
+                <ion-icon name="logo-github" class="social-icon"></ion-icon>
+              </a>
+
+              <!-- !Email -->
+              <a
+                href="mailto:awcoetzer@outlook.com"
+                class="social-link"
+                target="_blank"
+                data-title="Email">
+                <ion-icon name="mail-outline" class="social-icon"></ion-icon>
+              </a>
+            </div>
+            <address class="address-text-box">
+              <p class="address">Sofia, Bulgaria</p>
+            </address>
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy;
+                <span id="copyright">(This is a script)</span>
+                Andre Coetzer. All rights reserved
+              </p>
+            </div>
+          </div>
+
+          <!-- !Page Links -->
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="link link--footer">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#journey" class="link link--footer">Journey</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#about" class="link link--footer">About</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="#featured" class="link link--footer">Featured</a>
               </li>
             </ul>
-          </nav>
+          </div>
 
-          <h1 class="heading-primary">
-            A graphic designer<span class="apostraphe">'</span>s journey to
-            becoming a developer
-          </h1>
-          <p class="hero-description">
-            When I'm not coding, I'm usually dreaming about coding. When I'm not dreaming about coding, I'm probably
-            learning how to code. Welcome to my coding journey.
-          </p>
-          <a href="#featured" class="btn btn--hero-full margin-right-sm">Check out my projects</a>
-          <a href="#footer" class="btn btn--hero-outline">Contact</a>
-        </div>
-
-        <picture class="hero-img-box">
-          <source srcset="./resources/images/main/hero/computer-illustration.webp" type="image/webp">
-          <source srcset="./resources/images/main/hero/computer-illustration-min.png" type="image/png">
-
-          <img src="./resources/images/main/hero/computer-illustration-min.png"
-            alt="Retro computer illustration. Done by Andre Coetzer" class="hero-img" />
-        </picture>
-      </div>
-    </section>
-
-    <!-- !Section: Journey -->
-    <section id="journey" class="section-padding section-journey">
-      <div class="container center-text">
-        <span class="pre-heading"> My Journey </span>
-        <h2 class="heading-secondary">
-          Learning is a lifelong process and I'll never stop
-        </h2>
-      </div>
-
-      <div class="cards">
-        <div class="container">
-          <div class="card-box">
-
-            <!-- !Journey Card 1 -->
-            <a href="./html-pages/html.html" class="card-link">
-              <div class="card">
-                <div class="card-text-box">
-                  <ion-icon name="logo-html5" class="card-icon"></ion-icon>
-                  <span class="pre-heading pre-heading--cards">
-                    HTML Notes
-                  </span>
-                </div>
-              </div>
-            </a>
-
-            <!-- !Journey Card 2 -->
-            <a href="./css-pages/css.html" class="card-link">
-              <div class="card">
-                <div class="card-text-box">
-                  <ion-icon name="logo-css3" class="card-icon"></ion-icon>
-                  <span class="pre-heading pre-heading--cards">
-                    CSS Notes
-                  </span>
-                </div>
-              </div>
-            </a>
-
-            <!-- !Journey Card 3 -->
-            <a href="./javascript-pages/javascript.html" class="card-link">
-              <div class="card">
-                <div class="card-text-box">
-                  <ion-icon name="logo-javascript" class="card-icon"></ion-icon>
-                  <span class="pre-heading pre-heading--cards">
-                    Javscript Notes
-                  </span>
-                </div>
-              </div>
-            </a>
-
-            <!-- !Journey Card 4 -->
-            <a href="./react-pages/react.html" class="card-link">
-              <div class="card">
-                <div class="card-text-box">
-                  <ion-icon name="logo-react" class="card-icon"></ion-icon>
-                  <span class="pre-heading pre-heading--cards">
-                    React Notes
-                  </span>
-                </div>
-              </div>
-            </a>
-
-            <!-- !Journey Card 5 -->
-            <a href="./node-pages/node.html" class="card-link">
-              <div class="card">
-                <div class="card-text-box">
-                  <ion-icon name="logo-nodejs" class="card-icon"></ion-icon>
-                  <span class="pre-heading pre-heading--cards">
-                    Node.js Notes
-                  </span>
-                </div>
-              </div>
-            </a>
+          <!-- !Site Links -->
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="../index.html" class="link link--footer">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../html-pages/html.html" class="link link--footer">
+                  HTML
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../css-pages/css.html" class="link link--footer">
+                  CSS
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a
+                  href="../javascript-pages/javascript.html"
+                  class="link link--footer">
+                  JavaScript
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../react-pages/react.html" class="link link--footer">
+                  React
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../node-pages/node.html" class="link link--footer">
+                  Node.js
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- !ection: About -->
-    <section id="about" class="section-padding section-about">
-      <div class="container">
-        <span class="pre-heading"> About </span>
-        <h2 class="heading-secondary">I'm a designer turned developer</h2>
-      </div>
-
-      <div class="about">
-        <div class="container grid grid--2-cols grid--center-v">
-          <div class="about-text-box">
-            <p class="about-text">
-              Hey there, the name's <strong>Andre</strong>, a junior web developer who is currently aiming towards full
-              stack development.
-            </p>
-            <p class="about-text">
-              I am always learning new things, and I believe it's never too late to change careers or delve into
-              something new. I find myself determined to learn it all. Not only that, but I want to be the best that I
-              can be and hope to make an impact on people's lives through code.
-            </p>
-          </div>
-
-          <picture class="about-img-box">
-            <source srcset="./resources/images/about/question-mark-in-stars-illustration.webp" type="image/webp">
-            <source srcset="./resources/images/about/question-mark-in-stars-illustration-min.png" type="image/png">
-
-            <img src="./resources/images/about/question-mark-in-stars-illustration-min.png"
-              alt="Window showing space illustration. Done by Andre Coetzer" class="about-img" />
-          </picture>
-        </div>
-      </div>
-    </section>
-
-    <!-- !Section: Featured -->
-    <section id="featured" class="section-padding section-featured">
-      <div class="container">
-        <span class="notice-block">
-          <ion-icon name="warning-outline" class="notice-icon"></ion-icon>
-          <span class="notice-message">This is for future projects</span>
-        </span>
-        <span class="pre-heading"> Featured </span>
-        <h2 class="heading-secondary">
-          Showcasing some of my most awesome projects
-        </h2>
-      </div>
-
-      <div class="featured under-construction">
-        <div class="container grid grid--2-cols grid--center-v">
-
-          <!-- !Project 1 -->
-          <div class="featured-text-box">
-            <span class="pre-heading"> Future Awesome Project Title </span>
-            <h3 class="heading-tertiary">
-              Future awesome project description
-            </h3>
-            <p class="featured-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Expedita corrupti nihil, libero amet officiis voluptate id
-              consequuntur aperiam perferendis ab. Saepe, amet minus animi
-              assumenda doloremque asperiores rerum dicta tenetur? Temporibus
-              iusto quidem sed, aspernatur expedita voluptate eius labore fuga
-              natus, perspiciatis obcaecati quaerat sit! In voluptate fugiat
-              suscipit labore consequatur temporibus! Dignissimos et tenetur,
-              aut quasi reprehenderit illo accusantium.
-            </p>
-          </div>
-
-          <picture class="featured-img-box">
-            <source srcset="./resources/images/javascript/nail-illustration.webp" type="image/webp">
-            <source srcset="./resources/images/javascript/nail-illustration-min.png" type="image/png">
-
-            <img src="./resources/images/javascript/nail-illustration-min.png"
-              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
-              class="featured-img" />
-          </picture>
-
-          <!-- !Project 2 -->
-          <picture class="featured-img-box">
-            <source srcset="./resources/images/javascript/nail-illustration.webp" type="image/webp">
-            <source srcset="./resources/images/javascript/nail-illustration-min.png" type="image/png">
-
-            <img src="./resources/images/javascript/nail-illustration-min.png"
-              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
-              class="featured-img" />
-          </picture>
-
-          <div class="featured-text-box">
-            <span class="pre-heading"> Future Awesome Project Title </span>
-            <h3 class="heading-tertiary">
-              Future awesome project description
-            </h3>
-            <p class="featured-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Expedita corrupti nihil, libero amet officiis voluptate id
-              consequuntur aperiam perferendis ab. Saepe, amet minus animi
-              assumenda doloremque asperiores rerum dicta tenetur? Temporibus
-              iusto quidem sed, aspernatur expedita voluptate eius labore fuga
-              natus, perspiciatis obcaecati quaerat sit! In voluptate fugiat
-              suscipit labore consequatur temporibus! Dignissimos et tenetur,
-              aut quasi reprehenderit illo accusantium.
-            </p>
-          </div>
-
-          <!-- !Project 3 -->
-          <div class="featured-text-box">
-            <span class="pre-heading"> Future Awesome Project Title </span>
-            <h3 class="heading-tertiary">
-              Future awesome project description
-            </h3>
-            <p class="featured-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Expedita corrupti nihil, libero amet officiis voluptate id
-              consequuntur aperiam perferendis ab. Saepe, amet minus animi
-              assumenda doloremque asperiores rerum dicta tenetur? Temporibus
-              iusto quidem sed, aspernatur expedita voluptate eius labore fuga
-              natus, perspiciatis obcaecati quaerat sit! In voluptate fugiat
-              suscipit labore consequatur temporibus! Dignissimos et tenetur,
-              aut quasi reprehenderit illo accusantium.
-            </p>
-          </div>
-
-          <picture class="featured-img-box">
-            <source srcset="./resources/images/javascript/nail-illustration.webp" type="image/webp">
-            <source srcset="./resources/images/javascript/nail-illustration-min.png" type="image/png">
-
-            <img src="./resources/images/javascript/nail-illustration-min.png"
-              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
-              class="featured-img" />
-          </picture>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- !Footer -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="footer-box">
-
-        <!-- !Profile -->
-        <div class="profile-col">
-          <picture class="footer-profile">
-            <source srcset="./resources/images/main/profile-pic/me-reduced.webp" type="image/webp">
-            <source srcset="./resources/images/main/profile-pic/me-reduced-min.jpg" type="image/jpg">
-
-            <img src="./resources/images/main/profile-pic/me-reduced-min.jpg"
-              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </picture>
-          <div class="social-icons">
-            <!-- !Discord -->
-            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
-              data-title="Discord">
-              <ion-icon name="logo-discord" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Github -->
-            <a href="https://github.com/acoetzer" class="social-link" target="_blank" data-title="GitHub">
-              <ion-icon name="logo-github" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Email -->
-            <a href="mailto:awcoetzer@outlook.com" class="social-link" target="_blank" data-title="Email">
-              <ion-icon name="mail-outline" class="social-icon"></ion-icon>
-            </a>
-          </div>
-          <address class="address-text-box">
-            <p class="address">Sofia, Bulgaria</p>
-          </address>
-          <div class="copyright-text center-text">
-            <p class="copyright">
-              &copy; <span id="copyright">(This is a script)</span> Andre
-              Coetzer. All rights reserved
-            </p>
-          </div>
-        </div>
-
-        <!-- !Page Links -->
-        <div class="page-links-col">
-          <span class="pre-heading footer-pre-heading">Page Links</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="#" class="link link--footer">Go to the Top &uarr;</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#journey" class="link link--footer">Journey</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#about" class="link link--footer">About</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#featured" class="link link--footer">Featured</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- !Site Links -->
-        <div class="site-links-col">
-          <span class="pre-heading footer-pre-heading">Site Map</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="../index.html" class="link link--footer">Home</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../html-pages/html.html" class="link link--footer">HTML</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../css-pages/css.html" class="link link--footer">CSS</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../javascript-pages/javascript.html" class="link link--footer">JavaScript</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../react-pages/react.html" class="link link--footer">React</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../node-pages/node.html" class="link link--footer">Node.js</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- !Scripts -->
-  <script src="./resources/javascript/app.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <!-- !Scripts -->
+    <script src="./resources/javascript/app.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
