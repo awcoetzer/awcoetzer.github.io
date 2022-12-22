@@ -1561,9 +1561,11 @@ strong {
 }
 
 .prev-next-text-box {
+  flex: 1;
 }
 
 .pre-heading--prev-next {
+  max-width: 100%;
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(
     to right,
