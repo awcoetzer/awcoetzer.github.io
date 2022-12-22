@@ -1,251 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JavaScript fundamentals (Part 2), continuing the journey through javascript fundamentals with Part 2."
+    />
+    <link
+      rel="icon"
+      href="../resources/images/favicon/computer-illustration-64x64.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../resources/css/prism.css" />
+    <script src="../resources/javascript/prism.js"></script>
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <title>JavaScript Fundamentals (Part 2) &mdash; JavaScript</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JavaScript fundamentals (Part 2), continuing the journey through javascript fundamentals with Part 2." />
-  <link rel="icon" href="../resources/images/favicon/computer-illustration-64x64.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../resources/css/prism.css" />
-  <script src="../resources/javascript/prism.js"></script>
-  <link rel="stylesheet" href="../resources/css/style.css" />
-  <title>JavaScript Fundamentals (Part 2) &mdash; JavaScript</title>
-</head>
+  <body>
+    <!-- !Section: Header -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="../index.html" class="btn main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-<body>
-  <!-- !Section: Header -->
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-item">
-          <a href="../index.html" class="btn main-nav-link">Home</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#footer" class="btn main-nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
+      <button class="mobile-nav">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </button>
 
-    <button class="mobile-nav">
-      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-    </button>
+      <!-- !Back to Top btn -->
+      <a href="#" class="btt-btn">
+        <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
+      </a>
+    </header>
 
-    <!-- !Back to Top btn -->
-    <a href="#" class="btt-btn">
-      <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
-    </a>
-  </header>
+    <main>
+      <!-- !Section: Blog Hero -->
+      <section class="section-padding--blog section-blog-hero">
+        <div class="blog-hero">
+          <picture class="blog-hero-img-box">
+            <source
+              srcset="../resources/images/javascript/nail-illustration.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="../resources/images/javascript/nail-illustration-min.png"
+              type="image/png"
+            />
 
-  <main>
+            <img
+              src="../resources/images/javascript/nail-illustration-min.png"
+              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+              class="blog-hero-img"
+            />
+          </picture>
 
-    <!-- !Section: Blog Hero -->
-    <section class="section-padding--blog section-blog-hero">
-      <div class="blog-hero">
-        <picture class="blog-hero-img-box">
-          <source srcset="../resources/images/javascript/nail-illustration.webp" type="image/webp">
-          <source srcset="../resources/images/javascript/nail-illustration-min.png" type="image/png">
-
-          <img src="../resources/images/javascript/nail-illustration-min.png"
-            alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer" class="blog-hero-img" />
-        </picture>
-
-        <div class="blog-hero-text-box">
-
-          <!-- !Breadcrumb Navigation -->
-          <nav class="breadcrumb-nav">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="../index.html" class="link link--breadcrumb">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript.html" class="link link--breadcrumb">JavaScript</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript-fundamentals-part-2.html" class="link link--breadcrumb">JavaScript Fundamentals
-                  (Part 2)</a>
-              </li>
-            </ul>
-          </nav>
-          <span class="pre-heading">Section 3</span>
-          <h1 class="heading-primary">JavaScript fundamentals (Part 2)</h1>
+          <div class="blog-hero-text-box">
+            <!-- !Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="../index.html" class="link link--breadcrumb">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="./javascript.html" class="link link--breadcrumb"
+                    >JavaScript</a
+                  >
+                </li>
+                <li class="breadcrumb-item">
+                  <a
+                    href="./javascript-fundamentals-part-2.html"
+                    class="link link--breadcrumb"
+                    >JavaScript Fundamentals (Part 2)</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <span class="pre-heading">Section 3</span>
+            <h1 class="heading-primary">JavaScript fundamentals (Part 2)</h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- !Section Blog -->
-    <section class="section-padding--blog section-blog">
-      <div class="container--blog">
-        <div class="blog">
+      <!-- !Section Blog -->
+      <section class="section-padding--blog section-blog">
+        <div class="container--blog">
+          <div class="blog">
+            <!-- !Table of Contents -->
+            <nav class="toc">
+              <div class="toc-box">
+                <button class="toc-btn">
+                  <span class="pre-heading toc-btn-heading"
+                    >Table of Contents</span
+                  >
+                  <ion-icon name="add-outline" class="toc-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
+                </button>
 
-          <!-- !Table of Contents -->
-          <nav class="toc">
-            <div class="toc-box">
-              <button class="toc-btn">
-                <span class="pre-heading toc-btn-heading">Table of Contents</span>
-                <ion-icon name="add-outline" class="toc-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
-              </button>
-
-              <div class="toc-hidden-box">
-                <ul class="toc-list">
-                  <li class="toc-item">
-                    <a href="#lecture-32" class="link link--toc">
-                      Activating strict mode
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-33" class="link link--toc">
-                      Functions
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-34" class="link link--toc">
-                      Functions declarations vs. expressions
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-35" class="link link--toc">
-                      Arrow functions
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-36" class="link link--toc">
-                      Functions calling other functions
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-37" class="link link--toc">
-                      Reviewing functions
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-38" class="link link--toc">
-                      Coding challenge - 1
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-39" class="link link--toc">
-                      Introduction to arrays
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-40" class="link link--toc">
-                      Basic array operations (Methods)
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-41" class="link link--toc">
-                      Coding challenge - 2
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-42" class="link link--toc">
-                      Introduction to objects
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-43" class="link link--toc">
-                      Dot vs. bracket notation
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-44" class="link link--toc">
-                      Object methods
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-45" class="link link--toc">
-                      Coding challenge - 3
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-46" class="link link--toc">
-                      Iteration &mdash; The for loop
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-47" class="link link--toc">
-                      Looping arrays, breaking and continuing
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-48" class="link link--toc">
-                      Looping backwards and loops in loops
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-49" class="link link--toc">
-                      The while loop
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-50" class="link link--toc">
-                      Coding challenge - 4
-                    </a>
-                  </li>
-                </ul>
+                <div class="toc-hidden-box">
+                  <ul class="toc-list">
+                    <li class="toc-item">
+                      <a href="#lecture-32" class="link link--toc">
+                        Activating strict mode
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-33" class="link link--toc">
+                        Functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-34" class="link link--toc">
+                        Functions declarations vs. expressions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-35" class="link link--toc">
+                        Arrow functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-36" class="link link--toc">
+                        Functions calling other functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-37" class="link link--toc">
+                        Reviewing functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-38" class="link link--toc">
+                        Coding challenge - 1
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-39" class="link link--toc">
+                        Introduction to arrays
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-40" class="link link--toc">
+                        Basic array operations (Methods)
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-41" class="link link--toc">
+                        Coding challenge - 2
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-42" class="link link--toc">
+                        Introduction to objects
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-43" class="link link--toc">
+                        Dot vs. bracket notation
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-44" class="link link--toc">
+                        Object methods
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-45" class="link link--toc">
+                        Coding challenge - 3
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-46" class="link link--toc">
+                        Iteration &mdash; The for loop
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-47" class="link link--toc">
+                        Looping arrays, breaking and continuing
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-48" class="link link--toc">
+                        Looping backwards and loops in loops
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-49" class="link link--toc">
+                        The while loop
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-50" class="link link--toc">
+                        Coding challenge - 4
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </nav>
+            </nav>
 
-          <!-- !Lectures -->
-          <div class="lectures">
+            <!-- !Lectures -->
+            <div class="lectures">
+              <!-- !Lecture 32 -->
+              <div id="lecture-32" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 32 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Activating strict mode
+                </h3>
 
-            <!-- !Lecture 32 -->
-            <div id="lecture-32" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 32 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Activating strict mode
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Strict mode
                     'use strict';
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Activating strict mode allows writing more secure code, it
+                  will become a lot harder to make errors while writing the
+                  code. Activating strict mode should always be the first line,
+                  if anything is before that apart from comments, strict mode
+                  will not work.
+                </p>
+
+                <p class="lecture-text">
+                  Strict mode displays in your console possible errors such as
+                  variables that haven't been assigned, as well as possible use
+                  of reserved keywords within JavaScript. Always use strict
+                  mode.
+                </p>
+
+                <!-- !End of Lecture 32 -->
               </div>
 
-              <p class="lecture-text">
-                Activating strict mode allows writing more secure code, it will become a lot harder to make errors while
-                writing the code. Activating strict mode should always be the first line, if anything is before that
-                apart from comments, strict mode will not work.
-              </p>
+              <!-- !Lecture 33 -->
+              <div id="lecture-33" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 33 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Functions
+                </h3>
 
-              <p class="lecture-text">
-                Strict mode displays in your console possible errors such as variables that haven't been assigned, as
-                well as possible use of reserved keywords within JavaScript. Always use strict mode.
-              </p>
+                <p class="lecture-text">
+                  A function is a piece of code we can reuse over and over
+                  again.  In this sense, functions helps us keep our code DRY,
+                  which is an acronym for, Don't Repeat Yourself. Functions act
+                  much like a variable, storing lines of code inside. 
+                </p>
 
-              <!-- !End of Lecture 32 -->
-            </div>
-
-            <!-- !Lecture 33 -->
-            <div id="lecture-33" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 33 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Functions
-              </h3>
-
-              <p class="lecture-text">
-                A function is a piece of code we can reuse over and over again.  In this sense, functions helps us keep
-                our code DRY, which is an acronym for, Don't Repeat Yourself. Functions act much like a variable,
-                storing lines of code inside. 
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Function
                     function logger() {
@@ -260,20 +283,22 @@
                     console.log(typeof test)
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                The area inside the function where the code is written is known as the function body. To invoke or use
-                the function, you simple call, run or invoke the function name and do not forget the parenthesis. 
-              </p>
+                <p class="lecture-text">
+                  The area inside the function where the code is written is
+                  known as the function body. To invoke or use the function, you
+                  simple call, run or invoke the function name and do not forget
+                  the parenthesis. 
+                </p>
 
-              <p class="lecture-text">
-                It's worth noting, the above function will not return a value, even you had to capture it, the variable
-                would be undefined.
-              </p>
+                <p class="lecture-text">
+                  It's worth noting, the above function will not return a value,
+                  even you had to capture it, the variable would be undefined.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Function with parameters and return
                     function juicer(nApples, nOranges) {
@@ -284,53 +309,61 @@
                     console.log(myJuice);
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  A function can take information and return information, this
+                  is done through the function's parameters, which allows for
+                  input. Parameters are placed within the parenthesis of the
+                  function. In this case, the parameters are nApples and
+                  nOranges, which take a value known as an argument. 
+                </p>
+
+                <p class="lecture-text">
+                  So, when declaring a function, the parameters are called
+                  parameters, while when invoking the function and adding a
+                  value to where the parameters were, is called an argument.
+                </p>
+
+                <p class="lecture-text">
+                  The return keyword returns a value, unlike logging this
+                  directly to the console, we need to capture it with a
+                  variable. If we just had to call the function, we still would
+                  not see the value, unless captured. Once the return keyword
+                  has taken place, the code will not run any further.
+                </p>
+
+                <!-- !End of Lecture 33 -->
               </div>
 
-              <p class="lecture-text">
-                A function can take information and return information, this is done through the function's parameters,
-                which allows for input. Parameters are placed within the parenthesis of the function. In this case, the
-                parameters are nApples and nOranges, which take a value known as an argument. 
-              </p>
+              <!-- !Lecture 33 Assignment -->
+              <div id="lecture-33-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 33 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                So, when declaring a function, the parameters are called parameters, while when invoking the function
-                and adding a value to where the parameters were, is called an argument.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Write a function called 'describeCountry' which takes
+                      three parameters: 'country', 'population' and
+                      'capitalCity'. Based on this input, the function returns a
+                      string with this format: 'Finland has 6 million people and
+                      its capital city is Helsinki'
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Call this function 3 times, with input data for 3
+                      different countries. Store the returned values in 3
+                      different variables, and log them to the console
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                The return keyword returns a value, unlike logging this directly to the console, we need to capture it
-                with a variable. If we just had to call the function, we still would not see the value, unless captured.
-                Once the return keyword has taken place, the code will not run any further.
-              </p>
-
-              <!-- !End of Lecture 33 -->
-            </div>
-
-            <!-- !Lecture 33 Assignment -->
-            <div id="lecture-33-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 33 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Write a function called 'describeCountry' which takes three parameters: 'country', 'population' and
-                    'capitalCity'. Based on this input, the function returns a string with this format: 'Finland has 6
-                    million people and its capital city is Helsinki'
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Call this function 3 times, with input data for 3 different countries. Store the returned values in
-                    3 different variables, and log them to the console
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     function describeCountry (country, population, capitalCity) {
                       const myCountry = `${country} has ${population} million people and it's capital is ${capitalCity}`;
@@ -346,20 +379,20 @@
                     console.log(columbia);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 33 Assignment -->
               </div>
 
-              <!-- !End of Lecture 33 Assignment -->
-            </div>
+              <!-- !Lecture 34 -->
+              <div id="lecture-34" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 34 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Functions declarations vs. expressions
+                </h3>
 
-            <!-- !Lecture 34 -->
-            <div id="lecture-34" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 34 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Functions declarations vs. expressions
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Declaring a function
 
@@ -384,85 +417,101 @@
                     console.log(age2);
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  When we declare a function, we initialize the function with
+                  the function keyword and then provide it a name. Whereas, when
+                  we do function expressions, we save the function to a
+                  variable. 
+                </p>
+
+                <p class="lecture-text">
+                  The function's expression's name is the variable name, this
+                  means the function defined inside the variable is known as an
+                  anonymous function because it has no name. This also points
+                  out that a function is not a type but an expression and, as we
+                  know, an expression returns a value. When invoking a function
+                  expression, we still need to assign it to a variable, much the
+                  same way as when we declare a function.
+                </p>
+
+                <p class="lecture-text">
+                  If everything works similarly, just written differently, what
+                  are the differences?
+                </p>
+
+                <p class="lecture-text">
+                  When declaring a function, you can call the function even
+                  before it has been declared. Meaning, your function does not
+                  have to be at the top of the page. A Function expression,
+                  however, does not allow this. You first need the expression
+                  before you can invoke the function, forcing you to write your
+                  function at the top of the page. 
+                </p>
+
+                <p class="lecture-text">
+                  This brings us to a question of which to use?
+                </p>
+
+                <p class="lecture-text">
+                  It comes down to personal preference, if you like declaring
+                  functions, then use that, if you prefer function expressions
+                  and writing your functions at the top of the page, then use
+                  that.
+                </p>
+
+                <p class="lecture-text">
+                  Function expressions seem more organized, keeping both values
+                  and functions inside variables and first declaring a function
+                  before invoking it, forcing a written structure.
+                </p>
+
+                <!-- !End of Lecture 34 -->
               </div>
 
-              <p class="lecture-text">
-                When we declare a function, we initialize the function with the function keyword and then provide it a
-                name. Whereas, when we do function expressions, we save the function to a variable. 
-              </p>
+              <!-- !Lecture 34 Assignment -->
+              <div id="lecture-34-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 34 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                The function's expression's name is the variable name, this means the function defined inside the
-                variable is known as an anonymous function because it has no name. This also points out that a function
-                is not a type but an expression and, as we know, an expression returns a value. When invoking a function
-                expression, we still need to assign it to a variable, much the same way as when we declare a function.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      The world population is 7900 million people. Create a
+                      function declaration called 'percentageOfWorld1' which
+                      receives a 'population' value, and returns the percentage
+                      of the world population that the given population
+                      represents. For example, China has 1441 million people, so
+                      it's about 18.2% of the world population
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      To calculate the percentage, divide the given 'population'
+                      value by 7900 and then multiply by 100
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Call 'percentageOfWorld1' for 3 populations of countries
+                      of your choice, store the results into variables, and log
+                      them to the console
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create a function expression which does the exact same
+                      thing, called 'percentageOfWorld2', and also call it with
+                      3 country populations (can be the same populations)
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                If everything works similarly, just written differently, what are the differences?
-              </p>
-
-              <p class="lecture-text">
-                When declaring a function, you can call the function even before it has been declared. Meaning, your
-                function does not have to be at the top of the page. A Function expression, however, does not allow
-                this. You first need the expression before you can invoke the function, forcing you to write your
-                function at the top of the page. 
-              </p>
-
-              <p class="lecture-text">
-                This brings us to a question of which to use?
-              </p>
-
-              <p class="lecture-text">
-                It comes down to personal preference, if you like declaring functions, then use that, if you prefer
-                function expressions and writing your functions at the top of the page, then use that.
-              </p>
-
-              <p class="lecture-text">
-                Function expressions seem more organized, keeping both values and functions inside variables and first
-                declaring a function before invoking it, forcing a written structure.
-              </p>
-
-              <!-- !End of Lecture 34 -->
-            </div>
-
-            <!-- !Lecture 34 Assignment -->
-            <div id="lecture-34-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 34 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    The world population is 7900 million people. Create a function declaration called
-                    'percentageOfWorld1' which receives a 'population' value, and returns the percentage of the world
-                    population that the given population represents. For example, China has 1441 million people, so it's
-                    about 18.2% of the world population
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    To calculate the percentage, divide the given 'population' value by 7900 and then multiply by 100
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Call 'percentageOfWorld1' for 3 populations of countries of your choice, store the results into
-                    variables, and log them to the console
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Create a function expression which does the exact same thing, called 'percentageOfWorld2', and also
-                    call it with 3 country populations (can be the same populations)
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Declaring functions
                     function percentageOfWorld1(population) {
@@ -503,38 +552,43 @@
                     );
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 34 Assignment -->
               </div>
 
-              <!-- !End of Lecture 34 Assignment -->
-            </div>
+              <!-- !Lecture 35 -->
+              <div id="lecture-35" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 35 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Arrow functions
+                </h3>
 
-            <!-- !Lecture 35 -->
-            <div id="lecture-35" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 35 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Arrow functions
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Arrow function
                     const calcAge3 = birthYear => 2023 - birthYear;
                     const age3 = calcAge3(1989);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Arrow functions is a shorter syntax for function expressions they do not support the 'this' keyword, as we will see later in the course.
-              </p>
+                <p class="lecture-text">
+                  Arrow functions is a shorter syntax for function expressions
+                  they do not support the 'this' keyword, as we will see later
+                  in the course.
+                </p>
 
-              <p class="lecture-text">
-                Arrow functions, that have but one parameter and a single line of code, are known as one-liner functions. We do not need to place parenthesis around the parameter, nor use the 'return' keyword, as it is implicit.
-              </p>
+                <p class="lecture-text">
+                  Arrow functions, that have but one parameter and a single line
+                  of code, are known as one-liner functions. We do not need to
+                  place parenthesis around the parameter, nor use the 'return'
+                  keyword, as it is implicit.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box">
+                <div class="code-example">
+                  <pre class="lecture-code-box">
                   <code class="lecture-code language-javascript">
                     const yearsBeforeRetirement = (birthYear, firstName) => {
                     const age = 2023 - birthYear;
@@ -546,40 +600,48 @@
                     console.log(yearsBeforeRetirement(1989, 'Andre'));
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  In the above example, the arrow function has more than a
+                  single parameter, so we need to use parenthesis. We also
+                  require code block brackets as there is more than a single
+                  line of code. The 'return' keyword is also required, as it is
+                  no longer a one-liner function.
+                </p>
+
+                <p class="lecture-text">
+                  Again, we ask, which function to use?
+                </p>
+
+                <p class="lecture-text">
+                  The answer is still function expressions. As mentioned earlier
+                  that arrow functions are great as one-liner functions, but
+                  they don't support the 'this' keyword which is given to a
+                  function associated with objects (methods).
+                </p>
+
+                <!-- !End of Lecture 35 -->
               </div>
 
-              <p class="lecture-text">
-                In the above example, the arrow function has more than a single parameter, so we need to use parenthesis. We also require code block brackets as there is more than a single line of code. The 'return' keyword is also required, as it is no longer a one-liner function.
-              </p>
+              <!-- !Lecture 35 Assignment -->
+              <div id="lecture-35-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 35 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                Again, we ask, which function to use?
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Recreate the last assignment, but this time create an
+                      arrow function called'percentageOfWorld3'
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                The answer is still function expressions. As mentioned earlier that arrow functions are great as one-liner functions, but they don't support the 'this' keyword which is given to a function associated with objects (methods).
-              </p>
-
-              <!-- !End of Lecture 35 -->
-            </div>
-
-            <!-- !Lecture 35 Assignment -->
-            <div id="lecture-35-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 35 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Recreate the last assignment, but this time create an arrow function called'percentageOfWorld3'
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const percentageOfWorld3 = (population) => (population / 7900) * 100;
 
@@ -594,24 +656,26 @@
                     `);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 35 Assignment -->
               </div>
 
-              <!-- !End of Lecture 35 Assignment -->
-            </div>
+              <!-- !Lecture 36 -->
+              <div id="lecture-36" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 36 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Functions calling other functions
+                </h3>
 
-            <!-- !Lecture 36 -->
-            <div id="lecture-36" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 36 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Functions calling other functions
-              </h3>
+                <p class="lecture-text">
+                  In JavaScript, we can call other functions inside functions.
+                  We have been doing this to some degree using console.log( ...
+                  ).
+                </p>
 
-              <p class="lecture-text">
-                In JavaScript, we can call other functions inside functions. We have been doing this to some degree using console.log( ... ).
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // cutting the fruit into pieces
                     const fruitPieces = function (fruit) {
@@ -629,46 +693,56 @@
                     console.log(juicer(3, 2));
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above, we could have done the calculation within the juicer
+                  function. Though to illustrate how functions can work inside
+                  other functions, this is a prime example.
+                </p>
+
+                <p class="lecture-text">
+                  It also follows the principle, if this juice had many more
+                  arguments, then repeating this code would be better suited for
+                  a function. Always let your code be DRY.
+                </p>
+
+                <!-- !End of Lecture 36 -->
               </div>
 
-              <p class="lecture-text">
-                Above, we could have done the calculation within the juicer function. Though to illustrate how functions can work inside other functions, this is a prime example.
-              </p>
+              <!-- !Lecture 36 Assignment -->
+              <div id="lecture-36-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 36 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                It also follows the principle, if this juice had many more arguments, then repeating this code would be better suited for a function. Always let your code be DRY.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create a function called 'describePopulation'. Use the
+                      function type you like the most. This function takes in
+                      two arguments: 'country' and 'population', and returns a
+                      string like this: 'China has 1441 million people, which is
+                      about 18.2% of the world.'
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      To calculate the percentage, 'describePopulation' call the
+                      'percentageOfWorld1' you created earlier.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Call 'describePopulation' with data for 3 countries of
+                      your choice.
+                    </p>
+                  </li>
+                </ol>
 
-              <!-- !End of Lecture 36 -->
-            </div>
-
-            <!-- !Lecture 36 Assignment -->
-            <div id="lecture-36-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 36 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create a function called 'describePopulation'. Use the function type you like the most. This function takes in two arguments: 'country' and 'population', and returns a string like this: 'China has 1441 million people, which is about 18.2% of the world.'
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     To calculate the percentage, 'describePopulation' call the 'percentageOfWorld1' you created earlier.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                      Call 'describePopulation' with data for 3 countries of your choice.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const describePopulation = function (country, population) {
                     return `${country} has ${population} million people, which is ${percentageOfWorld1(population)}% of the world`
@@ -679,20 +753,20 @@
                     console.log(describePopulation('Brazil', 215))
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 36 Assignment -->
               </div>
 
-              <!-- !End of Lecture 36 Assignment -->
-            </div>
+              <!-- !Lecture 37 -->
+              <div id="lecture-37" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 37 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Reviewing functions
+                </h3>
 
-            <!-- !Lecture 37 -->
-            <div id="lecture-37" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 37 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Reviewing functions
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const calcAge = function (birthYear) {
                       return 2023 - birthYear;
@@ -713,22 +787,26 @@
                     console.log(yearsBeforeRetirement(1945, 'John'))
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                As we review functions, it's important to note that parameters are like local variables for the function. We can use the same parameter name in other function parameters without issues.
-              </p>
+                <p class="lecture-text">
+                  As we review functions, it's important to note that parameters
+                  are like local variables for the function. We can use the same
+                  parameter name in other function parameters without issues.
+                </p>
 
-              <p class="lecture-text">
-                In programming, -1 is used to denote that there is no value or meaning. 
-              </p>
+                <p class="lecture-text">
+                  In programming, -1 is used to denote that there is no value or
+                  meaning. 
+                </p>
 
-              <p class="lecture-text">
-                Once a return has executed, the function will stop. This is known as the function has returned.
-              </p>
+                <p class="lecture-text">
+                  Once a return has executed, the function will stop. This is
+                  known as the function has returned.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code box">
+                <div class="code-example">
+                  <pre class="lecture-code box">
                   <code class="lecture-code language-javascript">
                     // Function declaration
                     function myFunc1 () {
@@ -750,101 +828,132 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  There are 3 types of functions, function declarations,
+                  function expressions and arrow functions. Function declaration
+                  can be invoked even before the function is declared, this
+                  giving you the freedom to place functions wherever in your
+                  code.
+                </p>
+
+                <p class="lecture-text">
+                  A function expression cannot be invoked before it's declared,
+                  therefore having a more structure approached to coding. Arrow
+                  functions, being much the same as function expressions, just
+                  using shorter syntax, does not support the 'this keyword'.
+                </p>
+
+                <p class="lecture-text">
+                  Arrow functions are great for one-liner functions, they can
+                  have no parenthesis and have implicit returns, making your
+                  code shorter and cleaner.
+                </p>
+
+                <p class="lecture-text">
+                  Functions can receive data, transform data and return data.
+                  They can operate within other functions. When declaring a
+                  function a parameter is called a parameter, though when
+                  invoking the function and placing the value in the parameters,
+                  that is called the arguments.
+                </p>
+
+                <p class="lecture-text">
+                  Parameters are also like local variables to that specific
+                  function. The code within a function is referred to as the
+                  function body.
+                </p>
+
+                <!-- !End of Lecture 37 -->
               </div>
 
-              <p class="lecture-text">
-                There are 3 types of functions, function declarations, function expressions and arrow functions. Function declaration can be invoked even before the function is declared, this giving you the freedom to place functions wherever in your code.
-              </p>
+              <!-- !Lecture 38 -->
+              <div id="lecture-38" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 38 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge - 1
+                </h3>
 
-              <p class="lecture-text">
-                A function expression cannot be invoked before it's declared, therefore having a more structure approached to coding. Arrow functions, being much the same as function expressions, just using shorter syntax, does not support the 'this keyword'.
-              </p>
+                <p class="lecture-text">
+                  Back to the two gymnastics teams, the Dolphins and the Koalas!
+                  There is a new gymnastics discipline, which works differently.
+                  Each team competes 3 times, and then the average of the 3
+                  scores is calculated (so one average score per team). A team
+                  only wins if it has at least double the average score of the
+                  other team. Otherwise, no team wins!
+                </p>
 
-              <p class="lecture-text">
-                Arrow functions are great for one-liner functions, they can have no parenthesis and have implicit returns, making your code shorter and cleaner.
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an arrow function 'calcAverage' to calculate the
+                      average of 3 scores.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use the function to calculate the average for both teams.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create a function 'checkWinner' that takes the average
+                      score of each team as parameters ('avgDolhins' and
+                      'avgKoalas'), and then logs the winner to the console,
+                      together with the victory points, according to the rule
+                      above. Example: "Koalas win (30 vs. 13)".
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use the 'checkWinner' function to determine the winner for
+                      both Data 1 and Data 2.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Ignore draws this time.
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                Functions can receive data, transform data and return data. They can operate within other functions. When declaring a function a parameter is called a parameter, though when invoking the function and placing the value in the parameters, that is called the arguments.
-              </p>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54
+                      and 49.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34
+                      and 27.
+                    </p>
+                  </li>
+                </ul>
 
-              <p class="lecture-text">
-                Parameters are also like local variables to that specific function. The code within a function is referred to as the function body.
-              </p>
+                <span class="pre-heading">Hints:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      To calculate average of 3 values, add them all together
+                      and divide by 3.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      To check if number A is at least double number B, check
+                      for A >= 2 * B. Apply this to the team's average scores
+                      😉.
+                    </p>
+                  </li>
+                </ul>
 
-              <!-- !End of Lecture 37 -->
-            </div>
-
-            <!-- !Lecture 38 -->
-            <div id="lecture-38" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 38 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge - 1
-              </h3>
-
-              <p class="lecture-text">
-                Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently. Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team). A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
-              </p>
-
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create an arrow function 'calcAverage' to calculate the average of 3 scores.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Use the function to calculate the average for both teams.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create a function 'checkWinner' that takes the average score of each team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Use the 'checkWinner' function to determine the winner for both Data 1 and Data 2.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Ignore draws this time.
-                  </p>
-                </li>
-              </ol>
-
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27.
-                  </p>
-                </li>
-              </ul>
-
-              <span class="pre-heading">Hints:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     To calculate average of 3 values, add them all together and divide by 3.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉.
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const calcAverage = (a, b, c) => (a + b + c) / 3;
 
@@ -871,20 +980,20 @@
                     console.log(checkWinner(scoreDolphins, scoreKoalas));
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 38 -->
               </div>
 
-              <!-- !End of Lecture 38 -->
-            </div>
+              <!-- !Lecture 39 -->
+              <div id="lecture-39" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 39 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Introduction to arrays
+                </h3>
 
-            <!-- !Lecture 39 -->
-            <div id="lecture-39" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 39 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Introduction to arrays
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Creating arrays
 
@@ -899,18 +1008,26 @@
                     const arr = new Array(1989, 1990, 1991, 1992);
                   </code>
                 </pre>
-              </div>
-              
-              <p class="lecture-text">
-                Arrays are what is known as data structures in JavaScript. JavaScript has but 2 data structures, arrays and objects, though arrays are objects as we will learn later on, they just a special kind of object as they have their own methods, as we learn about methods, is that functions associated with objects become methods.
-              </p>
+                </div>
 
-              <p class="lecture-text">
-                There are many ways to create an array, as seen above. The first example is what is known as an array literal, and is the easiest syntax for creating arrays. While the bottom is using functions to create an array.
-              </p>
+                <p class="lecture-text">
+                  Arrays are what is known as data structures in JavaScript.
+                  JavaScript has but 2 data structures, arrays and objects,
+                  though arrays are objects as we will learn later on, they just
+                  a special kind of object as they have their own methods, as we
+                  learn about methods, is that functions associated with objects
+                  become methods.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <p class="lecture-text">
+                  There are many ways to create an array, as seen above. The
+                  first example is what is known as an array literal, and is the
+                  easiest syntax for creating arrays. While the bottom is using
+                  functions to create an array.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Retrieving an indexed array
 
@@ -919,14 +1036,17 @@
                     console.log(friends[friends.length -1]);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                The way we can retrieve a value from an array, is by using brackets with the index value starting at 0. The brackets within arrays [ ... ] can hold an expression, as we know, expressions return a value.
-              </p>
+                <p class="lecture-text">
+                  The way we can retrieve a value from an array, is by using
+                  brackets with the index value starting at 0. The brackets
+                  within arrays [ ... ] can hold an expression, as we know,
+                  expressions return a value.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Mutating arrays elements
 
@@ -934,14 +1054,18 @@
                     friends = ['Bob', 'Maria', 'Justin'] // This is not allowed
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Array values, are mutable, though you cannot change the entire array. Even though the array was assigned to a const variable, it's it still mutable. In JavaScript, values that are not mutable with a const variable are primitive values, arrays are not a type but a data structure.
-              </p>
+                <p class="lecture-text">
+                  Array values, are mutable, though you cannot change the entire
+                  array. Even though the array was assigned to a const variable,
+                  it's it still mutable. In JavaScript, values that are not
+                  mutable with a const variable are primitive values, arrays are
+                  not a type but a data structure.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
 
@@ -957,42 +1081,51 @@
                     console.log(`${andre[0]}'s best friend is ${andre[andre.length -1][0]}`)
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  An array can hold different types of values, it can even nest
+                  other arrays or data structures inside of it. To select values
+                  within nested arrays, we simply use multiple brackets.
+                </p>
+
+                <!-- !End of Lecture 39 -->
               </div>
 
-              <p class="lecture-text">
-                An array can hold different types of values, it can even nest other arrays or data structures inside of it. To select values within nested arrays, we simply use multiple brackets.
-              </p>
+              <!-- !Lecture 39 Assignment -->
+              <div id="lecture-39-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 39 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 39 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an array containing 4 population values of 4
+                      countries of your choice. You may use the values you have
+                      been using previously. Store this array into a variable
+                      called 'populations'.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Log to the console whether the array has 4 elements or not
+                      (true or false).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an array called 'percentages' containing the
+                      percentages of the world population for these 4 population
+                      values. Use the function 'percentageOfWorld1' that you
+                      created earlier to compute the 4 percentage values.
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 39 Assignment -->
-            <div id="lecture-39-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 39 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations'.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Log to the console whether the array has 4 elements or not (true or false).
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const populations = [7, 60, 320, 50];
 
@@ -1013,20 +1146,20 @@
                     ];
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 39 Assignment -->
               </div>
 
-              <!-- !End of Lecture 39 Assignment -->
-            </div>
+              <!-- !Lecture 40 -->
+              <div id="lecture-40" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 40 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Basic array operations (Methods)
+                </h3>
 
-            <!-- !Lecture 40 -->
-            <div id="lecture-40" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 40 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Basic array operations (Methods)
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Let's make a burger
                     const burger = [
@@ -1044,14 +1177,18 @@
                     console.log(burger);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                With arrays, we have what is known as array methods or array operations. The first is '.push( ... )'. This will allow us to push further elements to the end of the array. We then have '.unshift( ... )' which adds elements to the front of the array.
-              </p>
+                <p class="lecture-text">
+                  With arrays, we have what is known as array methods or array
+                  operations. The first is '.push( ... )'. This will allow us to
+                  push further elements to the end of the array. We then have
+                  '.unshift( ... )' which adds elements to the front of the
+                  array.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Oh no! Our burger's bun is stale, lets remove it
 
@@ -1064,14 +1201,17 @@
                     console.log(burger);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                We then have the reverse of putting in, and that is removing elements from arrays. '.pop( ... )' removes from the end of an array, also returns the removed element. '.shift( ... )' removes from the beginning.
-              </p>
+                <p class="lecture-text">
+                  We then have the reverse of putting in, and that is removing
+                  elements from arrays. '.pop( ... )' removes from the end of an
+                  array, also returns the removed element. '.shift( ... )'
+                  removes from the beginning.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const findWaldo = [
                       'not Waldo',
@@ -1089,52 +1229,70 @@
                     console.log(findWaldo.includes('Waldo'));
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The above methods are very useful, they help you find or
+                  understand if an element is within an array. '.index( ... )'
+                  return the index position of an element, while the more modern
+                  way of doing it, '.include( ... )' returns a boolean value.
+                  The '.include( ... )' also uses strict equality and is more
+                  useful in the real world.
+                </p>
+
+                <!-- !End of Lecture 40 -->
               </div>
 
-              <p class="lecture-text">
-                The above methods are very useful, they help you find or understand if an element is within an array. '.index( ... )' return the index position of an element, while the more modern way of doing it, '.include( ... )' returns a boolean value. The '.include( ... )' also uses strict equality and is more useful in the real world.
-              </p>
+              <!-- !Lecture 40 Assignment -->
+              <div id="lecture-40-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 40 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 40 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an array containing all the neighbouring countries
+                      of a country of your choice. Choose a country which has at
+                      least 2 or 3 neighbours. Store the array into a variable
+                      called 'neighbours'.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      At some point, a new country called 'Utopia' is created in
+                      the neighbourhood of your selected country. So add it to
+                      the end of the 'neighbours' array.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Unfortunately, after some time, the new country is
+                      dissolved. So remove it from the end of the array.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      If the 'neighbours' array does not include the country
+                      ‘Germany’, log to the console: 'Probably not a central
+                      European country :D'.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Change the name of one of your neighbouring countries. To
+                      do that, find the index of the country in the 'neighbours'
+                      array, and then use that index to change the array at that
+                      index position. For example, you can search for 'Sweden'
+                      in the array, and then replace it with 'Republic of
+                      Sweden'.
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 40 Assignment -->
-            <div id="lecture-40-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 40 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called 'neighbours'.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     At some point, a new country called 'Utopia' is created in the neighbourhood of your selected country. So add it to the end of the 'neighbours' array.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Unfortunately, after some time, the new country is dissolved. So remove it from the end of the array.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     If the 'neighbours' array does not include the country ‘Germany’, log to the console: 'Probably not a central European country :D'.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Change the name of one of your neighbouring countries. To do that, find the index of the country in the 'neighbours' array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const neighbours = [
                       'Canada',
@@ -1156,66 +1314,81 @@
                     console.log(neighbours);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 40 Assignment -->
               </div>
 
-              <!-- !End of Lecture 40 Assignment -->
-            </div>
+              <!-- !Lecture 41 -->
+              <div id="lecture-41" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 41 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge - 2
+                </h3>
 
-            <!-- !Lecture 41 -->
-            <div id="lecture-41" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 41 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge - 2
-              </h3>
+                <p class="lecture-text">
+                  Steven is still building his tip calculator, using the same
+                  rules as before: Tip 15% of the bill if the bill value is
+                  between 50 and 300, and if the value is different, the tip is
+                  20%.
+                </p>
 
-              <p class="lecture-text">
-                Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Write a function 'calcTip' that takes any bill value as an
+                      input and returns the corresponding tip, calculated based
+                      on the rules above (you can check out the code from first
+                      tip calculator challenge if you need to). Use the function
+                      type you like the most. Test the function using a bill
+                      value of 100.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      And now let's use arrays! So create an array 'bills'
+                      containing the test data below.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an array 'tips' containing the tip value for each
+                      bill, calculated from the function you created before.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      <strong>Bonus</strong>: Create an array 'total' containing
+                      the total values, so the bill + tip.
+                    </p>
+                  </li>
+                </ol>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     And now let's use arrays! So create an array 'bills' containing the test data below.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     <strong>Bonus</strong>: Create an array 'total' containing the total values, so the bill + tip.
-                  </p>
-                </li>
-              </ol>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      125, 555 and 44
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     125, 555 and 44
-                  </p>
-                </li>
-              </ul>
+                <span class="pre-heading">Hints:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Remember that an array needs a value in each position, and
+                      that value can actually be the returned value of a
+                      function! So you can just call a function as array values
+                      (so don't store the tip values in separate variables
+                      first, but right in the new array) 😉.
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Hints:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                      Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉.
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const calcTip = function (bill) {
                       return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
@@ -1242,20 +1415,20 @@
                     console.log(total);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 41 -->
               </div>
 
-              <!-- !End of Lecture 41 -->
-            </div>
+              <!-- !Lecture 42 -->
+              <div id="lecture-42" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 42 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Introduction to objects
+                </h3>
 
-            <!-- !Lecture 42 -->
-            <div id="lecture-42" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 42 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Introduction to objects
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
                     const friends = ['Scott', 'Frank', 'Jack'];
@@ -1282,44 +1455,57 @@
                     console.log(andreObj.firstName);
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  When it comes to objects, they answer a problem we have with
+                  arrays, which is knowing where data is. When it comes to
+                  arrays, we intuitively have to know with what the first index
+                  corresponds with. Is it the first name, the last name or the
+                  age if the array was about a person, however with objects we
+                  have what is known as key value pairs.
+                </p>
+
+                <p class="lecture-text">
+                  We can essentially assign a key to a value, which means we
+                  don't have to worry about ordering our data structure, whereas
+                  with arrays we do. Each key is also known as a property.
+                </p>
+
+                <p class="lecture-text">
+                  There are multiple ways to make objects, much like the array,
+                  but the object literal is the easiest way. 
+                </p>
+
+                <p class="lecture-text">
+                  The big difference between objects and arrays are, an array is
+                  more for structured data, while objects are not. Structure is
+                  more important for arrays and not objects.
+                </p>
+
+                <!-- !End of Lecture 42 -->
               </div>
-              
-              <p class="lecture-text">
-                When it comes to objects, they answer a problem we have with arrays, which is knowing where data is. When it comes to arrays, we intuitively have to know with what the first index corresponds with. Is it the first name, the last name or the age if the array was about a person, however with objects we have what is known as key value pairs.
-              </p>
 
-              <p class="lecture-text">
-                We can essentially assign a key to a value, which means we don't have to worry about ordering our data structure, whereas with arrays we do. Each key is also known as a property.
-              </p>
+              <!-- !Lecture 42 Assignment -->
+              <div id="lecture-42-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 42 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                There are multiple ways to make objects, much like the array, but the object literal is the easiest way. 
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an object called 'myCountry' for a country of your
+                      choice, containing properties 'country', 'capital',
+                      'language', 'population' and 'neighbours' (an array like
+                      we used in previous assignments).
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                The big difference between objects and arrays are, an array is more for structured data, while objects are not. Structure is more important for arrays and not objects.
-              </p>
-
-              <!-- !End of Lecture 42 -->
-            </div>
-
-            <!-- !Lecture 42 Assignment -->
-            <div id="lecture-42-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 42 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments).
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const myCountry = {
                       country: 'Republic of Bulgaria',
@@ -1338,20 +1524,20 @@
                     console.log(myCountry.country);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 42 Assignment -->
               </div>
 
-              <!-- !End of Lecture 42 Assignment -->
-            </div>
+              <!-- !Lecture 43 -->
+              <div id="lecture-43" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 43 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Dot vs. bracket notation
+                </h3>
 
-            <!-- !Lecture 43 -->
-            <div id="lecture-43" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 43 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Dot vs. bracket notation
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
                     const friends = ['Scott', 'Frank', 'Jack'];
@@ -1377,18 +1563,25 @@
                     console.log(andreObj['last' + nameKey]);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                This is how we can retrieve data from objects. The difference between Dot and Bracket is that the bracket notation allows for expressions. We can prove this by looking at the operator precedence table, where they refer to the Dot notation as Member Access and the Bracket notation as the computed Member Access.
-              </p>
+                <p class="lecture-text">
+                  This is how we can retrieve data from objects. The difference
+                  between Dot and Bracket is that the bracket notation allows
+                  for expressions. We can prove this by looking at the operator
+                  precedence table, where they refer to the Dot notation as
+                  Member Access and the Bracket notation as the computed Member
+                  Access.
+                </p>
 
-              <p class="lecture-text">
-                This is important when trying to understand which to use, and it's simple, when you need to compute something, use the bracket notation and when not use the dot notation.
-              </p>
+                <p class="lecture-text">
+                  This is important when trying to understand which to use, and
+                  it's simple, when you need to compute something, use the
+                  bracket notation and when not use the dot notation.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const interestedIn = prompt('What would you like to know about Andre?, You can choose from firstName, lastName, age, job, friends');
 
@@ -1402,14 +1595,16 @@
                     };
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                If we had to take user input and place it as a property, it will not compute the value, whereas the brackets first evaluate the expression and then returns the value.
-              </p>
+                <p class="lecture-text">
+                  If we had to take user input and place it as a property, it
+                  will not compute the value, whereas the brackets first
+                  evaluate the expression and then returns the value.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     andreObj.location = 'Bulgaria';
                     andreObj['website'] = 'https://acoetzer.github.io';
@@ -1417,19 +1612,21 @@
                     console.log(andreObj);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                We can also assign new properties to an object using both Dot and Bracket Notation.
-              </p>
+                <p class="lecture-text">
+                  We can also assign new properties to an object using both Dot
+                  and Bracket Notation.
+                </p>
 
-              <span class="pre-heading"> Challenge </span>
-              <p class="lecture-text">
-                Write a dynamic sentence using an object. Example &mdash; Andre has 3 friends, and his best friend is Whoever.
-              </p>
+                <span class="pre-heading"> Challenge </span>
+                <p class="lecture-text">
+                  Write a dynamic sentence using an object. Example &mdash;
+                  Andre has 3 friends, and his best friend is Whoever.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
                     const friends = ['Scott', 'Frank', 'Jack'];
@@ -1445,33 +1642,38 @@
                     console.log(`${andreObj.firstName} has ${andreObj.friends.length} friends and his best friend is ${andreObj.friends[0]}`);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 43 -->
               </div>
 
-              <!-- !End of Lecture 43 -->
-            </div>
+              <!-- !Lecture 43 Assignment -->
+              <div id="lecture-43-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 43 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-            <!-- !Lecture 43 Assignment -->
-            <div id="lecture-43-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 43 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Using the object from the previous assignment, log a
+                      string like this to the console: 'Finland has 6 million
+                      finnish-speaking people, 3 neighbouring countries and a
+                      capital called Helsinki.'
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Increase the country's population by two million using dot
+                      notation, and then decrease it by two million using
+                      brackets notation.
+                    </p>
+                  </li>
+                </ol>
 
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const myCountry = {
                       country: 'Republic of Bulgaria',
@@ -1498,20 +1700,20 @@
                     console.log(myCountry.population);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 43 Assignment -->
               </div>
 
-              <!-- !End of Lecture 43 Assignment -->
-            </div>
+              <!-- !Lecture 44 -->
+              <div id="lecture-44" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 44 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Object methods
+                </h3>
 
-            <!-- !Lecture 44 -->
-            <div id="lecture-44" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 44 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Object methods
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
                     const friends = ['Scott', 'Frank', 'Jack'];
@@ -1532,27 +1734,33 @@
                     console.log(andreObj.age);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Any function that is associated with an object is known as a method. Which is why they say, all methods are functions, but not all function are methods.
-              </p>
+                <p class="lecture-text">
+                  Any function that is associated with an object is known as a
+                  method. Which is why they say, all methods are functions, but
+                  not all function are methods.
+                </p>
 
-              <p class="lecture-text">
-                A method is also just a property that holds a function, which is why we don't declare it but use a function expression.
-              </p>
+                <p class="lecture-text">
+                  A method is also just a property that holds a function, which
+                  is why we don't declare it but use a function expression.
+                </p>
 
-              <p class="lecture-text">
-                The 'this' keyword is a special variable for methods. The 'this' keyword points to the object it is in.
-              </p>
+                <p class="lecture-text">
+                  The 'this' keyword is a special variable for methods. The
+                  'this' keyword points to the object it is in.
+                </p>
 
-              <span class="pre-heading"> Challenge </span>
-              <p class="lecture-text">
-                Write a method called getSummary that returns a summary of Andre like so &mdash; Andre is a 33-year-old developer who has or hasn't cooked dinner today.
-              </p>
+                <span class="pre-heading"> Challenge </span>
+                <p class="lecture-text">
+                  Write a method called getSummary that returns a summary of
+                  Andre like so &mdash; Andre is a 33-year-old developer who has
+                  or hasn't cooked dinner today.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const firstName = 'Andre';
                     const friends = ['Scott', 'Frank', 'Jack'];
@@ -1577,38 +1785,45 @@
                     console.log(andreObj.getSummary());
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 44 -->
               </div>
 
-              <!-- !End of Lecture 44 -->
-            </div>
+              <!-- !Lecture 44 Assignment -->
+              <div id="lecture-44-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 44 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-            <!-- !Lecture 44 Assignment -->
-            <div id="lecture-44-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 44 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Add a method called 'describe' to the 'myCountry' object.
+                      This method will log a string to the console, similar to
+                      the string logged in the previous assignment, but this
+                      time using the 'this' keyword.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Call the 'describe' method
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Add a method called 'checkIsland' to the 'myCountry'
+                      object. This method will set a new property on the object,
+                      called 'isIsland'. 'isIsland' will be true if there are no
+                      neighbouring countries, and false if there are. Use the
+                      ternary operator to set the property.
+                    </p>
+                  </li>
+                </ol>
 
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Call the 'describe' method
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                      Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const myCountry = {
                     country: 'Republic of Bulgaria',
@@ -1635,52 +1850,62 @@
                   console.log(myCountry.checkIsland())
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 44 Assignment -->
               </div>
 
-              <!-- !End of Lecture 44 Assignment -->
-            </div>
+              <!-- !Lecture 45 -->
+              <div id="lecture-45" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 45 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge - 3
+                </h3>
 
-            <!-- !Lecture 45 -->
-            <div id="lecture-45" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 45 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge - 3
-              </h3>
+                <p class="lecture-text">
+                  Let's go back to Mark and John comparing their BMIs! This
+                  time, let's use objects to implement the calculations!
+                  Remember: BMI = mass / height ** 2 = mass / (height * height)
+                  (mass in kg and height in meter).
+                </p>
 
-              <p class="lecture-text">
-                Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter).
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      For each of them, create an object with properties for
+                      their full name, mass, and height (Mark Miller and John
+                      Smith).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create a 'calcBMI' method on each object to calculate the
+                      BMI (the same method on both objects). Store the BMI value
+                      to a property, and also return it from the method.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Log to the console who has the higher BMI, together with
+                      the full name and the respective BMI. Example: "John's BMI
+                      (28.3) is higher than Mark's (23.9)!".
+                    </p>
+                  </li>
+                </ol>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith).
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!".
-                  </p>
-                </li>
-              </ol>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Marks weights 78 kg and is 1.69 m tall. John weights 92 kg
+                      and is 1.95 m tall.
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const mark = {
                       fullName: 'Mark Miller',
@@ -1718,24 +1943,27 @@
                     console.log(bmiCompare(mark, john));
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 45 -->
               </div>
 
-              <!-- !End of Lecture 45 -->
-            </div>
+              <!-- !Lecture 46 -->
+              <div id="lecture-46" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 46 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Iteration &mdash; The for loop
+                </h3>
 
-            <!-- !Lecture 46 -->
-            <div id="lecture-46" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 46 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Iteration &mdash; The for loop
-              </h3>
+                <p class="lecture-text">
+                  Looking back at the 'if statement'  we now know that that is a
+                  control structure, loops are much the same. Loops help us
+                  repeat repetitive tasks, for this we use what is known as a
+                  'for loop'.
+                </p>
 
-              <p class="lecture-text">
-                Looking back at the 'if statement'  we now know that that is a control structure, loops are much the same. Loops help us repeat repetitive tasks, for this we use what is known as a 'for loop'.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Incremental
                     for (let i = 0; i <= 10; i++) {
@@ -1748,52 +1976,60 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The first example of a loop is a 'for loop', there is another
+                  known as the 'for ... in' loop, which will see later in the
+                  course. The 'for loop', consist of 3 parts, the declaration or
+                  variable assignment, the condition and the incremental or
+                  decremental.
+                </p>
+
+                <!-- !End of Lecture 46 -->
               </div>
 
-              <p class="lecture-text">
-                The first example of a loop is a 'for loop', there is another known as the 'for ... in' loop, which will see later in the course. The 'for loop', consist of 3 parts, the declaration or variable assignment, the condition and the incremental or decremental.
-              </p>
+              <!-- !Lecture 46 Assignment -->
+              <div id="lecture-46-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 46 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 46 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      There are elections in your country! In a small town,
+                      there are only 50 voters. Use a for loop to simulate the
+                      50 people voting, by logging a string like this to the
+                      console (for numbers 1 to 50): 'Voter number 1 is
+                      currently voting'.
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 46 Assignment -->
-            <div id="lecture-46-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 46 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     for (let i = 1; i <= 50; i++) {
                       console.log(`Voter number ${i} is currently voting`);
                     };
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 46 Assignment -->
               </div>
 
-              <!-- !End of Lecture 46 Assignment -->
-            </div>
+              <!-- !Lecture 47 -->
+              <div id="lecture-47" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 47 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Looping arrays, breaking and continuing
+                </h3>
 
-            <!-- !Lecture 47 -->
-            <div id="lecture-47" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 47 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Looping arrays, breaking and continuing
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const simpleArray = [
                       'Text-1',
@@ -1818,18 +2054,22 @@
                     console.log(simpleArray2)
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                The above is how we loop over a basic array. The variable name 'i' is a standard name for iteration variables within programming. Once getting into nested loops, which use 'j' and 'k' as those are the letter that are after the letter 'i'.
-              </p>
+                <p class="lecture-text">
+                  The above is how we loop over a basic array. The variable name
+                  'i' is a standard name for iteration variables within
+                  programming. Once getting into nested loops, which use 'j' and
+                  'k' as those are the letter that are after the letter 'i'.
+                </p>
 
-              <p class="lecture-text">
-                The length of the loop is determined by the array length, and then we just increment the value by 1.
-              </p>
+                <p class="lecture-text">
+                  The length of the loop is determined by the array length, and
+                  then we just increment the value by 1.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const years = [1989, 1990, 1991, 1992];
                     const age = [];
@@ -1839,14 +2079,17 @@
                     };
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Within the 'for loop', we can also create a new array by pushing each iteration to an already defined variable outside the loop, containing an empty array. Above is just another example of how a 'for loop' can be used.
-              </p>
+                <p class="lecture-text">
+                  Within the 'for loop', we can also create a new array by
+                  pushing each iteration to an already defined variable outside
+                  the loop, containing an empty array. Above is just another
+                  example of how a 'for loop' can be used.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     for (let i = 0; i <= simpleArray.length; i++) {
   
@@ -1855,14 +2098,16 @@
                     }
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                The 'Continue' keyword allows us to break out the current iteration and move to the next. Above is an example, that it only logs certain data types.
-              </p>
+                <p class="lecture-text">
+                  The 'Continue' keyword allows us to break out the current
+                  iteration and move to the next. Above is an example, that it
+                  only logs certain data types.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     for (let i = 0; i <= simpleArray.length; i++) {
   
@@ -1871,42 +2116,51 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The 'Break' keyword on the other hand breaks out of the loop
+                  entirely. Above, if a certain type is reached, it will
+                  completely stop the 'for loop ', in this instance, a number.
+                </p>
+
+                <!-- !End of Lecture 47 -->
               </div>
 
-              <p class="lecture-text">
-                The 'Break' keyword on the other hand breaks out of the loop entirely. Above, if a certain type is reached, it will completely stop the 'for loop ', in this instance, a number.
-              </p>
+              <!-- !Lecture 47 Assignment -->
+              <div id="lecture-47-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 47 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 47 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Let's bring back the 'populations' array from a previous
+                      assignment.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use a for loop to compute an array called 'percentages2'
+                      containing the percentages of the world population for the
+                      4 population values. Use the function 'percentageOfWorld1'
+                      that you created earlier.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Confirm that 'percentages2' contains exactly the same
+                      values as the 'percentages' array that we created manually
+                      in the previous assignment, and reflect on how much better
+                      this solution is.
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 47 Assignment -->
-            <div id="lecture-47-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 47 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Let's bring back the 'populations' array from a previous assignment.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const percentageOfWorld1 = function (population) {
                       return (population / 7900) * 100;
@@ -1927,20 +2181,20 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 47 Assignment -->
               </div>
 
-              <!-- !End of Lecture 47 Assignment -->
-            </div>
+              <!-- !Lecture 48 -->
+              <div id="lecture-48" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 48 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Looping backwards and loops in loops
+                </h3>
 
-            <!-- !Lecture 48 -->
-            <div id="lecture-48" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 48 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Looping backwards and loops in loops
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const myNumbers = [1, 2, 3, 4, 5];
 
@@ -1949,14 +2203,16 @@
                     }
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                To loop backwards over an array, we simply let 'i' equal to the array.length -1 and of course set the condition to be greater than or equal to 0 and lastly decrement the variable.
-              </p>
+                <p class="lecture-text">
+                  To loop backwards over an array, we simply let 'i' equal to
+                  the array.length -1 and of course set the condition to be
+                  greater than or equal to 0 and lastly decrement the variable.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     for (let i = 1; i <= 3; i++) {
                       console.log(`Exercise ${i}`);
@@ -1966,42 +2222,49 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  To loop within a loop, we simply add a loop inside it.
+                </p>
+
+                <!-- !End of Lecture 48 -->
               </div>
 
-              <p class="lecture-text">
-                To loop within a loop, we simply add a loop inside it.
-              </p>
+              <!-- !Lecture 48 Assignment -->
+              <div id="lecture-48-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 48 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 48 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Store this array of arrays into a variable called
+                      'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'],
+                      ['Norway', 'Sweden', 'Russia']];
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Log only the neighbouring countries to the console, one by
+                      one, not the entire arrays. Log a string like 'Neighbour:
+                      Canada' for each country.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      You will need a loop inside a loop for this. This is
+                      actually a bit tricky, so don't worry if it's too
+                      difficult for you! But you can still try to figure this
+                      out anyway.
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 48 Assignment -->
-            <div id="lecture-48-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 48 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Store this array of arrays into a variable called 'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                      You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway. 
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const listOfNeighbours = [
                       ['Canada', 'Mexico'], 
@@ -2016,20 +2279,20 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 48 Assignment -->
               </div>
 
-              <!-- !End of Lecture 48 Assignment -->
-            </div>
+              <!-- !Lecture 49 -->
+              <div id="lecture-49" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 49 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  The while loop
+                </h3>
 
-            <!-- !Lecture 49 -->
-            <div id="lecture-49" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 49 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                The while loop
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // basic while loop example
 
@@ -2056,37 +2319,43 @@
                     diceMe(5);
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  A while loop does not require a counter, and is used when you
+                  do not know when the loop should end. That's when something is
+                  truly random. When we know when the loop should end, it's best
+                  to use a 'for loop'.
+                </p>
+
+                <!-- !End of Lecture 49 -->
               </div>
 
-              <p class="lecture-text">
-                A while loop does not require a counter, and is used when you do not know when the loop should end. That's when something is truly random. When we know when the loop should end, it's best to use a 'for loop'.
-              </p>
+              <!-- !Lecture 49 Assignment -->
+              <div id="lecture-49-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 49 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 49 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Recreate the challenge from the lecture 'Looping Arrays,
+                      Breaking and Continuing', but this time using a while loop
+                      (call the array 'percentages3')
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Reflect on what solution you like better for this task:
+                      the for loop or the while loop?
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 49 Assignment -->
-            <div id="lecture-49-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 49 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing', but this time using a while loop (call the array 'percentages3')
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Reflect on what solution you like better for this task: the for loop or the while loop?
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const percentageOfWorld1 = function (population) {
                       return (population / 7900) * 100;
@@ -2113,61 +2382,68 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 49 Assignment -->
               </div>
 
-              <!-- !End of Lecture 49 Assignment -->
-            </div>
+              <!-- !Lecture 50 -->
+              <div id="lecture-50" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 50 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge - 4
+                </h3>
 
-            <!-- !Lecture 50 -->
-            <div id="lecture-50" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 50 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge - 4
-              </h3>
+                <p class="lecture-text">
+                  Let's improve Steven's tip calculator even more, this time
+                  using loops!
+                </p>
 
-              <p class="lecture-text">
-                Let's improve Steven's tip calculator even more, this time using loops!
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an array 'bills' containing all 10 test bill
+                      values.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create empty arrays for the tips and the totals ('tips'
+                      and 'totals').
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use the 'calcTip' function we wrote before (no need to
+                      repeat) to calculate tips and total values (bill + tip)
+                      for every bill value in the bills array. Use a for loop to
+                      perform the 10 calculations!.
+                    </p>
+                  </li>
+                </ol>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Create an array 'bills' containing all 10 test bill values.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Create empty arrays for the tips and the totals ('tips' and 'totals').
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!.
-                  </p>
-                </li>
-              </ol>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
-                  </p>
-                </li>
-              </ul>
+                <span class="pre-heading">Hints:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Call ‘calcTip ‘in the loop and use the push method to add
+                      values to the tips and totals arrays 😉
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Hints:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                      Call ‘calcTip ‘in the loop and use the push method to add values to the tips and totals arrays 😉
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const calcTip = function (bill) {
                       return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
@@ -2184,34 +2460,44 @@
                     }
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <span class="pre-heading">Bonus:</span>
-              <p class="lecture-text">
-                 Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a difficult challenge (we haven't done this before)! Here is how to solve it:
-              </p>
+                <span class="pre-heading">Bonus:</span>
+                <p class="lecture-text">
+                  Write a function 'calcAverage' which takes an array called
+                  'arr' as an argument. This function calculates the average of
+                  all numbers in the given array. This is a difficult challenge
+                  (we haven't done this before)! Here is how to solve it:
+                </p>
 
-              <span class="pre-heading">Bonus Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                     Call the function with the 'totals' array
-                  </p>
-                </li>
-              </ol>
+                <span class="pre-heading">Bonus Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      First, you will need to add up all values in the array. To
+                      do the addition, start by creating a variable 'sum' that
+                      starts at 0. Then loop over the array using a for loop. In
+                      each iteration, add the current value to the 'sum'
+                      variable. This way, by the end of the loop, you have all
+                      values added together.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      To calculate the average, divide the sum you calculated
+                      before by the length of the array (because that's the
+                      number of elements)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Call the function with the 'totals' array
+                    </p>
+                  </li>
+                </ol>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const calcAverage = function (arr) {
                       let sum = 0;
@@ -2224,124 +2510,178 @@
                     console.log(calcAverage(totals))
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 50 -->
               </div>
 
-              <!-- !End of Lecture 50 -->
+              <!-- !Blog Nav -->
+              <div class="blog-nav">
+                <a
+                  href="./javascript-fundamentals-part-1.html"
+                  class="prev-next-blog-link"
+                >
+                  <ion-icon
+                    name="arrow-back-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next"
+                      >Previous</span
+                    >
+                    <span class="prev-next-blog-name"
+                      >JavaScript Fundamentals (Part 1)</span
+                    >
+                  </div>
+                </a>
+
+                <a
+                  href="./developer-skills-and-editor-setup.html"
+                  class="prev-next-blog-link"
+                >
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next">Next</span>
+                    <span class="prev-next-blog-name"
+                      >Developer Skills and Editor Setup</span
+                    >
+                  </div>
+
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <!-- !Blog Nav -->
-            <div class="blog-nav">
-              <a href="./javascript-fundamentals-part-1.html" class="prev-next-blog-link">
-                <ion-icon name="arrow-back-outline" class="prev-next-icon"></ion-icon>
-
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Previous</span>
-                  <span class="prev-next-blog-name">JavaScript Fundamentals (Part 1)</span>
-                </div>
+    <!-- !Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <!-- !Profile -->
+          <div class="profile-col">
+            <figure class="footer-profile">
+              <img
+                src="../resources/images/main/profile-pic/me.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img"
+              />
+            </figure>
+            <div class="social-icons">
+              <!-- !Discord -->
+              <a
+                href="https://discordapp.com/users/871093653660106812"
+                class="social-link"
+                target="_blank"
+                data-title="Discord"
+              >
+                <ion-icon name="logo-discord" class="social-icon"></ion-icon>
               </a>
 
-              <a href="./developer-skills-and-editor-setup.html" class="prev-next-blog-link">
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Next</span>
-                  <span class="prev-next-blog-name">Developer Skills and Editor Setup</span>
-                </div>
+              <!-- !Github -->
+              <a
+                href="https://github.com/acoetzer"
+                class="social-link"
+                target="_blank"
+                data-title="GitHub"
+              >
+                <ion-icon name="logo-github" class="social-icon"></ion-icon>
+              </a>
 
-                <ion-icon name="arrow-forward-outline" class="prev-next-icon"></ion-icon>
+              <!-- !Email -->
+              <a
+                href="mailto:awcoetzer@outlook.com"
+                class="social-link"
+                target="_blank"
+                data-title="Email"
+              >
+                <ion-icon name="mail-outline" class="social-icon"></ion-icon>
               </a>
             </div>
+            <address class="address-text-box">
+              <p class="address">Sofia, Bulgaria</p>
+            </address>
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy; <span id="copyright">(This is a script)</span> Andre
+                Coetzer. All rights reserved
+              </p>
+            </div>
+          </div>
+
+          <!-- !Page Links -->
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="link link--footer">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="./javascript.html" class="link link--footer"
+                  >&larr; JavaScript</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- !Site Links -->
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="../index.html" class="link link--footer">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../html-pages/html.html" class="link link--footer"
+                  >HTML</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../css-pages/css.html" class="link link--footer"
+                  >CSS</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a
+                  href="../javascript-pages/javascript.html"
+                  class="link link--footer"
+                  >JavaScript</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../react-pages/react.html" class="link link--footer"
+                  >React</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../node-pages/node.html" class="link link--footer"
+                  >Node.js</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- !Footer -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="footer-box">
+    <!-- !Scripts -->
+    <!-- !Course Section Script -->
+    <script src="./course-exercises/javascript-fundamentals-part-2.js"></script>
 
-        <!-- !Profile -->
-        <div class="profile-col">
-          <figure class="footer-profile">
-            <img src="../resources/images/main/profile-pic/me.jpg"
-              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </figure>
-          <div class="social-icons">
-            <!-- !Discord -->
-            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
-              data-title="Discord">
-              <ion-icon name="logo-discord" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Github -->
-            <a href="https://github.com/acoetzer" class="social-link" target="_blank" data-title="GitHub">
-              <ion-icon name="logo-github" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Email -->
-            <a href="mailto:awcoetzer@outlook.com" class="social-link" target="_blank" data-title="Email">
-              <ion-icon name="mail-outline" class="social-icon"></ion-icon>
-            </a>
-          </div>
-          <address class="address-text-box">
-            <p class="address">Sofia, Bulgaria</p>
-          </address>
-          <div class="copyright-text center-text">
-            <p class="copyright">
-              &copy; <span id="copyright">(This is a script)</span> Andre Coetzer. All rights reserved
-            </p>
-          </div>
-        </div>
-
-        <!-- !Page Links -->
-        <div class="page-links-col">
-          <span class="pre-heading footer-pre-heading">Page Links</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="#" class="link link--footer">Go to the Top &uarr;</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="./javascript.html" class="link link--footer">&larr; JavaScript</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- !Site Links -->
-        <div class="site-links-col">
-          <span class="pre-heading footer-pre-heading">Site Map</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="../index.html" class="link link--footer">Home</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../html-pages/html.html" class="link link--footer">HTML</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../css-pages/css.html" class="link link--footer">CSS</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../javascript-pages/javascript.html" class="link link--footer">JavaScript</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../react-pages/react.html" class="link link--footer">React</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../node-pages/node.html" class="link link--footer">Node.js</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- !Scripts -->
-  <!-- !Course Section Script -->
-  <script src="./course-exercises/javascript-fundamentals-part-2.js"></script>
-
-  <!-- !Standard Scripts -->
-  <script src="../resources/javascript/app-blog.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <!-- !Standard Scripts -->
+    <script src="../resources/javascript/app-blog.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

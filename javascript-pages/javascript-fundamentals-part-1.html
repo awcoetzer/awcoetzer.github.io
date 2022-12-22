@@ -1,278 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JavaScript fundamentals (Part 1. My first steps into JavaScript with JavaScript Fundamentals Part 1"
+    />
+    <link
+      rel="icon"
+      href="../resources/images/favicon/computer-illustration-64x64.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../resources/css/prism.css" />
+    <script src="../resources/javascript/prism.js"></script>
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <title>JavaScript Fundamentals (Part 1) &mdash; JavaScript</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JavaScript fundamentals (Part 1. My first steps into JavaScript with JavaScript Fundamentals Part 1" />
-  <link rel="icon" href="../resources/images/favicon/computer-illustration-64x64.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../resources/css/prism.css" />
-  <script src="../resources/javascript/prism.js"></script>
-  <link rel="stylesheet" href="../resources/css/style.css" />
-  <title>JavaScript Fundamentals (Part 1) &mdash; JavaScript</title>
-</head>
+  <body>
+    <!-- !Section: Header -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="../index.html" class="btn main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-<body>
-  <!-- !Section: Header -->
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-item">
-          <a href="../index.html" class="btn main-nav-link">Home</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#footer" class="btn main-nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
+      <button class="mobile-nav">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </button>
 
-    <button class="mobile-nav">
-      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-    </button>
+      <!-- !Back to Top btn -->
+      <a href="#" class="btt-btn">
+        <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
+      </a>
+    </header>
 
-    <!-- !Back to Top btn -->
-    <a href="#" class="btt-btn">
-      <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
-    </a>
-  </header>
+    <main>
+      <!-- !Section: Blog Hero -->
+      <section class="section-padding--blog section-blog-hero">
+        <div class="blog-hero">
+          <picture class="blog-hero-img-box">
+            <source
+              srcset="../resources/images/javascript/nail-illustration.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="../resources/images/javascript/nail-illustration-min.png"
+              type="image/png"
+            />
 
-  <main>
+            <img
+              src="../resources/images/javascript/nail-illustration-min.png"
+              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+              class="blog-hero-img"
+            />
+          </picture>
 
-    <!-- !Section: Blog Hero -->
-    <section class="section-padding--blog section-blog-hero">
-      <div class="blog-hero">
-        <picture class="blog-hero-img-box">
-          <source srcset="../resources/images/javascript/nail-illustration.webp" type="image/webp">
-          <source srcset="../resources/images/javascript/nail-illustration-min.png" type="image/png">
-
-          <img src="../resources/images/javascript/nail-illustration-min.png"
-            alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer" class="blog-hero-img" />
-        </picture>
-
-        <div class="blog-hero-text-box">
-
-          <!-- !Breadcrumb Navigation -->
-          <nav class="breadcrumb-nav">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="../index.html" class="link link--breadcrumb">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript.html" class="link link--breadcrumb">JavaScript</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript-fundamentals-part-1.html" class="link link--breadcrumb">JavaScript Fundamentals (Part 1)</a>
-              </li>
-            </ul>
-          </nav>
-          <span class="pre-heading">Section 2</span>
-          <h1 class="heading-primary">JavaScript fundamentals (Part 1)</h1>
-        </div>
-      </div>
-    </section>
-
-    <!-- !Section Blog -->
-    <section class="section-padding--blog section-blog">
-      <div class="container--blog">
-        <div class="blog">
-
-          <!-- !Table of Contents -->
-          <nav class="toc">
-            <div class="toc-box">
-              <button class="toc-btn">
-                <span class="pre-heading toc-btn-heading">Table of Contents</span>
-                <ion-icon name="add-outline" class="toc-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
-              </button>
-
-              <div class="toc-hidden-box">
-                <ul class="toc-list">
-                  <li class="toc-item">
-                    <a href="#lecture-7" class="link link--toc">Hello, World!</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-8" class="link link--toc">A brief introduction to JavaScript</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-9" class="link link--toc">Linking a JavaScript file</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-10" class="link link--toc">Values and Variables</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-11" class="link link--toc">
-                      Practice assignments
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-12" class="link link--toc">
-                      Data Types
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-13" class="link link--toc">
-                      let, const and var
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-14" class="link link--toc">
-                      Basic operators
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-15" class="link link--toc">
-                      Operator precedence
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-16" class="link link--toc">
-                      Coding challenge &mdash; 1
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-17" class="link link--toc">
-                      Strings and template literals
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-18" class="link link--toc">
-                      Taking decisions &mdash; if and else statements
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-19" class="link link--toc">
-                      Code challenge &mdash; 2
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-20" class="link link--toc">
-                      Type conversion and coercion
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-21" class="link link--toc">
-                      Truthy and falsy values
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-22" class="link link--toc">
-                      Equality Operators == vs. ====
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-23" class="link link--toc">
-                      Boolean Logic
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-24" class="link link--toc">
-                      Logical operators
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-25" class="link link--toc">
-                      Coding challenge &mdash; 3
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-26" class="link link--toc">
-                      The switch statement
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-27" class="link link--toc">
-                      Statements and expressions
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-28" class="link link--toc">
-                      The conditional ternary operator
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-29" class="link link--toc">
-                      Code challenge &mdash; 4
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-30" class="link link--toc">
-                      JavaScript Releases: ES5, ES6+ and ESNext
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <!-- !Lectures -->
-          <div class="lectures">
-
-            <!-- !Lecture 7 -->
-            <div id="lecture-7" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 7 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Hello, World!
-              </h3>
-
-              <p class="lecture-text">
-                Welcome to JavaScript, before we write anything in our editor, we will take a look at some basic
-                JavaScript by using the browser's console.
-              </p>
-
-              <p class="lecture-text">
-                To open the console within your browser, there are a few ways you could achieve this.
-              </p>
-
-              <ul class="lecture-steps">
-                <li class="lecture-steps--item">
-                  <span class="pre-heading lecture-steps--pre-heading">Right Click</span>
-                  <p class="lecture-steps--item-description">
-                    Right click somewhere on the browsers window and select inspect and navigate to the tab that says
-                    console.
-                  </p>
+          <div class="blog-hero-text-box">
+            <!-- !Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="../index.html" class="link link--breadcrumb">Home</a>
                 </li>
-                <li class="lecture-steps--item">
-                  <span class="pre-heading lecture-steps--pre-heading">Shortcut</span>
-                  <p class="lecture-steps--item-description">
-                    The second method is to press Ctrl Shift + J, which should bring up the console directly.
-                  </p>
+                <li class="breadcrumb-item">
+                  <a href="./javascript.html" class="link link--breadcrumb"
+                    >JavaScript</a
+                  >
                 </li>
-                <li class="lecture-steps--item">
-                  <span class="pre-heading lecture-steps--pre-heading">Settings</span>
-                  <p class="lecture-steps--item-description">
-                    Lastly, depending on your browser, somewhere in its menu should be the developer tools.
-                  </p>
+                <li class="breadcrumb-item">
+                  <a
+                    href="./javascript-fundamentals-part-1.html"
+                    class="link link--breadcrumb"
+                    >JavaScript Fundamentals (Part 1)</a
+                  >
                 </li>
               </ul>
+            </nav>
+            <span class="pre-heading">Section 2</span>
+            <h1 class="heading-primary">JavaScript fundamentals (Part 1)</h1>
+          </div>
+        </div>
+      </section>
 
-              <p class="lecture-text">
-                Inside the console, we can take a look at some basic commands, which will be explained at a later time. The first thing we will learn is all famous “Hello, World!” which is a rite of passage for anyone learning code.
-              </p>
+      <!-- !Section Blog -->
+      <section class="section-padding--blog section-blog">
+        <div class="container--blog">
+          <div class="blog">
+            <!-- !Table of Contents -->
+            <nav class="toc">
+              <div class="toc-box">
+                <button class="toc-btn">
+                  <span class="pre-heading toc-btn-heading"
+                    >Table of Contents</span
+                  >
+                  <ion-icon name="add-outline" class="toc-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
+                </button>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="toc-hidden-box">
+                  <ul class="toc-list">
+                    <li class="toc-item">
+                      <a href="#lecture-7" class="link link--toc"
+                        >Hello, World!</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-8" class="link link--toc"
+                        >A brief introduction to JavaScript</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-9" class="link link--toc"
+                        >Linking a JavaScript file</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-10" class="link link--toc"
+                        >Values and Variables</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-11" class="link link--toc">
+                        Practice assignments
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-12" class="link link--toc">
+                        Data Types
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-13" class="link link--toc">
+                        let, const and var
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-14" class="link link--toc">
+                        Basic operators
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-15" class="link link--toc">
+                        Operator precedence
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-16" class="link link--toc">
+                        Coding challenge &mdash; 1
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-17" class="link link--toc">
+                        Strings and template literals
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-18" class="link link--toc">
+                        Taking decisions &mdash; if and else statements
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-19" class="link link--toc">
+                        Code challenge &mdash; 2
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-20" class="link link--toc">
+                        Type conversion and coercion
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-21" class="link link--toc">
+                        Truthy and falsy values
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-22" class="link link--toc">
+                        Equality Operators == vs. ====
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-23" class="link link--toc">
+                        Boolean Logic
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-24" class="link link--toc">
+                        Logical operators
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-25" class="link link--toc">
+                        Coding challenge &mdash; 3
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-26" class="link link--toc">
+                        The switch statement
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-27" class="link link--toc">
+                        Statements and expressions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-28" class="link link--toc">
+                        The conditional ternary operator
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-29" class="link link--toc">
+                        Code challenge &mdash; 4
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-30" class="link link--toc">
+                        JavaScript Releases: ES5, ES6+ and ESNext
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <!-- !Lectures -->
+            <div class="lectures">
+              <!-- !Lecture 7 -->
+              <div id="lecture-7" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 7 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Hello, World!
+                </h3>
+
+                <p class="lecture-text">
+                  Welcome to JavaScript, before we write anything in our editor,
+                  we will take a look at some basic JavaScript by using the
+                  browser's console.
+                </p>
+
+                <p class="lecture-text">
+                  To open the console within your browser, there are a few ways
+                  you could achieve this.
+                </p>
+
+                <ul class="lecture-steps">
+                  <li class="lecture-steps--item">
+                    <span class="pre-heading lecture-steps--pre-heading"
+                      >Right Click</span
+                    >
+                    <p class="lecture-steps--item-description">
+                      Right click somewhere on the browsers window and select
+                      inspect and navigate to the tab that says console.
+                    </p>
+                  </li>
+                  <li class="lecture-steps--item">
+                    <span class="pre-heading lecture-steps--pre-heading"
+                      >Shortcut</span
+                    >
+                    <p class="lecture-steps--item-description">
+                      The second method is to press Ctrl Shift + J, which should
+                      bring up the console directly.
+                    </p>
+                  </li>
+                  <li class="lecture-steps--item">
+                    <span class="pre-heading lecture-steps--pre-heading"
+                      >Settings</span
+                    >
+                    <p class="lecture-steps--item-description">
+                      Lastly, depending on your browser, somewhere in its menu
+                      should be the developer tools.
+                    </p>
+                  </li>
+                </ul>
+
+                <p class="lecture-text">
+                  Inside the console, we can take a look at some basic commands,
+                  which will be explained at a later time. The first thing we
+                  will learn is all famous “Hello, World!” which is a rite of
+                  passage for anyone learning code.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     alert('Hello, World!')
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                If we write or copy this code above into our browser's console, we should see a popup appear at the top of the screen. Let's take a look at some other things JavaScript can do with alert while we are in the browser.
-              </p>
+                <p class="lecture-text">
+                  If we write or copy this code above into our browser's
+                  console, we should see a popup appear at the top of the
+                  screen. Let's take a look at some other things JavaScript can
+                  do with alert while we are in the browser.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Defining a Variable
                     let js = 'amazing'
@@ -281,18 +324,25 @@
                     if (js === 'amazing') alert('JavaScript is Fun!')
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Above, we first defined a variable using let, more on this later, and then used an if statement with an equality operator to create some form of logic. In pseudocode, it's if the variable's value is strictly equal to the string amazing, then do this. The 'this', is the alert function that will be run.
-              </p>
+                <p class="lecture-text">
+                  Above, we first defined a variable using let, more on this
+                  later, and then used an if statement with an equality operator
+                  to create some form of logic. In pseudocode, it's if the
+                  variable's value is strictly equal to the string amazing, then
+                  do this. The 'this', is the alert function that will be run.
+                </p>
 
-              <p class="lecture-text">
-                If we copy and paste the code above in your console, you should see the popup with the words 'JavaScript is fun!'. Lets to change the variable to something else, and see what happens.
-              </p>
+                <p class="lecture-text">
+                  If we copy and paste the code above in your console, you
+                  should see the popup with the words 'JavaScript is fun!'. Lets
+                  to change the variable to something else, and see what
+                  happens.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Defining a Variable
                     let js = 'boring'
@@ -301,36 +351,48 @@
                     if (js === 'amazing') alert('JavaScript is Fun!')
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Now, if we copy the copy above, you should see nothing
+                  happening. That is because the if statement returns false
+                  instead of true, and therefor does not run the code.
+                </p>
+
+                <!-- !End of Lecture 7 -->
               </div>
 
-              <p class="lecture-text">
-                Now, if we copy the copy above, you should see nothing happening. That is because the if statement returns false instead of true, and therefor does not run the code.
-              </p>
+              <!-- !Lecture 8 -->
+              <div id="lecture-8" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 8 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  A brief introduction to JavaScript
+                </h3>
 
-              <!-- !End of Lecture 7 -->
-            </div>
+                <p class="lecture-text">
+                  JavaScript is considered to be a high level, object-oriented,
+                  multi paradigm, programming language. Starting with
+                  programming language, JavaScript is the programming language
+                  for the web. The meaning of high level is that, we don't have
+                  to worry about things like ram usage among other things, we
+                  can simply focus purely on programming.
+                </p>
+                <p class="lecture-text">
+                  It's object orientated because most things are done with and
+                  inside of objects. It's also multi paradigm in the sense that
+                  many programming styles can be used in JavaScript.
+                </p>
 
+                <p class="lecture-text">
+                  If we look at what makes a website, we can place together
+                  HTML, CSS, and JavaScript. HTML, provides the content on the
+                  page, otherwise known as the Noun, CSS is the appearance, also
+                  known as the Adjective, while JavaScript is the programming
+                  language for the site, also known as the Verb.
+                </p>
 
-            <!-- !Lecture 8 -->
-            <div id="lecture-8" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 8 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                A brief introduction to JavaScript
-              </h3>
-
-              <p class="lecture-text">
-                JavaScript is considered to be a high level, object-oriented, multi paradigm, programming language. Starting with programming language, JavaScript is the programming language for the web. The meaning of high level is that, we don't have to worry about things like ram usage among other things, we can simply focus purely on programming.
-              </p>
-              <p class="lecture-text">
-                It's object orientated because most things are done with and inside of objects. It's also multi paradigm in the sense that many programming styles can be used in JavaScript.
-              </p>
-
-              <p class="lecture-text">
-                If we look at what makes a website, we can place together HTML, CSS, and JavaScript. HTML, provides the content on the page, otherwise known as the Noun, CSS is the appearance, also known as the Adjective, while JavaScript is the programming language for the site, also known as the Verb.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-html">
                     &lt;!-- The Noun -- &gt;
                     &lt;p&gt;
@@ -338,10 +400,10 @@
                     &lt;/p&gt;
                 </code>
                 </pre>
-              </div>
+                </div>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-css">
                     /* The Adjective */
                     p {
@@ -349,45 +411,58 @@
                     }
                 </code>
               </pre>
-              </div>
+                </div>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // The Verb
                     p.hide();
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  JavaScript allows for both frontend programming and backend
+                  using technologies such as Node.js. JavaScript has its
+                  libraries such as React, Angular and Vue which are
+                  ever-changing and also sometimes easier to use than plain
+                  JavaScript.
+                </p>
+
+                <p class="lecture-text">
+                  That's not all, there is also React Native and Ionic that can
+                  be used for Desktop applications as well as mobile. The
+                  possibilities are almost endless.
+                </p>
+
+                <!-- !End of Lecture 8 -->
               </div>
 
-              <p class="lecture-text">
-                JavaScript allows for both frontend programming and backend using technologies such as Node.js. JavaScript has its libraries such as React, Angular and Vue which are ever-changing and also sometimes easier to use than plain JavaScript.
-              </p>
+              <!-- !Lecture 9 -->
+              <div id="lecture-9" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 9 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Linking a JavaScript file
+                </h3>
 
-              <p class="lecture-text">
-                That's not all, there is also React Native and Ionic that can be used for Desktop applications as well as mobile. The possibilities are almost endless.
-              </p>
+                <p class="lecture-text">
+                  Linking a .js file works similar to that of linking a CSS
+                  file. The only difference is that it is best practice to add
+                  the JavaScript file just before the end of the body HTML
+                  element, whereas the .css file is linked within the head HTML
+                  element. You could however write an internal script, just like
+                  an internal style for CSS, however it's not preferred for
+                  cleaner code.
+                </p>
 
-              <!-- !End of Lecture 8 -->
-            </div>
+                <p class="lecture-text">
+                  An internal script would look something like the following,
+                  below.
+                </p>
 
-            <!-- !Lecture 9 -->
-            <div id="lecture-9" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 9 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Linking a JavaScript file
-              </h3>
-
-              <p class="lecture-text">
-                Linking a .js file works similar to that of linking a CSS file. The only difference is that it is best practice to add the JavaScript file just before the end of the body HTML element, whereas the .css file is linked within the head HTML element. You could however write an internal script, just like an internal style for CSS, however it's not preferred for cleaner code.
-              </p>
-
-              <p class="lecture-text">
-                An internal script would look something like the following, below.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-html">
                     &lt;!DOCTYPE html&gt;
                     &lt;html lang="en"&gt;
@@ -406,14 +481,16 @@
                     &lt;/html&gt;
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                While if external, it would require you to make an app.js file and then you to link it to your HTML document like the following below.
-              </p>
+                <p class="lecture-text">
+                  While if external, it would require you to make an app.js file
+                  and then you to link it to your HTML document like the
+                  following below.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-html">
                     &lt;!DOCTYPE html&gt;
                     &lt;html lang="en"&gt;
@@ -430,79 +507,102 @@
                     &lt;/html&gt;
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Now that we will not be working in the console, to log values to the console directly, we can still use the console to output some values using a command in JavaScript called <em>console.log()</em> as shown below.
-              </p>
+                <p class="lecture-text">
+                  Now that we will not be working in the console, to log values
+                  to the console directly, we can still use the console to
+                  output some values using a command in JavaScript called
+                  <em>console.log()</em> as shown below.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // To log something to the console
                     console.log('👋 This is how to log to the console!');
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  If you view the console, you should see a similar message
+                  displayed. Of course, we did this using an external .js file
+                  which we linked to this page.
+                </p>
+
+                <!-- !End of Lecture 9 -->
               </div>
 
-              <p class="lecture-text">
-                If you view the console, you should see a similar message displayed. Of course, we did this using an external .js file which we linked to this page.
-              </p>
+              <!-- !Lecture 10 -->
+              <div id="lecture-10" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 10 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Values and Variables
+                </h3>
 
-              <!-- !End of Lecture 9 -->
-            </div>
-
-            <!-- !Lecture 10 -->
-            <div id="lecture-10" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 10 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Values and Variables
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     'Andre' // This is a value
                     
                     console.log('Andre');
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Above is what is known as a value in JavaScript. A value is the smallest unit of information inside of JavaScript. Though, to can see this value, we would need to log this to the console.
-              </p>
+                <p class="lecture-text">
+                  Above is what is known as a value in JavaScript. A value is
+                  the smallest unit of information inside of JavaScript. Though,
+                  to can see this value, we would need to log this to the
+                  console.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let firstName = 'Andre';
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Above is called declaring a variable, where 'firstName' is the variable's name, it's then assigned a value and holds information inside it. A variable is much like a box in the real world, where you can place a book inside the box and label the box 'book', for example. This works much the same way.
-              </p>
+                <p class="lecture-text">
+                  Above is called declaring a variable, where 'firstName' is the
+                  variable's name, it's then assigned a value and holds
+                  information inside it. A variable is much like a box in the
+                  real world, where you can place a book inside the box and
+                  label the box 'book', for example. This works much the same
+                  way.
+                </p>
 
-              <p class="lecture-text">
-                The variable will take whatever value or data you place inside it and store it in your computer's memory so that if you want to use it at a later date, you can. To use a variable, all you need to do is call on that variable's name, Instead of writing out the literal value.
-              </p>
+                <p class="lecture-text">
+                  The variable will take whatever value or data you place inside
+                  it and store it in your computer's memory so that if you want
+                  to use it at a later date, you can. To use a variable, all you
+                  need to do is call on that variable's name, Instead of writing
+                  out the literal value.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript ">
                     console.log(firstName);
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                When it comes to naming variables, there are a few naming conventions as well as hard rules to follow. So far we have been using what is known as camel casing, where the first word and letter is lowercase and all subsequent words are capitalized thereafter. Another method is called snake casing and is very prominent with in the Ruby community. Snake casing separates each word with an underscore.
-              </p>
+                <p class="lecture-text">
+                  When it comes to naming variables, there are a few naming
+                  conventions as well as hard rules to follow. So far we have
+                  been using what is known as camel casing, where the first word
+                  and letter is lowercase and all subsequent words are
+                  capitalized thereafter. Another method is called snake casing
+                  and is very prominent with in the Ruby community. Snake casing
+                  separates each word with an underscore.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Camel Casing
                     let firstName;
@@ -511,26 +611,38 @@
                     let first_name;
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Variables names cannot start with a number, this is seen as something illegal within JavaScript. Though it can contain a number, just not as the first letter. In fact, a variable can only contain the following, numbers, letters, underscores, and the dollar symbol.
-              </p>
+                <p class="lecture-text">
+                  Variables names cannot start with a number, this is seen as
+                  something illegal within JavaScript. Though it can contain a
+                  number, just not as the first letter. In fact, a variable can
+                  only contain the following, numbers, letters, underscores, and
+                  the dollar symbol.
+                </p>
 
-              <p class="lecture-text">
-                Respectfully, variable names cannot be the same as reserved keywords within JavaScript. An example of that would be the keyword new. There is one keyword that is not illegal but by convention is not used by itself when naming variables, and that is the keyword name.
-              </p>
+                <p class="lecture-text">
+                  Respectfully, variable names cannot be the same as reserved
+                  keywords within JavaScript. An example of that would be the
+                  keyword new. There is one keyword that is not illegal but by
+                  convention is not used by itself when naming variables, and
+                  that is the keyword name.
+                </p>
 
-              <p class="lecture-text">
-                Furthermore, Variables as per convention should not start with a capital letter, as these variables are use for something called object-oriented programming. Adding to this, variables should also not be in all uppercase letters, as these are reserved for constants that we know will never change.
-              </p>
+                <p class="lecture-text">
+                  Furthermore, Variables as per convention should not start with
+                  a capital letter, as these variables are use for something
+                  called object-oriented programming. Adding to this, variables
+                  should also not be in all uppercase letters, as these are
+                  reserved for constants that we know will never change.
+                </p>
 
-              <p class="lecture-text">
-                Lastly, variables should be descriptive, for example below.
-              </p>
+                <p class="lecture-text">
+                  Lastly, variables should be descriptive, for example below.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Non descriptive naming
                     let job1 = 'Graphic Designer'
@@ -541,33 +653,34 @@
                     let secondJob = 'Web Developer'
                   </code>
                 </pre>
+                </div>
+                <!-- !End of Lecture 10 -->
               </div>
-              <!-- !End of Lecture 10 -->
-            </div>
 
-            <!-- !Lecture 10 Assignment -->
-            <div id="lecture-10-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 10 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
+              <!-- !Lecture 10 Assignment -->
+              <div id="lecture-10-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 10 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Declare variables called 'country', 'continent' and 'population' and
-                    assign their values according to your own country (population in millions)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Log their values to the console
-                  </p>
-                </li>
-              </ol>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Declare variables called 'country', 'continent' and
+                      'population' and assign their values according to your own
+                      country (population in millions)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Log their values to the console
+                    </p>
+                  </li>
+                </ol>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const country = 'Bulgaria';
                     const continent = 'Europe';
@@ -576,35 +689,36 @@
                     console.log(`${country}, ${continent}, ${population}`)
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 10 Assignment -->
               </div>
 
-              <!-- !End of Lecture 10 Assignment -->
-            </div>
+              <!-- !Lecture 11 -->
+              <div id="lecture-11" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 11 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice assignments
+                </h3>
 
+                <p class="lecture-text">
+                  As seen above, each section has an assignment, you can view
+                  the results inside the console. Note that after each section,
+                  check the assignment .pdf to see what assignment is given.
+                </p>
 
-            <!-- !Lecture 11 -->
-            <div id="lecture-11" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 11 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice assignments
-              </h3>
+                <!-- !End of Lecture 11 -->
+              </div>
 
-              <p class="lecture-text">
-                As seen above, each section has an assignment, you can view the results inside the console. Note that after each section, check the assignment .pdf to see what assignment is given.
-              </p>
+              <!-- !Lecture 12 -->
+              <div id="lecture-12" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 12 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Data Types
+                </h3>
 
-              <!-- !End of Lecture 11 -->
-            </div>
-
-            <!-- !Lecture 12 -->
-            <div id="lecture-12" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 12 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Data Types
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
                       // An object
                       let me = {
@@ -617,28 +731,32 @@
                       let age = 33;
                     </code>
                   </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                In JavaScript, every value is either an object or a primitive. There are 7 primitive data types. Number,
-                Strings, Boolean, Undefined, Null, Symbol and Big Int.
-              </p>
+                <p class="lecture-text">
+                  In JavaScript, every value is either an object or a primitive.
+                  There are 7 primitive data types. Number, Strings, Boolean,
+                  Undefined, Null, Symbol and Big Int.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Number Data Type
                     let age = 33; // is actually 33.0
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                The number data type, is always a floating point number, even though we don't see a decimal, it is there. Unlike other programming languages, we don't need to specify whether a number is a float or int.
-              </p>
+                <p class="lecture-text">
+                  The number data type, is always a floating point number, even
+                  though we don't see a decimal, it is there. Unlike other
+                  programming languages, we don't need to specify whether a
+                  number is a float or int.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // String Data Type
                     let firstName = 'Andre'; // Single quotation marks
@@ -648,29 +766,31 @@
                     let firstName = "Andre'; // Mixing not allowed!
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Strings take a sequence of characters within its quotation marks. The quotation marks can be either double or single, but you cannot mix them.
-              </p>
+                <p class="lecture-text">
+                  Strings take a sequence of characters within its quotation
+                  marks. The quotation marks can be either double or single, but
+                  you cannot mix them.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Boolean Data Type
                     let isStudying = true;
                     let isSleeping = false;
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Booleans consist of only 2 values, true or false. This data type is used for decision making in our
-                code.
-              </p>
+                <p class="lecture-text">
+                  Booleans consist of only 2 values, true or false. This data
+                  type is used for decision making in our code.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Undefined Data Type
                     let lastName;
@@ -679,31 +799,37 @@
                     console.log(typeof lastName)
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                An undefined data type is when a variable takes the type undefined when it has an empty value. Just to
-                add, undefined is both a value and a data type. We can see this by the code above.
-              </p>
+                <p class="lecture-text">
+                  An undefined data type is when a variable takes the type
+                  undefined when it has an empty value. Just to add, undefined
+                  is both a value and a data type. We can see this by the code
+                  above.
+                </p>
 
-              <p class="lecture-text">
-                Small note on typeof, as we will see later, it is an operator and is used to see the type a value is.
-              </p>
+                <p class="lecture-text">
+                  Small note on typeof, as we will see later, it is an operator
+                  and is used to see the type a value is.
+                </p>
 
-              <p class="lecture-text">
-                Null is very similar to undefined, though not the same. More on this later in the course.
-              </p>
+                <p class="lecture-text">
+                  Null is very similar to undefined, though not the same. More
+                  on this later in the course.
+                </p>
 
-              <p class="lecture-text">
-                Symbol, is a value that will never change, again more on this later.
-              </p>
+                <p class="lecture-text">
+                  Symbol, is a value that will never change, again more on this
+                  later.
+                </p>
 
-              <p class="lecture-text">
-                Big Int, the same as number but allows for larger numbers. More on this later in the course.
-              </p>
+                <p class="lecture-text">
+                  Big Int, the same as number but allows for larger numbers.
+                  More on this later in the course.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // JavaScript as a dynamic language
                     let javascript = true;
@@ -713,39 +839,42 @@
                     console.log(javascript)
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  JavaScript is a dynamic language, as seen above we do not need
+                  to declare the variable twice, though just reassign the value.
+                </p>
+
+                <!-- !End of Lecture 12 -->
               </div>
 
-              <p class="lecture-text">
-                JavaScript is a dynamic language, as seen above we do not need to declare the variable twice, though
-                just reassign the value.
-              </p>
+              <!-- !Lecture 12 Assignment -->
+              <div id="lecture-12-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 12 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 12 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Declare a variable called 'isIsland' and set its value
+                      according to your country. The variable should hold a
+                      Boolean value. Also declare a variable 'language', but
+                      don't assign it any value yet
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Log the types of 'isIsland', 'population', 'country' and
+                      'language' to the console
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 12 Assignment -->
-            <div id="lecture-12-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 12 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Declare a variable called 'isIsland' and set its value according to your country. The variable
-                    should hold a Boolean value. Also declare a variable 'language', but don't assign it any value yet
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Log the types of 'isIsland', 'population', 'country' and 'language' to the console
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Working with the last assignment in mind
                     const isIsland = false;
@@ -754,76 +883,92 @@
                     console.log(typeof country, typeof population, typeof isIsland, typeof language);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 12 Assignment -->
               </div>
 
-              <!-- !End of Lecture 12 Assignment -->
-            </div>
+              <!-- !Lecture 13 -->
+              <div id="lecture-13" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 13 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  let, const and var
+                </h3>
 
-            <!-- !Lecture 13 -->
-            <div id="lecture-13" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 13 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                let, const and var
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let age = 33;
                     const birthYear = 1989;
                     var outOfDate = true; // var is legacy
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  In JavaScript, there are 3 ways of declaring variables. That
+                  being let, const and the legacy way, var. The difference
+                  between let and const is that let is mutable and const is not.
+                  This means that let can change its value or even data type to
+                  something completely different, and it's legal in JavaScript.
+                </p>
+
+                <p class="lecture-text">
+                  Const however cannot do this and is not mutable. Therefore,
+                  you cannot reassign or mutate the value or data type inside a
+                  const variable. It's basically constant. You also shouldn't
+                  leave a const variable undefined.
+                </p>
+
+                <p class="lecture-text">
+                  How do we know which to use? When it comes to best practice,
+                  it's best to only use const, unless you know the value will
+                  change later in your code. It's also a best practice to not
+                  introduce too many mutable variables into your code, as this
+                  can lead too hard to find bugs.
+                </p>
+
+                <p class="lecture-text">
+                  Var on the other hand should be avoided and no longer used, as
+                  it's the legacy way of declaring a variable. It's only here to
+                  know how it works, just in case you encounter one in the wild.
+                </p>
+
+                <!-- !End of Lecture 13 -->
               </div>
 
-              <p class="lecture-text">
-                In JavaScript, there are 3 ways of declaring variables. That being let, const and the legacy way, var. The difference between let and const is that let is mutable and const is not. This means that let can change its value or even data type to something completely different, and it's legal in JavaScript.
-              </p>
+              <!-- !Lecture 13 Assignment -->
+              <div id="lecture-13-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 13 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                Const however cannot do this and is not mutable. Therefore, you cannot reassign or mutate the value or data type inside a const variable. It's basically constant. You also shouldn't leave a const variable undefined.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Set the value of 'language' to the language spoken where
+                      you live (some countries have multiple languages, but just
+                      choose one)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Think about which variables should be const variables
+                      (which values will never change, and which might change?).
+                      Then, change these variables to const.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Try to change one of the changed variables now, and
+                      observe what happens.
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                How do we know which to use? When it comes to best practice, it's best to only use const, unless you know the value will change later in your code. It's also a best practice to not introduce too many mutable  variables into your code, as this can lead too hard to find bugs.
-              </p>
-
-              <p class="lecture-text">
-                Var on the other hand should be avoided and no longer used, as it's the legacy way of declaring a variable. It's only here to know how it works, just in case you encounter one in the wild.
-              </p>
-
-              <!-- !End of Lecture 13 -->
-            </div>
-
-            <!-- !Lecture 13 Assignment -->
-            <div id="lecture-13-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 13 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Set the value of 'language' to the language spoken where you live (some countries have multiple
-                    languages, but just choose one)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Think about which variables should be const variables (which values will never change, and which
-                    might change?). Then, change these variables to const.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Try to change one of the changed variables now, and observe what happens.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Reassigning the value of language
                     language = 'Bulgarian'
@@ -831,24 +976,26 @@
                     isIsland = true; // Assigned to constant ERR
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 13 Assignment -->
               </div>
 
-              <!-- !End of Lecture 13 Assignment -->
-            </div>
+              <!-- !Lecture 14 -->
+              <div id="lecture-14" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 14 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Basic operators
+                </h3>
 
-            <!-- !Lecture 14 -->
-            <div id="lecture-14" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 14 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Basic operators
-              </h3>
+                <p class="lecture-text">
+                  There are many operators in JavaScript. Arithmetic,
+                  Comparison, Logical, Assignment and many more. Operators allow
+                  us to transform multiple different values, or combine them.
+                </p>
 
-              <p class="lecture-text">
-                There are many operators in JavaScript. Arithmetic, Comparison, Logical, Assignment and many more. Operators allow us to transform multiple different values, or combine them.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Arithmetic operators
                     console.log(2 + 1) // Addition
@@ -871,14 +1018,19 @@
                     console.log(myText1 + ' ' + myText2)
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Arithmetic operators operate as you would expect them too. You can use the plus + operator to concatenate strings together. In fact, you can concatenate different data types like together in a process known as type coercion, which we will cover later. There is a better way of concatenating strings together, called String template literals.
-              </p>
+                <p class="lecture-text">
+                  Arithmetic operators operate as you would expect them too. You
+                  can use the plus + operator to concatenate strings together.
+                  In fact, you can concatenate different data types like
+                  together in a process known as type coercion, which we will
+                  cover later. There is a better way of concatenating strings
+                  together, called String template literals.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let x = 10 + 20;
                     x += 10; // which means x = x + 10
@@ -890,26 +1042,38 @@
                     x--; // which means x = x - 1
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Assignment Operators, as you would have guessed it, assign something like a value to a variable using the equal's syntax. Above, we see a variable x being declared and assigned a value in the form of a mathematical equation.
-              </p>
+                <p class="lecture-text">
+                  Assignment Operators, as you would have guessed it, assign
+                  something like a value to a variable using the equal's syntax.
+                  Above, we see a variable x being declared and assigned a value
+                  in the form of a mathematical equation.
+                </p>
 
-              <p class="lecture-text">
-                As we will understand later on, that mathematical equation is what is known as an expression. An expression in JavaScript is anything that returns a value, more on this later. What's important to know here is that there is something called operator precedence, which again we will learn more about later.
-              </p>
+                <p class="lecture-text">
+                  As we will understand later on, that mathematical equation is
+                  what is known as an expression. An expression in JavaScript is
+                  anything that returns a value, more on this later. What's
+                  important to know here is that there is something called
+                  operator precedence, which again we will learn more about
+                  later.
+                </p>
 
-              <p class="lecture-text">
-                Though in short, the equation will execute first, providing a value. That value would in return be assigned to the x variable.
-              </p>
+                <p class="lecture-text">
+                  Though in short, the equation will execute first, providing a
+                  value. That value would in return be assigned to the x
+                  variable.
+                </p>
 
-              <p class="lecture-text">
-                Following that, are a few more assignment operators, most importantly the Incremental and Decremental, as this we use quite often.
-              </p>
+                <p class="lecture-text">
+                  Following that, are a few more assignment operators, most
+                  importantly the Incremental and Decremental, as this we use
+                  quite often.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Comparison operators
                     age1 > age2 // Greater than
@@ -927,55 +1091,62 @@
                     console.log(age2 <= age3);
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Comparison operators return a boolean value, they are used in
+                  the decision-making process.
+                </p>
+
+                <!-- !End of Lecture 14 -->
               </div>
 
-              <p class="lecture-text">
-                Comparison operators return a boolean value, they are used in the decision-making process.
-              </p>
+              <!-- !Lecture 14 Assignment -->
+              <div id="lecture-14-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 14 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 14 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      If your country split in half, and each half would contain
+                      half the population, then how many people would live in
+                      each half?
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Increase the population of your country by 1 and log the
+                      result to the console
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Finland has a population of 6 million. Does your country
+                      have more people than Finland?
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      The average population of a country is 33 million people.
+                      Does your country have less people than the average
+                      country?
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Based on the variables you created, create a new variable
+                      'description' which contains a string with this format:
+                      'Portugal is in Europe, and its 11 million people speak
+                      portuguese'
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 14 Assignment -->
-            <div id="lecture-14-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 14 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    If your country split in half, and each half would contain half the population, then how many people
-                    would live in each half?
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Increase the population of your country by 1 and log the result to the console
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Finland has a population of 6 million. Does your country have more people than Finland?
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    The average population of a country is 33 million people. Does your country have less people than
-                    the average country?
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Based on the variables you created, create a new variable 'description' which contains a string with
-                    this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let halfOfPopulation = population / 2;
                     console.log(halfPopulation)
@@ -997,85 +1168,108 @@
                     let description2 = `${country} is in ${continent}, and it's ${population} people speak ${language}`;
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 14 Assignment -->
               </div>
 
-              <!-- !End of Lecture 14 Assignment -->
-            </div>
+              <!-- !Lecture 15 -->
+              <div id="lecture-15" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 15 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Operator precedence
+                </h3>
 
-            <!-- !Lecture 15 -->
-            <div id="lecture-15" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 15 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Operator precedence
-              </h3>
+                <p class="lecture-text">
+                  Different operators in JavaScript have higher precedence over
+                  others. We can see that here in the
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table"
+                    target="_blank"
+                    class="link link--inline"
+                    >precedence table</a
+                  >
+                  provided by MDN. On the table, we can see the mathematical
+                  operators have a higher precedence over the assignment
+                  operator. This explains why x had a value of 30, and that is
+                  because the mathematical operator had precedence over the
+                  assignment operator.
+                </p>
 
-              <p class="lecture-text">
-                Different operators in JavaScript have higher precedence over others. We can see that here in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table" target="_blank" class="link link--inline">precedence table</a> provided by MDN. On the table, we can see the mathematical operators have a higher precedence over the assignment operator. This explains why x had a value of 30, and that is because the mathematical operator had precedence over the assignment operator.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let x = y = 25 - 10 - 5; // Both equal 10 10
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Certain operators also work from right to left, as in the
+                  example above, both x and y will equate to 10. If we break it
+                  down we understand that the equation happens first, then the
+                  value of that expression is assigned to the variable y which
+                  is then assigned to the variable x because it works from right
+                  to left. If this was reversed, the entire statement and
+                  expression would not work.
+                </p>
+
+                <!-- !End of Lecture 15 -->
               </div>
 
-              <p class="lecture-text">
-                Certain operators also work from right to left, as in the example above, both x and y will equate to 10. If we break it down we understand that the equation happens first, then the value of that expression is assigned to the variable y which is then assigned to the variable x because it works from right to left. If this was reversed, the entire statement and expression would not work.
-              </p>
+              <!-- !Lecture 16 -->
+              <div id="lecture-16" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 16 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge &mdash; 1
+                </h3>
 
-              <!-- !End of Lecture 15 -->
-            </div>
+                <p class="lecture-text">
+                  Mark and John are trying to compare their BMI (Body Mass
+                  Index), which is calculated using the formula: BMI = mass
+                  /height ** 2 = mass / (height * height) (mass in kg and height
+                  in meter)
+                </p>
 
-            <!-- !Lecture 16 -->
-            <div id="lecture-16" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 16 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge &mdash; 1
-              </h3>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Store Mark's and John's mass and height in variables
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Calculate both their BMIs using the formula (you can even
+                      implement both versions)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create a Boolean variable 'markHigherBMI' containing
+                      information about whether Mark has a higher BMI than John.
+                    </p>
+                  </li>
+                </ol>
 
-              <p class="lecture-text">
-                Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula:
-                BMI = mass /height ** 2 = mass / (height * height) (mass in kg and height in meter)
-              </p>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data 1: Marks weights 78 kg and is 1.69 m tall. John
+                      weights 92 kg and is 1.95m tall.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data 2: Marks weights 95 kg and is 1.88 m tall. John
+                      weights 85 kg and is 1.76m tall.
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Store Mark's and John's mass and height in variables
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Calculate both their BMIs using the formula (you can even implement both versions)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI
-                    than John.
-                  </p>
-                </li>
-              </ol>
-
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95m tall.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76m tall.
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Data 1
                     /*
@@ -1098,20 +1292,20 @@
                     console.log(`Mark's BMI is ${bmiMark}, John's BMI is ${bmiJohn} and is Mark's BMI higher than John's? : ${markHigherBMI}`);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 16 -->
               </div>
 
-              <!-- !End of Lecture 16 -->
-            </div>
+              <!-- !Lecture 17 -->
+              <div id="lecture-17" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 17 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Strings and template literals
+                </h3>
 
-            <!-- !Lecture 17 -->
-            <div id="lecture-17" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 17 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Strings and template literals
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const myName = 'Andre';
                     
@@ -1122,58 +1316,63 @@
                     console.log(`Hello, my name is ${myName}`)
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  String template literals allows you to not do string
+                  concatenation anymore. You can now inject the variable
+                  directly into your string. You can imagine this is very useful
+                  in creating cleaner and more understanding code.
+                </p>
+
+                <p class="lecture-text">
+                  A template literal or string template literal is different to
+                  the quotation marks as it uses the back tick character. A lot
+                  of developers prefer this over the quotation marks as they
+                  don't need to worry about which to use. Though, there could be
+                  performance issues if you just use template literals.
+                </p>
+
+                <!-- !End of Lecture 17 -->
               </div>
 
-              <p class="lecture-text">
-                String template literals allows you to not do string concatenation anymore. You can now inject the
-                variable directly into your string. You can imagine this is very useful in creating cleaner and more
-                understanding code.
-              </p>
+              <!-- !Lecture 17 Assignment -->
+              <div id="lecture-17-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 17 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                A template literal or string template literal is different to the quotation marks as it uses the back tick character. A lot of developers prefer this over the quotation marks as they don't need to worry about which to use. Though, there could be performance issues if you just use template literals.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Recreate the 'description' variable from the last
+                      assignment, this time using the template literal syntax.
+                    </p>
+                  </li>
+                </ol>
 
-              <!-- !End of Lecture 17 -->
-            </div>
-
-            <!-- !Lecture 17 Assignment -->
-            <div id="lecture-17-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 17 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Recreate the 'description' variable from the last assignment, this time using the template literal
-                    syntax.
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // String template literals
                     let description3 = `${country} is in ${continent}, and it's ${population} people speak ${language}`;
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 17 Assignment -->
               </div>
 
-              <!-- !End of Lecture 17 Assignment -->
-            </div>
+              <!-- !Lecture 18 -->
+              <div id="lecture-18" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 18 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Taking decisions &mdash; if and else statements
+                </h3>
 
-            <!-- !Lecture 18 -->
-            <div id="lecture-18" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 18 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Taking decisions &mdash; if and else statements
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // If statement
                     if (condition) {
@@ -1192,14 +1391,18 @@
                     }
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Above is an example of an if statement, an if statement is used to make decisions. Let's start by making a decision with JavaScript by making a program that lets us know whether a person is old enough to get their driver's license and if not, how many years until they are allowed.
-              </p>
+                <p class="lecture-text">
+                  Above is an example of an if statement, an if statement is
+                  used to make decisions. Let's start by making a decision with
+                  JavaScript by making a program that lets us know whether a
+                  person is old enough to get their driver's license and if not,
+                  how many years until they are allowed.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let age = 20;
 
@@ -1211,36 +1414,39 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 18 -->
               </div>
 
-              <!-- !End of Lecture 18 -->
-            </div>
+              <!-- !Lecture 18 Assignment -->
+              <div id="lecture-18-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 18 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-            <!-- !Lecture 18 Assignment -->
-            <div id="lecture-18-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 18 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      If your country's population is greater that 33 million,
+                      log a string like this to the console: 'Portugal's
+                      population is above average'. Otherwise, log a string like
+                      'Portugal's population is 22 million below average' (the
+                      22 is the average of 33 minus the country's population)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      After checking the result, change the population
+                      temporarily to 13 and then to 130. See the different
+                      results, and set the population back to original
+                    </p>
+                  </li>
+                </ol>
 
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    If your country's population is greater that 33 million, log a string like this to the console:
-                    'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22
-                    million below average' (the 22 is the average of 33 minus the country's population)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    After checking the result, change the population temporarily to 13 and then to 130. See the
-                    different results, and set the population back to original
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     if (population > averagePopulation) {
                       console.log(`${country} population is above average.`)
@@ -1249,40 +1455,43 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 18 Assignment -->
               </div>
 
-              <!-- !End of Lecture 18 Assignment -->
-            </div>
+              <!-- !Lecture 19 -->
+              <div id="lecture-19" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 19 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Code challenge &mdash; 2
+                </h3>
 
-            <!-- !Lecture 19 -->
-            <div id="lecture-19" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 19 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Code challenge &mdash; 2
-              </h3>
+                <p class="lecture-text">
+                  Use the BMI example from Challenge #1, and the code you
+                  already wrote, and improve it.
+                </p>
 
-              <p class="lecture-text">
-                Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Print a nice output to the console, saying who has the
+                      higher BMI. The message is either "Mark's BMI is higher
+                      than John's!" or "John's BMI is higher than Mark's!"
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use a template literal to include the BMI values in the
+                      outputs. Example: "Mark's BMI (28.3) is higher than John's
+                      (23.9)!"
+                    </p>
+                  </li>
+                </ol>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI
-                    is higher than John's!" or "John's BMI is higher than Mark's!"
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is
-                    higher than John's (23.9)!"
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     if (bmiMark > bmiJohn) {
                       console.log(`Mark's BMI(${bmiMark}) is higher than John's BMI(${bmiJohn})`)
@@ -1291,33 +1500,40 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 19 -->
               </div>
 
-              <!-- !End of Lecture 19 -->
-            </div>
+              <!-- !Lecture 20 -->
+              <div id="lecture-20" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 20 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Type conversion and coercion
+                </h3>
 
-            <!-- !Lecture 20 -->
-            <div id="lecture-20" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 20 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Type conversion and coercion
-              </h3>
+                <p class="lecture-text">
+                  In programming, converting between data types is something
+                  that happens often. Whether it is from a string to number or
+                  vice versa. In JavaScript, we call this type conversion and
+                  type coercion, the difference between the 2 being the first is
+                  explicit while the second is implicit.
+                </p>
 
-              <p class="lecture-text">
-                In programming, converting between data types is something that happens often. Whether it is from a string to number or vice versa. In JavaScript, we call this type conversion and type coercion, the difference between the 2 being the first is explicit while the second is implicit.
-              </p>
+                <p class="lecture-text">
+                  Type conversion is a manual conversion of a type, while Type
+                  coercion is JavaScript automatically converting the type.
+                </p>
 
-              <p class="lecture-text">
-                Type conversion is a manual conversion of a type, while Type coercion is JavaScript automatically
-                converting the type.
-              </p>
+                <p class="lecture-text">
+                  There are really only 3 types that can be converted to, that
+                  being Number, String, and Boolean. When it comes to Boolean,
+                  this is what is known as Truthy and Falsy Values, which will
+                  see later on.
+                </p>
 
-              <p class="lecture-text">
-                There are really only 3 types that can be converted to, that being Number, String, and Boolean. When it comes to Boolean, this is what is known as Truthy and Falsy Values, which will see later on.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Type conversion using Functions
                     const inputYear = '1991';
@@ -1328,16 +1544,17 @@
                     console.log(typeof NaN)
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Above is an example of Type conversion where we manually convert the types using functions. One thing to
-                take note of is the result of NaN, if we look at the typeof NaN, it results in a number, even though it
-                stands for Not a Number.
-              </p>
+                <p class="lecture-text">
+                  Above is an example of Type conversion where we manually
+                  convert the types using functions. One thing to take note of
+                  is the result of NaN, if we look at the typeof NaN, it results
+                  in a number, even though it stands for Not a Number.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Type coercion
                     // To String
@@ -1357,55 +1574,59 @@
                     '10' - '4' - '2' - 2 + '5' = ?
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  With Type coercion, JavaScript automatically converts the type
+                  based on some operators. When the expression contains a +
+                  JavaScript will convert the type to a string, if it's a - it
+                  will convert the expression to a number, the same for * and /
+                  as those are the only way those operators can work.
+                </p>
+
+                <p class="lecture-text">
+                  When understood correctly, coercion will allow us to use a lot
+                  less code, all we need to do is trust that JavaScript will
+                  convert the type correctly.
+                </p>
+
+                <!-- !End of Lecture 20 -->
               </div>
 
-              <p class="lecture-text">
-                With Type coercion, JavaScript automatically converts the type based on some operators. When the expression contains a + JavaScript will convert the type to a string, if it's a - it will convert the expression to a number, the same for * and / as those are the only way those operators can work.
-              </p>
+              <!-- !Lecture 20 Assignment -->
+              <div id="lecture-20-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 20 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                When understood correctly, coercion will allow us to use a lot less code, all we need to do is trust that JavaScript will convert the type correctly.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Predict the result of these 5 operations without executing
+                      them:
+                    </p>
+                    <p class="lecture-list--item-description">'9' - '5';</p>
+                    <p class="lecture-list--item-description">
+                      '19' - '13' + '17';
+                    </p>
+                    <p class="lecture-list--item-description">
+                      '19' - '13' + 17;
+                    </p>
+                    <p class="lecture-list--item-description">'123' < 57;</p>
+                    <p class="lecture-list--item-description">
+                      5 + 6 + '4' + 9 - 4 - 2;
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Execute the operations to check if you were right
+                    </p>
+                  </li>
+                </ol>
 
-              <!-- !End of Lecture 20 -->
-            </div>
-
-            <!-- !Lecture 20 Assignment -->
-            <div id="lecture-20-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 20 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Predict the result of these 5 operations without executing them:
-                  </p>
-                  <p class="lecture-list--item-description">
-                    '9' - '5';
-                  </p>
-                  <p class="lecture-list--item-description">
-                    '19' - '13' + '17';
-                  </p>
-                  <p class="lecture-list--item-description">
-                    '19' - '13' + 17;
-                  </p>
-                  <p class="lecture-list--item-description">
-                    '123' < 57; </p>
-                      <p class="lecture-list--item-description">
-                        5 + 6 + '4' + 9 - 4 - 2;
-                      </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Execute the operations to check if you were right
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     console.log('9' - '5'); // 4
                     console.log('19' - '13' + '17'); // 617
@@ -1414,20 +1635,20 @@
                     console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 20 Assignment -->
               </div>
 
-              <!-- !End of Lecture 20 Assignment -->
-            </div>
+              <!-- !Lecture 21 -->
+              <div id="lecture-21" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 21 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Truthy and falsy values
+                </h3>
 
-            <!-- !Lecture 21 -->
-            <div id="lecture-21" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 21 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Truthy and falsy values
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Falsy values
                     console.log( 0, '', undefined, null, NaN, false);
@@ -1439,14 +1660,17 @@
                     console.log(Boolean(NaN));
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                In JavaScript there are only 5 so called falsy values, the 6th being false of course, everything else is truthy. The understanding of falsy values is that it's not false unless converted to a boolean.
-              </p>
+                <p class="lecture-text">
+                  In JavaScript there are only 5 so called falsy values, the 6th
+                  being false of course, everything else is truthy. The
+                  understanding of falsy values is that it's not false unless
+                  converted to a boolean.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Falsy values
                     console.log(Boolean(''));
@@ -1455,18 +1679,26 @@
                     console.log(Boolean('Am i falsy?'));
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                A truthy value is any value that is not falsy, an example of this is a string that is not empty. We can and have seen whether something is truthy or falsy by using the boolean function. However, we never really use this function as these truthy or falsy values are implicit and happens with coercion.
-              </p>
+                <p class="lecture-text">
+                  A truthy value is any value that is not falsy, an example of
+                  this is a string that is not empty. We can and have seen
+                  whether something is truthy or falsy by using the boolean
+                  function. However, we never really use this function as these
+                  truthy or falsy values are implicit and happens with coercion.
+                </p>
 
-              <p class="lecture-text">
-                The question is, when does JavaScript do type coercion towards Boolean, and btw we spoke before about type conversion having 3 types it converts to, String, Number, and Boolean. The function above Boolean() is the manual type conversion to Boolean.
-              </p>
+                <p class="lecture-text">
+                  The question is, when does JavaScript do type coercion towards
+                  Boolean, and btw we spoke before about type conversion having
+                  3 types it converts to, String, Number, and Boolean. The
+                  function above Boolean() is the manual type conversion to
+                  Boolean.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     let hasMoney = 0;
 
@@ -1477,27 +1709,29 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  To answer the question, JavaScript does coercion in 2
+                  scenarios, when using a logic operator, or in a logical
+                  context like the statement above. The above statement will
+                  execute the else block, but why? We haven't specified what is
+                  and what is not true, though through Truthy and Falsy
+                  JavaScript already knows what is true and what is false.
+                </p>
+
+                <!-- !End of Lecture 21 -->
               </div>
 
-              <p class="lecture-text">
-                To answer the question, JavaScript does coercion in 2 scenarios, when using a logic operator, or in a
-                logical context like the statement above. The above statement will execute the else block, but why? We
-                haven't specified what is and what is not true, though through Truthy and Falsy JavaScript already knows
-                what is true and what is false.
-              </p>
+              <!-- !Lecture 22 -->
+              <div id="lecture-22" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 22 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Equality Operators == vs. ====
+                </h3>
 
-              <!-- !End of Lecture 21 -->
-            </div>
-
-            <!-- !Lecture 22 -->
-            <div id="lecture-22" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 22 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Equality Operators == vs. ====
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Equality operators
                     === // Strict equality operator
@@ -1508,15 +1742,16 @@
                     != // Loose not equality operator
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                Equality operators are part of the comparison operators and provide a boolean value. The only difference
-                between each equality operator is Strict vs Loose.
-              </p>
+                <p class="lecture-text">
+                  Equality operators are part of the comparison operators and
+                  provide a boolean value. The only difference between each
+                  equality operator is Strict vs Loose.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Strict
                     console.log('1' === 1)
@@ -1527,74 +1762,85 @@
                     console.log(1 == 1);
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Looking at the example above we see that with strict, no
+                  coercion takes places, whereas with loose JavaScript does a
+                  type coercion and matches something called the Unicode values
+                  together.
+                </p>
+
+                <p class="lecture-text">
+                  For best practice, we should also try to use the strict
+                  equality, as when using loose can result in unwanted bugs.
+                </p>
+
+                <!-- !End of Lecture 22 -->
               </div>
 
-              <p class="lecture-text">
-                Looking at the example above we see that with strict, no coercion takes places, whereas with loose JavaScript does a type coercion and matches something called the Unicode values together.
-              </p>
+              <!-- !Lecture 22 Assignment -->
+              <div id="lecture-22-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 22 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <p class="lecture-text">
-                For best practice, we should also try to use the strict equality, as when using loose can result in unwanted bugs.
-              </p>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Declare a variable 'numNeighbors' based on a prompt input
+                      like this: prompt('How many neighbor countries does your
+                      country have?');
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      If there is only 1 neighbor, log to the console 'Only 1
+                      border!' (use loose equality == for now)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use an else-if block to log 'More than 1 border' in case
+                      'numNeighbors' is greater than 1
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use an else block to log 'No borders' (this block will be
+                      executed when 'numNeighbors' is 0 or any other value)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Test the code with different values of 'numNeighbors',
+                      including 1 and 0.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Change == to ===, and test the code again, with the same
+                      values of 'numNeighbors'. Notice what happens when there
+                      is exactly 1 border! Why is this happening?
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Finally, convert 'numNeighbors' to a number, and watch
+                      what happens now when you input 1
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Reflect on why we should use the === operator and type
+                      conversion in this situation
+                    </p>
+                  </li>
+                </ol>
 
-              <!-- !End of Lecture 22 -->
-            </div>
-
-            <!-- !Lecture 22 Assignment -->
-            <div id="lecture-22-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 22 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Declare a variable 'numNeighbors' based on a prompt input like this: prompt('How many neighbor
-                    countries does your country have?');
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    If there is only 1 neighbor, log to the console 'Only 1 border!' (use loose equality == for now)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Use an else-if block to log 'More than 1 border' in case 'numNeighbors' is greater than 1
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Use an else block to log 'No borders' (this block will be executed when 'numNeighbors' is 0 or any
-                    other value)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Test the code with different values of 'numNeighbors', including 1 and 0.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Change == to ===, and test the code again, with the same values of 'numNeighbors'. Notice what
-                    happens when there is exactly 1 border! Why is this happening?
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Finally, convert 'numNeighbors' to a number, and watch what happens now when you input 1
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Reflect on why we should use the === operator and type conversion in this situation
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const numNeighbors = prompt('How many neighbor countries does your country have?')
 
@@ -1607,43 +1853,50 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 22 Assignment -->
               </div>
 
-              <!-- !End of Lecture 22 Assignment -->
-            </div>
+              <!-- !Lecture 23 -->
+              <div id="lecture-23" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 23 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Boolean Logic
+                </h3>
 
-            <!-- !Lecture 23 -->
-            <div id="lecture-23" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 23 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Boolean Logic
-              </h3>
+                <p class="lecture-text">
+                  Boolean logic consists of the And, Or and Not Logic operators.
+                  It uses various logical operators to combine true or false
+                  values. The most important to note about each is the And needs
+                  both values to be true in order for the statement to be true.
+                  Quick note, here I only mention 2, but there can be more than
+                  2 statements and in this case, all statements need to be true
+                  to result in true.
+                </p>
 
-              <p class="lecture-text">
-                Boolean logic consists of the And, Or and Not Logic operators. It uses various logical operators to combine true or false values. The most important to note about each is the And needs both values to be true in order for the statement to be true. Quick note, here I only mention 2, but there can be more than 2 statements and in this case, all statements need to be true to result in true.
-              </p>
+                <p class="lecture-text">
+                  The Or boolean logic needs only 1 statement to be true in
+                  order to be true, but both statements to be false in order to
+                  be false.
+                </p>
 
-              <p class="lecture-text">
-                The Or boolean logic needs only 1 statement to be true in order to be true, but both statements to be
-                false in order to be false.
-              </p>
+                <p class="lecture-text">
+                  The Not boolean logic, just reverses the value. If it was
+                  true, Not would reverse or change that to false.
+                </p>
+                <!-- !End of Lecture 23 -->
+              </div>
 
-              <p class="lecture-text">
-                The Not boolean logic, just reverses the value. If it was true, Not would reverse or change that to
-                false.
-              </p>
-              <!-- !End of Lecture 23 -->
-            </div>
+              <!-- !Lecture 24 -->
+              <div id="lecture-24" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 24 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Logical operators
+                </h3>
 
-            <!-- !Lecture 24 -->
-            <div id="lecture-24" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 24 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Logical operators
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Logical operators
                     something && something // The AND Logical Operator
@@ -1651,16 +1904,17 @@
                     !something // The NOT Logical Operator
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                This is how the syntax looks, the theory behind it falls under boolean logic. Though, we can build a
-                small program that checks to see if a person is able to drive, and if not lets them know someone else
-                should drive.
-              </p>
+                <p class="lecture-text">
+                  This is how the syntax looks, the theory behind it falls under
+                  boolean logic. Though, we can build a small program that
+                  checks to see if a person is able to drive, and if not lets
+                  them know someone else should drive.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Logical operators
                     const hasLicense = true;
@@ -1674,53 +1928,59 @@
                     };
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 24 -->
               </div>
 
-              <!-- !End of Lecture 24 -->
-            </div>
+              <!-- !Lecture 24 Assignment -->
+              <div id="lecture-24-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 24 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-            <!-- !Lecture 24 Assignment -->
-            <div id="lecture-24-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 24 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Comment out the previous code so the prompt doesn't get in
+                      the way.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Let's say Sarah is looking for a new country to live in.
+                      She wants to live in a country that speaks english, has
+                      less than 50 million people and is not an island.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Write an if statement to help Sarah figure out if your
+                      country is right for her. You will need to write a
+                      condition that accounts for all of Sarah's criteria. Take
+                      your time with this, and check part of the solution if
+                      necessary.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      If yours is the right country, log a string like this:
+                      'You should live in Portugal :)'. If not, log 'Portugal
+                      does not meet your criteria :('
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Probably your country does not meet all the criteria. So
+                      go back and temporarily change some variables in order to
+                      make the condition true (unless you live in Canada :D)
+                    </p>
+                  </li>
+                </ol>
 
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Comment out the previous code so the prompt doesn't get in the way.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks
-                    english, has less than 50 million people and is not an island.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Write an if statement to help Sarah figure out if your country is right for her. You will need to
-                    write a condition that accounts for all of Sarah's criteria. Take your time with this, and check
-                    part of the solution if necessary.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log
-                    'Portugal does not meet your criteria :('
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Probably your country does not meet all the criteria. So go back and temporarily change some
-                    variables in order to make the condition true (unless you live in Canada :D)
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const maxPopulation = 50000000;
 
@@ -1731,73 +1991,83 @@
                     };
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 24 Assignment -->
               </div>
 
-              <!-- !End of Lecture 24 Assignment -->
-            </div>
+              <!-- !Lecture 25 -->
+              <div id="lecture-25" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 25 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge &mdash; 3
+                </h3>
 
-            <!-- !Lecture 25 -->
-            <div id="lecture-25" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 25 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge &mdash; 3
-              </h3>
+                <p class="lecture-text">
+                  There are two gymnastics teams, Dolphins and Koalas. They
+                  compete against each other 3 times. The winner with the
+                  highest average score wins a trophy!
+                </p>
 
-              <p class="lecture-text">
-                There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner
-                with the highest average score wins a trophy!
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Calculate the average score for each team, using the test
+                      data below.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Compare the team's average scores to determine the winner
+                      of the competition, and print it to the console. Don't
+                      forget that there can be a draw, so test for that as well
+                      (draw means they have the same average score)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Bonus 1: Include a requirement for a minimum score of 100.
+                      With this rule, a team only wins if it has a higher score
+                      than the other team, and the same time a score of at least
+                      100 points. Hint: Use a logical operator to test for
+                      minimum score, as well as multiple else-if blocks 😉
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Bonus 2: Minimum score also applies to a draw! So a draw
+                      only happens when both teams have the same score and both
+                      have a score greater or equal 100 points.Otherwise, no
+                      team wins the trophy
+                    </p>
+                  </li>
+                </ol>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Calculate the average score for each team, using the test data below.
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Compare the team's average scores to determine the winner of the competition, and print it to the
-                    console. Don't forget that there can be a draw, so test for that as well (draw means they have the
-                    same average score)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it
-                    has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use
-                    a logical operator to test for minimum score, as well as multiple else-if blocks 😉
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same
-                    score and both have a score greater or equal 100 points.Otherwise, no team wins the trophy
-                  </p>
-                </li>
-              </ol>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91
+                      and 110
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score
+                      109, 95 and 123
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score
+                      109, 95 and 106
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // const dolphinsAverage = (96 + 108 + 89) / 3;
                     // const koalasAverage = (88 + 91 + 110) / 3;
@@ -1821,20 +2091,20 @@
                     };
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 25 -->
               </div>
 
-              <!-- !End of Lecture 25 -->
-            </div>
+              <!-- !Lecture 26 -->
+              <div id="lecture-26" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 26 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  The switch statement
+                </h3>
 
-            <!-- !Lecture 26 -->
-            <div id="lecture-26" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 26 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                The switch statement
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const day = 'tuesday';
 
@@ -1861,18 +2131,22 @@
                     };
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                A switch statement is an alternative to writing an if statement, just with less repeated code. It's useful if you wish to compare one value to multiple different options.
-              </p>
+                <p class="lecture-text">
+                  A switch statement is an alternative to writing an if
+                  statement, just with less repeated code. It's useful if you
+                  wish to compare one value to multiple different options.
+                </p>
 
-              <p class="lecture-text">
-                Taking a look at the syntax, most is self-explanatory. Some key elements to note is that you can combine cases together, and the default keyword is like the else statement.
-              </p>
+                <p class="lecture-text">
+                  Taking a look at the syntax, most is self-explanatory. Some
+                  key elements to note is that you can combine cases together,
+                  and the default keyword is like the else statement.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const day = 'tuesday';
 
@@ -1891,50 +2165,54 @@
                     };
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The same as the switch statement just in the form of an if
+                  statement, we can clearly see the repeated code. However, that
+                  being said, the switch statement is not really used anymore
+                  and people prefer to use the if statement.
+                </p>
+
+                <!-- !End of Lecture 26 -->
               </div>
 
-              <p class="lecture-text">
-                The same as the switch statement just in the form of an if statement, we can clearly see the repeated code. However, that being said, the switch statement is not really used anymore and people prefer to use the if statement.
-              </p>
+              <!-- !Lecture 26 Assignment -->
+              <div id="lecture-26-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 26 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 26 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Use a switch statement to log the following string for the
+                      given 'language':
+                    </p>
+                    <p class="lecture-list--item-description">
+                      chinese or mandarin: 'MOST number of native speakers!'
+                    </p>
+                    <p class="lecture-list--item-description">
+                      spanish: '2nd place in number of native speakers'
+                    </p>
+                    <p class="lecture-list--item-description">
+                      english: '3rd place'
+                    </p>
+                    <p class="lecture-list--item-description">
+                      hindi: 'Number 4'
+                    </p>
+                    <p class="lecture-list--item-description">
+                      arabic: '5th most spoken language'
+                    </p>
+                    <p class="lecture-list--item-description">
+                      for all other simply log 'Great language too :D'
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 26 Assignment -->
-            <div id="lecture-26-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 26 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Use a switch statement to log the following string for the given 'language':
-                  </p>
-                  <p class="lecture-list--item-description">
-                    chinese or mandarin: 'MOST number of native speakers!'
-                  </p>
-                  <p class="lecture-list--item-description">
-                    spanish: '2nd place in number of native speakers'
-                  </p>
-                  <p class="lecture-list--item-description">
-                    english: '3rd place'
-                  </p>
-                  <p class="lecture-list--item-description">
-                    hindi: 'Number 4'
-                  </p>
-                  <p class="lecture-list--item-description">
-                    arabic: '5th most spoken language'
-                  </p>
-                  <p class="lecture-list--item-description">
-                    for all other simply log 'Great language too :D'
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     switch (language) {
                       case 'chinese':
@@ -1955,166 +2233,184 @@
                     }
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 26 Assignment -->
               </div>
 
-              <!-- !End of Lecture 26 Assignment -->
-            </div>
+              <!-- !Lecture 27 -->
+              <div id="lecture-27" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 27 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Statements and expressions
+                </h3>
 
-            <!-- !Lecture 27 -->
-            <div id="lecture-27" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 27 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Statements and expressions
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     3 + 4 // Is known as an expression
                     '1991' // Also an expression
                   </code>
                 </pre>
-              </div>
+                </div>
 
-              <p class="lecture-text">
-                When talking about statements and expressions, an expression is essentially something that returns a value, whether it be a math equation like 1 + 1 or a number, string. It's a piece of code that produces a value.
-              </p>
+                <p class="lecture-text">
+                  When talking about statements and expressions, an expression
+                  is essentially something that returns a value, whether it be a
+                  math equation like 1 + 1 or a number, string. It's a piece of
+                  code that produces a value.
+                </p>
 
-              <p class="lecture-text">
-                A statement is a larger piece of code that does not produce a value, but a sequence of actions, such as
-                an if statement.
-              </p>
+                <p class="lecture-text">
+                  A statement is a larger piece of code that does not produce a
+                  value, but a sequence of actions, such as an if statement.
+                </p>
 
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // String literal
                     console.log(`A string template literal ${expression}`)
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The reason it's important to understand the difference is
+                  because JavaScript requires us to know where to place them. A
+                  good example of this would be the string template literals. It
+                  expects something that can produce a value, however you can't
+                  place a statement within in.
+                </p>
+
+                <!-- !End of Lecture 27 -->
               </div>
 
-              <p class="lecture-text">
-                The reason it's important to understand the difference is because JavaScript requires us to know where to place them. A good example of this would be the string template literals. It expects something that can produce a value, however you can't place a statement within in.
-              </p>
+              <!-- !Lecture 28 -->
+              <div id="lecture-28" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 28 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  The conditional ternary operator
+                </h3>
 
-              <!-- !End of Lecture 27 -->
-            </div>
-
-            <!-- !Lecture 28 -->
-            <div id="lecture-28" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 28 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                The conditional ternary operator
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Ternary operator
                     const someAge = 17;
                     someAge >= 18 ? console.log('Drink Wine') : console.log('Drink juice box');
                   </code>
                 </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The Ternary operator is an expression and not a statement. It
+                  only accepts one line of code and returns a value. This means
+                  that it can be used within a string template literal.
+                </p>
+
+                <!-- !End of Lecture 28 -->
               </div>
 
-              <p class="lecture-text">
-                The Ternary operator is an expression and not a statement. It only accepts one line of code and returns a value. This means that it can be used within a string template literal.
-              </p>
+              <!-- !Lecture 28 Assignment -->
+              <div id="lecture-28-a" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 28 &mdash; Assignment </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Practice Assignment
+                </h3>
 
-              <!-- !End of Lecture 28 -->
-            </div>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      If your country's population is greater than 33 million,
+                      use the ternary operator to log a string like this to the
+                      console: 'Portugal's population is above average'.
+                      Otherwise, simply log 'Portugal's population is below
+                      average'. Notice how only one word changes between these
+                      two sentences!
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      After checking the result, change the population
+                      temporarily to 13 and then to 130. See the different
+                      results, and set the population back to original
+                    </p>
+                  </li>
+                </ol>
 
-            <!-- !Lecture 28 Assignment -->
-            <div id="lecture-28-a" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 28 &mdash; Assignment </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Practice Assignment
-              </h3>
-
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    If your country's population is greater than 33 million, use the ternary operator to log a string
-                    like this to the console: 'Portugal's population is above average'. Otherwise, simply log
-                    'Portugal's population is below average'. Notice how only one word changes between these two
-                    sentences!
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    After checking the result, change the population temporarily to 13 and then to 130. See the
-                    different results, and set the population back to original
-                  </p>
-                </li>
-              </ol>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     population >= averagePopulation ? console.log(`${country} is above the average population`) : console.log(`${country} is below the average population`);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 28 Assignment -->
               </div>
 
-              <!-- !End of Lecture 28 Assignment -->
-            </div>
+              <!-- !Lecture 29 -->
+              <div id="lecture-29" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 29 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge &mdash; 4
+                </h3>
 
-            <!-- !Lecture 29 -->
-            <div id="lecture-29" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 29 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge &mdash; 4
-              </h3>
+                <p class="lecture-text">
+                  Steven wants to build a very simple tip calculator for
+                  whenever he goes eating in a restaurant. In his country, it's
+                  usual to tip 15% if the bill value is between 50 and 300. If
+                  the value is different, the tip is 20%.
+                </p>
 
-              <p class="lecture-text">
-                Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his
-                country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the
-                tip is 20%.
-              </p>
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Calculate the tip, depending on the bill value. Create a
+                      variable called 'tip' for this. It's not allowed to use an
+                      if/else statement 😅 (If it's easier for you, you can
+                      start with an if/else statement, and then try to convert
+                      it to a ternary operator!)
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Print a string to the console containing the bill value,
+                      the tip, and the final value (bill + tip). Example: “The
+                      bill was 275, the tip was 41.25, and the total value
+                      316.25”
+                    </p>
+                  </li>
+                </ol>
 
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not
-                    allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else
-                    statement, and then try to convert it to a ternary operator!)
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Print a string to the console containing the bill value, the tip, and the final value
-                    (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
-                    316.25”
-                  </p>
-                </li>
-              </ol>
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Data 1: Test for bill values 275, 40 and 430
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Data 1: Test for bill values 275, 40 and 430
-                  </p>
-                </li>
-              </ul>
+                <span class="pre-heading">hints:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      To calculate 20% of a value, simply multiply it by 20/100
+                      = 0.2
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+                    </p>
+                  </li>
+                </ul>
 
-              <span class="pre-heading">hints:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    To calculate 20% of a value, simply multiply it by 20/100 = 0.2
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-                    Value X is between 50 and 300, if it's >= 50 && <= 300 😉 </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     const bill = 430;
                     const tip = bill >= 50 && bill <= 300 ? (bill * 15) / 100 : (bill * 20) / 100;
@@ -2123,138 +2419,194 @@
                     console.log(`The bill amount was ${bill}, the tip will amount to ${tip} and the total is ${bill + tip}`);
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 29 -->
               </div>
 
-              <!-- !End of Lecture 29 -->
+              <!-- !Lecture 30 -->
+              <div id="lecture-30" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 30 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  JavaScript Releases: ES5, ES6+ and ESNext
+                </h3>
+
+                <p class="lecture-text">
+                  Not much to take notes on but just a deeper dive into the
+                  history of JavaScript/ ECMA and JavaScript Next which is
+                  considered the modern JavaScript. Goes on to mention how every
+                  year ECMA will release a new or update version of JavaScript
+                  and how the course will adapt to adding new changes into the
+                  course.
+                </p>
+
+                <!-- !End of Lecture 30 -->
+              </div>
+
+              <!-- !Blog Nav -->
+              <div class="blog-nav">
+                <a href="./welcome.html" class="prev-next-blog-link">
+                  <ion-icon
+                    name="arrow-back-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next"
+                      >Previous</span
+                    >
+                    <span class="prev-next-blog-name"
+                      >Welcome, Welcome, Welcome!</span
+                    >
+                  </div>
+                </a>
+
+                <a
+                  href="./javascript-fundamentals-part-2.html"
+                  class="prev-next-blog-link"
+                >
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next">Next</span>
+                    <span class="prev-next-blog-name"
+                      >JavaScript Fundamentals (Part 2)</span
+                    >
+                  </div>
+
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <!-- !Lecture 30 -->
-            <div id="lecture-30" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 30 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                JavaScript Releases: ES5, ES6+ and ESNext
-              </h3>
+    <!-- !Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <!-- !Profile -->
+          <div class="profile-col">
+            <figure class="footer-profile">
+              <img
+                src="../resources/images/main/profile-pic/me.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img"
+              />
+            </figure>
+            <div class="social-icons">
+              <!-- !Discord -->
+              <a
+                href="https://discordapp.com/users/871093653660106812"
+                class="social-link"
+                target="_blank"
+                data-title="Discord"
+              >
+                <ion-icon name="logo-discord" class="social-icon"></ion-icon>
+              </a>
 
-              <p class="lecture-text">
-                Not much to take notes on but just a deeper dive into the history of JavaScript/ ECMA and JavaScript Next which is considered the modern JavaScript. Goes on to mention how every year ECMA will release a new or update version of JavaScript and how the course will adapt to adding new changes into the course.
+              <!-- !Github -->
+              <a
+                href="https://github.com/acoetzer"
+                class="social-link"
+                target="_blank"
+                data-title="GitHub"
+              >
+                <ion-icon name="logo-github" class="social-icon"></ion-icon>
+              </a>
+
+              <!-- !Email -->
+              <a
+                href="mailto:awcoetzer@outlook.com"
+                class="social-link"
+                target="_blank"
+                data-title="Email"
+              >
+                <ion-icon name="mail-outline" class="social-icon"></ion-icon>
+              </a>
+            </div>
+            <address class="address-text-box">
+              <p class="address">Sofia, Bulgaria</p>
+            </address>
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy; <span id="copyright">(This is a script)</span> Andre
+                Coetzer. All rights reserved
               </p>
-
-              <!-- !End of Lecture 30 -->
             </div>
+          </div>
 
-            <!-- !Blog Nav -->
-            <div class="blog-nav">
-              <a href="./welcome.html" class="prev-next-blog-link">
-                <ion-icon name="arrow-back-outline" class="prev-next-icon"></ion-icon>
+          <!-- !Page Links -->
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="link link--footer">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="./javascript.html" class="link link--footer"
+                  >&larr; JavaScript</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Previous</span>
-                  <span class="prev-next-blog-name">Welcome, Welcome, Welcome!</span>
-                </div>
-              </a>
-
-              <a href="./javascript-fundamentals-part-2.html" class="prev-next-blog-link">
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Next</span>
-                  <span class="prev-next-blog-name">JavaScript Fundamentals (Part 2)</span>
-                </div>
-
-                <ion-icon name="arrow-forward-outline" class="prev-next-icon"></ion-icon>
-              </a>
-            </div>
+          <!-- !Site Links -->
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="../index.html" class="link link--footer">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../html-pages/html.html" class="link link--footer"
+                  >HTML</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../css-pages/css.html" class="link link--footer"
+                  >CSS</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a
+                  href="../javascript-pages/javascript.html"
+                  class="link link--footer"
+                  >JavaScript</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../react-pages/react.html" class="link link--footer"
+                  >React</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../node-pages/node.html" class="link link--footer"
+                  >Node.js</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- !Footer -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="footer-box">
+    <!-- !Scripts -->
+    <!-- !Course Section Script -->
+    <script src="./course-exercises/javascript-fundamentals-part-1.js"></script>
 
-        <!-- !Profile -->
-        <div class="profile-col">
-          <figure class="footer-profile">
-            <img src="../resources/images/main/profile-pic/me.jpg"
-              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </figure>
-          <div class="social-icons">
-            <!-- !Discord -->
-            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
-              data-title="Discord">
-              <ion-icon name="logo-discord" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Github -->
-            <a href="https://github.com/acoetzer" class="social-link" target="_blank" data-title="GitHub">
-              <ion-icon name="logo-github" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Email -->
-            <a href="mailto:awcoetzer@outlook.com" class="social-link" target="_blank" data-title="Email">
-              <ion-icon name="mail-outline" class="social-icon"></ion-icon>
-            </a>
-          </div>
-          <address class="address-text-box">
-            <p class="address">Sofia, Bulgaria</p>
-          </address>
-          <div class="copyright-text center-text">
-            <p class="copyright">
-              &copy; <span id="copyright">(This is a script)</span> Andre Coetzer. All rights reserved
-            </p>
-          </div>
-        </div>
-
-        <!-- !Page Links -->
-        <div class="page-links-col">
-          <span class="pre-heading footer-pre-heading">Page Links</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="#" class="link link--footer">Go to the Top &uarr;</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="./javascript.html" class="link link--footer">&larr; JavaScript</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- !Site Links -->
-        <div class="site-links-col">
-          <span class="pre-heading footer-pre-heading">Site Map</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="../index.html" class="link link--footer">Home</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../html-pages/html.html" class="link link--footer">HTML</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../css-pages/css.html" class="link link--footer">CSS</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../javascript-pages/javascript.html" class="link link--footer">JavaScript</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../react-pages/react.html" class="link link--footer">React</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../node-pages/node.html" class="link link--footer">Node.js</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- !Scripts -->
-  <!-- !Course Section Script -->
-  <script src="./course-exercises/javascript-fundamentals-part-1.js"></script>
-
-  <!-- !Standard Scripts -->
-  <script src="../resources/javascript/app-blog.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <!-- !Standard Scripts -->
+    <script src="../resources/javascript/app-blog.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

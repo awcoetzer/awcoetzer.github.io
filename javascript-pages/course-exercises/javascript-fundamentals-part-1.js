@@ -43,7 +43,7 @@ console.log(
   typeof country,
   typeof population,
   typeof isIsland,
-  typeof language,
+  typeof language
 );
 console.log('');
 
@@ -111,13 +111,7 @@ const averagePopulation = 33000000;
 console.log(population < averagePopulation);
 
 // String Concatenation
-const description = `${country
-} is in ${
-  continent
-}, and it's ${
-  population
-} people speak ${
-  language}`;
+const description = `${country} is in ${continent}, and it's ${population} people speak ${language}`;
 console.log(description);
 
 // String template literals
@@ -144,10 +138,11 @@ const heightJohn = 1.76;
 
 const bmiMark = weightMark / heightMark ** 2;
 const bmiJohn = weightJohn / (heightJohn * heightJohn);
-const markHigherBMI = bmiMark > bmiJohn ? "Mark's is higher" : "John's is higher";
+const markHigherBMI =
+  bmiMark > bmiJohn ? "Mark's is higher" : "John's is higher";
 
 console.log(
-  `Mark's BMI is ${bmiMark}, John's BMI is ${bmiJohn} and is Mark's BMI higher than John's? : ${markHigherBMI}`,
+  `Mark's BMI is ${bmiMark}, John's BMI is ${bmiJohn} and is Mark's BMI higher than John's? : ${markHigherBMI}`
 );
 
 console.log('');
@@ -183,7 +178,7 @@ if (age >= 18) {
 } else {
   const yearsLeft = age - 18;
   console.log(
-    `Sorry, you have to wait ${yearsLeft} years before to can get your drivers license`,
+    `Sorry, you have to wait ${yearsLeft} years before to can get your drivers license`
   );
 }
 
@@ -198,7 +193,7 @@ if (population > averagePopulation) {
   console.log(
     `${country} population is ${
       averagePopulation - population
-    } below the average population`,
+    } below the average population`
   );
 }
 
@@ -350,9 +345,9 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 } else if (koalasAverage > dolphinsAverage && koalasAverage >= 100) {
   console.log('Koalas have won');
 } else if (
-  dolphinsAverage === koalasAverage
-  && dolphinsAverage >= 100
-  && koalasAverage >= 100
+  dolphinsAverage === koalasAverage &&
+  dolphinsAverage >= 100 &&
+  koalasAverage >= 100
 ) {
   console.log("It's a draw");
 } else {
@@ -455,7 +450,7 @@ console.log(tip);
 console.log(
   `The bill amount was ${bill}, the tip will amount to ${tip} and the total is ${
     bill + tip
-  }`,
+  }`
 );
 
 console.log('');

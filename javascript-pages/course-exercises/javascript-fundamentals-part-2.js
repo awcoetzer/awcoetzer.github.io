@@ -1,6 +1,6 @@
 'use strict';
 /*
-  Notes:
+  NOTES
         Lecture: 🦞
         Lecture Challenge: 🐟
         Assignment: 🦀
@@ -8,7 +8,7 @@
 */
 
 //////////////////// Lecture 32 ////////////////////
-
+// LECTURE 32
 console.log('🦞 LECTURE 32');
 
 // console.log("'use strict';");
@@ -45,7 +45,7 @@ console.log('🦞 LECTURE 33');
 
 // console.log(myJuice);
 
-console.log(''); 
+console.log('');
 
 //////////////////// Lecture 33 - Assignment ////////////////////
 console.log('🦀 LECTURE 33 - ASSIGNMENT');
@@ -236,7 +236,7 @@ console.log('🦑 CODING CHALLENGE - 1');
 // const checkWinner = function (avgDolphins, avgKoalas) {
 //   if (avgDolphins >= 2 * avgKoalas) {
 //     return `Dolphin's win (${avgDolphins} vs. ${avgKoalas})`;
-//   } else if (avgKoalas >= 2 * avgDolphins) { 
+//   } else if (avgKoalas >= 2 * avgDolphins) {
 //     return `Koala's win (${avgKoalas} vs. ${avgDolphins})`;
 //   } else {
 //     return `No one won...`
@@ -387,7 +387,6 @@ console.log('🦀 LECTURE 40 - ASSIGNMENT');
 
 console.log('');
 
-
 //////////////////// Coding Challenge - 2 ////////////////////
 console.log('🦑 CODING CHALLENGE - 2');
 
@@ -416,7 +415,6 @@ console.log('🦑 CODING CHALLENGE - 2');
 // console.log(total);
 
 console.log('');
-
 
 //////////////////// Lecture 42 ////////////////////
 console.log('🦞 LECTURE 42');
@@ -650,7 +648,7 @@ console.log('🦑 CODING CHALLENGE 3');
 // const mark = {
 //   fullName: 'Mark Miller',
 //   mass: 78,
-//   height: 1.69, 
+//   height: 1.69,
 //   calcBMI: function () {
 //     this.bmi = this.mass / this.height ** 2;
 //     return this.bmi
@@ -660,7 +658,7 @@ console.log('🦑 CODING CHALLENGE 3');
 // const john = {
 //   fullName: 'John Smith',
 //   mass: 92,
-//   height: 1.95, 
+//   height: 1.95,
 //   calcBMI: function () {
 //     this.bmi = this.mass / this.height ** 2;
 //     return this.bmi
@@ -738,7 +736,6 @@ console.log('🦞 LECTURE 47');
 // console.log(simpleArray)
 // console.log(simpleArray2)
 
-
 // // Example 2
 // const years = [1989, 1990, 1991, 1992];
 // const age = [];
@@ -753,7 +750,7 @@ console.log('🦞 LECTURE 47');
 
 // console.log('----- Continue example -----')
 // for (let i = 0; i <= simpleArray.length; i++) {
-  
+
 //   if (typeof simpleArray[i] !== 'string') continue;
 //   console.log(simpleArray[i], typeof simpleArray[i]);
 // }
@@ -762,7 +759,7 @@ console.log('🦞 LECTURE 47');
 
 // console.log('----- Break example -----')
 // for (let i = 0; i <= simpleArray.length; i++) {
-  
+
 //   if (typeof simpleArray[i] === 'boolean') break;
 //   console.log(simpleArray[i], typeof simpleArray[i]);
 // }
@@ -818,8 +815,8 @@ console.log('');
 console.log('🦀 LECTURE 48 - ASSIGNMENT');
 
 // const listOfNeighbours = [
-//   ['Canada', 'Mexico'], 
-//   ['Spain'], 
+//   ['Canada', 'Mexico'],
+//   ['Spain'],
 //   ['Norway', 'Sweden', 'Russia']
 // ];
 
@@ -897,7 +894,7 @@ console.log('🦑 CODING CHALLENGE - 4');
 // Example 1
 
 const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
@@ -907,7 +904,11 @@ const totals = [];
 for (let i = 0; i < bills.length; i++) {
   tips.push(calcTip(bills[i]));
   totals.push(bills[i] + tips[i]);
-  console.log(`Bill (${i + 1}) has a total of (${totals[i]}) and the Tip was (${tips[i]}) and the Bill was (${bills[i]})`);
+  console.log(
+    `Bill (${i + 1}) has a total of (${totals[i]}) and the Tip was (${
+      tips[i]
+    }) and the Bill was (${bills[i]})`
+  );
 }
 
 // Example 2
@@ -918,8 +919,8 @@ const calcAverage = function (arr) {
     sum += arr[i];
   }
   return sum / arr.length;
-}
+};
 
-console.log(calcAverage(totals))
+console.log(calcAverage(totals));
 
 console.log('');

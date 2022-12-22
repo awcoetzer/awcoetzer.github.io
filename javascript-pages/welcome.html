@@ -1,168 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to the JavaScript Course welcome lecture, here you will find all my notes taken from the course"
+    />
+    <link
+      rel="icon"
+      href="../resources/images/favicon/computer-illustration-64x64.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../resources/css/prism.css" />
+    <script src="../resources/javascript/prism.js"></script>
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <title>Welcome &mdash; JavaScript</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Welcome to the JavaScript Course welcome lecture, here you will find all my notes taken from the course" />
-  <link rel="icon" href="../resources/images/favicon/computer-illustration-64x64.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../resources/css/prism.css" />
-  <script src="../resources/javascript/prism.js"></script>
-  <link rel="stylesheet" href="../resources/css/style.css" />
-  <title>Welcome &mdash; JavaScript</title>
-</head>
+  <body>
+    <!-- !Section: Header -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="../index.html" class="btn main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-<body>
-  <!-- !Section: Header -->
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-item">
-          <a href="../index.html" class="btn main-nav-link">Home</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#footer" class="btn main-nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
+      <button class="mobile-nav">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </button>
 
-    <button class="mobile-nav">
-      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-    </button>
+      <!-- !Back to Top btn -->
+      <a href="#" class="btt-btn">
+        <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
+      </a>
+    </header>
 
-    <!-- !Back to Top btn -->
-    <a href="#" class="btt-btn">
-      <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
-    </a>
-  </header>
+    <main>
+      <!-- !Section: Blog Hero -->
+      <section class="section-padding--blog section-blog-hero">
+        <div class="blog-hero">
+          <picture class="blog-hero-img-box">
+            <source
+              srcset="../resources/images/javascript/nail-illustration.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="../resources/images/javascript/nail-illustration-min.png"
+              type="image/png"
+            />
 
-  <main>
+            <img
+              src="../resources/images/javascript/nail-illustration-min.png"
+              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+              class="blog-hero-img"
+            />
+          </picture>
 
-    <!-- !Section: Blog Hero -->
-    <section class="section-padding--blog section-blog-hero">
-      <div class="blog-hero">
-        <picture class="blog-hero-img-box">
-          <source srcset="../resources/images/javascript/nail-illustration.webp" type="image/webp">
-          <source srcset="../resources/images/javascript/nail-illustration-min.png" type="image/png">
-
-          <img src="../resources/images/javascript/nail-illustration-min.png"
-            alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer" class="blog-hero-img" />
-        </picture>
-
-        <div class="blog-hero-text-box">
-
-          <!-- !Breadcrumb Navigation -->
-          <nav class="breadcrumb-nav">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="../index.html" class="link link--breadcrumb">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript.html" class="link link--breadcrumb">JavaScript</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./welcome.html" class="link link--breadcrumb">Welcome</a>
-              </li>
-            </ul>
-          </nav>
-          <span class="pre-heading">Section 1</span>
-          <h1 class="heading-primary">Welcome, Welcome, Welcome!</h1>
+          <div class="blog-hero-text-box">
+            <!-- !Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="../index.html" class="link link--breadcrumb">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="./javascript.html" class="link link--breadcrumb"
+                    >JavaScript</a
+                  >
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="./welcome.html" class="link link--breadcrumb"
+                    >Welcome</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <span class="pre-heading">Section 1</span>
+            <h1 class="heading-primary">Welcome, Welcome, Welcome!</h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- !Section Blog -->
-    <section class="section-padding--blog section-blog">
-      <div class="container--blog">
-        <div class="blog">
+      <!-- !Section Blog -->
+      <section class="section-padding--blog section-blog">
+        <div class="container--blog">
+          <div class="blog">
+            <!-- !Table of Contents -->
+            <nav class="toc">
+              <div class="toc-box">
+                <button class="toc-btn">
+                  <span class="pre-heading toc-btn-heading"
+                    >Table of Contents</span
+                  >
+                  <ion-icon name="add-outline" class="toc-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
+                </button>
 
-          <!-- !Table of Contents -->
-          <nav class="toc">
-            <div class="toc-box">
-              <button class="toc-btn">
-                <span class="pre-heading toc-btn-heading">Table of Contents</span>
-                <ion-icon name="add-outline" class="toc-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
-              </button>
-
-              <div class="toc-hidden-box">
-                <ul class="toc-list">
-                  <li class="toc-item">
-                    <a href="#lecture-1" class="link link--toc">Course structure and projects</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-2" class="link link--toc">Read before you start</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-3" class="link link--toc">Watch before you start</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-4" class="link link--toc">Migration guide to v2 + old course</a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-5" class="link link--toc">
-                      Setting up our code editor
-                    </a>
-                  </li>
-                </ul>
+                <div class="toc-hidden-box">
+                  <ul class="toc-list">
+                    <li class="toc-item">
+                      <a href="#lecture-1" class="link link--toc"
+                        >Course structure and projects</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-2" class="link link--toc"
+                        >Read before you start</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-3" class="link link--toc"
+                        >Watch before you start</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-4" class="link link--toc"
+                        >Migration guide to v2 + old course</a
+                      >
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-5" class="link link--toc">
+                        Setting up our code editor
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </nav>
+            </nav>
 
-          <!-- !Lectures -->
-          <div class="lectures">
+            <!-- !Lectures -->
+            <div class="lectures">
+              <!-- !Lecture 1 -->
+              <div id="lecture-1" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 1 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Course structure and projects
+                </h3>
 
-            <!-- !Lecture 1 -->
-            <div id="lecture-1" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 1 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Course structure and projects
-              </h3>
+                <p class="lecture-text">
+                  Really not much of a notes section here, though this lecture
+                  shows all that will be covered within the course, including
+                  some exciting projects.
+                </p>
+              </div>
 
-              <p class="lecture-text">
-                Really not much of a notes section here, though this lecture shows all that will be covered within the
-                course, including some exciting projects.
-              </p>
-            </div>
+              <!-- !Lecture 2 -->
+              <div id="lecture-2" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 2 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Read before you start
+                </h3>
 
-            <!-- !Lecture 2 -->
-            <div id="lecture-2" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 2 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Read before you start
-              </h3>
+                <p class="lecture-text">
+                  This is where we can find the course materials.
+                  <a
+                    href="https://github.com/jonasschmedtmann/complete-javascript-course"
+                    class="link link--inline"
+                    target="_blank"
+                    >Complete JavaScript Course</a
+                  >
+                  GitHub repo.
+                </p>
+              </div>
 
-              <p class="lecture-text">
-                This is where we can find the course materials. <a
-                  href="https://github.com/jonasschmedtmann/complete-javascript-course" class="link link--inline"
-                  target="_blank">Complete JavaScript Course</a> GitHub repo.
-              </p>
-            </div>
+              <!-- !Lecture 3 -->
+              <div id="lecture-3" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 3 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Watch before you start
+                </h3>
 
-            <!-- !Lecture 3 -->
-            <div id="lecture-3" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 3 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Watch before you start
-              </h3>
+                <p class="lecture-text">
+                  Basic guides on how to take the courses.
+                </p>
 
-              <p class="lecture-text">
-                Basic guides on how to take the courses.
-              </p>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
                       /////////////////////////
                       // Example Code Block
@@ -172,144 +202,189 @@
                       alert(message);
                     </code>
                   </pre>
+                </div>
               </div>
 
+              <!-- !Lecture 4 -->
+              <div id="lecture-4" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 4 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Migration guide to v2 + old course
+                </h3>
+
+                <p class="lecture-text">The topic is irrelevant to me.</p>
+              </div>
+
+              <!-- !Lecture 5 -->
+              <div id="lecture-5" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 5 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Setting up our code editor
+                </h3>
+
+                <p class="lecture-text">
+                  Various extensions to Visual Studio Code. Nothing noteworthy.
+                </p>
+              </div>
+
+              <!-- !Blog Nav -->
+              <div class="blog-nav">
+                <a href="#" class="prev-next-blog-link hide">
+                  <ion-icon
+                    name="arrow-back-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next"
+                      >Previous</span
+                    >
+                    <span class="prev-next-blog-name">Sample Heading</span>
+                  </div>
+                </a>
+
+                <a
+                  href="./javascript-fundamentals-part-1.html"
+                  class="prev-next-blog-link"
+                >
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next">Next</span>
+                    <span class="prev-next-blog-name"
+                      >JavaScript Fundamentals (Part 1)</span
+                    >
+                  </div>
+
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <!-- !Lecture 4 -->
-            <div id="lecture-4" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 4 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Migration guide to v2 + old course
-              </h3>
-
-              <p class="lecture-text">
-                The topic is irrelevant to me.
-              </p>
-            </div>
-
-            <!-- !Lecture 5 -->
-            <div id="lecture-5" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 5 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Setting up our code editor
-              </h3>
-
-              <p class="lecture-text">
-                Various extensions to Visual Studio Code. Nothing noteworthy.
-              </p>
-            </div>
-
-            <!-- !Blog Nav -->
-            <div class="blog-nav">
-              <a href="#" class="prev-next-blog-link hide">
-                <ion-icon name="arrow-back-outline" class="prev-next-icon"></ion-icon>
-
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Previous</span>
-                  <span class="prev-next-blog-name">Sample Heading</span>
-                </div>
+    <!-- !Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <!-- !Profile -->
+          <div class="profile-col">
+            <figure class="footer-profile">
+              <img
+                src="../resources/images/main/profile-pic/me.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img"
+              />
+            </figure>
+            <div class="social-icons">
+              <!-- !Discord -->
+              <a
+                href="https://discordapp.com/users/871093653660106812"
+                class="social-link"
+                target="_blank"
+                data-title="Discord"
+              >
+                <ion-icon name="logo-discord" class="social-icon"></ion-icon>
               </a>
 
-              <a href="./javascript-fundamentals-part-1.html" class="prev-next-blog-link">
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Next</span>
-                  <span class="prev-next-blog-name">JavaScript Fundamentals (Part 1)</span>
-                </div>
+              <!-- !Github -->
+              <a
+                href="https://github.com/acoetzer"
+                class="social-link"
+                target="_blank"
+                data-title="GitHub"
+              >
+                <ion-icon name="logo-github" class="social-icon"></ion-icon>
+              </a>
 
-                <ion-icon name="arrow-forward-outline" class="prev-next-icon"></ion-icon>
+              <!-- !Email -->
+              <a
+                href="mailto:awcoetzer@outlook.com"
+                class="social-link"
+                target="_blank"
+                data-title="Email"
+              >
+                <ion-icon name="mail-outline" class="social-icon"></ion-icon>
               </a>
             </div>
+            <address class="address-text-box">
+              <p class="address">Sofia, Bulgaria</p>
+            </address>
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy; <span id="copyright">(This is a script)</span> Andre
+                Coetzer. All rights reserved
+              </p>
+            </div>
+          </div>
+
+          <!-- !Page Links -->
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="link link--footer">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="./javascript.html" class="link link--footer"
+                  >&larr; JavaScript</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- !Site Links -->
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="../index.html" class="link link--footer">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../html-pages/html.html" class="link link--footer"
+                  >HTML</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../css-pages/css.html" class="link link--footer"
+                  >CSS</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a
+                  href="../javascript-pages/javascript.html"
+                  class="link link--footer"
+                  >JavaScript</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../react-pages/react.html" class="link link--footer"
+                  >React</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../node-pages/node.html" class="link link--footer"
+                  >Node.js</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- !Footer -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="footer-box">
-
-        <!-- !Profile -->
-        <div class="profile-col">
-          <figure class="footer-profile">
-            <img src="../resources/images/main/profile-pic/me.jpg"
-              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </figure>
-          <div class="social-icons">
-            <!-- !Discord -->
-            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
-              data-title="Discord">
-              <ion-icon name="logo-discord" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Github -->
-            <a href="https://github.com/acoetzer" class="social-link" target="_blank" data-title="GitHub">
-              <ion-icon name="logo-github" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Email -->
-            <a href="mailto:awcoetzer@outlook.com" class="social-link" target="_blank" data-title="Email">
-              <ion-icon name="mail-outline" class="social-icon"></ion-icon>
-            </a>
-          </div>
-          <address class="address-text-box">
-            <p class="address">Sofia, Bulgaria</p>
-          </address>
-          <div class="copyright-text center-text">
-            <p class="copyright">
-              &copy; <span id="copyright">(This is a script)</span> Andre
-              Coetzer. All rights reserved
-            </p>
-          </div>
-        </div>
-
-        <!-- !Page Links -->
-        <div class="page-links-col">
-          <span class="pre-heading footer-pre-heading">Page Links</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="#" class="link link--footer">Go to the Top &uarr;</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="./javascript.html" class="link link--footer">&larr; JavaScript</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- !Site Links -->
-        <div class="site-links-col">
-          <span class="pre-heading footer-pre-heading">Site Map</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="../index.html" class="link link--footer">Home</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../html-pages/html.html" class="link link--footer">HTML</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../css-pages/css.html" class="link link--footer">CSS</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../javascript-pages/javascript.html" class="link link--footer">JavaScript</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../react-pages/react.html" class="link link--footer">React</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../node-pages/node.html" class="link link--footer">Node.js</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- !Scripts -->
-  <script src="../resources/javascript/app-blog.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <!-- !Scripts -->
+    <script src="../resources/javascript/app-blog.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

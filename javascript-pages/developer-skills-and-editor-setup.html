@@ -1,483 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="After completing the JavaScript Fundamentals, we take a small break to talk about developer skills and how to setup our editor." />
-  <link rel="icon" href="../resources/images/favicon/computer-illustration-64x64.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../resources/css/prism.css" />
-  <script src="../resources/javascript/prism.js"></script>
-  <link rel="stylesheet" href="../resources/css/style.css" />
-  <title>Developer Skills and Editor Setup &mdash; JavaScript</title>
-</head>
-<body>
-  
-  <!-- !Section: Header -->
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li class="main-nav-item">
-          <a href="../index.html" class="btn main-nav-link">Home</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
-        </li>
-        <li class="main-nav-item">
-          <a href="#footer" class="btn main-nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="After completing the JavaScript Fundamentals, we take a small break to talk about developer skills and how to setup our editor."
+    />
+    <link
+      rel="icon"
+      href="../resources/images/favicon/computer-illustration-64x64.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../resources/css/prism.css" />
+    <script src="../resources/javascript/prism.js"></script>
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <title>Developer Skills and Editor Setup &mdash; JavaScript</title>
+  </head>
+  <body>
+    <!-- !Section: Header -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="../index.html" class="btn main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-    <button class="mobile-nav">
-      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-    </button>
+      <button class="mobile-nav">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </button>
 
-    <!-- !Back to Top btn -->
-    <a href="#" class="btt-btn">
-      <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
-    </a>
-  </header>
+      <!-- !Back to Top btn -->
+      <a href="#" class="btt-btn">
+        <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
+      </a>
+    </header>
 
-  <main>
+    <main>
+      <!-- !Section: Blog Hero -->
+      <section class="section-padding--blog section-blog-hero">
+        <div class="blog-hero">
+          <picture class="blog-hero-img-box">
+            <source
+              srcset="../resources/images/javascript/nail-illustration.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="../resources/images/javascript/nail-illustration-min.png"
+              type="image/png"
+            />
 
-     <!-- !Section: Blog Hero -->
-    <section class="section-padding--blog section-blog-hero">
-      <div class="blog-hero">
-        <picture class="blog-hero-img-box">
-          <source srcset="../resources/images/javascript/nail-illustration.webp" type="image/webp">
-          <source srcset="../resources/images/javascript/nail-illustration-min.png" type="image/png">
+            <img
+              src="../resources/images/javascript/nail-illustration-min.png"
+              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+              class="blog-hero-img"
+            />
+          </picture>
 
-          <img src="../resources/images/javascript/nail-illustration-min.png"
-            alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer" class="blog-hero-img" />
-        </picture>
-
-        <div class="blog-hero-text-box">
-
-          <!-- !Breadcrumb Navigation -->
-          <nav class="breadcrumb-nav">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="../index.html" class="link link--breadcrumb">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript.html" class="link link--breadcrumb">JavaScript</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="./javascript-fundamentals-part-2.html" class="link link--breadcrumb">Developer Skills and Editor Setup</a>
-              </li>
-            </ul>
-          </nav>
-          <span class="pre-heading">Section 5</span>
-          <h1 class="heading-primary">
-            Developer Skills and Editor Setup
-          </h1>
+          <div class="blog-hero-text-box">
+            <!-- !Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="../index.html" class="link link--breadcrumb">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="./javascript.html" class="link link--breadcrumb"
+                    >JavaScript</a
+                  >
+                </li>
+                <li class="breadcrumb-item">
+                  <a
+                    href="./javascript-fundamentals-part-2.html"
+                    class="link link--breadcrumb"
+                    >Developer Skills and Editor Setup</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <span class="pre-heading">Section 5</span>
+            <h1 class="heading-primary">Developer Skills and Editor Setup</h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- !Section Blog -->
-    <section class="section-padding--blog section-blog">
-      <div class="container--blog">
-        <div class="blog">
+      <!-- !Section Blog -->
+      <section class="section-padding--blog section-blog">
+        <div class="container--blog">
+          <div class="blog">
+            <!-- !Table of Contents -->
+            <nav class="toc">
+              <div class="toc-box">
+                <button class="toc-btn">
+                  <span class="pre-heading toc-btn-heading"
+                    >Table of Contents</span
+                  >
+                  <ion-icon name="add-outline" class="toc-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
+                </button>
 
-          <!-- !Table of Contents -->
-          <nav class="toc">
-            <div class="toc-box">
-              <button class="toc-btn">
-                <span class="pre-heading toc-btn-heading">Table of Contents</span>
-                <ion-icon name="add-outline" class="toc-icon"></ion-icon>
-                <ion-icon name="remove-outline" class="toc-icon"> </ion-icon>
-              </button>
+                <div class="toc-hidden-box">
+                  <ul class="toc-list">
+                    <li class="toc-item">
+                      <a href="#lecture-55" class="link link--toc">
+                        Setting up prettier and VS code
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-56" class="link link--toc">
+                        Installing Node.js and setting up a dev environment
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-57" class="link link--toc">
+                        Learning how to code
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-58" class="link link--toc">
+                        How to think like a developer &mdash; Become a problem
+                        solver
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-59" class="link link--toc">
+                        Using Google, StackOverflow and MDN
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-60" class="link link--toc">
+                        Debugging &mdash; Fixing Errors
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-61" class="link link--toc">
+                        Debugging with console and breakpoints
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-62" class="link link--toc">
+                        Coding challenge - 1
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
 
-              <div class="toc-hidden-box">
-                <ul class="toc-list">
-                  <li class="toc-item">
-                    <a href="#lecture-55" class="link link--toc">
-                      Setting up prettier and VS code
-                    </a>
+            <!-- !Lectures -->
+            <div class="lectures">
+              <!-- !Lecture 55 -->
+              <div id="lecture-55" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 55 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Setting up Prettier and VS Code
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Test</p>
+
+                <!-- !End of Lecture 55 -->
+              </div>
+
+              <!-- !Lecture 56 -->
+              <div id="lecture-56" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 56 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Installing Node.js and setting up a dev environment
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Text here</p>
+
+                <!-- !End of Lecture 56 -->
+              </div>
+
+              <!-- !Lecture 57 -->
+              <div id="lecture-57" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 57 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Learning how to code
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Text here</p>
+
+                <!-- !End of Lecture 57 -->
+              </div>
+
+              <!-- !Lecture 58 -->
+              <div id="lecture-58" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 58 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  How to think like a developer &mdash; Become a problem solver
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Text here</p>
+
+                <!-- !End of Lecture 58 -->
+              </div>
+
+              <!-- !Lecture 59 -->
+              <div id="lecture-59" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 59 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Using Google, StackOverflow and MDN
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Text here</p>
+
+                <!-- !End of Lecture 59 -->
+              </div>
+
+              <!-- !Lecture 60 -->
+              <div id="lecture-60" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 60 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Debugging &mdash; Fixing errors
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Text here</p>
+
+                <!-- !End of Lecture 60 -->
+              </div>
+
+              <!-- !Lecture 61 -->
+              <div id="lecture-61" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 61 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Debugging with the console and breakpoints
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                  <code class="lecture-code language-javascript">
+                    // Example Code Here
+                  </code>
+                </pre>
+                </div>
+
+                <p class="lecture-text">Example Text here</p>
+
+                <!-- !End of Lecture 61 -->
+              </div>
+
+              <!-- !Lecture 62 -->
+              <div id="lecture-62" class="lecture-text-box">
+                <span class="pre-heading"> Lecture 62 </span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding challenge - 1
+                </h3>
+
+                <p class="lecture-text"></p>
+
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
                   </li>
-                  <li class="toc-item">
-                    <a href="#lecture-56" class="link link--toc">
-                      Installing Node.js and setting up a dev environment
-                    </a>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
                   </li>
-                  <li class="toc-item">
-                    <a href="#lecture-57" class="link link--toc">
-                      Learning how to code
-                    </a>
+                </ol>
+
+                <span class="pre-heading">Test Data:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
                   </li>
-                  <li class="toc-item">
-                    <a href="#lecture-58" class="link link--toc">
-                      How to think like a developer &mdash; Become a problem solver
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-59" class="link link--toc">
-                      Using Google, StackOverflow and MDN
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-60" class="link link--toc">
-                      Debugging &mdash; Fixing Errors
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-61" class="link link--toc">
-                      Debugging with console and breakpoints
-                    </a>
-                  </li>
-                  <li class="toc-item">
-                    <a href="#lecture-62" class="link link--toc">
-                      Coding challenge - 1
-                    </a>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
 
-          <!-- !Lectures -->
-          <div class="lectures">
+                <span class="pre-heading">Hints:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
+                  </li>
+                </ul>
 
-            <!-- !Lecture 55 -->
-            <div id="lecture-55" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 55 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Setting up Prettier and VS Code
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 55 -->
-            </div>
-
-            <!-- !Lecture 56 -->
-            <div id="lecture-56" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 56 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Installing Node.js and setting up a dev environment 
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 56 -->
-            </div>
-
-            <!-- !Lecture 57 -->
-            <div id="lecture-57" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 57 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Learning how to code
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 57 -->
-            </div>
-
-            <!-- !Lecture 58 -->
-            <div id="lecture-58" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 58 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                How to think like a developer &mdash; Become a problem solver
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 58 -->
-            </div>
-
-            <!-- !Lecture 59 -->
-            <div id="lecture-59" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 59 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Using Google, StackOverflow and MDN
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 59 -->
-            </div>
-
-            <!-- !Lecture 60 -->
-            <div id="lecture-60" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 60 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Debugging &mdash; Fixing errors
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 60 -->
-            </div>
-
-            <!-- !Lecture 61 -->
-            <div id="lecture-61" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 61 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Debugging with the console and breakpoints
-              </h3>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
-              </div>
-
-              <p class="lecture-text">
-                Example Text here
-              </p>
-
-              <!-- !End of Lecture 61 -->
-            </div>
-
-            <!-- !Lecture 62 -->
-            <div id="lecture-62" class="lecture-text-box">
-              <span class="pre-heading"> Lecture 62 </span>
-              <h3 class="heading-tertiary heading-tertiary--lecture">
-                Coding challenge - 1
-              </h3>
-
-              <p class="lecture-text">
-
-              </p>
-
-              <span class="pre-heading">Your Tasks:</span>
-              <ol class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
- 
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-              </ol>
-
-              <span class="pre-heading">Test Data:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-              </ul>
-
-              <span class="pre-heading">Hints:</span>
-              <ul class="lecture-list">
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-                <li class="lecture-list--item">
-                  <p class="lecture-list--item-description">
-
-                  </p>
-                </li>
-              </ul>
-
-              <div class="code-example">
-                <pre class="lecture-code-box line-numbers">
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
                     // Example code here
                   </code>
                 </pre>
+                </div>
+
+                <!-- !End of Lecture 62 -->
               </div>
 
-              <!-- !End of Lecture 62 -->
+              <!-- !Blog Nav -->
+              <div class="blog-nav">
+                <a
+                  href="./javascript-fundamentals-part-2.html"
+                  class="prev-next-blog-link"
+                >
+                  <ion-icon
+                    name="arrow-back-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next"
+                      >Previous</span
+                    >
+                    <span class="prev-next-blog-name"
+                      >JavaScript Fundamentals (Part 2)</span
+                    >
+                  </div>
+                </a>
+
+                <a
+                  href="./developer-skills-and-editor-setup.html"
+                  class="prev-next-blog-link"
+                >
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next">Next</span>
+                    <span class="prev-next-blog-name"
+                      >HTML and CSS Crash Course</span
+                    >
+                  </div>
+
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    class="prev-next-icon"
+                  ></ion-icon>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-            <!-- !Blog Nav -->
-            <div class="blog-nav">
-              <a href="./javascript-fundamentals-part-2.html" class="prev-next-blog-link">
-                <ion-icon name="arrow-back-outline" class="prev-next-icon"></ion-icon>
-
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Previous</span>
-                  <span class="prev-next-blog-name">JavaScript Fundamentals (Part 2)</span>
-                </div>
+    <!-- !Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <!-- !Profile -->
+          <div class="profile-col">
+            <figure class="footer-profile">
+              <img
+                src="../resources/images/main/profile-pic/me.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img"
+              />
+            </figure>
+            <div class="social-icons">
+              <!-- !Discord -->
+              <a
+                href="https://discordapp.com/users/871093653660106812"
+                class="social-link"
+                target="_blank"
+                data-title="Discord"
+              >
+                <ion-icon name="logo-discord" class="social-icon"></ion-icon>
               </a>
 
-              <a href="./developer-skills-and-editor-setup.html" class="prev-next-blog-link">
-                <div class="prev-next-text-box">
-                  <span class="pre-heading pre-heading--prev-next">Next</span>
-                  <span class="prev-next-blog-name">HTML and CSS Crash Course</span>
-                </div>
+              <!-- !Github -->
+              <a
+                href="https://github.com/acoetzer"
+                class="social-link"
+                target="_blank"
+                data-title="GitHub"
+              >
+                <ion-icon name="logo-github" class="social-icon"></ion-icon>
+              </a>
 
-                <ion-icon name="arrow-forward-outline" class="prev-next-icon"></ion-icon>
+              <!-- !Email -->
+              <a
+                href="mailto:awcoetzer@outlook.com"
+                class="social-link"
+                target="_blank"
+                data-title="Email"
+              >
+                <ion-icon name="mail-outline" class="social-icon"></ion-icon>
               </a>
             </div>
+            <address class="address-text-box">
+              <p class="address">Sofia, Bulgaria</p>
+            </address>
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy; <span id="copyright">(This is a script)</span> Andre
+                Coetzer. All rights reserved
+              </p>
+            </div>
+          </div>
+
+          <!-- !Page Links -->
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="link link--footer">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="./javascript.html" class="link link--footer"
+                  >&larr; JavaScript</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- !Site Links -->
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="../index.html" class="link link--footer">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../html-pages/html.html" class="link link--footer"
+                  >HTML</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../css-pages/css.html" class="link link--footer"
+                  >CSS</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a
+                  href="../javascript-pages/javascript.html"
+                  class="link link--footer"
+                  >JavaScript</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../react-pages/react.html" class="link link--footer"
+                  >React</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="../node-pages/node.html" class="link link--footer"
+                  >Node.js</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
-  </main>
+    <!-- !Scripts -->
+    <!-- !Course Section Script -->
+    <script src="./developer-skills-and-editor-setup.html"></script>
 
-   <!-- !Footer -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="footer-box">
-
-        <!-- !Profile -->
-        <div class="profile-col">
-          <figure class="footer-profile">
-            <img src="../resources/images/main/profile-pic/me.jpg"
-              alt="A profile picture of a very handsomely bearded man" class="footer-profile-img" />
-          </figure>
-          <div class="social-icons">
-            <!-- !Discord -->
-            <a href="https://discordapp.com/users/871093653660106812" class="social-link" target="_blank"
-              data-title="Discord">
-              <ion-icon name="logo-discord" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Github -->
-            <a href="https://github.com/acoetzer" class="social-link" target="_blank" data-title="GitHub">
-              <ion-icon name="logo-github" class="social-icon"></ion-icon>
-            </a>
-
-            <!-- !Email -->
-            <a href="mailto:awcoetzer@outlook.com" class="social-link" target="_blank" data-title="Email">
-              <ion-icon name="mail-outline" class="social-icon"></ion-icon>
-            </a>
-          </div>
-          <address class="address-text-box">
-            <p class="address">Sofia, Bulgaria</p>
-          </address>
-          <div class="copyright-text center-text">
-            <p class="copyright">
-              &copy; <span id="copyright">(This is a script)</span> Andre Coetzer. All rights reserved
-            </p>
-          </div>
-        </div>
-
-        <!-- !Page Links -->
-        <div class="page-links-col">
-          <span class="pre-heading footer-pre-heading">Page Links</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="#" class="link link--footer">Go to the Top &uarr;</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="./javascript.html" class="link link--footer">&larr; JavaScript</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- !Site Links -->
-        <div class="site-links-col">
-          <span class="pre-heading footer-pre-heading">Site Map</span>
-          <ul class="footer-list">
-            <li class="footer-list-item">
-              <a href="../index.html" class="link link--footer">Home</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../html-pages/html.html" class="link link--footer">HTML</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../css-pages/css.html" class="link link--footer">CSS</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../javascript-pages/javascript.html" class="link link--footer">JavaScript</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../react-pages/react.html" class="link link--footer">React</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="../node-pages/node.html" class="link link--footer">Node.js</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- !Scripts -->
-  <!-- !Course Section Script -->
-  <script src=""></script>
-
-  <!-- !Standard Scripts -->
-  <script src="../resources/javascript/app-blog.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
+    <!-- !Standard Scripts -->
+    <script src="../resources/javascript/app-blog.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
