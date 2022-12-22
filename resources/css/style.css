@@ -101,13 +101,12 @@
 }
 
 ::-webkit-scrollbar {
-  width: var(--space-8);
-  height: var(--space-8);
+  width: var(--space-16);
+  height: var(--space-16);
 }
 
 ::-webkit-scrollbar-track {
   background: var(--clr-shade);
-  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -121,7 +120,7 @@
 }
 
 html {
-  font-size: 65.2%;
+  font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -535,6 +534,10 @@ strong {
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
+}
+
+.inactive {
+  filter: grayscale(1);
 }
 
 /*
