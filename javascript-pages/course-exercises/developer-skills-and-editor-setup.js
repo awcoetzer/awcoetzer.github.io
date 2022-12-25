@@ -7,7 +7,10 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 const temperatures2 = [-3, -2, -6, -1, 'error'];
 const temperatures3 = ['error', -3, -2, -6, -1]; // This will result in a bug
 
-const tempAmplitude = function (arr) {
+
+const tempAmplitude = function (arrOne, arrTwo) {
+  const arr = arrOne.concat(arrTwo);
+
   let max = arr[0];
   let min = arr[0];
 
@@ -23,16 +26,13 @@ const tempAmplitude = function (arr) {
     }
   }
 
-  console.log(`Max: ${max}, Min ${min}`);
+  console.log(max, min);
 
   let amplitude = max - min;
   return `Todays amplitude was ${amplitude}`;
 };
 
-console.log(tempAmplitude(temperatures));
-console.log(tempAmplitude(temperatures2));
-console.log(tempAmplitude(temperatures3));
-
+console.log(tempAmplitude(temperatures, temperatures2));
 console.log('');
 
 //////////////////// Lecture 61 ////////////////////

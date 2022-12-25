@@ -357,40 +357,69 @@
                 </span>
 
                 <p class="lecture-text">
-                  Understand the problem and ask the right questions to get a clearer picture. While we still in our beginning stages, we won't know what the correct questions will be.
+                  Understand the problem and ask the right questions to get a
+                  clearer picture. While we still in our beginning stages, we
+                  won't know what the correct questions will be.
                 </p>
 
                 <p class="lecture-text">
-                  Regarding the example above, What should be reversed? Data types like strings, numbers and arrays make sense to reverse or are reversible compared to something like an object that isn't structured.
+                  Regarding the example above, What should be reversed? Data
+                  types like strings, numbers and arrays make sense to reverse
+                  or are reversible compared to something like an object that
+                  isn't structured.
                 </p>
 
                 <p class="lecture-text">
-                  What happens when something else is passed into the function?,What should we return, the same value or just a string? How do we recognize if what is passed in is a number or a string? And how do we reverse a number or string or array?
+                  What happens when something else is passed into the
+                  function?,What should we return, the same value or just a
+                  string? How do we recognize if what is passed in is a number
+                  or a string? And how do we reverse a number or string or
+                  array?
                 </p>
 
-                <span class="pre-heading">
-                  Step 2 Divide and Conquer
-                </span>
+                <span class="pre-heading">Step 2 Divide and Conquer</span>
 
                 <p class="lecture-text">
-                  Break a big problem into smaller problems! Check if the argument is a number or a string or an array. Implement reversing a number, string or array and return the reversed value.
+                  Break a big problem into smaller problems! Check if the
+                  argument is a number or a string or an array. Implement
+                  reversing a number, string or array and return the reversed
+                  value.
                 </p>
 
-                <span class="pre-heading">
-                  Step 3 Research
-                </span>
+                <span class="pre-heading">Step 3 Research</span>
 
                 <p class="lecture-text">
-                  Don't be afraid to research, if we can't do it by ourselves, which we should always try to do first, then there is no shame in research how to do something.
+                  Don't be afraid to research, if we can't do it by ourselves,
+                  which we should always try to do first, then there is no shame
+                  in research how to do something.
                 </p>
 
                 <p class="lecture-text">
-                  We can use sites like <a href="https://google.com" target="_blank" class="link link--inline">Google</a>, <a href="https://stackoverflow.com/" target="_blank" class="link link--inline">Stack Overflow</a>, <a href="https://developer.mozilla.org/en-US/" target="_blank" class="link link--inline">MDN</a> to help us in our research.
+                  We can use sites like
+                  <a
+                    href="https://google.com"
+                    target="_blank"
+                    class="link link--inline">
+                    Google
+                  </a>
+                  ,
+                  <a
+                    href="https://stackoverflow.com/"
+                    target="_blank"
+                    class="link link--inline">
+                    Stack Overflow
+                  </a>
+                  ,
+                  <a
+                    href="https://developer.mozilla.org/en-US/"
+                    target="_blank"
+                    class="link link--inline">
+                    MDN
+                  </a>
+                  to help us in our research.
                 </p>
 
-                <span class="pre-heading">
-                  Step 4 Using Pseudo Code
-                </span>
+                <span class="pre-heading">Step 4 Using Pseudo Code</span>
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
@@ -413,7 +442,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  Lastly, we can write pseudocode to understand something clearer, especially if the project is large.
+                  Lastly, we can write pseudocode to understand something
+                  clearer, especially if the project is large.
                 </p>
 
                 <!-- !End of Lecture 58 -->
@@ -428,13 +458,108 @@
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
+                    <code class="lecture-code language-javascript">
+                      // Problem 1
+
+                      const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+                      const temperatures2 = [-3, -2, -6, -1, 'error'];
+                      const temperatures3 = ['error', -3, -2, -6, -1]; // This will result in a bug
+
+                      const tempAmplitude = function (arr) {
+                        let max = arr[0];
+                        let min = arr[0];
+                      
+                        for (let i = 0; i < arr.length; i++) {
+                          const curTemp = arr[i];
+                        
+                          if (typeof curTemp !== 'number') {
+                            continue;
+                          } else if (curTemp > max) {
+                            max = curTemp;
+                          } else if (curTemp < min) {
+                            min = curTemp;
+                          }
+                        }
+                      
+                        let amplitude = max - min;
+                        return `Todays amplitude was ${amplitude}`;
+                      };
+                    </code>
+                  </pre>
                 </div>
 
-                <p class="lecture-text">Example Text here</p>
+                <span class="pre-heading">First Problem</span>
+
+                <p class="lecture-text">
+                  We work for a company building smart home appliances, specifically home temperature control units. Your project manager provides you a task of calculating the temperature amplitude within a given day. The project manager tells you that there is a possibility for a sensor read 'error'.
+                </p>
+
+                <span class="pre-heading">Step 1 Understanding the problem</span>
+
+                <p class="lecture-text">
+                  What is temperature amplitude? It's the difference between the highest and lowest given temperatures.
+                </p>
+
+                <p class="lecture-text">
+                  How to compute the Max and Min temperatures within an array?What's a sensor error and what to do when it appears?
+                </p>
+
+                <span class="pre-heading">Step 2 Divide and Conquer</span>
+
+                <p class="lecture-text">
+                  Find the max and min values in an array. Ignore the errors when the occur, return the amplitude value
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Problem 2
+                      const tempAmplitude = function (arrOne, arrTwo) {
+                        const arr = arrOne.concat(arrTwo);
+
+                        let max = arr[0];
+                        let min = arr[0];
+
+                        for (let i = 0; i < arr.length; i++) {
+                          const curTemp = arr[i];
+                        
+                          if (typeof curTemp !== 'number') {
+                            continue;
+                          } else if (curTemp > max) {
+                            max = curTemp;
+                          } else if (curTemp < min) {
+                            min = curTemp;
+                          }
+                        }
+                      
+                        console.log(max, min);
+                      
+                        let amplitude = max - min;
+                        return `Todays amplitude was ${amplitude}`;
+                      };
+
+                      console.log(tempAmplitude(temperatures, temperatures2));
+                    </code>
+                  </pre>
+                </div>
+
+                <span class="pre-heading">Second Problem</span>
+
+                <p class="lecture-text">
+                  You finish what was required of you, and you report your work to your project manager, but there is a problem, your manager was told that they have upgraded their prototype, and the device now outputs 2 arrays. You are now tasked with making that same function work with 2 arrays instead of 1.
+                </p>
+
+                <span class="pre-heading">Step 1 Understanding the problem</span>
+
+                <p class="lecture-text">
+                  Should we just implement the function twice? No, just merge the arrays into a single array.
+                </p>
+
+                <span class="pre-heading">Step 2 Divide and Conquer</span>
+
+                <p class="lecture-text">
+                  Merge 2 arrays into 1.
+                </p>
 
                 <!-- !End of Lecture 59 -->
               </div>
