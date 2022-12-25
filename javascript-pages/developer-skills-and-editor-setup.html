@@ -491,23 +491,32 @@
                 <span class="pre-heading">First Problem</span>
 
                 <p class="lecture-text">
-                  We work for a company building smart home appliances, specifically home temperature control units. Your project manager provides you a task of calculating the temperature amplitude within a given day. The project manager tells you that there is a possibility for a sensor read 'error'.
+                  We work for a company building smart home appliances,
+                  specifically home temperature control units. Your project
+                  manager provides you a task of calculating the temperature
+                  amplitude within a given day. The project manager tells you
+                  that there is a possibility for a sensor read 'error'.
                 </p>
 
-                <span class="pre-heading">Step 1 Understanding the problem</span>
+                <span class="pre-heading">
+                  Step 1 Understanding the problem
+                </span>
 
                 <p class="lecture-text">
-                  What is temperature amplitude? It's the difference between the highest and lowest given temperatures.
+                  What is temperature amplitude? It's the difference between the
+                  highest and lowest given temperatures.
                 </p>
 
                 <p class="lecture-text">
-                  How to compute the Max and Min temperatures within an array?What's a sensor error and what to do when it appears?
+                  How to compute the Max and Min temperatures within an
+                  array?What's a sensor error and what to do when it appears?
                 </p>
 
                 <span class="pre-heading">Step 2 Divide and Conquer</span>
 
                 <p class="lecture-text">
-                  Find the max and min values in an array. Ignore the errors when the occur, return the amplitude value
+                  Find the max and min values in an array. Ignore the errors
+                  when the occur, return the amplitude value
                 </p>
 
                 <div class="code-example">
@@ -546,20 +555,25 @@
                 <span class="pre-heading">Second Problem</span>
 
                 <p class="lecture-text">
-                  You finish what was required of you, and you report your work to your project manager, but there is a problem, your manager was told that they have upgraded their prototype, and the device now outputs 2 arrays. You are now tasked with making that same function work with 2 arrays instead of 1.
+                  You finish what was required of you, and you report your work
+                  to your project manager, but there is a problem, your manager
+                  was told that they have upgraded their prototype, and the
+                  device now outputs 2 arrays. You are now tasked with making
+                  that same function work with 2 arrays instead of 1.
                 </p>
 
-                <span class="pre-heading">Step 1 Understanding the problem</span>
+                <span class="pre-heading">
+                  Step 1 Understanding the problem
+                </span>
 
                 <p class="lecture-text">
-                  Should we just implement the function twice? No, just merge the arrays into a single array.
+                  Should we just implement the function twice? No, just merge
+                  the arrays into a single array.
                 </p>
 
                 <span class="pre-heading">Step 2 Divide and Conquer</span>
 
-                <p class="lecture-text">
-                  Merge 2 arrays into 1.
-                </p>
+                <p class="lecture-text">Merge 2 arrays into 1.</p>
 
                 <!-- !End of Lecture 59 -->
               </div>
@@ -572,19 +586,30 @@
                 </h3>
 
                 <p class="lecture-text">
-                  A software bug is any unintended or unexpected behavior of a software application. The term 'bug' was coined by Harvard when one of their computers actually had a bug inside it.
+                  A software bug is any unintended or unexpected behavior of a
+                  software application. The term 'bug' was coined by Harvard
+                  when one of their computers actually had a bug inside it.
                 </p>
 
                 <p class="lecture-text">
-                  How does one detect bugs? This usually happens during the development stages, during testing and from user reports during production and in some case's just by context, like certain browsers and only specific users.
+                  How does one detect bugs? This usually happens during the
+                  development stages, during testing and from user reports
+                  during production and in some case's just by context, like
+                  certain browsers and only specific users.
                 </p>
 
                 <p class="lecture-text">
-                  Once we have identified the bug, we need to find it and then fix it, as well as prevent it from happening again. With smaller code, using the console can be an easy way of debugging apps. However, if the code is larger, we use a debugger. Once fixed, we try to prevent it from happening again.
+                  Once we have identified the bug, we need to find it and then
+                  fix it, as well as prevent it from happening again. With
+                  smaller code, using the console can be an easy way of
+                  debugging apps. However, if the code is larger, we use a
+                  debugger. Once fixed, we try to prevent it from happening
+                  again.
                 </p>
 
                 <p class="lecture-text">
-                  When it comes to debugging, your mantra should be to Identify, Find, Fix and Prevent.
+                  When it comes to debugging, your mantra should be to Identify,
+                  Find, Fix and Prevent.
                 </p>
 
                 <!-- !End of Lecture 60 -->
@@ -599,13 +624,66 @@
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example Code Here
-                  </code>
-                </pre>
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                      console.log()
+                      console.warn()
+                      console.error()
+                      console.table() // which is great for displaying objects
+                    </code>
+                 </pre>
                 </div>
 
-                <p class="lecture-text">Example Text here</p>
+                <p class="lecture-text">
+                  Before we get into practicing debugging, there are some nice console.log alternatives, which are really just for aesthetic purposes. The console.table(object) is really helpful when it comes to displaying objects.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box">
+                    <code class="lecture-code language-javascript">
+                      // This code outputs a result of 10273
+                      // Expected result should be 283
+                      const measureKelvin = function () {
+                        const measurement = {
+                          type: 'temp',
+                          unit: 'Celsius',
+                          // value: prompt('Degree Celsius')
+                          value: '10',
+                        };
+                      
+                        const kelvin = measurement.value + 273;
+                        return kelvin;
+                      };
+
+                      console.log(measureKelvin());
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  You can also use the browser's debugger by going to sources and setting a breakpoint for where you want your code to stop. This way of debugging is really handy for loops.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box">
+                    <code class="lecture-code language-javascript">
+                      // This code outputs a result of 283
+                      const measureKelvin2 = function () {
+                        const measurement = {
+                          type: 'temp',
+                          unit: 'Celsius',
+                          // value: parseInt(prompt('Degree Celsius'))
+                          value: 10,
+                        };
+                      
+                        const kelvin = measurement.value + 273;
+                        return kelvin;
+                      };
+
+                      console.log(measureKelvin2());
+                    </code>
+                  </pre>
+                </div>
 
                 <!-- !End of Lecture 61 -->
               </div>
@@ -617,45 +695,72 @@
                   Coding challenge - 1
                 </h3>
 
-                <p class="lecture-text"></p>
+                <p class="lecture-text">
+                  Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+                </p>
 
                 <span class="pre-heading">Your Tasks:</span>
                 <ol class="lecture-list">
                   <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
+                    <p class="lecture-list--item-description">
+                       Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console. Try it with both test datasets.
+                    </p>
                   </li>
                   <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
+                    <p class="lecture-list--item-description">
+                       Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+                    </p>
                   </li>
                 </ol>
 
                 <span class="pre-heading">Test Data:</span>
                 <ul class="lecture-list">
                   <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
+                    <p class="lecture-list--item-description">
+                      Data 1: [17, 21, 23]
+                    </p>
                   </li>
                   <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
-                  </li>
-                </ul>
-
-                <span class="pre-heading">Hints:</span>
-                <ul class="lecture-list">
-                  <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
-                  </li>
-                  <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
+                    <p class="lecture-list--item-description">
+                       Data 2: [12, 5, -5, 0, 4]
+                    </p>
                   </li>
                 </ul>
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
-                  <code class="lecture-code language-javascript">
-                    // Example code here
-                  </code>
-                </pre>
+                    <code class="lecture-code language-javascript">
+                      const maxTemps1 = [17, 21, 23];
+                      const maxTemps2 = [12, 5, -5, 0, 4];
+
+                      const printForecast = function (arr) {
+                        let logTemp = '';
+                      
+                        for (let i = 0; i < arr.length; i++) {
+                          const curTemp = arr[i];
+                          logTemp += `... ${curTemp}°C in ${i + 1} days `;
+                        }
+                      
+                        return logTemp;
+                      };
+
+                      console.log(`${printForecast(maxTemps1)}...`);
+                      console.log(`${printForecast(maxTemps2)}...`);
+                    </code>
+                  </pre>
                 </div>
+
+                <span class="pre-heading">Understanding the problem</span>
+
+                <p class="lecture-text">
+                  From a single array, print a string to the console, is the string single or multiple lines? The answer is that it's a single line with three dots as spaces.The information or input is from an array. A single string needs to store x number of values, that are different.
+                </p>
+
+                <span class="pre-heading">Divide and Conquer</span>
+
+                <p class="lecture-text">
+                  Create a function that's in an array of values (in this case, the maximum temperatures). Loop over the array, and each iteration should add a string to an empty variable. The string should be as long as the input.
+                </p>
 
                 <!-- !End of Lecture 62 -->
               </div>
