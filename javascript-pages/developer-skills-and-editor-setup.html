@@ -166,15 +166,40 @@
                   Setting up Prettier and VS Code
                 </h3>
 
+                <p class="lecture-text">
+                  Without going into the nitty-gritty of what Prettier is, let's
+                  keep it short and say Prettier is an opinionated formatter, it
+                  helps to format your code to a standard look.
+                </p>
+
+                <p class="lecture-text">
+                  To set up Prettier, we first need to install the extension inside VS Code and then set it as the default formatter within our settings.
+                </p>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example Code Here
+                    {
+                      "arrowParens": "avoid",
+                      "singleQuote": true,
+                      "htmlWhitespaceSensitivity": "ignore",
+                      "bracketSameLine": true
+                    }
                   </code>
                 </pre>
                 </div>
 
-                <p class="lecture-text">Example Test</p>
+                <p class="lecture-text">
+                  We then need to create a '.prettierrc' file that we can set some rules for our preferred formatting style. More style or rules can be found here on <a href="https://prettier.io/docs/en/options.html" target="_blank" class="link link--inline">Prettier's webpage</a>. Other extensions we can install is eslint and TODO highlights.
+                </p>
+
+                <p class="lecture-text">
+                  VS Code snippets is another great tool to help your workflow. By creating snippets of commonly used commands, such as typing 'cl' for 'console.log( ... )', can help for repetitive tasks.
+                </p>
+
+                <p class="lecture-text">
+                  To navigate and set up our snippets, go to File > Preferences > Configure User Snippets > New Global Snippet. From there follow the example snippet.
+                </p>
 
                 <!-- !End of Lecture 55 -->
               </div>
