@@ -1,9 +1,11 @@
 'use strict';
 
+//////////////////// Lecture 59 ////////////////////
+console.log('🦞 LECTURE 59');
+
 const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 const temperatures2 = [-3, -2, -6, -1, 'error'];
 const temperatures3 = ['error', -3, -2, -6, -1]; // This will result in a bug
-
 
 const tempAmplitude = function (arr) {
   let max = arr[0];
@@ -17,7 +19,7 @@ const tempAmplitude = function (arr) {
     } else if (curTemp > max) {
       max = curTemp;
     } else if (curTemp < min) {
-      min = curTemp
+      min = curTemp;
     }
   }
 
@@ -31,34 +33,42 @@ console.log(tempAmplitude(temperatures));
 console.log(tempAmplitude(temperatures2));
 console.log(tempAmplitude(temperatures3));
 
+console.log('');
+
+//////////////////// Lecture 61 ////////////////////
+console.log('🦞 LECTURE 61');
+
 // Bug inducing code
-// const measureKelvin = function () {
-//   const measurement = {
-//     type: 'temp',
-//     unit: 'Celsius',
-//     value: prompt('Degree Celsius')
-//   }
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'Celsius',
+    // value: prompt('Degree Celsius')
+    value: '10',
+  };
 
-//   const kelvin = measurement.value + 273;
-//   return kelvin
-// }
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
 
-// console.log(measureKelvin())
+console.log(measureKelvin());
 
 // Identify, Find and Fixing the code
-// const measureKelvin2 = function () {
-//   const measurement = {
-//     type: 'temp',
-//     unit: 'Celsius',
-//     value: parseInt(prompt('Degree Celsius'))
-//   }
+const measureKelvin2 = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'Celsius',
+    // value: parseInt(prompt('Degree Celsius'))
+    value: 10,
+  };
 
-//   const kelvin = measurement.value + 273;
-//   return kelvin
-// }
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
 
-// console.log(measureKelvin2())
+console.log(measureKelvin2());
 
+console.log('');
 
 //////////////////// Coding challenge - 1 ////////////////////
 console.log('🦑 CODING CHALLENGE - 1');
@@ -71,13 +81,13 @@ const printForecast = function (arr) {
 
   for (let i = 0; i < arr.length; i++) {
     const curTemp = arr[i];
-    logTemp += `... ${curTemp}°C in ${i + 1} days `
+    logTemp += `... ${curTemp}°C in ${i + 1} days `;
   }
 
   return logTemp;
-}
+};
 
-console.log(`${printForecast(maxTemps1)}...`)
-console.log(`${printForecast(maxTemps2)}...`)
+console.log(`${printForecast(maxTemps1)}...`);
+console.log(`${printForecast(maxTemps2)}...`);
 
 console.log('');
