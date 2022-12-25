@@ -190,7 +190,7 @@
                 </div>
 
                 <p class="lecture-text">
-                  We then need to create a '.prettierrc' file that we can set some rules for our preferred formatting style. More style or rules can be found here on <a href="https://prettier.io/docs/en/options.html" target="_blank" class="link link--inline">Prettier's webpage</a>. Other extensions we can install is eslint and TODO highlights.
+                  We then need to create a '.prettierrc' file that we can set some rules for our preferred formatting style. More style or rules can be found here on <a href="https://prettier.io/docs/en/options.html" target="_blank" class="link link--inline">Prettier's webpage</a> . Other extensions we can install is eslint and TODO highlights.
                 </p>
 
                 <p class="lecture-text">
@@ -210,16 +210,47 @@
                 <h3 class="heading-tertiary heading-tertiary--lecture">
                   Installing Node.js and setting up a dev environment
                 </h3>
+                
+                <p class="lecture-text">
+                  Installing Node.js and setting up a dev environment.
+                </p>
+
+                <p class="lecture-text">
+                  The first thing we need to do is install node.js, This can be achieved multiple different ways. Using the browser, we can download it directly from the node.js webpage <a href="https://nodejs.org/en/" target="_blank" class="link link--inline">Node.js</a> .
+                </p>
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                   <code class="lecture-code language-javascript">
-                    // Example Code Here
+                    // For windows users
+                    -> winget search node
+                    //Expected output is a list of packages 
+                    // Find a package (name)Node.js LTS -- (id)OpenJS.NodeJS.LTS
+
+                    -> winget install  OpenJS.NodeJS.LTS
+
+                    // Test version
+                    node -v
+                    // Expected output at this time should be v18.12.1
                   </code>
                 </pre>
                 </div>
 
-                <p class="lecture-text">Example Text here</p>
+                <p class="lecture-list">
+                  Another method is using the terminal and, depending on your OS, check your package manager for node.js.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box">
+                    <code class="lecture-code language-javascript">
+                      -> npm install live-server -g
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The last thing is to install live-server globally using npm. npm means Node Package Manager.
+                </p>
 
                 <!-- !End of Lecture 56 -->
               </div>
