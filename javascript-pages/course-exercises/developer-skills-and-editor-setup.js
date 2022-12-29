@@ -7,7 +7,6 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 const temperatures2 = [-3, -2, -6, -1, 'error'];
 const temperatures3 = ['error', -3, -2, -6, -1]; // This will result in a bug
 
-
 const tempAmplitude = function (arrOne, arrTwo) {
   const arr = arrOne.concat(arrTwo);
 
