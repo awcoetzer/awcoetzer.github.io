@@ -2340,4 +2340,12 @@ strong {
   .lecture-steps {
     flex-direction: column;
   }
+
+  .project-bottom {
+    row-gap: var(--space-24);
+  }
+
+  .project-bottom--right {
+    margin: 0 auto;
+  }
 }
