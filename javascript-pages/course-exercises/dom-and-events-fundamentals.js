@@ -52,6 +52,7 @@ guessButton.addEventListener('click', () => {
 const againButton = document.querySelector('.again-btn');
 
 againButton.addEventListener('click', function () {
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
   document.querySelector('.message').textContent = 'Waiting for a guess...';
   document.querySelector('.message').style.color = 'var(--clr-tint)';
