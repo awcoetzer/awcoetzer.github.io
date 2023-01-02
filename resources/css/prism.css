@@ -32,7 +32,6 @@ pre[class*='language-'] {
   border-radius: var(--radius-5);
   /* background: #2d2d2d; */
   background: var(--clr-shade);
-  animation: code-gradient 5s alternate-reverse infinite;
   box-shadow: inset 0 0.3rem 0.4rem 0 hsla(0, 0%, 0%, 0.2);
 }
 :not(pre) > code[class*='language-'] {
