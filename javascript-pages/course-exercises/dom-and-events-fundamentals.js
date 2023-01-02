@@ -19,8 +19,8 @@ guessButton.addEventListener('click', () => {
     document.querySelector('.message').textContent = '⛔ No Number Chosen';
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = "🥳 Yay! That's correct!";
-    document.querySelector('.secret-number').textContent = secretNumber;
     document.querySelector('.message').style.color = '#4ade80';
+    document.querySelector('.secret-number').textContent = secretNumber;
     document.querySelector('.secret-number').style.color = '#4ade80';
     if (score > highscore) {
       highscore = score;
@@ -34,6 +34,8 @@ guessButton.addEventListener('click', () => {
     } else {
       document.querySelector('.message').textContent = '💥 You Lost';
       document.querySelector('.message').style.color = '#f87171';
+      document.querySelector('.secret-number').textContent = secretNumber;
+      document.querySelector('.secret-number').style.color = '#f87171';
       document.querySelector('.score').textContent = 0;
     }
   } else if (guess < secretNumber) {
@@ -44,6 +46,8 @@ guessButton.addEventListener('click', () => {
     } else {
       document.querySelector('.message').textContent = '💥 You Lost';
       document.querySelector('.message').style.color = '#f87171';
+      document.querySelector('.secret-number').textContent = secretNumber;
+      document.querySelector('.secret-number').style.color = '#f87171';
       document.querySelector('.score').textContent = 0;
     }
   }
