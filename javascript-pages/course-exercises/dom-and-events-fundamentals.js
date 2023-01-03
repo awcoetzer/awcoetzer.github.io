@@ -161,7 +161,7 @@ againBtnEl.addEventListener('click', function () {
   displayScore(score);
   displaySecretNumber('?');
   displaySecretNumberColor('var(--clr-tint)');
-  document.querySelector('.guess').value = '';
+  guessEl.value = '';
 });
 
 console.log('');

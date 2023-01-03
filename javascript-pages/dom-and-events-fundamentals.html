@@ -226,7 +226,10 @@
 
                     <section class="project-bottom grid grid--2-cols">
                       <section class="project-bottom--left">
-                        <input type="number" placeholder="Enter" class="guess" />
+                        <input
+                          type="number"
+                          placeholder="Enter"
+                          class="guess" />
                         <button class="btn project-btn guess-btn">Check</button>
                       </section>
 
@@ -314,13 +317,14 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is both the completed project and the code which is not refactored as we will look into that later.
+                  Above is both the completed project and the code which is not
+                  refactored as we will look into that later.
                 </p>
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      
+
                     </code>
                   </pre>
                 </div>
@@ -500,7 +504,78 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+
+                      const guessEl = document.querySelector('.guess');
+                      const guessBtnEl = document.querySelector('.guess-btn');
+                      const againBtnEl = document.querySelector('.again-btn');
+                      const messageEl = document.querySelector('.message');
+                      const secretNumberEl = document.querySelector('.secret-number');
+                      const scoreEl = document.querySelector('.score');
+                      const highscoreEl = document.querySelector('.highscore');
+                                          
+                      const displayMessage = function (message) {
+                        messageEl.textContent = message;
+                      };
+                      
+                      const displayMessageColor = function (color) {
+                        messageEl.style.color = color;
+                      };
+                      
+                      const displaySecretNumber = function (value) {
+                        secretNumberEl.textContent = value;
+                      };
+                      
+                      const displaySecretNumberColor = function (color) {
+                        secretNumberEl.style.color = color;
+                      };
+                      
+                      const displayScore = function (value) {
+                        scoreEl.textContent = value;
+                      };
+                      
+                      let secretNumber = Math.trunc(Math.random() * 20) + 1;
+                      let score = 20;
+                      let highscore = 0;
+                      
+                      guessBtnEl.addEventListener('click', function () {
+                        let guess = parseInt(guessEl.value);
+                      
+                        if (!guess) {
+                          displayMessage('⛔ No Number Chosen');
+                        } else if (guess === secretNumber) {
+                          displayMessage("🥳 Yay! That's correct!");
+                          displayMessageColor('#4ade80');
+                          displaySecretNumber(secretNumber);
+                          displaySecretNumberColor('#4ade80');
+                          if (score > highscore) {
+                            highscore = score;
+                          }
+                          highscoreEl.textContent = highscore;
+                        } else if (guess !== secretNumber) {
+                          if (score > 1) {
+                            displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
+                            score--;
+                            displayScore(score);
+                          } else {
+                            displayMessage('💥 You Lost');
+                            displayMessageColor('#f87171');
+                            displaySecretNumber(secretNumber);
+                            displaySecretNumberColor('#f87171');
+                            displayScore(0);
+                          }
+                        }
+                      });
+
+                      againBtnEl.addEventListener('click', function () {
+                        secretNumber = Math.trunc(Math.random() * 20) + 1;
+                        score = 20;
+                        displayMessage('Waiting for a guess...');
+                        displayMessageColor('var(--clr-tint)');
+                        displayScore(score);
+                        displaySecretNumber('?');
+                        displaySecretNumberColor('var(--clr-tint)');
+                        guessEl.value = '';
+                      });
                     </code>
                   </pre>
                 </div>
