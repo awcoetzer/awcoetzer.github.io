@@ -1602,6 +1602,7 @@ strong {
   font-size: var(--font-52);
   color: var(--clr-tint);
   background-color: var(--clr-shade);
+  box-shadow: 0 0 0.8rem 0 hsla(222, 47%, 11%, 1);
 }
 
 .project-bottom {
@@ -1626,6 +1627,13 @@ strong {
   line-height: var(--line-height-17);
   color: var(--clr-tint);
   background: none;
+}
+
+.guess::placeholder {
+  font-size: var(--font-16);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
+  color: var(--clr-tint);
 }
 
 .guess-btn {
