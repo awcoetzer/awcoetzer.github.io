@@ -324,10 +324,31 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
+                      // Legacy ways of selecting elements
+                      document.getElementByTagName();
+                      document.getElementById();
+                      document.getElementByClass();
 
+                      // This is the more modern way of selecting elements
+                      document.querySelector();
+                      document.querySelectorAll();
+
+                      // To view all properties and methods on an element node
+
+                      const headingPrimaryEl = document.querySelector('.heading-primary');
+
+                      console.log(headingPrimaryEl);
                     </code>
                   </pre>
                 </div>
+
+                <p class="lecture-text">
+                  Before we dive into the DOM, let's learn how to select and element. We can do this using document.querySelector. The 'querySelector' is a method on the document object. When you pass in a selector, it has to be within a string or quotation marks. 
+                </p>
+
+                <p class="lecture-text">
+                  We can view the available to properties and methods if we assign an element node to a variable.
+                </p>
 
                 <!-- !End of Lecture 70 -->
               </div>

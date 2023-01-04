@@ -177,3 +177,19 @@ console.log('🦞 Project 3');
 console.log('🦞 LECTURE 82 - 86');
 
 console.log('');
+
+// Every time you hover of the heading, it changes to a random color
+const headingPrimaryEl = document.querySelector('.heading-primary');
+
+const randomColor = function () {
+  let r = Math.trunc(Math.random() * 255) + 1;
+  let g = Math.trunc(Math.random() * 255) + 1;
+  let b = Math.trunc(Math.random() * 255) + 1;
+  return `rgb(${r}, ${g}, ${b})`
+}
+
+headingPrimaryEl.addEventListener('mouseover', function () {
+  headingPrimaryEl.style.color = randomColor();
+  headingPrimaryEl.style.cursor = 'pointer';
+})
+

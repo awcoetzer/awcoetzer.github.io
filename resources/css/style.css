@@ -1626,6 +1626,7 @@ strong {
   font-size: var(--font-18);
   line-height: var(--line-height-17);
   color: var(--clr-tint);
+  color: rgb(255, 255, 255);
   background: none;
 }
 
