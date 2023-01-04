@@ -1697,10 +1697,30 @@ strong {
   background-color: var(--bg-color);
 }
 
-.color-value {
-
+.color-controller-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-24);
+  border-radius: var(--radius-5);
+  background-color: hsla(0, 0%, 0%, 0.4);
 }
 
+.color-option {
+  font-size: var(--font-18);
+  font-weight: var(--weight-500);
+  line-height: var(--line-height-17);
+  letter-spacing: var(--letter-space-n05);
+}
+
+.color-key {
+  color: hsla(0, 0%, 100%, 0.4);
+}
+
+.color-option--value {
+  margin-bottom: var(--space-24);
+}
 
 .code-example {
   margin: var(--space-48) var(--space-16) var(--space-24);

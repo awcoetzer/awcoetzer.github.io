@@ -106,7 +106,7 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-// Here we listening for the check button, and then we perform 
+// Here we listening for the check button, and then we perform
 // various actions which involve the games logic.
 guessBtnEl.addEventListener('click', function () {
   let guess = parseInt(guessEl.value);
@@ -134,8 +134,7 @@ guessBtnEl.addEventListener('click', function () {
     // and if its still above the score of 1.
   } else if (guess !== secretNumber) {
     if (score > 1) {
-
-      // Instead of writing 2 else if statements, we use a ternary 
+      // Instead of writing 2 else if statements, we use a ternary
       // operator to provide a value of either too high, or too low.
       displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
       score--;
@@ -151,7 +150,7 @@ guessBtnEl.addEventListener('click', function () {
 });
 
 // Here we listen if the the again button was clicked and then
-// reset all the values to their default value. Note that highscore 
+// reset all the values to their default value. Note that highscore
 // was not included in the reset
 againBtnEl.addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -162,6 +161,33 @@ againBtnEl.addEventListener('click', function () {
   displaySecretNumber('?');
   displaySecretNumberColor('var(--clr-tint)');
   guessEl.value = '';
+});
+
+console.log('');
+
+//////////////////// Color Controller ////////////////////
+console.log('😎 My Project - Color Controller');
+console.log('😎 Color Controller');
+
+const colorController = document.querySelector('.color-controller');
+const colorValue = document.querySelector('.color-option--value');
+
+const randomColor = function () {
+  let h = Math.trunc(Math.random() * 360) + 1;
+  let s = Math.trunc(Math.random() * 100) + 1;
+  let l = Math.trunc(Math.random() * 100) + 1;
+
+  return `hsl(${h}, ${s}%, ${l}%)`;
+};
+
+
+document.addEventListener('keydown', function (e) {
+  let currentColor = randomColor();
+
+  if (e.key === 'g' || e.key === 'G') {
+    colorController.style.backgroundColor = currentColor;
+    colorValue.textContent = currentColor;
+  }
 });
 
 console.log('');
@@ -177,19 +203,3 @@ console.log('🦞 Project 3');
 console.log('🦞 LECTURE 82 - 86');
 
 console.log('');
-
-// Every time you hover of the heading, it changes to a random color
-const headingPrimaryEl = document.querySelector('.heading-primary');
-
-const randomColor = function () {
-  let r = Math.trunc(Math.random() * 255) + 1;
-  let g = Math.trunc(Math.random() * 255) + 1;
-  let b = Math.trunc(Math.random() * 255) + 1;
-  return `rgb(${r}, ${g}, ${b})`
-}
-
-headingPrimaryEl.addEventListener('mouseover', function () {
-  headingPrimaryEl.style.color = randomColor();
-  headingPrimaryEl.style.cursor = 'pointer';
-})
-

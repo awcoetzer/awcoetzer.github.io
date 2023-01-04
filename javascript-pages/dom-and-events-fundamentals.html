@@ -382,7 +382,8 @@
                 </picture>
 
                 <p class="lecture-text">
-                  For each element in the HTML page, there is an element node in the DOM tree.
+                  For each element in the HTML page, there is an element node in
+                  the DOM tree.
                 </p>
 
                 <p class="lecture-text">
@@ -399,17 +400,24 @@
                 </p>
 
                 <p class="lecture-text">
-                  The DOM however is not part of JavaScript, but the DOM and DOM Methods are web APIs. 'API' stands for Application Programming Interface, which we will learn more about later. Web APIs are like libraries that browsers implement and what we can access using JavaScript code.
+                  The DOM however is not part of JavaScript, but the DOM and DOM
+                  Methods are web APIs. 'API' stands for Application Programming
+                  Interface, which we will learn more about later. Web APIs are
+                  like libraries that browsers implement and what we can access
+                  using JavaScript code.
                 </p>
 
                 <p class="lecture-text">
-                  Apart from the DOM, there are a ton more web APIs such as timers, fetch etc...
+                  Apart from the DOM, there are a ton more web APIs such as
+                  timers, fetch etc...
                 </p>
 
                 <span class="pre-heading">In Summary</span>
 
                 <p class="lecture-text">
-                  Web APIs are automatically given to us through the browser and web APIs are written in JavaScript which act as a sort of library, giving us access to the DOM.
+                  Web APIs are automatically given to us through the browser and
+                  web APIs are written in JavaScript which act as a sort of
+                  library, giving us access to the DOM.
                 </p>
 
                 <!-- !End of Lecture 71 -->
@@ -446,11 +454,20 @@
                 </div>
 
                 <p class="lecture-text">
-                  When it comes to selecting element nodes in JavaScript, There are some legacy ways and some more modern ways, as labeled above. The difference between 'querySelector' and 'querySelectorAll' is that if you have a button that is used in multiple instances on the page, just using 'querySelector' will return the first instance of that element.
+                  When it comes to selecting element nodes in JavaScript, There
+                  are some legacy ways and some more modern ways, as labeled
+                  above. The difference between 'querySelector' and
+                  'querySelectorAll' is that if you have a button that is used
+                  in multiple instances on the page, just using 'querySelector'
+                  will return the first instance of that element.
                 </p>
 
                 <p class="lecture-text">
-                  While 'querySelectorAll' will return something called a node list which is an array that we can loop over. We first select an element and then with one of the available properties we can manipulate it but assigning a value related to that property.
+                  While 'querySelectorAll' will return something called a node
+                  list which is an array that we can loop over. We first select
+                  an element and then with one of the available properties we
+                  can manipulate it but assigning a value related to that
+                  property.
                 </p>
 
                 <!-- !End of Lecture 72 -->
@@ -480,11 +497,16 @@
                 </div>
 
                 <p class="lecture-text">
-                  An event is something that happens on the page, whether it be a mouse click, a button pressed or mouse hover etc... With an event listener, we can listen for a certain event and then react to it.
+                  An event is something that happens on the page, whether it be
+                  a mouse click, a button pressed or mouse hover etc... With an
+                  event listener, we can listen for a certain event and then
+                  react to it.
                 </p>
 
                 <p class="lecture-text">
-                  The '.addEventListener('event name' function (e) {})' is a special type of method that's expects an event handler function as the second argument.
+                  The '.addEventListener('event name' function (e) {})' is a
+                  special type of method that's expects an event handler
+                  function as the second argument.
                 </p>
 
                 <!-- !End of Lecture 73 -->
@@ -540,7 +562,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is the refactored game logic which we will see later. The comments should highlight the purpose for the game logic applied, including some logic we have gotten to yet.
+                  Above is the refactored game logic which we will see later.
+                  The comments should highlight the purpose for the game logic
+                  applied, including some logic we have gotten to yet.
                 </p>
 
                 <!-- !End of Lecture 74 -->
@@ -556,18 +580,13 @@
                 <div class="project">
                   <div class="project-container color-controller-box">
                     <div class="color-controller">
-                      <p class="color-value">
-                        
-                      </p>
-                      <p class="color-option">
-                        <strong>'G'</strong> to generate
-                      </p>
-                      <p class="color-option">
-                        <strong>'W'</strong> &uarr; Brightness & <strong>'S'</strong> &darr; Brightness
-                      </p>
-                      <p class="color-option">
-                        <strong>'A'</strong> &darr; Saturation & <strong>'D'</strong> &uarr; Saturation
-                      </p>
+                      <div class="color-controller-text-box">
+                        <p class="color-option color-option--value">Color Code</p>
+                        <p class="color-option">
+                          Press <strong class="color-key">'G'</strong>
+                          to generate a random color
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -581,11 +600,17 @@
                 </div>
 
                 <p class="lecture-text">
-                  In JavaScript the property names, such as 'font-family', now adopts the camel casing way of writing which looks like this 'fontFamily'. Whenever we manipulate a style, we always need to use a string as a value.
+                  In JavaScript the property names, such as 'font-family', now
+                  adopts the camel casing way of writing which looks like this
+                  'fontFamily'. Whenever we manipulate a style, we always need
+                  to use a string as a value.
                 </p>
 
                 <p class="lecture-text">
-                  It's important to know that styles applied using JavaScript become inline styles. Apart from the '!important' keyword, we know that inline styles have a higher specificity than that of styles inside a CSS document.
+                  It's important to know that styles applied using JavaScript
+                  become inline styles. Apart from the '!important' keyword, we
+                  know that inline styles have a higher specificity than that of
+                  styles inside a CSS document.
                 </p>
 
                 <!-- !End of Lecture 75 -->
@@ -599,29 +624,34 @@
                 </h3>
 
                 <p class="lecture-text">
-                  Implement a game rest functionality, so that the player can make a new guess!
+                  Implement a game rest functionality, so that the player can
+                  make a new guess!
                 </p>
 
                 <span class="pre-heading">Your Tasks:</span>
                 <ol class="lecture-list">
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                      Select the element with the 'again' class and attach a click event handler.
+                      Select the element with the 'again' class and attach a
+                      click event handler.
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                      In the handler function, restore initial values of the 'score' and 'secretNumber' variables
+                      In the handler function, restore initial values of the
+                      'score' and 'secretNumber' variables
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                      Restore the initial conditions of the message, number, score and guess input fields
+                      Restore the initial conditions of the message, number,
+                      score and guess input fields
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                      Also restore the original background color (#222) and number width (15rem)
+                      Also restore the original background color (#222) and
+                      number width (15rem)
                     </p>
                   </li>
                 </ol>
@@ -672,7 +702,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is how we implemented the high score functionality into the game, if we look at the reset you will see this was not included into the reset as we would like to keep the highscore.
+                  Above is how we implemented the high score functionality into
+                  the game, if we look at the reset you will see this was not
+                  included into the reset as we would like to keep the
+                  highscore.
                 </p>
 
                 <!-- !End of Lecture 77 -->
