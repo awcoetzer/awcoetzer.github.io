@@ -598,15 +598,15 @@
                       const colorValue = document.querySelector('.color-option--value');
                                           
                       const randomColor = function () {
-                        let h = Math.trunc(Math.random() * 360) + 1;
-                        let s = Math.trunc(Math.random() * 100) + 1;
-                        let l = Math.trunc(Math.random() * 100) + 1;
+                        const h = Math.trunc(Math.random() * 360) + 1;
+                        const s = Math.trunc(Math.random() * 100) + 1;
+                        const l = Math.trunc(Math.random() * 100) + 1;
                       
                         return `hsl(${h}, ${s}%, ${l}%)`;
                       };
                       
                       document.addEventListener('keydown', function (e) {
-                        let currentColor = randomColor();
+                        const currentColor = randomColor();
                       
                         if (e.key === 'g' || e.key === 'G') {
                           colorController.style.backgroundColor = currentColor;
