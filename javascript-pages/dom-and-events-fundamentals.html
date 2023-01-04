@@ -660,12 +660,20 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                          // Below we check for the highscore, if the score is higher than
+                          // the highscore, then the highscore becomes that score.
+
+                          if (score > highscore) {
+                            highscore = score;
+                          }
+                          highscoreEl.textContent = highscore;
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Above is how we implemented the high score functionality into the game, if we look at the reset you will see this was not included into the reset as we would like to keep the highscore.
+                </p>
 
                 <!-- !End of Lecture 77 -->
               </div>
