@@ -500,12 +500,48 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      if (!guess) {
+                        displayMessage('⛔ No Number Chosen');
+
+                        //
+                      } else if (guess === secretNumber) {
+                        displayMessage("🥳 Yay! That's correct!");
+                        displayMessageColor('#4ade80');
+                        displaySecretNumber(secretNumber);
+                        displaySecretNumberColor('#4ade80');
+                      
+                        // Below we check for the highscore, if the score is higher than
+                        // the highscore, then the highscore becomes that score.
+                        if (score > highscore) {
+                          highscore = score;
+                        }
+                        highscoreEl.textContent = highscore;
+                      
+                        //  Below we check if the number is different to the secret number
+                        // and if its still above the score of 1.
+                      } else if (guess !== secretNumber) {
+                        if (score > 1) {
+                        
+                          // Instead of writing 2 else if statements, we use a ternary 
+                          // operator to provide a value of either too high, or too low.
+                          displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
+                          score--;
+                          displayScore(score);
+                        } else {
+                          displayMessage('💥 You Lost');
+                          displayMessageColor('#f87171');
+                          displaySecretNumber(secretNumber);
+                          displaySecretNumberColor('#f87171');
+                          displayScore(0);
+                        }
+                      }
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Above is the refactored game logic which we will see later. The comments should highlight the purpose for the game logic applied, including some logic we have gotten to yet.
+                </p>
 
                 <!-- !End of Lecture 74 -->
               </div>
