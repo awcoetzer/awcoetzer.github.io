@@ -425,12 +425,33 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Legacy ways of selecting elements
+                      document.getElementByTagName();
+                      document.getElementById();
+                      document.getElementByClass();
+
+                      // This is the more modern way of selecting elements
+                      document.querySelector();
+                      document.querySelectorAll();
+
+                      const messageEl = document.querySelector(.message);
+
+                      // To assign a value
+                      messageEl.textContent = 'Something';
+
+                      // or read a property
+                      console.log(messageEl.textContent);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  When it comes to selecting element nodes in JavaScript, There are some legacy ways and some more modern ways, as labeled above. The difference between 'querySelector' and 'querySelectorAll' is that if you have a button that is used in multiple instances on the page, just using 'querySelector' will return the first instance of that element.
+                </p>
+
+                <p class="lecture-text">
+                  While 'querySelectorAll' will return something called a node list which is an array that we can loop over. We first select an element and then with one of the available properties we can manipulate it but assigning a value related to that property.
+                </p>
 
                 <!-- !End of Lecture 72 -->
               </div>
