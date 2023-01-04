@@ -583,8 +583,7 @@
                       <div class="color-controller-text-box">
                         <p class="color-option color-option--value">Color Code</p>
                         <p class="color-option">
-                          Press <strong class="color-key">'G'</strong>
-                          to generate a random color
+                          Press <strong class="color-key">'G'</strong> or <strong class="color-key">'touch'</strong> your screen.
                         </p>
                       </div>
                     </div>
@@ -596,7 +595,7 @@
                     <code class="lecture-code language-javascript">
                       const colorController = document.querySelector('.color-controller');
                       const colorValue = document.querySelector('.color-option--value');
-                                          
+
                       const randomColor = function () {
                         const h = Math.trunc(Math.random() * 360) + 1;
                         const s = Math.trunc(Math.random() * 100) + 1;
@@ -604,7 +603,7 @@
                       
                         return `hsl(${h}, ${s}%, ${l}%)`;
                       };
-                      
+
                       document.addEventListener('keydown', function (e) {
                         const currentColor = randomColor();
                       
@@ -612,6 +611,13 @@
                           colorController.style.backgroundColor = currentColor;
                           colorValue.textContent = currentColor;
                         }
+                      });
+
+                      document.addEventListener('touchstart', function () {
+                        const currentColor = randomColor();
+
+                        colorController.style.backgroundColor = currentColor;
+                        colorValue.textContent = currentColor;
                       });
                     </code>
                   </pre>

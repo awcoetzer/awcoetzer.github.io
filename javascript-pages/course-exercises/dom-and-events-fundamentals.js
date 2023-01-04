@@ -189,6 +189,13 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+document.addEventListener('touchstart', function () {
+  const currentColor = randomColor();
+
+  colorController.style.backgroundColor = currentColor;
+  colorValue.textContent = currentColor;
+});
+
 console.log('');
 
 //////////////////// Lecture 79 - 81 ////////////////////
