@@ -466,12 +466,26 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // The breakdown of the event handler function
+                      .addEventListener(' Event Name ', Event Handler Function (event) {})
+
+                      // Ways we can implement an event listener
+                      document.querySelector('.message').addEventListener('click', function () {});
+
+                      const messageEl =  querySelector('.message');
+
+                      messageEl.add EventListener('click', function () {});
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  An event is something that happens on the page, whether it be a mouse click, a button pressed or mouse hover etc... With an event listener, we can listen for a certain event and then react to it.
+                </p>
+
+                <p class="lecture-text">
+                  The '.addEventListener('event name' function (e) {})' is a special type of method that's expects an event handler function as the second argument.
+                </p>
 
                 <!-- !End of Lecture 73 -->
               </div>
