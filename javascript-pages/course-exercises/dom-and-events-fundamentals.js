@@ -180,7 +180,6 @@ const randomColor = function () {
   return `hsl(${h}, ${s}%, ${l}%)`;
 };
 
-
 document.addEventListener('keydown', function (e) {
   let currentColor = randomColor();
 

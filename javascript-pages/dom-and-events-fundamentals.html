@@ -594,7 +594,25 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const colorController = document.querySelector('.color-controller');
+                      const colorValue = document.querySelector('.color-option--value');
+                                          
+                      const randomColor = function () {
+                        let h = Math.trunc(Math.random() * 360) + 1;
+                        let s = Math.trunc(Math.random() * 100) + 1;
+                        let l = Math.trunc(Math.random() * 100) + 1;
+                      
+                        return `hsl(${h}, ${s}%, ${l}%)`;
+                      };
+                      
+                      document.addEventListener('keydown', function (e) {
+                        let currentColor = randomColor();
+                      
+                        if (e.key === 'g' || e.key === 'G') {
+                          colorController.style.backgroundColor = currentColor;
+                          colorValue.textContent = currentColor;
+                        }
+                      });
                     </code>
                   </pre>
                 </div>
