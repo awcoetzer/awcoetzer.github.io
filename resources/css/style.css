@@ -1679,6 +1679,28 @@ strong {
 
 }
 
+.color-controller-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-controller {
+  width: 40rem;
+  height: 40rem;
+  border-radius: var(--radius-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-16);
+  background-color: var(--bg-color);
+}
+
+.color-value {
+
+}
+
 
 .code-example {
   margin: var(--space-48) var(--space-16) var(--space-24);
