@@ -1679,6 +1679,12 @@ strong {
 
 }
 
+/* 
+
+  Color Controller
+
+*/
+
 .color-controller-box {
   display: flex;
   justify-content: center;
@@ -1726,6 +1732,37 @@ strong {
   margin: var(--space-48) var(--space-16) var(--space-24);
   position: relative;
 }
+
+/* 
+
+  Modal Windows
+
+*/
+
+.modal-windows-box {
+
+}
+
+.modal-container {
+
+}
+
+.modal-btn {
+
+}
+
+.modal-hidden-box {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: red;
+}
+
+.modal-text-box {
+
+}
+
 
 .code-example::before {
   content: 'Code Example';
