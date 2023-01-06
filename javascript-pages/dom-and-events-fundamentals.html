@@ -827,7 +827,13 @@
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  As you can see above, we refactored the code using the DRY
+                  principle. One thing to note is when selecting element nodes
+                  from the DOM, instead of saying document.querySel.. on the
+                  event, we select them before hand and place them near the top
+                  of the js file.
+                </p>
 
                 <!-- !End of Lecture 78 -->
               </div>
@@ -839,46 +845,81 @@
                   Project -2 &mdash; Modal window
                 </h3>
 
-                <div class="modal-windows-box">
-                  <!-- Modal 1 -->
-                  <div class="modal-container">
-                    <button class="modal-btn">Modal 1</button>
-                    <div class="modal-hidden-box">
-                      <span class="pre-heading">Modal 1</span>
-                      <p class="modal-text-box">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis possimus consectetur nemo fugit vel sit
-                        ut beatae incidunt iste, tempore aliquid veniam quam
-                        suscipit provident sint delectus ducimus quas numquam?
-                      </p>
-                    </div>
-                  </div>
+                <div class="project project--modal">
+                  <div class="modal-windows-box">
+                    <!-- Modal 1 -->
+                    <div class="modal-container">
+                      <button class="btn project-btn modal-btn">Modal 1</button>
+                      <div class="modal-hidden-box">
+                        <div class="modal-text-box">
+                          <div class="modal-header">
+                            <span class="pre-heading pre-heading--modal">
+                              Modal 1
+                            </span>
+                            <ion-icon
+                              name="close-outline"
+                              class="modal-icon-close"></ion-icon>
+                          </div>
 
-                  <!-- Modal 2 -->
-                  <div class="modal-container">
-                    <button class="modal-btn">Modal 1</button>
-                    <div class="modal-hidden-box">
-                      <span class="pre-heading">Modal 1</span>
-                      <p class="modal-text-box">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis possimus consectetur nemo fugit vel sit
-                        ut beatae incidunt iste, tempore aliquid veniam quam
-                        suscipit provident sint delectus ducimus quas numquam?
-                      </p>
+                          <p class="modal-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Officiis possimus consectetur nemo fugit vel
+                            si tut beatae incidunt iste, tempore aliquid veniam
+                            quam suscipit provident sint delectus ducimus quas
+                            numquam?
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <!-- Modal 3 -->
-                  <div class="modal-container">
-                    <button class="modal-btn">Modal 1</button>
-                    <div class="modal-hidden-box">
-                      <span class="pre-heading">Modal 1</span>
-                      <p class="modal-text-box">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Officiis possimus consectetur nemo fugit vel sit
-                        ut beatae incidunt iste, tempore aliquid veniam quam
-                        suscipit provident sint delectus ducimus quas numquam?
-                      </p>
+                    <!-- Modal 2 -->
+                    <div class="modal-container">
+                      <button class="btn project-btn modal-btn">Modal 2</button>
+                      <div class="modal-hidden-box">
+                        <div class="modal-text-box">
+                          <div class="modal-header">
+                            <span class="pre-heading pre-heading--modal">
+                              Modal 2
+                            </span>
+                            <ion-icon
+                              name="close-outline"
+                              class="modal-icon-close"></ion-icon>
+                          </div>
+
+                          <p class="modal-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Officiis possimus consectetur nemo fugit vel
+                            si tut beatae incidunt iste, tempore aliquid veniam
+                            quam suscipit provident sint delectus ducimus quas
+                            numquam?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal 3 -->
+                    <div class="modal-container">
+                      <button class="btn project-btn modal-btn">Modal 3</button>
+                      <div class="modal-hidden-box">
+                        <div class="modal-text-box">
+                          <div class="modal-header">
+                            <span class="pre-heading pre-heading--modal">
+                              Modal 3
+                            </span>
+                            <ion-icon
+                              name="close-outline"
+                              class="modal-icon-close"></ion-icon>
+                          </div>
+
+                          <p class="modal-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Officiis possimus consectetur nemo fugit vel
+                            si tut beatae incidunt iste, tempore aliquid veniam
+                            quam suscipit provident sint delectus ducimus quas
+                            numquam?
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
