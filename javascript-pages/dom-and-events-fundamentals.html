@@ -881,30 +881,31 @@
                       const modalBox = document.querySelector('.modal-box');
                       const modalCloseBtn = document.querySelector('.modal-icon-close');
                       const overlay = document.querySelector('.modal-overlay');
-                                          
-                                          
+
+
                       const openModal = function () {
                         modalBox.classList.remove('modal-hidden');
                         overlay.classList.remove('modal-hidden');
                       }
-                      
+
                       const closeModal = function () {
                         modalBox.classList.add('modal-hidden');
                         overlay.classList.add('modal-hidden');
                       };
-                      
+
                       for (let i = 0; i < modalBtn.length; i++)
                         modalBtn[i].addEventListener('click', openModal)
-                      
+
                       modalCloseBtn.addEventListener('click', closeModal);
-                      
+
                       overlay.addEventListener('click', closeModal)
-                      
+
                       document.addEventListener('keydown', function (e) {
-                        if (e.key === 'Escape') {
+                        if (e.key === 'Escape' && !modalBox.classList.contains('modal-hidden')) {
                           closeModal()
+                          console.log(`${e.key} was pressed`)
                         }
-                      })
+                      });
                     </code>
                   </pre>
                 </div>

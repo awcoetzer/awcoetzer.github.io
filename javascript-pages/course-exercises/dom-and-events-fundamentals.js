@@ -226,8 +226,9 @@ modalCloseBtn.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal)
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
+  if (e.key === 'Escape' && !modalBox.classList.contains('modal-hidden')) {
     closeModal()
+    console.log(`${e.key} was pressed`)
   }
 });
 
