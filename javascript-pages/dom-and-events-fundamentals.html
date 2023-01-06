@@ -932,12 +932,12 @@
                         modalBox.classList.remove('modal-hidden');
                         overlay.classList.remove('modal-hidden');
                       }
-                      
+
                       const closeModal = function () {
                         modalBox.classList.add('modal-hidden');
                         overlay.classList.add('modal-hidden');
                       };
-                      
+
                       for (let i = 0; i < modalBtn.length; i++)
                         modalBtn[i].addEventListener('click', openModal)
                     </code>
@@ -965,12 +965,33 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && !modalBox.classList.contains('modal-hidden')) {
+                          closeModal()
+                          console.log(`${e.key} was pressed`)
+                        }
+                      });
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Keyboard events are so-called global events, as they don't happen on a specific element, but rather the entire document. Each event listener stores information about the event in the form of an object when the event has executed.
+                </p>
+
+                <p class="lecture-text">
+                  To access this event information, we can add in a parameter to the event handler function and then log that to the console.
+                </p>
+
+                <span class="pre-heading">In Summary</span>
+
+                <p class="lecture-text">
+                  When an event occurs, we can have access to that information through the event handler function. This works because we don't call the event function, we only declare it and the event calls the function and passes the event object as an argument.
+                </p>
+
+                <p class="lecture-text">
+                  Another useful thing which is done a lot is to check if an element already has a class present using the 'classList.contains(' ... ')' method.
+                </p>
 
                 <!-- !End of Lecture 81 -->
               </div>
