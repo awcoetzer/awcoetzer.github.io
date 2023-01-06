@@ -928,12 +928,29 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const openModal = function () {
+                        modalBox.classList.remove('modal-hidden');
+                        overlay.classList.remove('modal-hidden');
+                      }
+                      
+                      const closeModal = function () {
+                        modalBox.classList.add('modal-hidden');
+                        overlay.classList.add('modal-hidden');
+                      };
+                      
+                      for (let i = 0; i < modalBtn.length; i++)
+                        modalBtn[i].addEventListener('click', openModal)
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  With the 'for loop' we place an event handler on each iteration. In the event handler, we can specify a named function, meaning we can declare the function somewhere else and use that as the event handler method.
+                </p>
+
+                <p class="lecture-text">
+                  Though, we don't call the function, so this means we declare it without the parenthesis and allow the event to call it.
+                </p>
 
                 <!-- !End of Lecture 80 -->
               </div>
