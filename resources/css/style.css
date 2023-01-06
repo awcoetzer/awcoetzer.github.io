@@ -1486,7 +1486,7 @@ strong {
     #fb7185
   );
   background-size: 400%;
-  animation: code-gradient 5s alternate-reverse infinite;
+  animation: code-gradient 5s ease infinite;
   z-index: 999;
 }
 
@@ -1588,7 +1588,7 @@ strong {
     #fb7185
   );
   background-size: 400%;
-  animation: code-gradient 5s alternate-reverse infinite;
+  animation: code-gradient 5s ease infinite;
 }
 
 .project-heading {
@@ -1781,8 +1781,29 @@ z-index: 1;
   width: 100%;
   height: 100%;
   border-radius: var(--radius-5);
-  background-color: hsla(340, 50%, 50%, 0.5);
-  backdrop-filter: blur(1px);
+  background-image: linear-gradient(
+    45deg,
+    #f8717170,
+    #fb923c70,
+    #fbbf2470,
+    #facc1570,
+    #a3e63570,
+    #4ade8070,
+    #34d39970,
+    #2dd4bf70,
+    #22d3ee70,
+    #38bdf870,
+    #60a5fa70,
+    #818cf870,
+    #a78bfa70,
+    #c084fc70,
+    #e879f970,
+    #f472b670,
+    #fb718570
+  );
+  background-size: 1000%;
+  animation: code-gradient 10s ease infinite;
+  backdrop-filter: blur(2px);
 }
 
 .modal-text-box {
@@ -1865,16 +1886,19 @@ z-index: 1;
     #fb7185
   );
   background-size: 400%;
-  animation: code-gradient 5s alternate-reverse infinite;
+  animation: code-gradient 5s ease infinite;
   z-index: 999;
 }
 
 @keyframes code-gradient {
   0% {
-    background-position: 0%;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 100%;
+    background-position: 0% 50%;
   }
 }
 
