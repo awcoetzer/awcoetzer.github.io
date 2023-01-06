@@ -846,88 +846,65 @@
                 </h3>
 
                 <div class="project project--modal">
-                  <div class="modal-windows-box">
-                    <!-- Modal 1 -->
-                    <div class="modal-container">
-                      <button class="btn project-btn modal-btn">Modal 1</button>
-                      <div class="modal-hidden-box">
-                        <div class="modal-text-box">
-                          <div class="modal-header">
-                            <span class="pre-heading pre-heading--modal">
-                              Modal 1
-                            </span>
-                            <ion-icon
-                              name="close-outline"
-                              class="modal-icon-close"></ion-icon>
-                          </div>
+                  <div class="modal-container">
+                    <button class="btn project-btn modal-btn">Modal 1</button>
+                    <button class="btn project-btn modal-btn">Modal 2</button>
+                    <button class="btn project-btn modal-btn">Modal 3</button>
 
-                          <p class="modal-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Officiis possimus consectetur nemo fugit vel
-                            si tut beatae incidunt iste, tempore aliquid veniam
-                            quam suscipit provident sint delectus ducimus quas
-                            numquam?
-                          </p>
+                    <div class="modal-box modal-hidden">
+                      <div class="modal-text-box">
+                        <div class="modal-header">
+                          <span class="pre-heading pre-heading--modal">
+                            I'm a modal window 😎
+                          </span>
+                          <ion-icon
+                            name="close-outline"
+                            class="modal-icon-close"></ion-icon>
                         </div>
+
+                        <p class="modal-description">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Officiis possimus consectetur nemo fugit vel si
+                          tut beatae incidunt iste, tempore aliquid veniam quam
+                          suscipit provident sint delectus ducimus quas numquam?
+                        </p>
                       </div>
                     </div>
-
-                    <!-- Modal 2 -->
-                    <div class="modal-container">
-                      <button class="btn project-btn modal-btn">Modal 2</button>
-                      <div class="modal-hidden-box">
-                        <div class="modal-text-box">
-                          <div class="modal-header">
-                            <span class="pre-heading pre-heading--modal">
-                              Modal 2
-                            </span>
-                            <ion-icon
-                              name="close-outline"
-                              class="modal-icon-close"></ion-icon>
-                          </div>
-
-                          <p class="modal-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Officiis possimus consectetur nemo fugit vel
-                            si tut beatae incidunt iste, tempore aliquid veniam
-                            quam suscipit provident sint delectus ducimus quas
-                            numquam?
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Modal 3 -->
-                    <div class="modal-container">
-                      <button class="btn project-btn modal-btn">Modal 3</button>
-                      <div class="modal-hidden-box">
-                        <div class="modal-text-box">
-                          <div class="modal-header">
-                            <span class="pre-heading pre-heading--modal">
-                              Modal 3
-                            </span>
-                            <ion-icon
-                              name="close-outline"
-                              class="modal-icon-close"></ion-icon>
-                          </div>
-
-                          <p class="modal-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Officiis possimus consectetur nemo fugit vel
-                            si tut beatae incidunt iste, tempore aliquid veniam
-                            quam suscipit provident sint delectus ducimus quas
-                            numquam?
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="modal-overlay modal-hidden"></div>
                   </div>
                 </div>
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const modalBtn = document.querySelectorAll('.modal-btn');
+                      const modalBox = document.querySelector('.modal-box');
+                      const modalCloseBtn = document.querySelector('.modal-icon-close');
+                      const overlay = document.querySelector('.modal-overlay');
+                                          
+                                          
+                      const openModal = function () {
+                        modalBox.classList.remove('modal-hidden');
+                        overlay.classList.remove('modal-hidden');
+                      }
+                      
+                      const closeModal = function () {
+                        modalBox.classList.add('modal-hidden');
+                        overlay.classList.add('modal-hidden');
+                      };
+                      
+                      for (let i = 0; i < modalBtn.length; i++)
+                        modalBtn[i].addEventListener('click', openModal)
+                      
+                      modalCloseBtn.addEventListener('click', closeModal);
+                      
+                      overlay.addEventListener('click', closeModal)
+                      
+                      document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape') {
+                          closeModal()
+                        }
+                      })
                     </code>
                   </pre>
                 </div>

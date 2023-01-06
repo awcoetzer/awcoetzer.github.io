@@ -202,6 +202,35 @@ console.log('');
 console.log('🦞 Project 2');
 console.log('🦞 LECTURE 79 - 81');
 
+const modalBtn = document.querySelectorAll('.modal-btn');
+const modalBox = document.querySelector('.modal-box');
+const modalCloseBtn = document.querySelector('.modal-icon-close');
+const overlay = document.querySelector('.modal-overlay');
+
+
+const openModal = function () {
+  modalBox.classList.remove('modal-hidden');
+  overlay.classList.remove('modal-hidden');
+}
+
+const closeModal = function () {
+  modalBox.classList.add('modal-hidden');
+  overlay.classList.add('modal-hidden');
+};
+
+for (let i = 0; i < modalBtn.length; i++)
+  modalBtn[i].addEventListener('click', openModal)
+
+modalCloseBtn.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal)
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeModal()
+  }
+});
+
 console.log('');
 
 //////////////////// Lecture 82 - 86 ////////////////////
