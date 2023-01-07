@@ -207,11 +207,10 @@ const modalBox = document.querySelector('.modal-box');
 const modalCloseBtn = document.querySelector('.modal-icon-close');
 const overlay = document.querySelector('.modal-overlay');
 
-
 const openModal = function () {
   modalBox.classList.remove('modal-hidden');
   overlay.classList.remove('modal-hidden');
-}
+};
 
 const closeModal = function () {
   modalBox.classList.add('modal-hidden');
@@ -219,16 +218,16 @@ const closeModal = function () {
 };
 
 for (let i = 0; i < modalBtn.length; i++)
-  modalBtn[i].addEventListener('click', openModal)
+  modalBtn[i].addEventListener('click', openModal);
 
 modalCloseBtn.addEventListener('click', closeModal);
 
-overlay.addEventListener('click', closeModal)
+overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalBox.classList.contains('modal-hidden')) {
-    closeModal()
-    console.log(`${e.key} was pressed`)
+    closeModal();
+    console.log(`${e.key} was pressed`);
   }
 });
 
@@ -237,5 +236,70 @@ console.log('');
 //////////////////// Lecture 82 - 86 ////////////////////
 console.log('🦞 Project 3');
 console.log('🦞 LECTURE 82 - 86');
+
+const player0El = document.querySelector('.player--0');
+const player1El = document.querySelector('.player--1');
+const score0El = document.getElementById('score--0');
+const current0El = document.getElementById('current--0');
+const score1El = document.getElementById('score--1');
+const current1El = document.getElementById('current--1');
+
+const newGameBtnEl = document.querySelector('.game-btn--new');
+const rollDiceBtnEl = document.querySelector('.game-btn--roll');
+const holdBtnEl = document.querySelector('.game-btn--hold');
+const diceEl = document.querySelector('.game-dice');
+
+diceEl.classList.add('dice--hidden');
+score0El.textContent = 0;
+score1El.textContent = 0;
+
+const scores = [0, 0];
+let currentScore = 0;
+let activePlayer = 0;
+let isGameOver = 0;
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+
+rollDiceBtnEl.addEventListener('click', function () {
+  if (!isGameOver) {
+    const dice = Math.trunc(Math.random() * 6) + 1;
+
+    diceEl.classList.remove('dice--hidden');
+    diceEl.src = `../resources/images/javascript/dice-${dice}.png`;
+
+    if (dice !== 1) {
+      currentScore += dice;
+      console.log(currentScore);
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      switchPlayer();
+    }
+  }
+});
+
+holdBtnEl.addEventListener('click', function () {
+  if (!isGameOver) {
+    scores[activePlayer] += currentScore;
+
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scores[activePlayer];
+
+    if (scores[activePlayer] >= 30) {
+      isGameOver = true;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('game-winner');
+    } else {
+      switchPlayer();
+    }
+  }
+});
 
 console.log('');
