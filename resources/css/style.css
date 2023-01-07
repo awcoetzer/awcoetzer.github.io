@@ -2536,4 +2536,8 @@ z-index: 1;
   .project-bottom--right {
     margin: 0 auto;
   }
+
+  .modal-box {
+    width: 80%;
+  }
 }
