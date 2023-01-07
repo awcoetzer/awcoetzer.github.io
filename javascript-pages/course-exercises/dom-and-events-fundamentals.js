@@ -249,14 +249,25 @@ const rollDiceBtnEl = document.querySelector('.game-btn--roll');
 const holdBtnEl = document.querySelector('.game-btn--hold');
 const diceEl = document.querySelector('.game-dice');
 
-diceEl.classList.add('dice--hidden');
-score0El.textContent = 0;
-score1El.textContent = 0;
+let scores, currentScore, activePlayer, isGameOver;
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let isGameOver = 0;
+const init = function () {
+  scores = [0, 0];
+  currentScore = 0;
+  activePlayer = 0;
+  isGameOver = 0;
+
+  score0El.textContent = 0;
+  current0El.textContent = 0;
+  score1El.textContent = 0;
+  current1El.textContent = 0;
+
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--active');
+  diceEl.classList.add('dice--hidden');
+}
+
+init()
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -291,15 +302,18 @@ holdBtnEl.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 30) {
+    if (scores[activePlayer] >= 100) {
       isGameOver = true;
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('game-winner');
     } else {
       switchPlayer();
+      diceEl.classList.add('dice--hidden');
     }
   }
 });
+
+newGameBtnEl.addEventListener('click', init);
 
 console.log('');
