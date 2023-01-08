@@ -265,9 +265,11 @@ const init = function () {
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
   diceEl.classList.add('dice--hidden');
-}
+  player0El.classList.remove('game-winner');
+  player1El.classList.remove('game-winner');
+};
 
-init()
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -302,7 +304,7 @@ holdBtnEl.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 30) {
       isGameOver = true;
       document
         .querySelector(`.player--${activePlayer}`)
