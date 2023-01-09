@@ -1069,14 +1069,14 @@
                       const current0El = document.getElementById('current--0');
                       const score1El = document.getElementById('score--1');
                       const current1El = document.getElementById('current--1');
-                                          
+
                       const newGameBtnEl = document.querySelector('.game-btn--new');
                       const rollDiceBtnEl = document.querySelector('.game-btn--roll');
                       const holdBtnEl = document.querySelector('.game-btn--hold');
                       const diceEl = document.querySelector('.game-dice');
-                                          
+
                       let scores, currentScore, activePlayer, isGameOver;
-                                          
+
                       const init = function () {
                         scores = [0, 0];
                         currentScore = 0;
@@ -1094,9 +1094,9 @@
                         player0El.classList.remove('game-winner');
                         player1El.classList.remove('game-winner');
                       };
-                      
+
                       init();
-                      
+
                       const switchPlayer = function () {
                         document.getElementById(`current--${activePlayer}`).textContent = 0;
                         currentScore = 0;
@@ -1104,7 +1104,7 @@
                         player0El.classList.toggle('player--active');
                         player1El.classList.toggle('player--active');
                       };
-                      
+
                       rollDiceBtnEl.addEventListener('click', function () {
                         if (!isGameOver) {
                           const dice = Math.trunc(Math.random() * 6) + 1;
@@ -1122,7 +1122,7 @@
                           }
                         }
                       });
-                      
+
                       holdBtnEl.addEventListener('click', function () {
                         if (!isGameOver) {
                           scores[activePlayer] += currentScore;
@@ -1141,7 +1141,7 @@
                           }
                         }
                       });
-                      
+
                       newGameBtnEl.addEventListener('click', init);
                     </code>
                   </pre>
@@ -1190,12 +1190,30 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      rollDiceBtnEl.addEventListener('click', function () {
+                        if (!isGameOver) {
+                          const dice = Math.trunc(Math.random() * 6) + 1;
+                        
+                          diceEl.classList.remove('dice--hidden');
+                          diceEl.src = `../resources/images/javascript/dice-${dice}.png`;
+                        
+                          if (dice !== 1) {
+                            currentScore += dice;
+                            console.log(currentScore);
+                            document.getElementById(`current--${activePlayer}`).textContent =
+                              currentScore;
+                          } else {
+                            switchPlayer();
+                          }
+                        }
+                      });
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Within this lecture, we start by implementing the roll dice functionality. This, providing the random number, and showing its corresponding dice image using dynamically type string literals.
+                </p>
 
                 <!-- !End of Lecture 83 -->
               </div>
