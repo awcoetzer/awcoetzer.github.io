@@ -1228,12 +1228,24 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const switchPlayer = function () {
+                        document.getElementById(`current--${activePlayer}`).textContent = 0;
+                        currentScore = 0;
+                        activePlayer = activePlayer === 0 ? 1 : 0;
+                        player0El.classList.toggle('player--active');
+                        player1El.classList.toggle('player--active');
+                      };
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Within our HTML, we set the players ID starting from zero, 'player--0' as player 1 and 'player--1' as player 2. This is because of how we will set up our scores and active players when we start using dynamically type string literals. If anyone ever reads this, this is kinda hard to explain, which is why it's best to view the example.
+                </p>
+
+                <p class="lecture-text">
+                  We then make an active player variable and set that to 0, as we always want 'player--0' or player 1 in other words to be the first to start the game. Then within our conditions and if statement, we can use a ternary operator to adjust the active player status by saying if 'activePlayer' is set to 0 then change it to 1 if not then change it to 0.
+                </p>
 
                 <!-- !End of Lecture 84 -->
               </div>
@@ -1248,12 +1260,31 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      holdBtnEl.addEventListener('click', function () {
+                        if (!isGameOver) {
+                          scores[activePlayer] += currentScore;
+                        
+                          document.getElementById(`score--${activePlayer}`).textContent =
+                            scores[activePlayer];
+                        
+                          if (scores[activePlayer] >= 30) {
+                            isGameOver = true;
+                            document
+                              .querySelector(`.player--${activePlayer}`)
+                              .classList.add('game-winner');
+                          } else {
+                            switchPlayer();
+                            diceEl.classList.add('dice--hidden');
+                          }
+                        }
+                      });
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Basically, we just sum the current score to the current player's total score when the player decides to hold their score. We then check that the active player score meets the condition of winning, if so, we set the isGameOver Variable to true and display that visually.
+                </p>
 
                 <!-- !End of Lecture 85 -->
               </div>
