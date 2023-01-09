@@ -1063,12 +1063,119 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const player0El = document.querySelector('.player--0');
+                      const player1El = document.querySelector('.player--1');
+                      const score0El = document.getElementById('score--0');
+                      const current0El = document.getElementById('current--0');
+                      const score1El = document.getElementById('score--1');
+                      const current1El = document.getElementById('current--1');
+                                          
+                      const newGameBtnEl = document.querySelector('.game-btn--new');
+                      const rollDiceBtnEl = document.querySelector('.game-btn--roll');
+                      const holdBtnEl = document.querySelector('.game-btn--hold');
+                      const diceEl = document.querySelector('.game-dice');
+                                          
+                      let scores, currentScore, activePlayer, isGameOver;
+                                          
+                      const init = function () {
+                        scores = [0, 0];
+                        currentScore = 0;
+                        activePlayer = 0;
+                        isGameOver = 0;
+                      
+                        score0El.textContent = 0;
+                        current0El.textContent = 0;
+                        score1El.textContent = 0;
+                        current1El.textContent = 0;
+                      
+                        player0El.classList.add('player--active');
+                        player1El.classList.remove('player--active');
+                        diceEl.classList.add('dice--hidden');
+                        player0El.classList.remove('game-winner');
+                        player1El.classList.remove('game-winner');
+                      };
+                      
+                      init();
+                      
+                      const switchPlayer = function () {
+                        document.getElementById(`current--${activePlayer}`).textContent = 0;
+                        currentScore = 0;
+                        activePlayer = activePlayer === 0 ? 1 : 0;
+                        player0El.classList.toggle('player--active');
+                        player1El.classList.toggle('player--active');
+                      };
+                      
+                      rollDiceBtnEl.addEventListener('click', function () {
+                        if (!isGameOver) {
+                          const dice = Math.trunc(Math.random() * 6) + 1;
+                        
+                          diceEl.classList.remove('dice--hidden');
+                          diceEl.src = `../resources/images/javascript/dice-${dice}.png`;
+                        
+                          if (dice !== 1) {
+                            currentScore += dice;
+                            console.log(currentScore);
+                            document.getElementById(`current--${activePlayer}`).textContent =
+                              currentScore;
+                          } else {
+                            switchPlayer();
+                          }
+                        }
+                      });
+                      
+                      holdBtnEl.addEventListener('click', function () {
+                        if (!isGameOver) {
+                          scores[activePlayer] += currentScore;
+                        
+                          document.getElementById(`score--${activePlayer}`).textContent =
+                            scores[activePlayer];
+                        
+                          if (scores[activePlayer] >= 30) {
+                            isGameOver = true;
+                            document
+                              .querySelector(`.player--${activePlayer}`)
+                              .classList.add('game-winner');
+                          } else {
+                            switchPlayer();
+                            diceEl.classList.add('dice--hidden');
+                          }
+                        }
+                      });
+                      
+                      newGameBtnEl.addEventListener('click', init);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  This game is about not rolling a 1, and adding up your current score, though if the player rolls a 1 they lose their current score and their turn is over.
+                </p>
+
+                <picture class="lecture-img-box">
+                  <source
+                    srcset="../resources/images/javascript/flow-chart.webp"
+                    type="image/webp" />
+                  <source
+                    srcset="../resources/images/javascript/flow-chart-min.png"
+                    type="image/png" />
+
+                  <img
+                    src="../resources/images/javascript/flow-chart-min.png"
+                    alt="The DOM tree and how it looks"
+                    class="lecture-img" />
+                </picture>
+
+                <p class="lecture-text">
+                  To understand the game better, we can break down the problem using a flow chart and listing all possible scenarios. Utilizing the flow chart when building applications is a great way to visualize how the application will operate. It doesn't have to be a complete plan and can be added onto over time.
+                </p>
+
+                <p class="lecture-text">
+                  Getting to the lecture, we select the score elements by their ID using both '.querySelector('#IDName')' and '.getElementByID('IDName')'. Generally with much larger applications you will want to use '.getElementByID('IDName')' as it's a lot faster.
+                </p>
+
+                <p class="lecture-text">
+                  We also went a made a hidden helper CSS class, setting the display property to none, and added that to the dice image using JavaScript instead of adding it directly to the HTML. Why, I don't know, maybe just because we can or because if the script doesn't load, we can still show there is something there.
+                </p>
 
                 <!-- !End of Lecture 82 -->
               </div>
