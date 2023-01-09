@@ -1299,12 +1299,36 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      let scores, currentScore, activePlayer, isGameOver;
+
+                      const init = function () {
+                        scores = [0, 0];
+                        currentScore = 0;
+                        activePlayer = 0;
+                        isGameOver = 0;
+                      
+                        score0El.textContent = 0;
+                        current0El.textContent = 0;
+                        score1El.textContent = 0;
+                        current1El.textContent = 0;
+                      
+                        player0El.classList.add('player--active');
+                        player1El.classList.remove('player--active');
+                        diceEl.classList.add('dice--hidden');
+                        player0El.classList.remove('game-winner');
+                        player1El.classList.remove('game-winner');
+                      };
+
+                      init();
+
+                      newGameBtnEl.addEventListener('click', init);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Here we just reset the game and made a function for that.
+                </p>
 
                 <!-- !End of Lecture 86 -->
               </div>
