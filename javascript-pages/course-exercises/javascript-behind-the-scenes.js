@@ -2,9 +2,12 @@
 
 const lectureTextEl = document.querySelectorAll('.lecture-text');
 
+const noCopy = function () {
+  
+}
 
 for (let i = 0; i < lectureTextEl.length; i++) {
-  lectureTextEl[i].textContent = 'Example text here'
+  lectureTextEl[i].textContent = 'Example text here';
 }
 
 //////////////////// Lecture 89 ////////////////////
