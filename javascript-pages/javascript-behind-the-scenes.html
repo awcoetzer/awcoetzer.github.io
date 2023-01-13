@@ -558,12 +558,24 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      if (!numProducts) deleteShoppingCart()
+
+                      var numProducts = 10;
+
+                      function deleteShoppingCart () {
+                        console.log('Your shopping cart was deleted');
+                      };
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Above is a perfect example of why never to use var, because var gets hoisted to undefined the if statement will execute before that because undefined is a falsey value. As a result, it will delete your shopping cart.
+                </p>
+
+                <p class="lecture-text">
+                  Some good practice to avoid things like this is to always write your variables on top of each scope, always declare your functions first and call them after, and never use var!
+                </p>
 
                 <!-- !End of Lecture 95 -->
               </div>
@@ -575,15 +587,17 @@
                   The this Keyword
                 </h3>
 
-                <div class="code-example">
-                  <pre class="lecture-code-box line-numbers">
-                    <code class="lecture-code language-javascript">
-                      // Example Code Here
-                    </code>
-                  </pre>
-                </div>
+                <p class="lecture-text">
+                  The 'this' keyword is part of the execution context. The 'this' keyword points to the owner function. The 'this' keyword in a method points to the object.
+                </p>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  If 'this' was used Globally, and if using strict mode would return undefined, though in sloppy mode, returns window. With arrow functions it does not get its own 'this' keyword but points to the parents 'this' keyword.
+                </p>
+
+                <p class="lecture-text">
+                  With event listeners, the 'this' keyword inside a function will point to the DOM element the handler is attached to. The 'this' keyword does not point to the function itself, and also not its variable environment.
+                </p>
 
                 <!-- !End of Lecture 96 -->
               </div>

@@ -82,6 +82,14 @@ console.log('');
 //////////////////// Lecture 95 ////////////////////
 console.log('LECTURE 95');
 
+// if (!numProducts) deleteShoppingCart()
+
+// var numProducts = 10;
+
+// function deleteShoppingCart () {
+//   console.log('Your shopping cart was deleted');
+// };
+
 console.log('');
 
 //////////////////// Lecture 96 ////////////////////
