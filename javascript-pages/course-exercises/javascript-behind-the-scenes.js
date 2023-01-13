@@ -59,6 +59,19 @@ console.log('');
 //////////////////// Lecture 93 ////////////////////
 console.log('LECTURE 93');
 
+// const firstName = 'Andre';
+
+// function calcAge(birthyear) {
+//   const age = 2037 - birthYear;
+//   function printAge() {
+//     const output = `You are ${age},  born in ${birthYear} and your name is ${firstName}`;
+//     console.log(output);
+//   }
+//   printAge();
+// }
+
+// calcAge(1989);
+
 console.log('');
 
 //////////////////// Lecture 94 ////////////////////
