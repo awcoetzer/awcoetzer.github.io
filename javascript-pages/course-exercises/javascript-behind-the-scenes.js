@@ -13,26 +13,46 @@ console.log('');
 //////////////////// Lecture 91 ////////////////////
 console.log('LECTURE 91');
 
-const myName = 'Andre';
+// const myName = 'Andre';
 
-const first = function () {
-  let a = 1;
-  const b = second(7, 8);
-  a = a + b;
-  return a;
-};
+// const first = function () {
+//   let a = 1;
+//   const b = second(7, 8);
+//   a = a + b;
+//   return a;
+// };
 
-const second = (numOne, numTwo) => {
-  var c = numOne + numTwo;
-  return c;
-};
+// const second = (numOne, numTwo) => {
+//   var c = numOne + numTwo;
+//   return c;
+// };
 
-const x = first();
+// const x = first();
 
 console.log('');
 
 //////////////////// Lecture 92 ////////////////////
 console.log('LECTURE 92');
+
+// // Global Scope
+// const me = 'Andre';
+// const job = 'Developer';
+// const birthYear = 1989;
+// const isAlive = true;
+
+// // Function Scope
+
+// const calcAge = function (birthYear) {
+//   const now = 2037;
+//   const age = now - birthYear;
+//   return age;
+// };
+
+// //Block Scope
+// if (!isAlive) {
+//   const output = 'Sorry, but you are dead';
+//   console.log(output);
+// }
 
 console.log('');
 

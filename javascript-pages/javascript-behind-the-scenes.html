@@ -442,15 +442,57 @@
                   Scope and The Scope Chain
                 </h3>
 
+                <p class="lecture-text">
+                  Each execution context has a variable environment, a scope chain and a 'this' keyword. Scoping is how our variables are organized and accessed. Scoping asks where do variables live and or where can we access a certain variable and where can we not.
+                </p>
+
+                <p class="lecture-text">
+                  In JavaScript, we have what is known as lexical scoping, which is scoping that is controlled by the placement of functions and blocks in the code. An example of this is a function written inside a function. That inner function has access to the parent variables, but not the parent to child.
+                </p>
+
+                <p class="lecture-text">
+                  Scope means the space or environment in which a certain variable is declared.
+                </p>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Global Scope
+                      const me = 'Andre';
+                      const job = 'Developer';
+                      const birthYear = 1989;
+                      const isAlive = true;
+
+                      // Function Scope
+
+                      const calcAge = function (birthYear) {
+                        const now = 2037;
+                        const age = now - birthYear;
+                        return age;
+                      };
+
+                      //Block Scope
+                      if (!isAlive) {
+                        const output = 'Sorry, but you are dead';
+                        console.log(output);
+                      }
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  There is a global scope, function scope and a block scope. Scopes can only look up in a scope chain, but never into a scope.Important to remember is that let and const are block scoped, but var is not.
+                </p>
+
+                <span class="pre-heading">In Summary</span>
+
+                <p class="lecture-text">
+                  Scoping asks where do variables live, or where we can access them. There are 3 types of scopes in JavaScript, Global, function and block. let and const are blocked scoped, while var is not. JavaScript uses lexical scoping. 
+                </p>
+
+                <p class="lecture-text">
+                  Every scope has access to all outer or parent variables. This is known as the scope chain, but never the other way around.
+                </p>
 
                 <!-- !End of Lecture 92 -->
               </div>
