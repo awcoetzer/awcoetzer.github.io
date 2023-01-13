@@ -612,12 +612,30 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      console.log(this);
+
+                      const calcAge = function (birthYear) {
+                        console.log(2037 - birthYear);
+                        console.log(this);
+                      };
+
+                      const calcAge2 = birthYear => {
+                        console.log(2037 - birthYear);
+                        console.log(this);
+                      };
+
+                      const myself = {
+                        firstName: 'Andre',
+                        lastName: 'Coetzer',
+                        birthYear: 1989,
+                        calcAge: function () {
+                          console.log(2037 - this.birthYear);
+                          console.log(this);
+                        },
+                      };
                     </code>
                   </pre>
                 </div>
-
-                <p class="lecture-text">CHANGE ME</p>
 
                 <!-- !End of Lecture 97 -->
               </div>

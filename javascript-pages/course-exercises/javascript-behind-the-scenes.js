@@ -100,6 +100,28 @@ console.log('');
 //////////////////// Lecture 97 ////////////////////
 console.log('LECTURE 97');
 
+// console.log(this);
+
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
+
+// const calcAge2 = birthYear => {
+//   console.log(2037 - birthYear);
+//   console.log(this);
+// };
+
+// const myself = {
+//   firstName: 'Andre',
+//   lastName: 'Coetzer',
+//   birthYear: 1989,
+//   calcAge: function () {
+//     console.log(2037 - this.birthYear);
+//     console.log(this);
+//   },
+// };
+
 console.log('');
 
 //////////////////// Lecture 98 ////////////////////
