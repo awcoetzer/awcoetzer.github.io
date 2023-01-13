@@ -302,15 +302,91 @@
                   The JavaScript Engine and Runtime
                 </h3>
 
-                <div class="code-example">
-                  <pre class="lecture-code-box line-numbers">
-                    <code class="lecture-code language-javascript">
-                      // Example Code Here
-                    </code>
-                  </pre>
-                </div>
+                <p class="lecture-text">
+                  A JavaScript engine is simply a program that executes JavaScript code. Every browser has its own JavaScript engine, the most well known one is the V8 engine from Google, the V8 engine powers Google Chrome and Node.js.
+                </p>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <picture class="lecture-img-box">
+                  <source
+                    srcset="../resources/images/javascript/javascript-engine.webp"
+                    type="image/webp" />
+                  <source
+                    srcset="../resources/images/javascript/javascript-engine-min.png"
+                    type="image/png" />
+
+                  <img
+                    src="../resources/images/javascript/javascript-engine-min.png"
+                    alt="The JavaScript engine, Call Stack and Heap"
+                    class="lecture-img" />
+                </picture>
+
+                <p class="lecture-text">
+                  Any JavaScript engine contains a Call Stack and a Heap. The call stack is where our code is executed using something known as execution context. The heap is an unstructured memory pool where all objects, or reference types, are stored. More on primitive and reference types later.
+                </p>
+
+                <p class="lecture-text">
+                  But how is the code compiled to machine code, so that it can actually be executed afterward? Before we can answer that question, we need to understand the difference between compilation and interpretation.
+                </p>
+
+                <p class="lecture-text">
+                  Compiling to machine code can happen either through compilation or interpretation.
+                </p>
+
+                <picture class="lecture-img-box">
+                  <source
+                    srcset="../resources/images/javascript/compilation-interpretation.webp"
+                    type="image/webp" />
+                  <source
+                    srcset="../resources/images/javascript/compilation-interpretation-min.png"
+                    type="image/png" />
+
+                  <img
+                    src="../resources/images/javascript/compilation-interpretation-min.png"
+                    alt="Compilation vs Interpretation vs Just-In-Time"
+                    class="lecture-img" />
+                </picture>
+
+                <p class="lecture-text">
+                  Interpretation is where the interpreter runs through the source code line by line. This used to be how JavaScript work, though today this is no longer acceptable. So now it has what is known as just-in-time, which is a mix between compilation and interpretation.
+                </p>
+
+                <p class="lecture-text">
+                  When speaking about the JavaScript engine, and when our code enters the engine. The first step is to parse the code. During the parsing phase, the code is passed to the AST (Abstract Syntax Tree).
+                </p>
+
+                <p class="lecture-text">
+                  The next step is to take the AST and compile it to machine code. This machine code gets executed right away as it uses just-in-time compilation, The execution happens in the Call Stack.
+                </p>
+
+                <p class="lecture-text">
+                  Now that the program is running it doesn't stop there, the code, even though it's running, goes through some optimization strategies, where the code becomes more and more optimized, this allowing it to execute the program as fast as possible and over time optimize the code and replace the current code.
+                </p>
+
+                <picture class="lecture-img-box">
+                  <source
+                    srcset="../resources/images/javascript/javascript-runtime.webp"
+                    type="image/webp" />
+                  <source
+                    srcset="../resources/images/javascript/javascript-runtime-min.png"
+                    type="image/png" />
+
+                  <img
+                    src="../resources/images/javascript/javascript-runtime-min.png"
+                    alt="JavaScript Runtime"
+                    class="lecture-img" />
+                </picture>
+
+                <p class="lecture-text">
+                  Next, we take a look at the JavaScript Runtime. The runtime is like a container that includes all the things needed to use JavaScript, (In this case in the browser).
+                </p>
+
+                <p class="lecture-text">
+                  At the heart of a runtime is a JavaScript engine, though this is not enough, we also need things like the Web APIs and Callback Queues. When an event happens, it is placed into the callback queue. When the call stack is empty, it's then passed to the engine and executed.
+                </p>
+
+                <p class="lecture-text">
+                  This process happens by something called the event loop. This is basically an overview of the Non Concurrency Model. A runtime can also exist outside the browser, such as Node.js, the only thing missing is the Web APIs. Just remember, there are other runtimes available apart from browsers.
+                </p>
 
                 <!-- !End of Lecture 90 -->
               </div>
