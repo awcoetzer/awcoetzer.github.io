@@ -186,15 +186,111 @@
                   An High-Level Overview of JavaScript
                 </h3>
 
+                <p class="lecture-text">
+                  Let's take a look at the saying " JavaScript is a High-Level, Object-Orientated, Multi-Paradigm programming language " and then expand on that to create the monster version.
+                </p>
+
+                <span class="pre-heading">Monster Version</span>
+
+                <p class="lecture-text">
+                  JavaScript is a High-Level, Prototype-Based, Object-Orientated, Multi-Paradigm, interpreted or just-in-time compiled, Dynamic, Single Threaded, Garbage-Collection programming language, with first class functions and a Non blocking event loop concurrency model.
+                </p>
+
+                <p class="lecture-text">
+                  Let's unpack each of these and see what they mean.
+                </p>
+
+                <span class="pre-heading">High-Level</span>
+
+                <p class="lecture-text">
+                  Any Computer program needs resources such as ram, CPU and so on, though with low level programming languages such as C, you have to manually manage these resources. Asking the computer for memory to create a new variable.
+                </p>
+
+                <p class="lecture-text">
+                  On the other side, you have high level programming languages like JavaScript and Python where the developers don't need to worry about this, as it happens automatically with something known as garbage collection.
+                </p>
+
+                <span class="pre-heading">Garbage-Collection</span>
+
+                <p class="lecture-text">
+                  One of the powerful tools that takes away memory management is garbage collection. Garbage collection is an algorithm inside JavaScript which removes old, unused variables from memory to not clog up the memory.
+                </p>
+
+                <span class="pre-heading">Interpreted or just-in-time compiled language</span>
+
+                <p class="lecture-text">
+                  Machine code is in 0's and 1's, though JavaScript is written in human-readable code which needs to be compiled to machine code, with JavaScript this happens within the JavaScript Engine.
+                </p>
+
+                <span class="pre-heading">Multi-Paradigm</span>
+
+                <p class="lecture-text">
+                  In programming, a paradigm is an approach and mindset of structuring code, which will direct your coding style and technique.
+                </p>
+
+                <p class="lecture-text">
+                  There are 3 popular paradigms, which are, Procedural Programming, Object-Oriented Programming (OOP) and Functional Programming (FP).Procedural programming is what we have been doing up until now. That is programming in a very linear way with some functions in-between.
+                </p>
+
+                <p class="lecture-text">
+                  The thing to note about paradigms is that they can be imperative vs. declarative. More on this later in the course.Many languages are only procedural, OOP or FP, though with JavaScript it can do all of it.
+                </p>
+
+                <span class="pre-heading">Prototype-Based Object-Oriented</span>
+
+                <p class="lecture-text">
+                  The OOP nature of JavaScript is a prototype base object-oriented approach. This means that almost everything in JavaScript is an object, except for primitive values.
+                </p>
+
+                <p class="lecture-text">
+                  Earlier we said Arrays are objects, and why is it that we can use a push method on an array, when we now know that methods are related to objects? This is due to prototypal inheritance, an array is created from an array blueprint called the prototype.
+                </p>
+
+                <p class="lecture-text">
+                  This prototype contains all the array methods. The arrays we create in our code inherit the methods from the blueprint. Later, we will discuss OOP in more detail.
+                </p>
+
+                <span class="pre-heading">First class functions</span>
+
+                <p class="lecture-text">
+                  This means that functions are treated the same as variables. We can pass them into other functions and even return functions. This allows for functional programming.
+                </p>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      overlay.addEventListener('click', closeModal);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Above is an example of functional programming we used recently, whereby the event handlers took in a named function.
+                </p>
+
+                <span class="pre-heading">Dynamic</span>
+
+                <p class="lecture-text">
+                  JavaScript is a dynamic typed language, meaning when we assign a value to a variable without having to define the type. In other words, types become known at runtime.
+                </p>
+
+                <p class="lecture-text">
+                  The value can also change from one type to another, though if you're interested in a strong typed JavaScript, then you can check out TypeScript.
+                </p>
+
+                <span class="pre-heading">Single-Threaded Non-Blocking Concurrency Model</span>
+
+                <p class="lecture-text">
+                  This will be discussed later in the course as well, due to it being such a complex topic. So concurrency model means how the JavaScript engine handles multiple tasks happening at the same time.
+                </p>
+
+                <p class="lecture-text">
+                  We need this because JavaScript runs in a single thread, so it can only do one thing at a time. So if there was a long-running task like fetching data from the backend, this could block the single thread, which is known as block behavior. We want non-blocking behavior.
+                </p>
+
+                <p class="lecture-text">
+                  So by JavaScript using event loops, that takes long-running tasks and executes them in the background and puts them back in the main thread once they are finished.
+                </p>
 
                 <!-- !End of Lecture 89 -->
               </div>
