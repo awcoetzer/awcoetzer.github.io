@@ -398,15 +398,39 @@
                   Execution Contexts and The Call Stack
                 </h3>
 
+                <p class="lecture-text">
+                  What is the execution context within the call stack? It executes code starting with global execution, (Top Level Code). An example of this is code that is outside a function. So, an execution context is basically an environment in which a piece of JavaScript code is executed.
+                </p>
+
+                <p class="lecture-text">
+                  You get one global execution context, this is all your top level code. Then you get another for the first function and then the second and so forth.
+                </p>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const myName = 'Andre';
+
+                      const first = function () {
+                        let a = 1;
+                        const b = second(7, 8);
+                        a = a + b;
+                        return a;
+                      };
+
+                      const second = (numOne, numTwo) => {
+                        var c = numOne + numTwo;
+                        return c;
+                      };
+
+                      const x = first();
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  The call stack ensures that the order of execution never gets lost. The program will stay in the global state until it is closed, by closing the tab or browser.
+                </p>
 
                 <!-- !End of Lecture 91 -->
               </div>
