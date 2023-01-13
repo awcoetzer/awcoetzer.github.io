@@ -650,12 +650,38 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const andre = {
+                        year: 1989,
+                        firstName: 'Andre',
+                        calcAge: function () {
+                        console.log(this);
+                        console.log(2037 - this.year)
+                        },
+                        greet: () => {
+                        console.log(`Hello, ${this.firstName}`)
+                        }
+                      }
+
+                      // access to arguments
+                      function sum (a, b) {
+                        console.log(arguments)
+                        return a + b;
+                      }
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  In the above example, the arrow functions 'this' keyword will point towards the parent, which in this case is the window object and since we should always be using strict mode, it should return undefined.
+                </p>
+
+                <p class="lecture-text">
+                  Never use arrow functions in a method.
+                </p>
+
+                <p class="lecture-text">
+                  Functions also have access to a keyword called 'arguments'.
+                </p>
 
                 <!-- !End of Lecture 98 -->
               </div>

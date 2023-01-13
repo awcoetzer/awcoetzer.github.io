@@ -127,6 +127,24 @@ console.log('');
 //////////////////// Lecture 98 ////////////////////
 console.log('LECTURE 98');
 
+// const andre = {
+//   year: 1989,
+//   firstName: 'Andre',
+//   calcAge: function () {
+//   console.log(this);
+//   console.log(2037 - this.year)
+//   },
+//   greet: () => {
+//   console.log(`Hello, ${this.firstName}`)
+//   }
+// }
+
+// // access to arguments
+// function sum (a, b) {
+//   console.log(arguments)
+//   return a + b;
+// }
+
 console.log('');
 
 //////////////////// Lecture 99 ////////////////////
