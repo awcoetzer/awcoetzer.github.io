@@ -512,7 +512,7 @@
                       function calcAge(birthyear) {
                         const age = 2037 - birthYear;
                         function printAge() {
-                          const output = `You are ${age},  born in ${birthYear} and your name is ${firstName}`;
+                          const output = `You are ${age}, born in ${birthYear} and your name is ${firstName}`;
                           console.log(output);
                         }
                         printAge();
@@ -533,15 +533,17 @@
                   Variable Environment: Hoisting and The TDZ
                 </h3>
 
-                <div class="code-example">
-                  <pre class="lecture-code-box line-numbers">
-                    <code class="lecture-code language-javascript">
-                      // Example Code Here
-                    </code>
-                  </pre>
-                </div>
+                <p class="lecture-text">
+                  Hoisting makes some types of variables accessible / usable in the code before they are actually declared. So basically hoisting list variables to the top of their scope. An example of hoisting is function declarations.
+                </p>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Var is also hoisted, but remains undefined, while let and const are not hoisted and are placed in the TDZ or temporal dead zone. With function expressions and arrow functions, it all depends with what it was created, so depending if its a let, const or var.
+                </p>
+
+                <p class="lecture-text">
+                  The TDZ or Temporal Dead Zone, is basically the area from the start of the execution to when the variable is declared so if you call on a variable before it has been declared, you will full into the TDZ.
+                </p>
 
                 <!-- !End of Lecture 94 -->
               </div>
