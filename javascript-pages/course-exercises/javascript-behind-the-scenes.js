@@ -150,9 +150,28 @@ console.log('');
 //////////////////// Lecture 99 ////////////////////
 console.log('LECTURE 99');
 
+// let age = 30;
+// let oldAge = age;
+// age = 31;
+
+// console.log(oldAge);
+// console.log(age);
+
+// const me = {
+//   name: 'Andre',
+//   age: 30,
+// }
+
+// const friend = me;
+// friend.age = 27;
+// console.log(`Friend: ${friend.age}`);
+// console.log(`Me: ${me.age}`);
+
 console.log('');
 
 //////////////////// Lecture 100 ////////////////////
 console.log('LECTURE 100');
+
+
 
 console.log('');

@@ -696,12 +696,51 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      let age = 30;
+                      let oldAge = age;
+                      age = 31;
+
+                      console.log(oldAge);
+                      console.log(age);
+
+                      const me = {
+                        name: 'Andre',
+                        age: 30,
+                      }
+
+                      const friend = me;
+                      friend.age = 27;
+                      console.log(`Friend: ${friend.age}`);
+                      console.log(`Me: ${me.age}`);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  The above example happens of something known as primitive types and reference types in memory. Primitive types are stored in the call stack, while object or reference types as they are known are stored in the heap.
+                </p>
+
+                <picture class="lecture-img-box">
+                  <source
+                    srcset="../resources/images/javascript/primitive-reference-types.webp"
+                    type="image/webp" />
+                  <source
+                    srcset="../resources/images/javascript/primitive-reference-types-min.png"
+                    type="image/png" />
+
+                  <img
+                    src="../resources/images/javascript/primitive-reference-types-min.png"
+                    alt="JavaScript Runtime"
+                    class="lecture-img" />
+                </picture>
+
+                <p class="lecture-text">
+                  In the diagram above, it's important to note that the identifier pints to the address and not the value itself. This diagram also explains why with const we can change the object value, whereas with primitives we cannot.
+                </p>
+
+                <p class="lecture-text">
+                  Whenever you think you copy the object, you're in fact just creating a new variable pointing to the same object reference.
+                </p>
 
                 <!-- !End of Lecture 99 -->
               </div>
