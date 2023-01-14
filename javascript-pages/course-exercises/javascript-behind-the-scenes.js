@@ -172,6 +172,37 @@ console.log('');
 //////////////////// Lecture 100 ////////////////////
 console.log('LECTURE 100');
 
+// // Primitive types
+// let lastName = 'Williams';
+// let oldLastName = 'lastName';
+// lastName = 'Davis';
+// console.log(`last name: ${lastName}, old last name: ${oldLastName}`);
 
+// // Reference types
+// const jessica = {
+//   firstName: 'Jessica',
+//   lastName: 'Williams',
+//   age: 27,
+//   family: [
+//     'Brody', 
+//     'Alice'
+//   ]
+// };
+
+// const marriedJessica = jessica;
+// marriedJessica.lastName = 'Davis';
+
+// console.log('Jessica:', jessica);
+// console.log('Married Jessica:', marriedJessica);
+
+// // Coping Objects
+// const jessicaCopy = Object.assign({}, jessica);
+// jessicaCopy.lastName = 'Coetzer';
+
+// // altering info on a second level with object.assign()
+// jessicaCopy.family.push('Margarita')
+// jessicaCopy.family.push('Alfred')
+
+// console.log('Jessica Copy:', jessicaCopy);
 
 console.log('');

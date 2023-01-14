@@ -755,12 +755,53 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Primitive types
+                      let lastName = 'Williams';
+                      let oldLastName = 'lastName';
+                      lastName = 'Davis';
+                      console.log(`last name: ${lastName}, old last name: ${oldLastName}`);
+
+                      // Reference types
+                      const jessica = {
+                        firstName: 'Jessica',
+                        lastName: 'Williams',
+                        age: 27,
+                        family: [
+                          'Brody', 
+                          'Alice'
+                        ]
+                      };
+
+                      const marriedJessica = jessica;
+                      marriedJessica.lastName = 'Davis';
+
+                      console.log('Jessica:', jessica);
+                      console.log('Married Jessica:', marriedJessica);
+
+                      // Coping Objects
+                      const jessicaCopy = Object.assign({}, jessica);
+                      jessicaCopy.lastName = 'Coetzer';
+
+                      // altering info on a second level with object.assign()
+                      jessicaCopy.family.push('Margarita')
+                      jessicaCopy.family.push('Alfred')
+
+                      console.log('Jessica Copy:', jessicaCopy);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  As we have seen, primitives change as follows, and they point to the address rather than the value. Though, to actually copy the object, we can use the 'object.assign({}, the object you want to copy)' function to make a new object where the properties were copied.
+                </p>
+
+                <p class="lecture-text">
+                  There is a problem with using this function however and that is that it only works for the top level, if there is an object inside the object, then this inner object will still point to the same place in memory.
+                </p>
+
+                <p class="lecture-text">
+                  So 'object.assign({}, object)' only creates what is known as a shallow copy and not a deep copy. To create a deep copy, we will need to use an external library such as 'low dash' that houses tools in order to achieve this.
+                </p>
 
                 <!-- !End of Lecture 100 -->
               </div>
