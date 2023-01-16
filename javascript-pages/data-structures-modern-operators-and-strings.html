@@ -242,12 +242,181 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Made up restaurant menu app
+                      const restaurant = {
+                        name: 'Just Delicious',
+                        location: "74-5035 Queen Ka'ahumanu Hwy, Kailua-Kona, Hawaii",
+                        categories: [
+                          'Seafood & Grill',
+                          'Hawaiian BBQ & Grill',
+                          'Hawaiian',
+                          'Organic',
+                        ],
+                        starterMenu: [
+                          'Garlic Bread',
+                          'Bread Sticks',
+                          'Hawaiian Salad',
+                          'Garlic Snails',
+                          'Hot Stone Muscles',
+                        ],
+                        mainMenu: [
+                          'Pizza',
+                          'Seafood Grill',
+                          'Hawaiian Fried Rice & Seafood',
+                          'Seafood Platter with Hawaiian Trio Sauce',
+                          'Ocean Fish, Catch Of The Day',
+                        ],
+                        sidesMenu: [
+                          'French Fries',
+                          'Hawaiian Coleslaw',
+                          'Hawaiian Macaroni Salad',
+                          'Pineapple Rice',
+                          'Hawaiian Rolls',
+                        ],
+                        order: function (starterIndex, mainIndex, sidesIndex) {
+                          return [
+                            this.starterMenu[starterIndex],
+                            this.mainMenu[mainIndex],
+                            this.sidesMenu[sidesIndex],
+                          ];
+                        },
+                      };
+
+                      // Introduction to deconstructing arrays
+                      const arr = [1, 2, 3];
+                      const a = arr[0];
+                      const b = arr[1];
+                      const c = arr[2];
+                      console.log(a, b, c);
+
+                      // Using the deconstruct syntax
+                      const [x, y, z] = arr;
+                      console.log(x, y, z);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Deconstructing is basically a way of unpacking values from an array or object into separate variables. Deconstructing help to break down a larger data structure into a simpler one.
+                </p>
+
+                <p class="lecture-text">
+                  Above is the deconstructing assignment, brackets to the left of the assignment operator is known for being the deconstructing syntax even though it looks like an array it's not.
+                </p>
+
+                <span class="pre-heading">Note</span>
+
+                <p class="lecture-text">
+                  The original array is not damaged or tampered with.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // We don't need to select all values when deconstructing
+                      const [first, second] = restaurant.categories;
+                      console.log(first, second);
+
+                      // We can even skip the second value
+                      const [first, , third] = restaurant.categories;
+                      console.log(first, third);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  When deconstructing we don't need to select all the value, we can just select in this case the first and second value. Though, what if we didn't want the second value but the third? It's as easy as just placing an empty space as illustrated above.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Switching variables
+                      let [main, , secondary] = restaurant.categories;
+                      console.log(main, secondary);
+
+                      // Old way of switch variables using temp
+                      const temp = main;
+                      main = secondary;
+                      secondary = temp
+                      console.log(main, secondary);
+
+                      // using deconstruction as a method of switching
+                      [main, secondary] = [secondary, main];
+                      console.log(main, secondary);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Hypothetically, let's say that the owner of the restaurant wanted to switch the main category of his restaurant with the third. Above shows the old way of doing so by using a temp variable to hold the value of main and setting main as secondary and secondary as temp, which holds the original main value.
+                </p>
+
+                <p class="lecture-text">
+                  The deconstructing way of doing this, is, as you see, a lot simpler.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Unpacking a function into variable using deconstruction
+                      const [starterMeal, mainMeal, sideMeal] = restaurant.order(0, 1, 0);
+                      console.log(starterMeal, mainMeal, sideMeal);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above shows how we can receive values from functions and immediately unpack them into variables.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // deconstructing nested arrays
+                      const nested = [1, 'skip me', 3, [4, 5]];
+                      const [q, , w, [e, r]] = nested;
+                      console.log(q, w, e, r);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above illustrates how we can deconstruct nested arrays, by simply adding another deconstruction syntax within the already established deconstruction syntax.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Assigning a default value
+                      const mysteryAPI = [8, 9];
+                      const [xx = 1, yy = 1, zz = 1] = mysteryAPI;
+                      console.log(xx, yy, zz);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Sometimes we won't know the length of an array, so we can assign default values to each variable just in case the array is not as long.
+                </p>
+
+                <span class="pre-heading">
+                  Practicing default values
+                </span>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Practice example, lets say we don't order a side dish
+                      const [starterMeal = 'X', mainMeal = 'X', sideMeal = 'X'] = restaurant.order(0, 1);
+                      console.log(starterMeal, mainMeal, sideMeal);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Let's say, when we order we do not order a side dish, so we add a default value to the variables just in case we leave one out.
+                </p>
 
                 <!-- !End of Lecture 103 -->
               </div>
