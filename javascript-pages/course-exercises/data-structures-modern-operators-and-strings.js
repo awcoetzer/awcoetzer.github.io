@@ -102,6 +102,110 @@ console.log('');
 //////////////////// Lecture 104 ////////////////////
 console.log('LECTURE 104');
 
+const restaurant = {
+  name: 'Just Delicious',
+  location: "74-5035 Queen Ka'ahumanu Hwy, Kailua-Kona, Hawaii",
+  categories: [
+    'Seafood & Grill',
+    'Hawaiian BBQ & Grill',
+    'Hawaiian',
+    'Organic',
+  ],
+  starterMenu: [
+    'Garlic Bread',
+    'Bread Sticks',
+    'Hawaiian Salad',
+    'Garlic Snails',
+    'Hot Stone Muscles',
+  ],
+  mainMenu: [
+    'Pizza',
+    'Seafood Grill',
+    'Hawaiian Fried Rice & Seafood',
+    'Seafood Platter with Hawaiian Trio Sauce',
+    'Ocean Fish, Catch Of The Day',
+  ],
+  sidesMenu: [
+    'French Fries',
+    'Hawaiian Coleslaw',
+    'Hawaiian Macaroni Salad',
+    'Pineapple Rice',
+    'Hawaiian Rolls',
+  ],
+  order: function (starterIndex, mainIndex, sidesIndex) {
+    return [
+      this.starterMenu[starterIndex],
+      this.mainMenu[mainIndex],
+      this.sidesMenu[sidesIndex],
+    ];
+  },
+  openingHours: {
+    thr: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 1,
+    sidesIndex = 'X',
+    time = '20:00',
+    address = 'No address was added',
+  }) {
+    console.log(
+      `Order Received! 
+      ${this.starterMenu[starterIndex]}, ${this.mainMenu[mainIndex]}, ${
+        sidesIndex === 'X' ? 'NO SIDES' : this.sidesMenu[sidesIndex]
+      } will be delivered to ${address} at ${time}`
+    );
+  },
+};
+
+// Deconstructing an object
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+// Changing the variable name
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+// Setting default values as well as changing the names
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+console.log(a, b);
+
+const obj = { a: 27, b: 34 };
+({ a, b } = obj);
+console.log(a, b);
+
+// Deconstructing nested objects
+const {fri: {open: o, close: c}} = openingHours;
+console.log(`Opening time is at ${o}, Closing time is at ${c}`);
+
+// Using an object as an argument for a method, which will be deconstructed
+restaurant.orderDelivery({
+  time: '22:00',
+  address: 'Texes State',
+  starterIndex: 3,
+  mainIndex: 2,
+});
+
 console.log('');
 
 //////////////////// Lecture 105 ////////////////////

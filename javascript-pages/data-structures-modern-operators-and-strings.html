@@ -297,11 +297,16 @@
                 </div>
 
                 <p class="lecture-text">
-                  Deconstructing is basically a way of unpacking values from an array or object into separate variables. Deconstructing help to break down a larger data structure into a simpler one.
+                  Deconstructing is basically a way of unpacking values from an
+                  array or object into separate variables. Deconstructing help
+                  to break down a larger data structure into a simpler one.
                 </p>
 
                 <p class="lecture-text">
-                  Above is the deconstructing assignment, brackets to the left of the assignment operator is known for being the deconstructing syntax even though it looks like an array it's not.
+                  Above is the deconstructing assignment, brackets to the left
+                  of the assignment operator is known for being the
+                  deconstructing syntax even though it looks like an array it's
+                  not.
                 </p>
 
                 <span class="pre-heading">Note</span>
@@ -325,7 +330,11 @@
                 </div>
 
                 <p class="lecture-text">
-                  When deconstructing we don't need to select all the value, we can just select in this case the first and second value. Though, what if we didn't want the second value but the third? It's as easy as just placing an empty space as illustrated above.
+                  When deconstructing we don't need to select all the value, we
+                  can just select in this case the first and second value.
+                  Though, what if we didn't want the second value but the third?
+                  It's as easy as just placing an empty space as illustrated
+                  above.
                 </p>
 
                 <div class="code-example">
@@ -349,11 +358,17 @@
                 </div>
 
                 <p class="lecture-text">
-                  Hypothetically, let's say that the owner of the restaurant wanted to switch the main category of his restaurant with the third. Above shows the old way of doing so by using a temp variable to hold the value of main and setting main as secondary and secondary as temp, which holds the original main value.
+                  Hypothetically, let's say that the owner of the restaurant
+                  wanted to switch the main category of his restaurant with the
+                  third. Above shows the old way of doing so by using a temp
+                  variable to hold the value of main and setting main as
+                  secondary and secondary as temp, which holds the original main
+                  value.
                 </p>
 
                 <p class="lecture-text">
-                  The deconstructing way of doing this, is, as you see, a lot simpler.
+                  The deconstructing way of doing this, is, as you see, a lot
+                  simpler.
                 </p>
 
                 <div class="code-example">
@@ -367,7 +382,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above shows how we can receive values from functions and immediately unpack them into variables.
+                  Above shows how we can receive values from functions and
+                  immediately unpack them into variables.
                 </p>
 
                 <div class="code-example">
@@ -382,7 +398,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above illustrates how we can deconstruct nested arrays, by simply adding another deconstruction syntax within the already established deconstruction syntax.
+                  Above illustrates how we can deconstruct nested arrays, by
+                  simply adding another deconstruction syntax within the already
+                  established deconstruction syntax.
                 </p>
 
                 <div class="code-example">
@@ -397,12 +415,12 @@
                 </div>
 
                 <p class="lecture-text">
-                  Sometimes we won't know the length of an array, so we can assign default values to each variable just in case the array is not as long.
+                  Sometimes we won't know the length of an array, so we can
+                  assign default values to each variable just in case the array
+                  is not as long.
                 </p>
 
-                <span class="pre-heading">
-                  Practicing default values
-                </span>
+                <span class="pre-heading">Practicing default values</span>
 
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
@@ -415,7 +433,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Let's say, when we order we do not order a side dish, so we add a default value to the variables just in case we leave one out.
+                  Let's say, when we order we do not order a side dish, so we
+                  add a default value to the variables just in case we leave one
+                  out.
                 </p>
 
                 <!-- !End of Lecture 103 -->
@@ -431,12 +451,198 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const restaurant = {
+                        name: 'Just Delicious',
+                        location: "74-5035 Queen Ka'ahumanu Hwy, Kailua-Kona, Hawaii",
+                        categories: [
+                          'Seafood & Grill',
+                          'Hawaiian BBQ & Grill',
+                          'Hawaiian',
+                          'Organic',
+                        ],
+                        starterMenu: [
+                          'Garlic Bread',
+                          'Bread Sticks',
+                          'Hawaiian Salad',
+                          'Garlic Snails',
+                          'Hot Stone Muscles',
+                        ],
+                        mainMenu: [
+                          'Pizza',
+                          'Seafood Grill',
+                          'Hawaiian Fried Rice & Seafood',
+                          'Seafood Platter with Hawaiian Trio Sauce',
+                          'Ocean Fish, Catch Of The Day',
+                        ],
+                        sidesMenu: [
+                          'French Fries',
+                          'Hawaiian Coleslaw',
+                          'Hawaiian Macaroni Salad',
+                          'Pineapple Rice',
+                          'Hawaiian Rolls',
+                        ],
+                        order: function (starterIndex, mainIndex, sidesIndex) {
+                          return [
+                            this.starterMenu[starterIndex],
+                            this.mainMenu[mainIndex],
+                            this.sidesMenu[sidesIndex],
+                          ];
+                        },
+                        openingHours: {
+                          thr: {
+                            open: 12,
+                            close: 22,
+                          },
+                          fri: {
+                            open: 11,
+                            close: 23,
+                          },
+                          sat: {
+                            open: 0,
+                            close: 24,
+                          },
+                        },
+                        orderDelivery: function ({
+                          starterIndex = 1,
+                          mainIndex = 1,
+                          sidesIndex = 'X',
+                          time = '20:00',
+                          address = 'No address was added',
+                        }) {
+                          console.log(
+                            `Order Received! 
+                            ${this.starterMenu[starterIndex]}, ${this.mainMenu[mainIndex]}, ${
+                              sidesIndex === 'X' ? 'NO SIDES' : this.sidesMenu[sidesIndex]
+                            } will be delivered to ${address} at ${time}`
+                          );
+                        },
+                      };
+                      
+                      // Deconstructing an object
+                      const { name, openingHours, categories } = restaurant;
+                      console.log(name, openingHours, categories);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Similar to deconstructing an array, to deconstruct an object
+                  we use curly braces instead of square brackets. When
+                  deconstructing objects, we don't need to manually skip objects
+                  like we did with arrays, because with objects as we know,
+                  order doesn't matter.
+                </p>
+
+                <p class="lecture-text">
+                  In order to deconstruct we need to use the property names of
+                  the object, at the same time it creates variable based on
+                  those names.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Changing the variable name
+                      const {
+                        name: restaurantName,
+                        openingHours: hours,
+                        categories: tags,
+                      } = restaurant;
+                      console.log(restaurantName, hours, tags);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  As mentioned above, we need to specify the property name in
+                  order to can deconstruct the object, however we can also
+                  change the variable to something other than the properties
+                  name as shown in the above example. This can be very useful
+                  when dealing with 3rd party data.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Setting default values as well as changing the names
+                      const { menu = [], starterMenu: starters = [] } = restaurant;
+                      console.log(menu, starters);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Like arrays, we can give default values, for example, above
+                  there is no menu property in the restaurant object, so it will
+                  receive a default value of an empty array.
+                </p>
+
+                <p class="lecture-text">
+                  You can also combine a new name with a default value.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Mutating variables
+                      let a = 111;
+                      let b = 999;
+                      console.log(a, b);
+
+                      const obj = { a: 27, b: 34 };
+                      ({ a, b } = obj);
+                      console.log(a, b);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Just like switching variables with arrays, we can mutate
+                  variables with objects, but we need to wrap the syntax within
+                  parenthesis, otherwise it's expecting a code block, and you
+                  cannot assign anything to a code block.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Deconstructing nested objects
+                      const {fri: {open: o, close: c}} = openingHours;
+                      console.log(`Opening time is at ${o}, Closing time is at ${c}`);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  With objects deconstructing we can also deconstruct nested
+                  objects, as seen in the example above, we can go as far as
+                  even changing the variable name for those nested object
+                  properties.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Using an object as an argument for a method, which will be deconstructed
+                      restaurant.orderDelivery({
+                        time: '22:00',
+                        address: 'Texes State',
+                        starterIndex: 3,
+                        mainIndex: 2,
+                      });
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Many times in JavaScript, we have functions with a lot of
+                  parameters. It can become hard to know the order of these
+                  parameters for someone using this function. So instead of
+                  defining the parameters manually, we can just pass an object
+                  as an argument to the function and the function will then
+                  deconstruct the object. This is a standard practice in
+                  JavaScript, especially when using 3rd party libraries.
+                </p>
 
                 <!-- !End of Lecture 104 -->
               </div>
@@ -878,7 +1084,9 @@
                   </div>
                 </a>
 
-                <a href="./a-closer-look-at-functions.html" class="prev-next-blog-link">
+                <a
+                  href="./a-closer-look-at-functions.html"
+                  class="prev-next-blog-link">
                   <div class="prev-next-text-box">
                     <span class="pre-heading pre-heading--prev-next">Next</span>
                     <span class="prev-next-blog-name">
