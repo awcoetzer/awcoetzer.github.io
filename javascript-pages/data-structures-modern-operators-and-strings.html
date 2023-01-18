@@ -839,12 +839,97 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const anArray = [1, 2, ...[3, 4]];
+
+                      // The rest operator in the deconstruction syntax
+                      const [a, b, ...otherNumbers] = anArray;
+                      console.log(a, b, otherNumbers);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  The rest pattern has the same syntax as the spread operator, tough does the opposite of the spread operator. The spread operator is to unpack an array while the rest operator is to pack into an array.
+                </p>
+
+                <p class="lecture-text">
+                  How can we tell the difference between the spread and rest operators if they look exactly the same, we spread is on the right of the assignment operator, while rest is on the left.
+                </p>
+
+                <p class="lecture-text">
+                  In the example above, we see the variable called others, the rest operator is called rest as it takes the rest of the elements and packs them into an array.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Rest operator in objects
+                      const {sat: weekendHours, ...weekdayHours} = restaurant.openingHours;
+                      console.log(weekendHours, weekdayHours);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above, we show that we can use both the spread operator and rest operator. A few important things to note is that the rest operator will only start collecting the rest of the elements from the last element in the deconstructing assignment, there can also only be one rest operator, and it has to be the last syntax written within the deconstructing assignment.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Rest operator in objects
+                      const {sat: weekendHours, ...weekdayHours} = restaurant.openingHours;
+                      console.log(weekendHours, weekdayHours);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above, we see how the pattern places the rest of the objects into a new object.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // rest in functions
+                      function restAdd (...nums) {
+                        let sum = 0;
+                        for (let i = 0; i < nums.length; i++) sum += nums[i];
+                        console.log(sum);
+                      }
+
+                      restAdd(1, 2);
+                      restAdd(2, 3, 5);
+                      restAdd(5, 5, 10, 30);
+                      restAdd(5, 2, 3, 5, 15, 10, 5, 2, 3, 50);
+
+                      // taking it one step further and using the spread operator in the function call
+                      const x = [5, 5, 10, 30, 50];
+                      restAdd(...x);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  When the rest syntax is in a function's parameter, it is known as a rest parameter. The benefit of this is that the function can have an infinite amount of values, in this case numbers, without having to define each parameter.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Using the rest operator in our restaurant example
+                      restaurant.orderPizza('pineapple', 'bacon', 'sour cream');
+                                          
+                      // using the spread in combination with the rest param
+                      const pizzaIngredients = ['mushrooms', 'olives', 'spinach', 'pepperoni']
+                      restaurant.orderPizza(...pizzaIngredients);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above, we just use the rest syntax with our restaurant example.
+                </p>
 
                 <!-- !End of Lecture 106 -->
               </div>
