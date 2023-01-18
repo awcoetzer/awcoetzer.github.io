@@ -247,31 +247,31 @@
                         name: 'Just Delicious',
                         location: "74-5035 Queen Ka'ahumanu Hwy, Kailua-Kona, Hawaii",
                         categories: [
-                          'Seafood & Grill',
-                          'Hawaiian BBQ & Grill',
-                          'Hawaiian',
-                          'Organic',
+                          '- Seafood & Grill',
+                          '- Hawaiian BBQ & Grill',
+                          '- Hawaiian',
+                          '- Organic',
                         ],
                         starterMenu: [
-                          'Garlic Bread',
-                          'Bread Sticks',
-                          'Hawaiian Salad',
-                          'Garlic Snails',
-                          'Hot Stone Muscles',
+                          '- Garlic Bread',
+                          '- Bread Sticks',
+                          '- Hawaiian Salad',
+                          '- Garlic Snails',
+                          '- Hot Stone Muscles',
                         ],
                         mainMenu: [
-                          'Pizza',
-                          'Seafood Grill',
-                          'Hawaiian Fried Rice & Seafood',
-                          'Seafood Platter with Hawaiian Trio Sauce',
-                          'Ocean Fish, Catch Of The Day',
+                          '- Pizza',
+                          '- Seafood Grill',
+                          '- Hawaiian Fried Rice & Seafood',
+                          '- Seafood Platter with Hawaiian Trio Sauce',
+                          '- Ocean Fish, Catch Of The Day',
                         ],
                         sidesMenu: [
-                          'French Fries',
-                          'Hawaiian Coleslaw',
-                          'Hawaiian Macaroni Salad',
-                          'Pineapple Rice',
-                          'Hawaiian Rolls',
+                          '- French Fries',
+                          '- Hawaiian Coleslaw',
+                          '- Hawaiian Macaroni Salad',
+                          '- Pineapple Rice',
+                          '- Hawaiian Rolls',
                         ],
                         order: function (starterIndex, mainIndex, sidesIndex) {
                           return [
@@ -280,6 +280,40 @@
                             this.sidesMenu[sidesIndex],
                           ];
                         },
+                        openingHours: {
+                          thr: {
+                            open: 12,
+                            close: 22,
+                          },
+                          fri: {
+                            open: 11,
+                            close: 23,
+                          },
+                          sat: {
+                            open: 0,
+                            close: 24,
+                          },
+                        },
+                        orderDelivery: function ({
+                          starterIndex = 1,
+                          mainIndex = 1,
+                          sidesIndex = 'X',
+                          time = '20:00',
+                          address = 'No address was added',
+                        }) {
+                          console.log(
+                            `Order Received! 
+                            ${this.starterMenu[starterIndex]}, ${this.mainMenu[mainIndex]}, ${
+                              sidesIndex === 'X' ? 'NO SIDES' : this.sidesMenu[sidesIndex]
+                            } will be delivered to ${address} at ${time}`
+                          );
+                        },
+                        orderPasta: function (ing1, ing2, ing3) {
+                          console.log(`Your pasta is ready and includes ${ing1}, ${ing2} and ${ing3}`);
+                        },
+                        orderPizza: function (mainIngredient, ...otherIngredients) {
+                          console.log(`Your ${mainIngredient} pizza is ready, with the optional ingredients ${otherIngredients} added`);
+                        }
                       };
 
                       // Introduction to deconstructing arrays
@@ -657,12 +691,140 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const arr = [3, 4, 5];
+                      const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+                      console.log(badNewArr);
+
+                      // Using the spread operator inside a array literal
+                      const newArr = [1, 2, ...arr];
+                      console.log(newArr);
+
+                      // Using the spread operator in functions
+                      console.log(...newArr);
+                      console.log(...restaurant.mainMenu);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  You can use the spread operator to basically unpack an array's
+                  elements. We use the spread operator whenever we would
+                  otherwise write multiple values that are separated by a comma.
+                </p>
+
+                <p class="lecture-text">
+                  That situation happens when we write array literals, for
+                  example, [1, 2, 3] or when we pass arguments into a function
+                  as the console.log() example above.
+                </p>
+
+                <p class="lecture-text">
+                  You might think that the spread operator is similar to that of
+                  deconstructing. The difference however is that it doesn't make
+                  new variables and takes all values from the array. The
+                  consequence of this is we can only use it where values are
+                  separated by commas are expected.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Creating a new array built off of another, while adding to it
+                      const newMenu = [...restaurant.mainMenu, '- Grilled Cheese'];
+                      console.log(...newMenu);
+
+                      // Shallow copy of an array
+                      const mainMenuCopy = [...restaurant.mainMenu]
+                      console.log(mainMenuCopy);
+
+                      // Merging arrays
+                      const menuMerge = [...restaurant.starterMenu, ...restaurant.mainMenu, ...restaurant.sidesMenu];
+                      console.log(menuMerge);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Two important use cases for the spread operator is to make
+                  shallow copies of arrays much like the object.assign({},
+                  object) method, just this syntax is easier. The other being
+                  the ability to merge arrays together.
+                </p>
+
+                <p class="lecture-text">
+                  The spread operator is not only for arrays, it's for all
+                  so-called iterable elements. Iterable's are things like
+                  arrays, strings, maps and sets which we will look into later,
+                  but not objects.
+                </p>
+
+                <p class="lecture-text">
+                  Basically, most of the built-in data structures in JavaScript
+                  are iterable, just not objects. Though later we will see
+                  objects support the spread operator.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Using the spread operator on strings
+                      const str =  'Andre';
+                      const letters = [...str, , 'C.']
+                      console.log(letters)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Since strings are iterable, we can unpack the string into an
+                  array, where each letter is its own value within the array.
+                  Remember, you can only use spread in an array or function
+                  argument, where they expect values separated by commas.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Spread operator using our restaurant example
+                      const ingredients = [
+                        prompt('Lets make your pasta!, Whats your first Ingredient?'),
+                        prompt('Whats your second ingredient?'),
+                        prompt('Whats your third ingredient?'),
+                      ];
+                      console.log(ingredients);
+
+                      restaurant.orderPasta(...ingredients)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above we wrote a function that when you order pasta you are
+                  prompt'ed with choosing 3 ingredients. We take this array of
+                  values and unpack them in the order pasta function using the
+                  spread operator.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Spread operator with objects
+                      const newRestaurant = {foundedIn: 1989, ...restaurant, founder: 'Hala Lulu'};
+                      console.log(restaurant);
+                      console.log(newRestaurant);
+
+                      // Coping is not pointing to same reference
+                      const restaurantCopy = {...restaurant};
+                      restaurantCopy.name = 'Hala Lulu';
+                      console.log(restaurant.name, restaurantCopy.name);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Since 2018 the spread operator works with objects even though
+                  it's not an iterable.
+                </p>
 
                 <!-- !End of Lecture 105 -->
               </div>
