@@ -973,11 +973,17 @@
                 </div>
 
                 <p class="lecture-text">
-                  Up until now we used logical operators for boolean values, the truth is we can use them for a lot more. There are 3 properties for logical operators, and they are that they can use ANY data type, they can return ANY data type, and they can be used for short-circuiting or short circuit evaluation.
+                  Up until now we used logical operators for boolean values, the
+                  truth is we can use them for a lot more. There are 3
+                  properties for logical operators, and they are that they can
+                  use ANY data type, they can return ANY data type, and they can
+                  be used for short-circuiting or short circuit evaluation.
                 </p>
 
                 <p class="lecture-text">
-                  Short-circuiting in the case of the 'OR' logical operator is that it will return the first truthy value, though if both are true it will return the last operand or value.
+                  Short-circuiting in the case of the 'OR' logical operator is
+                  that it will return the first truthy value, though if both are
+                  true it will return the last operand or value.
                 </p>
 
                 <div class="code-example">
@@ -995,7 +1001,11 @@
                 </div>
 
                 <p class="lecture-text">
-                  The example above shows how we can use short-circuiting to set a default value, if something doesn't exist. There is a small problem with the example above, and that is if the number of guests is actually 0, it will default to 10, in the next lecture we look at how we can prevent this.
+                  The example above shows how we can use short-circuiting to set
+                  a default value, if something doesn't exist. There is a small
+                  problem with the example above, and that is if the number of
+                  guests is actually 0, it will default to 10, in the next
+                  lecture we look at how we can prevent this.
                 </p>
 
                 <div class="code-example">
@@ -1009,7 +1019,11 @@
                 </div>
 
                 <p class="lecture-text">
-                  When it comes to the short circuit evaluation of the 'AND' operator, it works the complete opposite of the 'OR' operator. The 'AND' operator short circuits when the value is falsy, if both are falsy just like the 'OR' it will return the last value or operand.
+                  When it comes to the short circuit evaluation of the 'AND'
+                  operator, it works the complete opposite of the 'OR' operator.
+                  The 'AND' operator short circuits when the value is falsy, if
+                  both are falsy just like the 'OR' it will return the last
+                  value or operand.
                 </p>
 
                 <div class="code-example">
@@ -1026,7 +1040,11 @@
                 </div>
 
                 <p class="lecture-text">
-                  We can use the 'AND' short circuit evaluation to check if something exists. As for a practical explanation, we can use the 'OR' short-circuiting to set default values if the value is falsy, and with 'AND' we can execute code if the value is truthy.
+                  We can use the 'AND' short circuit evaluation to check if
+                  something exists. As for a practical explanation, we can use
+                  the 'OR' short-circuiting to set default values if the value
+                  is falsy, and with 'AND' we can execute code if the value is
+                  truthy.
                 </p>
 
                 <!-- !End of Lecture 107 -->
@@ -1058,15 +1076,27 @@
                 </div>
 
                 <p class="lecture-text">
-                  Before we had this problem with the 'OR' short circuit evaluation, where it saw the 0 as a falsy value and then returned the next value which was 10 and truthy, even it were both falsy it will still return the last value or operand.
+                  Before we had this problem with the 'OR' short circuit
+                  evaluation, where it saw the 0 as a falsy value and then
+                  returned the next value which was 10 and truthy, even it were
+                  both falsy it will still return the last value or operand.
                 </p>
 
                 <p class="lecture-text">
-                  However, lucky for us, there is the nullish coalescing operator that works the same way as the 'OR' but will yield the correct result. This works because it doesn't work with falsy values, but nullish values. Nullish values are undefined and null, (NOT 0 or ''), these are seen as if they were truthy. It's important to know it works the exact same way as the 'OR' Short circuit evaluation, just not with falsy values.
+                  However, lucky for us, there is the nullish coalescing
+                  operator that works the same way as the 'OR' but will yield
+                  the correct result. This works because it doesn't work with
+                  falsy values, but nullish values. Nullish values are undefined
+                  and null, (NOT 0 or ''), these are seen as if they were
+                  truthy. It's important to know it works the exact same way as
+                  the 'OR' Short circuit evaluation, just not with falsy values.
                 </p>
 
                 <p class="lecture-text">
-                  Basically, if set to 0 it short-circuits and immediately the first non nullish value is returned as if it were truthy, but if there were a nullish value it would return the right side operand of 10.
+                  Basically, if set to 0 it short-circuits and immediately the
+                  first non nullish value is returned as if it were truthy, but
+                  if there were a nullish value it would return the right side
+                  operand of 10.
                 </p>
 
                 <!-- !End of Lecture 108 -->
@@ -1107,7 +1137,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  Even more modern than the coalescing operator is the new logical assignment operators that were introduced in 2021. Basically, the 'OR' assignment operator assigns a value to the property if the property has a falsy value.
+                  Even more modern than the coalescing operator is the new
+                  logical assignment operators that were introduced in 2021.
+                  Basically, the 'OR' assignment operator assigns a value to the
+                  property if the property has a falsy value.
                 </p>
 
                 <div class="code-example">
@@ -1126,7 +1159,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above with the 'OR' logical operator, we ran into the same problem when setting the value to 0, but we do have a nullish assignment operator that works as we would expect it should.
+                  Above with the 'OR' logical operator, we ran into the same
+                  problem when setting the value to 0, but we do have a nullish
+                  assignment operator that works as we would expect it should.
                 </p>
 
                 <div class="code-example">
@@ -1145,7 +1180,13 @@
                 </div>
 
                 <p class="lecture-text">
-                  We also have the 'AND' assignment operator, which works as expected. However, it's good to note that with rest1 not having an owner property, with the first method of using the short circuit evaluation, it assigns the property and gives it the value of undefined, while when using the logical 'AND' assignment operator it does not. Just something to keep in mind.
+                  We also have the 'AND' assignment operator, which works as
+                  expected. However, it's good to note that with rest1 not
+                  having an owner property, with the first method of using the
+                  short circuit evaluation, it assigns the property and gives it
+                  the value of undefined, while when using the logical 'AND'
+                  assignment operator it does not. Just something to keep in
+                  mind.
                 </p>
 
                 <!-- !End of Lecture 109 -->
@@ -1158,15 +1199,157 @@
                   Coding Challenge #1
                 </h3>
 
+                <p class="lecture-text">
+                  We're building a football betting app (soccer for my American
+                  friends 😅)! Suppose we get data from a web service about a
+                  certain game ('game' variable on next page). In this challenge
+                  we're gonna work with that data.
+                </p>
+
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create one player array for each team (variables
+                      'players1' and 'players2').
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      The first player in any player array is the goalkeeper and
+                      the others are field players. For Bayern Munich (team 1)
+                      create one variable ('gk') with the goalkeeper's name, and
+                      one array ('fieldPlayers') with all the remaining 10 field
+                      players.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Create an array 'allPlayers' containing all players of
+                      both teams (22 players).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      During the game, Bayern Munich (team 1) used 3 substitute
+                      players. So create a new array ('players1Final')
+                      containing all the original team1 players plus 'Thiago',
+                      'Coutinho' and 'Perisic'.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Based on the game.odds object, create one variable for
+                      each odd (called 'team1', 'draw' and 'team2').
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Write a function ('printGoals') that receives an arbitrary
+                      number of player names (not an array) and prints each of
+                      them to the console, along with the number of goals that
+                      were scored in total (number of player names passed in).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      The team with the lower odd is more likely to win. Print
+                      to the console which team is more likely to win, without
+                      using an if/else statement or the ternary operator.
+                    </p>
+                  </li>
+                </ol>
+
+                <span class="pre-heading">Test Data for 6:</span>
+                <ul class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      First, use players 'Davies', 'Muller', 'Lewandowski' and
+                      'Kimmich'. Then, call the function again with players from
+                      game.scored
+                    </p>
+                  </li>
+                </ul>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const game = {
+                        team1: 'Bayern Munich',
+                        team2: 'Borrussia Dortmund',
+                        players: [
+                          [
+                            'Neuer',
+                            'Pavard',
+                            'Martinez',
+                            'Alaba',
+                            'Davies',
+                            'Kimmich',
+                            'Goretzka',
+                            'Coman',
+                            'Muller',
+                            'Gnarby',
+                            'Lewandowski',
+                          ],
+                          [
+                            'Burki',
+                            'Schulz',
+                            'Hummels',
+                            'Akanji',
+                            'Hakimi',
+                            'Weigl',
+                            'Witsel',
+                            'Hazard',
+                            'Brandt',
+                            'Sancho',
+                            'Gotze',
+                          ],
+                        ],
+                        score: '4:0',
+                        scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+                        date: 'Nov 9th, 2037',
+                        odds: {
+                          team1: 1.33,
+                          x: 3.25,
+                          team2: 6.5,
+                        },
+                      };
+
+                      // Task 1
+                      const [playersOne, playersTwo] = game.players;
+                      console.log(`Players One: ${playersOne}`);
+                      console.log(`Players Two: ${playersTwo}`);
+
+                      // Task 2
+                      const [gk, ...fieldPlayers] = playersOne;
+                      console.log(`GoalKeeper is ${gk} and field players are`, fieldPlayers);
+
+                      // Task 3
+                      const allPlayers = [...playersOne, ...playersTwo];
+                      console.log('All players are ', allPlayers);
+
+                      // Task 4
+                      const playersFinal = ['Thiago', 'Coutinho', ...playersOne, 'Perisic'];
+                      console.log('The final team for Team One ', playersFinal);
+
+                      // Task 5
+                      const { odds: {team1: teamOne, x: draw, team2: teamTwo} } = game;
+                      console.log(`Team 1: ${teamOne}, Draw: ${draw}, Team 2: ${teamTwo}`);
+
+                      // Task 6
+                      // Part 1
+                      game.printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
+
+                      game.printGoals('Lewandowski', 'Gnarby');
+
+                      // Part 2
+                      game.printGoals(...game.scored);
+
+                      // Task 7
+                      teamOne &lt; teamTwo && console.log('Team one is more likely to win');
                     </code>
                   </pre>
                 </div>
-
-                <p class="lecture-text">CHANGE ME</p>
 
                 <!-- !End of Lecture 110 -->
               </div>
