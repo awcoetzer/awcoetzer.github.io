@@ -70,11 +70,15 @@ const restaurant = {
     );
   },
   orderPasta: function (ing1, ing2, ing3) {
-    console.log(`Your pasta is ready and includes ${ing1}, ${ing2} and ${ing3}`);
+    console.log(
+      `Your pasta is ready and includes ${ing1}, ${ing2} and ${ing3}`
+    );
   },
   orderPizza: function (mainIngredient, ...otherIngredients) {
-    console.log(`Your ${mainIngredient} pizza is ready, with the optional ingredients ${otherIngredients} added`);
-  }
+    console.log(
+      `Your ${mainIngredient} pizza is ready, with the optional ingredients ${otherIngredients} added`
+    );
+  },
 };
 
 // // Introduction to deconstructing arrays
@@ -232,47 +236,76 @@ console.log('');
 //////////////////// Lecture 106 ////////////////////
 console.log('LECTURE 106');
 
-const anArray = [1, 2, ...[3, 4]];
+// const anArray = [1, 2, ...[3, 4]];
 
-// The rest operator in the deconstruction syntax
-const [a, b, ...otherNumbers] = anArray;
-console.log(a, b, otherNumbers);
+// // The rest operator in the deconstruction syntax
+// const [a, b, ...otherNumbers] = anArray;
+// console.log(a, b, otherNumbers);
 
-// Using both rest and spread operators
-const [pizza, seaFoodGrill, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(pizza, seaFoodGrill, otherFood);
+// // Using both rest and spread operators
+// const [pizza, seaFoodGrill, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, seaFoodGrill, otherFood);
 
-// Rest operator in objects
-const {sat: weekendHours, ...weekdayHours} = restaurant.openingHours;
-console.log(weekendHours, weekdayHours);
+// // Rest operator in objects
+// const {sat: weekendHours, ...weekdayHours} = restaurant.openingHours;
+// console.log(weekendHours, weekdayHours);
 
-// rest in functions
-function restAdd (...nums) {
-  let sum = 0;
-  for (let i = 0; i < nums.length; i++) sum += nums[i];
-  console.log(sum);
-}
+// // rest in functions
+// function restAdd (...nums) {
+//   let sum = 0;
+//   for (let i = 0; i < nums.length; i++) sum += nums[i];
+//   console.log(sum);
+// }
 
-restAdd(1, 2);
-restAdd(2, 3, 5);
-restAdd(5, 5, 10, 30);
-restAdd(5, 2, 3, 5, 15, 10, 5, 2, 3, 50);
+// restAdd(1, 2);
+// restAdd(2, 3, 5);
+// restAdd(5, 5, 10, 30);
+// restAdd(5, 2, 3, 5, 15, 10, 5, 2, 3, 50);
 
-// taking it one step further and using the spread operator in the function call
-const x = [5, 5, 10, 30, 50];
-restAdd(...x);
+// // taking it one step further and using the spread operator in the function call
+// const x = [5, 5, 10, 30, 50];
+// restAdd(...x);
 
-// Using the rest operator in our restaurant example
-restaurant.orderPizza('pineapple', 'bacon', 'sour cream');
+// // Using the rest operator in our restaurant example
+// restaurant.orderPizza('pineapple', 'bacon', 'sour cream');
 
-// using the spread in combination with the rest param
-const pizzaIngredients = ['mushrooms', 'olives', 'spinach', 'pepperoni']
-restaurant.orderPizza(...pizzaIngredients);
+// // using the spread in combination with the rest param
+// const pizzaIngredients = ['mushrooms', 'olives', 'spinach', 'pepperoni']
+// restaurant.orderPizza(...pizzaIngredients);
 
 console.log('');
 
 //////////////////// Lecture 107 ////////////////////
 console.log('LECTURE 107');
+
+// // Short circuiting with OR
+// console.log('---- OR Short Circuit Evaluation ----');
+// console.log(3 || 'Andre');
+// console.log('' || 'Andre');
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// // Practical use case for OR
+// restaurant.numGuests = 0; // This can cause an issue
+// const guestOne = restaurant.numGuests ? restaurant.numGuests : 10;
+// const guestTwo = restaurant.numGuests || 10;
+
+// console.log(guestOne);
+// console.log(guestTwo);
+
+// console.log('---- AND Short Circuit Evaluation ----');
+
+// console.log(0 && 'Andre');
+// console.log('Jonas' && 'Andre');
+// console.log('Hello' && 23 && null && '' && 'Andre');
+
+// // Practical use case for AND
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('Pepperoni', 'Basil', 'Feta');
+// };
+
+// restaurant.orderPizza && restaurant.orderPizza('Pepperoni', 'Basil', 'Feta');
 
 console.log('');
 
