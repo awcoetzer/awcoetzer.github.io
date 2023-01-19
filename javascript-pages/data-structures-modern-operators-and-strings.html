@@ -1019,7 +1019,7 @@
                       if (restaurant.orderPizza) {
                         restaurant.orderPizza('Pepperoni', 'Basil', 'Feta');
                       };
-                      
+
                       restaurant.orderPizza && restaurant.orderPizza('Pepperoni', 'Basil', 'Feta');
                     </code>
                   </pre>
@@ -1042,12 +1042,32 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Practical use case for OR
+                      restaurant.numGuests = 0; // This can cause an issue
+                      const guestOne = restaurant.numGuests ? restaurant.numGuests : 10;
+                      const guestTwo = restaurant.numGuests || 10;
+
+                      console.log(guestOne);
+                      console.log(guestTwo);
+
+                      // Nullish coalescing operator (??)
+                      const guestThree = restaurant.numGuests ?? 10;
+                      console.log(guestThree);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Before we had this problem with the 'OR' short circuit evaluation, where it saw the 0 as a falsy value and then returned the next value which was 10 and truthy, even it were both falsy it will still return the last value or operand.
+                </p>
+
+                <p class="lecture-text">
+                  However, lucky for us, there is the nullish coalescing operator that works the same way as the 'OR' but will yield the correct result. This works because it doesn't work with falsy values, but nullish values. Nullish values are undefined and null, (NOT 0 or ''), these are seen as if they were truthy. It's important to know it works the exact same way as the 'OR' Short circuit evaluation, just not with falsy values.
+                </p>
+
+                <p class="lecture-text">
+                  Basically, if set to 0 it short-circuits and immediately the first non nullish value is returned as if it were truthy.
+                </p>
 
                 <!-- !End of Lecture 108 -->
               </div>

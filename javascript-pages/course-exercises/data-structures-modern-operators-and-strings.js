@@ -312,6 +312,18 @@ console.log('');
 //////////////////// Lecture 108 ////////////////////
 console.log('LECTURE 108');
 
+// // Practical use case for OR
+// restaurant.numGuests = 0; // This can cause an issue
+// const guestOne = restaurant.numGuests ? restaurant.numGuests : 10;
+// const guestTwo = restaurant.numGuests || 10;
+
+// console.log(guestOne);
+// console.log(guestTwo);
+
+// // Nullish coalescing operator (??)
+// const guestThree = restaurant.numGuests ?? 10;
+// console.log(guestThree);
+
 console.log('');
 
 //////////////////// Lecture 109 ////////////////////
