@@ -1082,12 +1082,71 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const rest1 = {
+                        name: 'Pizzaria Maria',
+                        numGuests: 0,
+                      }
+
+                      const rest2 = {
+                        name: 'Taco Taco',
+                        owner: 'El Sanchez',
+                      }
+
+                      // the logical OR assignment operator
+                      rest1.numGuests = rest1.numGuests || 10;
+                      rest2.numGuests = rest2.numGuests || 10;
+                      console.log(rest1)
+                      console.log(rest2)
+
+                      rest1.numGuests ||= 15;
+                      rest2.numGuests ||= 15;
+                      console.log(rest1)
+                      console.log(rest2)
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Even more modern than the coalescing operator is the new logical assignment operators that were introduced in 2021. Basically, the 'OR' assignment operator assigns a value to the property if the property has a falsy value.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // the nullish assignment operator
+                        rest1.numGuests = rest1numGuests ?? 15;
+                        rest2.numGuests = rest2numGuests ?? 15;
+
+                        rest1.numGuests ??= 15;
+                        rest2.numGuests ??= 15;
+                        console.log(rest1)
+                        console.log(rest2)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above with the 'OR' logical operator, we ran into the same problem when setting the value to 0, but we do have a nullish assignment operator that works as we would expect it should.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // the logical AND assignment operator
+                      rest1.owner = rest1.owner && '&lt;ANONYMOUS&gt;'
+                      rest2.owner = rest2.owner && '&lt;ANONYMOUS&gt;'
+                      
+                      rest1.owner &&= '&lt;ANONYMOUS&gt;'
+                      rest2.owner &&= '&lt;ANONYMOUS&gt;'
+                      console.log(rest1);
+                      console.log(rest2);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  We also have the 'AND' assignment operator, which works as expected. However, it's good to note that with rest1 not having an owner property, with the first method of using the short circuit evaluation, it assigns the property and gives it the value of undefined, while when using the logical 'AND' assignment operator it does not. Just something to keep in mind.
+                </p>
 
                 <!-- !End of Lecture 109 -->
               </div>
