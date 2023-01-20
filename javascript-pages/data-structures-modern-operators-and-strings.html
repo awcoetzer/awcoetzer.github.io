@@ -242,7 +242,24 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
+                      const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+
                       // Made up restaurant menu app
+                      const openingHours = {
+                        [weekdays[3]]: {
+                          open: 12,
+                          close: 22,
+                        },
+                        [weekdays[4]]: {
+                          open: 11,
+                          close: 23,
+                        },
+                        [weekdays[5]]: {
+                          open: 0,
+                          close: 24,
+                        },
+                      };
+
                       const restaurant = {
                         name: 'Just Delicious',
                         location: "74-5035 Queen Ka'ahumanu Hwy, Kailua-Kona, Hawaii",
@@ -273,28 +290,15 @@
                           '- Pineapple Rice',
                           '- Hawaiian Rolls',
                         ],
-                        order: function (starterIndex, mainIndex, sidesIndex) {
+                        order(starterIndex, mainIndex, sidesIndex) {
                           return [
                             this.starterMenu[starterIndex],
                             this.mainMenu[mainIndex],
                             this.sidesMenu[sidesIndex],
                           ];
                         },
-                        openingHours: {
-                          thr: {
-                            open: 12,
-                            close: 22,
-                          },
-                          fri: {
-                            open: 11,
-                            close: 23,
-                          },
-                          sat: {
-                            open: 0,
-                            close: 24,
-                          },
-                        },
-                        orderDelivery: function ({
+                        openingHours,
+                        orderDelivery({
                           starterIndex = 1,
                           mainIndex = 1,
                           sidesIndex = 'X',
@@ -308,12 +312,16 @@
                             } will be delivered to ${address} at ${time}`
                           );
                         },
-                        orderPasta: function (ing1, ing2, ing3) {
-                          console.log(`Your pasta is ready and includes ${ing1}, ${ing2} and ${ing3}`);
+                        orderPasta(ing1, ing2, ing3) {
+                          console.log(
+                            `Your pasta is ready and includes ${ing1}, ${ing2} and ${ing3}`
+                          );
                         },
-                        orderPizza: function (mainIngredient, ...otherIngredients) {
-                          console.log(`Your ${mainIngredient} pizza is ready, with the optional ingredients ${otherIngredients} added`);
-                        }
+                        orderPizza(mainIngredient, ...otherIngredients) {
+                          console.log(
+                            `Your ${mainIngredient} pizza is ready, with the optional ingredients ${otherIngredients} added`
+                          );
+                        },
                       };
 
                       // Introduction to deconstructing arrays
@@ -1293,12 +1301,44 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+                      // The for-of loop
+                      for ( const item of menu) console.log(item);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  When looping over an array we already know how it's done using the traditional for loop and setting up the counter, a condition and the incrementing the counter, however, with the 'for-of' loop we skip all that.
+                </p>
+
+                <p class="lecture-text">
+                  This will automatically loop over the entire array. It's important to note that 'for-of' loop can still utilize the break and continue keywords.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // To get the index value
+                      for (const item of menu.entries()) {
+                        console.log(item)
+                      }
+
+                      for (const [i, item] of menu.entries()) {
+                        console.log(`${i + 1} ${item}`)
+                      }
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The 'for-of' loop was not really designed to provide an index value, however it is still possible using the 'entries()' method, which will place each iteration in its own array with an index number.
+                </p>
+
+                <p class="lecture-text">
+                  Since item is now an array, we can use array deconstruction to set each index to its own variable.
+                </p>
 
                 <!-- !End of Lecture 111 -->
               </div>
@@ -1313,12 +1353,31 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const spices = {
+                        driedFruit: ['Apples', 'Pears', 'Strawberry'],
+                        spiceMix: ['cinnamon sticks', 'allspice berries', 'lemongrass'],
+                      };
+
+                      const tea = {
+                        name: 'Lemon Tang',
+                        spices,
+                        isWaterBoiled: true,
+                        addWater() {
+                          if (this.isWaterBoiled) console.log(`${this.isWaterBoiled &&= `Water is boiled, lets make some ${this.name} tea betch`}`);
+                        },
+                      }
+                      tea.addWater()
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  In modern JavaScript, they introduced 3 ways to make it easier to write object literals. The first is you can place an outside object inside an object just a providing the name.
+                </p>
+
+                <p class="lecture-text">
+                  The second is you no longer need to write function expressions (see example above). Third is you can compute an object name if it was already declared in an array for example.
+                </p>
 
                 <!-- !End of Lecture 112 -->
               </div>
@@ -1338,7 +1397,9 @@
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  
+                </p>
 
                 <!-- !End of Lecture 113 -->
               </div>

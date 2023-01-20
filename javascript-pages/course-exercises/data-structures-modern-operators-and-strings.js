@@ -3,7 +3,24 @@
 //////////////////// Lecture 103 ////////////////////
 console.log('LECTURE 103');
 
-// // Made up restaurant menu app
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+
+// Made up restaurant menu app
+const openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[5]]: {
+    open: 0,
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Just Delicious',
   location: "74-5035 Queen Ka'ahumanu Hwy, Kailua-Kona, Hawaii",
@@ -34,28 +51,15 @@ const restaurant = {
     '- Pineapple Rice',
     '- Hawaiian Rolls',
   ],
-  order: function (starterIndex, mainIndex, sidesIndex) {
+  order(starterIndex, mainIndex, sidesIndex) {
     return [
       this.starterMenu[starterIndex],
       this.mainMenu[mainIndex],
       this.sidesMenu[sidesIndex],
     ];
   },
-  openingHours: {
-    thr: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
-  orderDelivery: function ({
+  openingHours,
+  orderDelivery({
     starterIndex = 1,
     mainIndex = 1,
     sidesIndex = 'X',
@@ -69,12 +73,12 @@ const restaurant = {
       } will be delivered to ${address} at ${time}`
     );
   },
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(
       `Your pasta is ready and includes ${ing1}, ${ing2} and ${ing3}`
     );
   },
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(
       `Your ${mainIngredient} pizza is ready, with the optional ingredients ${otherIngredients} added`
     );
@@ -469,10 +473,39 @@ console.log('');
 //////////////////// Lecture 111 ////////////////////
 console.log('LECTURE 111');
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// The for-of loop
+for ( const item of menu) console.log(item);
+
+// To get the index value
+for (const item of menu.entries()) {
+  console.log(item)
+}
+
+for (const [i, item] of menu.entries()) {
+  console.log(`${i + 1} ${item}`)
+}
+
 console.log('');
 
 //////////////////// Lecture 112 ////////////////////
 console.log('LECTURE 112');
+
+const spices = {
+  driedFruit: ['Apples', 'Pears', 'Strawberry'],
+  spiceMix: ['cinnamon sticks', 'allspice berries', 'lemongrass'],
+};
+
+const tea = {
+  name: 'Lemon Tang',
+  spices,
+  isWaterBoiled: true,
+  addWater() {
+    if (this.isWaterBoiled) console.log(`${this.isWaterBoiled &&= `Water is boiled, lets make some ${this.name} tea betch`}`);
+  },
+}
+tea.addWater()
 
 console.log('');
 
