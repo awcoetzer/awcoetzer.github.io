@@ -3,7 +3,7 @@
 //////////////////// Lecture 103 ////////////////////
 console.log('LECTURE 103');
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 // Made up restaurant menu app
 const openingHours = {
@@ -473,44 +473,79 @@ console.log('');
 //////////////////// Lecture 111 ////////////////////
 console.log('LECTURE 111');
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-// The for-of loop
-for ( const item of menu) console.log(item);
+// // The for-of loop
+// for (const item of menu) console.log(item);
 
-// To get the index value
-for (const item of menu.entries()) {
-  console.log(item)
-}
+// // To get the index value
+// for (const item of menu.entries()) {
+//   console.log(item);
+// }
 
-for (const [i, item] of menu.entries()) {
-  console.log(`${i + 1} ${item}`)
-}
+// for (const [i, item] of menu.entries()) {
+//   console.log(`${i + 1} ${item}`);
+// }
 
 console.log('');
 
 //////////////////// Lecture 112 ////////////////////
 console.log('LECTURE 112');
 
-const spices = {
-  driedFruit: ['Apples', 'Pears', 'Strawberry'],
-  spiceMix: ['cinnamon sticks', 'allspice berries', 'lemongrass'],
-};
+// const spices = {
+//   driedFruit: ['Apples', 'Pears', 'Strawberry'],
+//   spiceMix: ['cinnamon sticks', 'allspice berries', 'lemongrass'],
+// };
 
-const tea = {
-  name: 'Lemon Tang',
-  spices,
-  isWaterBoiled: true,
-  addWater() {
-    if (this.isWaterBoiled) console.log(`${this.isWaterBoiled &&= `Water is boiled, lets make some ${this.name} tea betch`}`);
-  },
-}
-tea.addWater()
+// const tea = {
+//   name: 'Lemon Tang',
+//   spices,
+//   isWaterBoiled: true,
+//   addWater() {
+//     if (this.isWaterBoiled)
+//       console.log(
+//         `${(this.isWaterBoiled &&= `Water is boiled, lets make some ${this.name} tea betch`)}`
+//       );
+//   },
+// };
+// tea.addWater();
 
 console.log('');
 
 //////////////////// Lecture 113 ////////////////////
 console.log('LECTURE 113');
+
+if (restaurant.openingHours && restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon.open);
+} else {
+  console.log('Does not exist');
+}
+// The optional chaining operator
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// practical Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  const open = restaurant.openingHours[days]?.open ?? 'closed';
+  console.log(`On ${day} we are open at ${open}`);
+}
+
+// Optional chaining with methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Optional chaining with arrays
+const usersOne = [{ founder: 'Andre', email: 'learning@somewhere.com' }];
+console.log(usersOne[0]?.founder ?? 'User does not exist');
+
+const usersTwo = [{ name: 'Andre', email: 'learning@somewhere.com' }];
+console.log(usersTwo[0]?.founder ?? 'User does not exist');
+
+// This show we would have to write it without optional chaining
+if (usersOne.length > 0) console.log(usersOne[0].founder);
+else console.log('User does not exist');
 
 console.log('');
 

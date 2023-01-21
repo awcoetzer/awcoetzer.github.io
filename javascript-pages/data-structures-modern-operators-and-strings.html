@@ -1392,13 +1392,77 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      if (restaurant.openingHours && restaurant.openingHours.mon) {
+                        console.log(restaurant.openingHours.mon.open);
+                      } else {
+                        console.log('Does not exist');
+                      }
+                      // The optional chaining operator
+                      console.log(restaurant.openingHours.mon?.open);
+                      console.log(restaurant.openingHours?.mon?.open);
                     </code>
                   </pre>
                 </div>
 
                 <p class="lecture-text">
-                  
+                  With optional chaining, if a certain property does not exist, it will return undefined immediately. Above, with the optional chaining example, we are recreating the first example or if statement.
+                </p>
+
+                <p class="lecture-text">
+                  What it says basically if .mon exists then return .open if it does not exist it will return undefined immediately. A property exists if it's not null or undefined, so the nullish coalescing concept is adopted here, meaning if it were 0 or an empty string it will exist.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // practical Example
+                      const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+                      for (const day of days) {
+                        const open = restaurant.openingHours[days]?.open ?? 'closed';
+                        console.log(`On ${day} we are open at ${open}`);
+                      }
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is a practical example if we had used an API and wanted to know if the restaurant was open and on which day it was open, using the optional chaining and nullish coalescing. 
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Optional chaining with methods
+                      console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+                      console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Optional chaining can also check if methods exists, and if it does exist to then execute the function. Remember to always use the nullish coalescing operator with optional chaining.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Optional chaining with arrays
+                      const usersOne = [{ founder: 'Andre', email: 'learning@somewhere.com' }];
+                      console.log(usersOne[0]?.founder ?? 'User does not exist');
+                                          
+                      const usersTwo = [{ name: 'Andre', email: 'learning@somewhere.com' }];
+                      console.log(usersTwo[0]?.founder ?? 'User does not exist');
+                                          
+                      // This show we would have to write it without optional chaining
+                      if (usersOne.length > 0) console.log(usersOne[0].founder);
+                      else console.log('User does not exist');
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Again, optional chaining, can also be used with arrays for example if an array is empty or not. The if statement above is an example of how we would have had to do this with the if statement.
                 </p>
 
                 <!-- !End of Lecture 113 -->
