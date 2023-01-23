@@ -515,42 +515,71 @@ console.log('');
 //////////////////// Lecture 113 ////////////////////
 console.log('LECTURE 113');
 
-if (restaurant.openingHours && restaurant.openingHours.mon) {
-  console.log(restaurant.openingHours.mon.open);
-} else {
-  console.log('Does not exist');
-}
-// The optional chaining operator
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
+// if (restaurant.openingHours && restaurant.openingHours.mon) {
+//   console.log(restaurant.openingHours.mon.open);
+// } else {
+//   console.log('Does not exist');
+// }
+// // The optional chaining operator
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
 
-// practical Example
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// // practical Example
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-for (const day of days) {
-  const open = restaurant.openingHours[days]?.open ?? 'closed';
-  console.log(`On ${day} we are open at ${open}`);
-}
+// for (const day of days) {
+//   const open = restaurant.openingHours[days]?.open ?? 'closed';
+//   console.log(`On ${day} we are open at ${open}`);
+// }
 
-// Optional chaining with methods
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+// // Optional chaining with methods
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+// console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 
-// Optional chaining with arrays
-const usersOne = [{ founder: 'Andre', email: 'learning@somewhere.com' }];
-console.log(usersOne[0]?.founder ?? 'User does not exist');
+// // Optional chaining with arrays
+// const usersOne = [{ founder: 'Andre', email: 'learning@somewhere.com' }];
+// console.log(usersOne[0]?.founder ?? 'User does not exist');
 
-const usersTwo = [{ name: 'Andre', email: 'learning@somewhere.com' }];
-console.log(usersTwo[0]?.founder ?? 'User does not exist');
+// const usersTwo = [{ name: 'Andre', email: 'learning@somewhere.com' }];
+// console.log(usersTwo[0]?.founder ?? 'User does not exist');
 
-// This show we would have to write it without optional chaining
-if (usersOne.length > 0) console.log(usersOne[0].founder);
-else console.log('User does not exist');
+// // This show we would have to write it without optional chaining
+// if (usersOne.length > 0) console.log(usersOne[0].founder);
+// else console.log('User does not exist');
 
 console.log('');
 
 //////////////////// Lecture 114 ////////////////////
 console.log('LECTURE 114');
+
+
+
+// Iterating over objects
+for (const days of Object.keys(openingHours)) {
+  console.log(days);
+}
+
+// Iterating over key/names
+const properties = Object.keys(openingHours);
+let openStr = `We are open on ${properties.length} days`;
+
+for (const day of properties) {
+  openStr += ` ${day}`;
+};
+console.log(openStr)
+
+// Iterating over values
+const values = Object.values(openingHours);
+
+for (const {open, close} of values) console.log(open, close);
+
+// iterating over the entries
+const entries = Object.entries(openingHours);
+
+for (const [keys, {open, close}] of entries) {
+  console.log(keys, open, close)
+}
+
 
 console.log('');
 
