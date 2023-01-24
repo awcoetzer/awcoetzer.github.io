@@ -378,95 +378,95 @@ console.log('');
 console.log('LECTURE 110');
 console.log('Coding Challenge One');
 
-// const game = {
-//   team1: 'Bayern Munich',
-//   team2: 'Borrussia Dortmund',
-//   players: [
-//     [
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-//     ],
-//     [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-//     ],
-//   ],
-//   score: '4:0',
-//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-//   date: 'Nov 9th, 2037',
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   },
-//   printGoals: function (...playerNames) {
-//     console.log(`${playerNames.length} goals scored`)
-//     const goals = playerNames.length;
-//     for (let i = 0; i < playerNames.length; i++) {
-//       console.log(playerNames[i]);
-//     }
-//   }
-// };
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+  printGoals: function (...playerNames) {
+    console.log(`${playerNames.length} goals scored`)
+    const goals = playerNames.length;
+    for (let i = 0; i < playerNames.length; i++) {
+      console.log(playerNames[i]);
+    }
+  }
+};
 
-// console.log('');
-// console.log('---- Task 1 ----');
-// const [playersOne, playersTwo] = game.players;
-// console.log(`Players One: ${playersOne}`);
-// console.log(`Players Two: ${playersTwo}`);
+console.log('');
+console.log('---- Task 1 ----');
+const [playersOne, playersTwo] = game.players;
+console.log(`Players One: ${playersOne}`);
+console.log(`Players Two: ${playersTwo}`);
 
-// console.log('');
-// console.log('---- Task 2 ----');
-// const [gk, ...fieldPlayers] = playersOne;
-// console.log(`GoalKeeper is ${gk} and field players are`, fieldPlayers);
+console.log('');
+console.log('---- Task 2 ----');
+const [gk, ...fieldPlayers] = playersOne;
+console.log(`GoalKeeper is ${gk} and field players are`, fieldPlayers);
 
-// console.log('');
-// console.log('---- Task 3 ----');
-// const allPlayers = [...playersOne, ...playersTwo];
-// console.log('All players are ', allPlayers);
+console.log('');
+console.log('---- Task 3 ----');
+const allPlayers = [...playersOne, ...playersTwo];
+console.log('All players are ', allPlayers);
 
-// console.log('');
-// console.log('---- Task 4 ----');
-// const playersFinal = ['Thiago', 'Coutinho', ...playersOne, 'Perisic'];
-// console.log('The final team for Team One ', playersFinal);
+console.log('');
+console.log('---- Task 4 ----');
+const playersFinal = ['Thiago', 'Coutinho', ...playersOne, 'Perisic'];
+console.log('The final team for Team One ', playersFinal);
 
-// console.log('');
-// console.log('---- Task 5 ----');
-// const { odds: {team1: teamOne, x: draw, team2: teamTwo} } = game;
-// console.log(`Team 1: ${teamOne}, Draw: ${draw}, Team 2: ${teamTwo}`);
+console.log('');
+console.log('---- Task 5 ----');
+const { odds: {team1: teamOne, x: draw, team2: teamTwo} } = game;
+console.log(`Team 1: ${teamOne}, Draw: ${draw}, Team 2: ${teamTwo}`);
 
-// console.log('');
-// console.log('---- Task 6 ----');
-// // Part 1
-// game.printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
+console.log('');
+console.log('---- Task 6 ----');
+// Part 1
+game.printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
 
-// console.log('');
-// game.printGoals('Lewandowski', 'Gnarby');
+console.log('');
+game.printGoals('Lewandowski', 'Gnarby');
 
-// console.log('');
-// // Part 2
-// game.printGoals(...game.scored);
+console.log('');
+// Part 2
+game.printGoals(...game.scored);
 
-// console.log('');
-// console.log('---- Task 7 ----');
-// teamOne < teamTwo && console.log('Team one is more likely to win');
+console.log('');
+console.log('---- Task 7 ----');
+teamOne < teamTwo && console.log('Team one is more likely to win');
 
 console.log('');
 
@@ -552,39 +552,39 @@ console.log('');
 //////////////////// Lecture 114 ////////////////////
 console.log('LECTURE 114');
 
+// // Iterating over objects
+// for (const days of Object.keys(openingHours)) {
+//   console.log(days);
+// }
 
+// // Iterating over object key/names
+// const properties = Object.keys(openingHours);
+// let openStr = `We are open on ${properties.length} days`;
 
-// Iterating over objects
-for (const days of Object.keys(openingHours)) {
-  console.log(days);
-}
+// for (const day of properties) {
+//   openStr += ` ${day}`;
+// };
+// console.log(openStr)
 
-// Iterating over key/names
-const properties = Object.keys(openingHours);
-let openStr = `We are open on ${properties.length} days`;
+// // Iterating over object values
+// const values = Object.values(openingHours);
 
-for (const day of properties) {
-  openStr += ` ${day}`;
-};
-console.log(openStr)
+// for (const {open, close} of values) console.log(open, close);
 
-// Iterating over values
-const values = Object.values(openingHours);
+// // iterating over the object entries
+// const entries = Object.entries(openingHours);
 
-for (const {open, close} of values) console.log(open, close);
-
-// iterating over the entries
-const entries = Object.entries(openingHours);
-
-for (const [keys, {open, close}] of entries) {
-  console.log(keys, open, close)
-}
-
+// for (const [keys, {open, close}] of entries) {
+//   console.log(keys, open, close)
+// }
 
 console.log('');
 
 //////////////////// Lecture 115 ////////////////////
 console.log('LECTURE 115');
+console.log('Coding Challenge Two');
+
+
 
 console.log('');
 

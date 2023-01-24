@@ -1478,12 +1478,72 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Iterating over objects
+                      for (const days of Object.keys(openingHours)) {
+                        console.log(days);
+                      }
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  As we know we can iterate over arrays, strings etc... however we can also iterate over objects in an indirect way. There are different ways we can go about it, we can decide to iterate over 3 things, keys (property names), values or entries.
+                </p>
+
+                <p class="lecture-text">
+                  We still loop over the object using a 'for-of' loop, but in an indirect way, as we will still be looping over an array.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Iterating over object key/names
+                      const properties = Object.keys(openingHours);
+                      let openStr = `We are open on ${properties.length} days`;
+
+                      for (const day of properties) {
+                        openStr += ` ${day}`;
+                      };
+                      console.log(openStr)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above we can see that indeed the thing we are iterating over is an array. We can also use this to compute how many properties are in the object.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Iterating over object values
+                      const values = Object.values(openingHours);
+                                          
+                      for (const {open, close} of values) console.log(open, close);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is how we iterate over the values.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // iterating over the object entries
+                      const entries = Object.entries(openingHours);
+
+                      for (const [keys, {open, close}] of entries) {
+                        console.log(keys, open, close)
+                      }
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Again, here we are iterating over both the keys and values, just take note that deep objects or objects on a second layer will remain objects.
+                </p>
 
                 <!-- !End of Lecture 114 -->
               </div>
@@ -1495,15 +1555,52 @@
                   Coding Challenge #2
                 </h3>
 
+                <p class="lecture-text">
+                  Let's continue with our football betting app! Keep using the 'game' variable from before.
+                </p>
+
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski").
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Print the 3 odds to the console, but in a nice formatted way, exactly like this: Odd of victory Bayern Munich: 1.33 Odd of draw: 3.25 Odd of victory Borrussia Dortmund: 6.5. Get the team names directly from the game object, don't hardcode them (except for "draw"). Hint: Note how the odds and the game objects have the same property names 😉.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Bonus: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+                    </p>
+                    <div class="code-example">
+                      <pre class="lecture-code-box line-numbers">
+                        <code class="lecture-code language-javascript">
+                          {
+                           Gnarby: 1,
+                           Hummels: 1,
+                           Lewandowski: 2
+                          }
+                        </code>
+                      </pre>
+                    </div>
+                  </li>
+                </ol>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      
                     </code>
                   </pre>
                 </div>
-
-                <p class="lecture-text">CHANGE ME</p>
 
                 <!-- !End of Lecture 115 -->
               </div>
