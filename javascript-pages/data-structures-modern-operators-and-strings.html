@@ -1597,7 +1597,46 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
+                      // Task 1
+                      for (const [i, player] of game.scored.entries()) {
+                        console.log(`Goal ${i + 1}: ${player}`);
+                      }
                       
+                      // Task 2
+                      const gameAverages = function () {
+                        const odds = Object.values(game.odds);
+                        let sum = 0;
+                      
+                        for (const odd of odds) {
+                          sum += odd;
+                        }
+                        sum /= odds.length;
+                      
+                        return sum.toFixed(2)
+                      };
+                      gameAverages();
+                      
+                      console.log(gameAverages());
+                      
+                      // Task 3
+                      const printOdds = function () {
+                        const odds = Object.entries(game.odds);
+                      
+                        for (const [team, odd] of odds) {
+                          const newStr = team === 'x' ? 'draw' : game[team];
+                          console.log(`Odd of ${newStr}: ${odd} `)
+                        }
+                      }
+                      printOdds()
+                      
+                      // Task 4
+                      const scorers = {};
+                      
+                      for (const player of game.scored) {
+                        scorers[player] ? scorers[player]++ : scorers[player] = 1;
+                      }
+                      
+                      console.log(scorers);
                     </code>
                   </pre>
                 </div>

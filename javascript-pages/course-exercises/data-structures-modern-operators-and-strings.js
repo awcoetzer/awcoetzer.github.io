@@ -418,12 +418,12 @@ const game = {
     team2: 6.5,
   },
   printGoals: function (...playerNames) {
-    console.log(`${playerNames.length} goals scored`)
+    console.log(`${playerNames.length} goals scored`);
     const goals = playerNames.length;
     for (let i = 0; i < playerNames.length; i++) {
       console.log(playerNames[i]);
     }
-  }
+  },
 };
 
 console.log('');
@@ -449,7 +449,9 @@ console.log('The final team for Team One ', playersFinal);
 
 console.log('');
 console.log('---- Task 5 ----');
-const { odds: {team1: teamOne, x: draw, team2: teamTwo} } = game;
+const {
+  odds: { team1: teamOne, x: draw, team2: teamTwo },
+} = game;
 console.log(`Team 1: ${teamOne}, Draw: ${draw}, Team 2: ${teamTwo}`);
 
 console.log('');
@@ -584,6 +586,46 @@ console.log('');
 console.log('LECTURE 115');
 console.log('Coding Challenge Two');
 
+// Task 1
+for (const [i, player] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${player}`);
+}
+
+// Task 2
+const gameAverages = function () {
+  const odds = Object.values(game.odds);
+  let sum = 0;
+
+  for (const odd of odds) {
+    sum += odd;
+  }
+  sum /= odds.length;
+
+  return sum.toFixed(2)
+};
+gameAverages();
+
+console.log(gameAverages());
+
+// Task 3
+const printOdds = function () {
+  const odds = Object.entries(game.odds);
+
+  for (const [team, odd] of odds) {
+    const newStr = team === 'x' ? 'draw' : game[team];
+    console.log(`Odd of ${newStr}: ${odd} `)
+  }
+}
+printOdds()
+
+// Task 4
+const scorers = {};
+
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : scorers[player] = 1;
+}
+
+console.log(scorers);
 
 
 console.log('');
