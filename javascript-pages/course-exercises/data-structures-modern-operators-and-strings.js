@@ -666,45 +666,44 @@ console.log('');
 //////////////////// Lecture 117 ////////////////////
 console.log('LECTURE 117');
 
-// creating a map
-const rest = new Map();
+// // creating a map
+// const rest = new Map();
 
-// adding data to the map using set
-rest.set('name', 'Classico Pizza');
-rest.set(1, 'Italy');
-rest.set(2, 'France');
+// // adding data to the map using set
+// rest.set('name', 'Classico Pizza');
+// rest.set(1, 'Italy');
+// rest.set(2, 'France');
 
-// Chaining sets
-rest.set('categories', ['Seafood', 'BBQ', 'Hawaiian', 'Organic',]).set('open', 11).set('close', 23).set(true, 'Yes, we are open').set(false, 'No, We are closed');
-console.log(rest)
+// // Chaining sets
+// rest.set('categories', ['Seafood', 'BBQ', 'Hawaiian', 'Organic',]).set('open', 11).set('close', 23).set(true, 'Yes, we are open').set(false, 'No, We are closed');
+// console.log(rest)
 
-// To get values from maps using get
-console.log(rest.get('name'));
-console.log(rest.get(false));
+// // To get values from maps using get
+// console.log(rest.get('name'));
+// console.log(rest.get(false));
 
-// Working with boolean values
-const time = 21;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+// // Working with boolean values
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
-// Checking for keys, the size and deleting elements
-// checking for a key using has
-console.log(rest.has('name'));
+// // Checking for keys, the size and deleting elements
+// // checking for a key using has
+// console.log(rest.has('name'));
 
-// deleting from a map
-console.log(rest) // before
-rest.delete(2)
-console.log(rest) // after
+// // deleting from a map
+// console.log(rest) // before
+// rest.delete(2)
+// console.log(rest) // after
 
-// Checking the size
-console.log(rest.size)
+// // Checking the size
+// console.log(rest.size)
 
-// using an array as a key
-const arr = [1, 2];
-// rest.set([1, 2], 'Hello There') This wont work
-rest.set(arr, 'Hello There')
+// // using an array as a key
+// const arr = [1, 2];
+// // rest.set([1, 2], 'Hello There') This wont work
+// rest.set(arr, 'Hello There')
 
-console.log(rest.get(arr));
-
+// console.log(rest.get(arr));
 
 console.log('');
 
@@ -721,16 +720,26 @@ const question = new Map([
   [false, 'Try again'],
 ]);
 
+// Object.entries() method
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+// Iterating over the map
 console.log(question.get('question'));
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Your answer: ${key} : ${value}`);
-}
+};
 
 // let answer = Number(prompt("What's your answer?"));
 let answer = 3;
 
 // Challenge
 console.log(question.get(answer === question.get('correct')));
+
+// Convert map back to an array
+console.log(question);
+console.log([...question]);
 
 console.log('');
 

@@ -1956,12 +1956,78 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      const question = new Map([
+                        ['question', 'What is the best programming language in the world?'],
+                        [1, 'C'],
+                        [2, 'Java'],
+                        [3, 'javaScript'],
+                        ['correct', 3],
+                        [true, 'Correct'],
+                        [false, 'Try again'],
+                      ]);
+
+                      // Object.entries() method
+                      console.log(Object.entries(openingHours));
+                      const hoursMap = new Map(Object.entries(openingHours));
+                      console.log(hoursMap);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  In the last lecture, we added values to the map using the '.set(key, value)' method, but there is a better way of doing that and the is writing the map as an array of arrays. However, when we're adding additional elements to the map, then using something like the '.set()' method is a good option.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Object.entries() method
+                      console.log(Object.entries(openingHours));
+                      const hoursMap = new Map(Object.entries(openingHours));
+                      console.log(hoursMap);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The first example is an array of arrays, is a similar structure to that of the Object.entries() method we saw. This means there is an easy way of converting from object to maps.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Iterating over the map
+                      console.log(question.get('question'));
+                      for (const [key, value] of question) {
+                        if (typeof key === 'number') console.log(`Your answer: ${key} : ${value}`);
+                      };
+
+                      // let answer = Number(prompt("What's your answer?"));
+                      let answer = 3;
+
+                      // Challenge
+                      console.log(question.get(answer === question.get('correct')));
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is a challenge for a 'quiz app' that if the user had to input the answer ranging from 1 to 3 that it should output the boolean value of either true or false.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Convert map back to an array
+                      console.log(question);
+                      console.log([...question]);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is how we can go back from a map to an array if need be.
+                </p>
 
                 <!-- !End of Lecture 118 -->
               </div>
