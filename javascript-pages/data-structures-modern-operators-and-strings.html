@@ -1310,11 +1310,16 @@
                 </div>
 
                 <p class="lecture-text">
-                  When looping over an array we already know how it's done using the traditional for loop and setting up the counter, a condition and the incrementing the counter, however, with the 'for-of' loop we skip all that.
+                  When looping over an array we already know how it's done using
+                  the traditional for loop and setting up the counter, a
+                  condition and the incrementing the counter, however, with the
+                  'for-of' loop we skip all that.
                 </p>
 
                 <p class="lecture-text">
-                  This will automatically loop over the entire array. It's important to note that 'for-of' loop can still utilize the break and continue keywords.
+                  This will automatically loop over the entire array. It's
+                  important to note that 'for-of' loop can still utilize the
+                  break and continue keywords.
                 </p>
 
                 <div class="code-example">
@@ -1333,11 +1338,15 @@
                 </div>
 
                 <p class="lecture-text">
-                  The 'for-of' loop was not really designed to provide an index value, however it is still possible using the 'entries()' method, which will place each iteration in its own array with an index number.
+                  The 'for-of' loop was not really designed to provide an index
+                  value, however it is still possible using the 'entries()'
+                  method, which will place each iteration in its own array with
+                  an index number.
                 </p>
 
                 <p class="lecture-text">
-                  Since item is now an array, we can use array deconstruction to set each index to its own variable.
+                  Since item is now an array, we can use array deconstruction to
+                  set each index to its own variable.
                 </p>
 
                 <!-- !End of Lecture 111 -->
@@ -1372,11 +1381,15 @@
                 </div>
 
                 <p class="lecture-text">
-                  In modern JavaScript, they introduced 3 ways to make it easier to write object literals. The first is you can place an outside object inside an object just a providing the name.
+                  In modern JavaScript, they introduced 3 ways to make it easier
+                  to write object literals. The first is you can place an
+                  outside object inside an object just a providing the name.
                 </p>
 
                 <p class="lecture-text">
-                  The second is you no longer need to write function expressions (see example above). Third is you can compute an object name if it was already declared in an array for example.
+                  The second is you no longer need to write function expressions
+                  (see example above). Third is you can compute an object name
+                  if it was already declared in an array for example.
                 </p>
 
                 <!-- !End of Lecture 112 -->
@@ -1405,11 +1418,18 @@
                 </div>
 
                 <p class="lecture-text">
-                  With optional chaining, if a certain property does not exist, it will return undefined immediately. Above, with the optional chaining example, we are recreating the first example or if statement.
+                  With optional chaining, if a certain property does not exist,
+                  it will return undefined immediately. Above, with the optional
+                  chaining example, we are recreating the first example or if
+                  statement.
                 </p>
 
                 <p class="lecture-text">
-                  What it says basically if .mon exists then return .open if it does not exist it will return undefined immediately. A property exists if it's not null or undefined, so the nullish coalescing concept is adopted here, meaning if it were 0 or an empty string it will exist.
+                  What it says basically if .mon exists then return .open if it
+                  does not exist it will return undefined immediately. A
+                  property exists if it's not null or undefined, so the nullish
+                  coalescing concept is adopted here, meaning if it were 0 or an
+                  empty string it will exist.
                 </p>
 
                 <div class="code-example">
@@ -1427,7 +1447,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is a practical example if we had used an API and wanted to know if the restaurant was open and on which day it was open, using the optional chaining and nullish coalescing. 
+                  Above is a practical example if we had used an API and wanted
+                  to know if the restaurant was open and on which day it was
+                  open, using the optional chaining and nullish coalescing. 
                 </p>
 
                 <div class="code-example">
@@ -1441,7 +1463,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Optional chaining can also check if methods exists, and if it does exist to then execute the function. Remember to always use the nullish coalescing operator with optional chaining.
+                  Optional chaining can also check if methods exists, and if it
+                  does exist to then execute the function. Remember to always
+                  use the nullish coalescing operator with optional chaining.
                 </p>
 
                 <div class="code-example">
@@ -1462,7 +1486,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  Again, optional chaining, can also be used with arrays for example if an array is empty or not. The if statement above is an example of how we would have had to do this with the if statement.
+                  Again, optional chaining, can also be used with arrays for
+                  example if an array is empty or not. The if statement above is
+                  an example of how we would have had to do this with the if
+                  statement.
                 </p>
 
                 <!-- !End of Lecture 113 -->
@@ -1487,11 +1514,15 @@
                 </div>
 
                 <p class="lecture-text">
-                  As we know we can iterate over arrays, strings etc... however we can also iterate over objects in an indirect way. There are different ways we can go about it, we can decide to iterate over 3 things, keys (property names), values or entries.
+                  As we know we can iterate over arrays, strings etc... however
+                  we can also iterate over objects in an indirect way. There are
+                  different ways we can go about it, we can decide to iterate
+                  over 3 things, keys (property names), values or entries.
                 </p>
 
                 <p class="lecture-text">
-                  We still loop over the object using a 'for-of' loop, but in an indirect way, as we will still be looping over an array.
+                  We still loop over the object using a 'for-of' loop, but in an
+                  indirect way, as we will still be looping over an array.
                 </p>
 
                 <div class="code-example">
@@ -1510,7 +1541,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above we can see that indeed the thing we are iterating over is an array. We can also use this to compute how many properties are in the object.
+                  Above we can see that indeed the thing we are iterating over
+                  is an array. We can also use this to compute how many
+                  properties are in the object.
                 </p>
 
                 <div class="code-example">
@@ -1542,7 +1575,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Again, here we are iterating over both the keys and values, just take note that deep objects or objects on a second layer will remain objects.
+                  Again, here we are iterating over both the keys and values,
+                  just take note that deep objects or objects on a second layer
+                  will remain objects.
                 </p>
 
                 <!-- !End of Lecture 114 -->
@@ -1556,29 +1591,42 @@
                 </h3>
 
                 <p class="lecture-text">
-                  Let's continue with our football betting app! Keep using the 'game' variable from before.
+                  Let's continue with our football betting app! Keep using the
+                  'game' variable from before.
                 </p>
 
                 <span class="pre-heading">Your Tasks:</span>
                 <ol class="lecture-list">
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski").
+                      Loop over the game.scored array and print each player name
+                      to the console, along with the goal number (Example: "Goal
+                      1: Lewandowski").
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember).
+                      Use a loop to calculate the average odd and log it to the
+                      console (We already studied how to calculate averages, you
+                      can go check if you don't remember).
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Print the 3 odds to the console, but in a nice formatted way, exactly like this: Odd of victory Bayern Munich: 1.33 Odd of draw: 3.25 Odd of victory Borrussia Dortmund: 6.5. Get the team names directly from the game object, don't hardcode them (except for "draw"). Hint: Note how the odds and the game objects have the same property names 😉.
+                      Print the 3 odds to the console, but in a nice formatted
+                      way, exactly like this: Odd of victory Bayern Munich: 1.33
+                      Odd of draw: 3.25 Odd of victory Borrussia Dortmund: 6.5.
+                      Get the team names directly from the game object, don't
+                      hardcode them (except for "draw"). Hint: Note how the odds
+                      and the game objects have the same property names 😉.
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Bonus: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+                      Bonus: Create an object called 'scorers' which contains
+                      the names of the players who scored as properties, and the
+                      number of goals as the value. In this game, it will look
+                      like this:
                     </p>
                     <div class="code-example">
                       <pre class="lecture-code-box line-numbers">
@@ -1601,7 +1649,7 @@
                       for (const [i, player] of game.scored.entries()) {
                         console.log(`Goal ${i + 1}: ${player}`);
                       }
-                      
+
                       // Task 2
                       const gameAverages = function () {
                         const odds = Object.values(game.odds);
@@ -1615,9 +1663,9 @@
                         return sum.toFixed(2)
                       };
                       gameAverages();
-                      
+
                       console.log(gameAverages());
-                      
+
                       // Task 3
                       const printOdds = function () {
                         const odds = Object.entries(game.odds);
@@ -1628,14 +1676,14 @@
                         }
                       }
                       printOdds()
-                      
+
                       // Task 4
                       const scorers = {};
-                      
+
                       for (const player of game.scored) {
                         scorers[player] ? scorers[player]++ : scorers[player] = 1;
                       }
-                      
+
                       console.log(scorers);
                     </code>
                   </pre>
@@ -1652,12 +1700,123 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // creating a set
+                      const orderSet = new Set(['Pizza', 'Pasta', 'Risotto', 'Pizza', 'Pasta']);
+                      console.log(orderSet);
+                      console.log(new Set('Andre'));
+
+                      // Checking if an item exist, and the size
+                      console.log(orderSet.has('Pizza'));
+                      console.log(orderSet.size);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  In the past, JavaScript had only has two built in data types,
+                  that being objects and arrays. However, with ES6, sets and
+                  maps were introduced.
+                </p>
+
+                <p class="lecture-text">
+                  A set is just a collection of unique values, whether it be
+                  primitive or reference types, therefor a set can never have
+                  any duplicates. Note, sets can hold mixed data types as well.
+                  With the example above, all duplicates in 'orderSet' are gone,
+                  as will in the string.
+                </p>
+
+                <p class="lecture-text">
+                  We can also check if a set have a particular value, as well as
+                  the size of a set.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Adding to a set
+                      orderSet.add('Garlic Bread');
+                      console.log(orderSet);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  In the example above, is how we can add to a set using the
+                  'add()' method. This brings us to the question of if we can
+                  add to a set, how can we retrieve from a set? The answer is,
+                  we cannot, apart from using the '.has()'method.
+                </p>
+
+                <p class="lecture-text">
+                  If you want to retrieve data, then it's better to use
+                  something like an array.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Clearing a set
+                      orderSet.clear()
+                      console.log(orderSet);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  There is one more method that be used on sets, and that is the
+                  'clear()' method. Clear, will remove all data from the set.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // iterating over sets
+                      for (const order of orderSet) console.log(order)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Sets are iterable and therefor we can loop over it.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Practical example
+                      const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef'];
+                      // we wrap this in brackets and spread the set to turn it from set to array.
+                      const uniqueStaff = [...new Set(staff)] 
+                      console.log(uniqueStaff)
+
+                      // If we just want the size of the set
+                      console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef']).size);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  In our practical example, we create an array that holds
+                  duplicate data, we then create a new variable, whereby we
+                  input the first array into a set data structure and then use
+                  the spread operator to turn the 'Set' back into an array, this
+                  creating a new array holding only the unique values.
+                </p>
+
+                <p class="lecture-text">
+                  However, if we just wanted to know the unique size of an
+                  array, then we can simply just log the 'Set' with the '.size'
+                  property.
+                </p>
+
+                <span class="pre-heading">In Summary</span>
+
+                <p class="lecture-text">
+                  Sets are not intended to replace arrays, set are used to
+                  determine unique values or remove repeated values from an
+                  array.
+                </p>
 
                 <!-- !End of Lecture 116 -->
               </div>
@@ -1677,7 +1836,9 @@
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  
+                </p>
 
                 <!-- !End of Lecture 117 -->
               </div>

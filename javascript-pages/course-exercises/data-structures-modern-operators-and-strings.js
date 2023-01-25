@@ -586,52 +586,80 @@ console.log('');
 console.log('LECTURE 115');
 console.log('Coding Challenge Two');
 
-// Task 1
-for (const [i, player] of game.scored.entries()) {
-  console.log(`Goal ${i + 1}: ${player}`);
-}
+// // Task 1
+// for (const [i, player] of game.scored.entries()) {
+//   console.log(`Goal ${i + 1}: ${player}`);
+// }
 
-// Task 2
-const gameAverages = function () {
-  const odds = Object.values(game.odds);
-  let sum = 0;
+// // Task 2
+// const gameAverages = function () {
+//   const odds = Object.values(game.odds);
+//   let sum = 0;
 
-  for (const odd of odds) {
-    sum += odd;
-  }
-  sum /= odds.length;
+//   for (const odd of odds) {
+//     sum += odd;
+//   }
+//   sum /= odds.length;
 
-  return sum.toFixed(2)
-};
-gameAverages();
+//   return sum.toFixed(2)
+// };
+// gameAverages();
 
-console.log(gameAverages());
+// console.log(gameAverages());
 
-// Task 3
-const printOdds = function () {
-  const odds = Object.entries(game.odds);
+// // Task 3
+// const printOdds = function () {
+//   const odds = Object.entries(game.odds);
 
-  for (const [team, odd] of odds) {
-    const newStr = team === 'x' ? 'draw' : game[team];
-    console.log(`Odd of ${newStr}: ${odd} `)
-  }
-}
-printOdds()
+//   for (const [team, odd] of odds) {
+//     const newStr = team === 'x' ? 'draw' : game[team];
+//     console.log(`Odd of ${newStr}: ${odd} `)
+//   }
+// }
+// printOdds()
 
-// Task 4
-const scorers = {};
+// // Task 4
+// const scorers = {};
 
-for (const player of game.scored) {
-  scorers[player] ? scorers[player]++ : scorers[player] = 1;
-}
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : scorers[player] = 1;
+// }
 
-console.log(scorers);
-
+// console.log(scorers);
 
 console.log('');
 
 //////////////////// Lecture 116 ////////////////////
 console.log('LECTURE 116');
+
+// creating a set
+const orderSet = new Set(['Pizza', 'Pasta', 'Risotto', 'Pizza', 'Pasta']);
+console.log(orderSet);
+console.log(new Set('Andre'));
+
+// Checking if an item exist, and the size
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.size);
+
+// Adding to a set
+orderSet.add('Garlic Bread');
+console.log(orderSet);
+
+// Clearing a set
+// orderSet.clear()
+// console.log(orderSet);
+
+// iterating over sets
+for (const order of orderSet) console.log(order)
+
+// Practical example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef'];
+// we wrap this in brackets and spread the set to turn it from set to array.
+const uniqueStaff = [...new Set(staff)]
+console.log(uniqueStaff)
+
+// If we just want the size of the set
+console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef']).size);
 
 console.log('');
 
@@ -642,6 +670,27 @@ console.log('');
 
 //////////////////// Lecture 118 ////////////////////
 console.log('LECTURE 118');
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'javaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again'],
+]);
+
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Your answer: ${key} : ${value}`);
+}
+
+// let answer = Number(prompt("What's your answer?"));
+let answer = 3;
+
+// Challenge
+console.log(question.get(answer === question.get('correct')));
 
 console.log('');
 
