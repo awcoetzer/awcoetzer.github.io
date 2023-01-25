@@ -1831,13 +1831,116 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // creating a map
+                      const rest = new Map();
+
+                      // adding data to the map using set
+                      rest.set('name', 'Classico Pizza');
+                      rest.set(1, 'Italy');
+                      rest.set(2, 'France');
                     </code>
                   </pre>
                 </div>
 
                 <p class="lecture-text">
-                  
+                  We learn't that maps is the other new built-in data structure in JavaScript. They are more useful than sets.
+                </p>
+
+                <p class="lecture-text">
+                  A map is a data structure to map values to keys. We know within object, keys are always strings, however with maps the keys can be any data type, including arrays, objects or even other maps.
+                </p>
+
+                <p class="lecture-text">
+                  The '.set(key, value)' method is how we add to a map, the first value is always the key and the second the value. It's important to know that the '.set()' method not only adds data to the map, but also returns it.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Chaining sets
+                      rest.set('categories', ['Seafood', 'BBQ', 'Hawaiian', 'Organic',]).set('open', 11).set('close', 23).set(true, 'Yes, we are open').set(false, 'No, We are closed');
+                      console.log(rest)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The fact that the '.set()' method returns the map, means that we can chain the set method when adding data, as seen in the above example.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // To get values from maps using get
+                      console.log(rest.get('name'));
+                      console.log(rest.get(false));
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  To get values from maps, we use the '.get(key)' method. One thing to note about the '.get()' method is the key data type entered is important, meaning it needs to match the 'typeof' basically.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Working with boolean values
+                      const time = 21;
+                      console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The example above is not really practical, but it shows the power of using booleans as keys.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Checking for keys, the size and deleting elements
+                      // checking for a key using has
+                      console.log(rest.has('name'));
+
+                      // deleting from a map
+                      console.log(rest) // before
+                      rest.delete(2)
+                      console.log(rest) // after
+
+                      // Checking the size
+                      console.log(rest.size)
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above are a few examples of further properties and methods that the map data structure has. Starting with the '.has(key)' method, this checks if a key is present within the map structure. Map also has the '.delete(key)' method, which, as you guessed, deletes a key value pair.
+                </p>
+
+                <p class="lecture-text">
+                  Furthermore, map has the '.size' property to check the size of the map, as well as the'.clear()' method to clear all values or data from the map.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // using an array as a key
+                      const arr = [1, 2];
+                      // rest.set([1, 2], 'Hello There') This wont work
+                      rest.set(arr, 'Hello There')
+
+                      console.log(rest.get(arr));
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above we show that we can set an array as a key, but if we directly use an array as a key, if we had to call on it later, that would point to different reference types in memory.
+                </p>
+
+                <p class="lecture-text">
+                  The workaround for that is to assign an array to a variable and use that.
                 </p>
 
                 <!-- !End of Lecture 117 -->

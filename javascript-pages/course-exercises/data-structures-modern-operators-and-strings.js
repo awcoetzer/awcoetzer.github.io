@@ -632,39 +632,79 @@ console.log('');
 //////////////////// Lecture 116 ////////////////////
 console.log('LECTURE 116');
 
-// creating a set
-const orderSet = new Set(['Pizza', 'Pasta', 'Risotto', 'Pizza', 'Pasta']);
-console.log(orderSet);
-console.log(new Set('Andre'));
+// // creating a set
+// const orderSet = new Set(['Pizza', 'Pasta', 'Risotto', 'Pizza', 'Pasta']);
+// console.log(orderSet);
+// console.log(new Set('Andre'));
 
-// Checking if an item exist, and the size
-console.log(orderSet.has('Pizza'));
-console.log(orderSet.size);
+// // Checking if an item exist, and the size
+// console.log(orderSet.has('Pizza'));
+// console.log(orderSet.size);
 
-// Adding to a set
-orderSet.add('Garlic Bread');
-console.log(orderSet);
-
-// Clearing a set
-// orderSet.clear()
+// // Adding to a set
+// orderSet.add('Garlic Bread');
 // console.log(orderSet);
 
-// iterating over sets
-for (const order of orderSet) console.log(order)
+// // Clearing a set
+// // orderSet.clear()
+// // console.log(orderSet);
 
-// Practical example
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef'];
-// we wrap this in brackets and spread the set to turn it from set to array.
-const uniqueStaff = [...new Set(staff)]
-console.log(uniqueStaff)
+// // iterating over sets
+// for (const order of orderSet) console.log(order)
 
-// If we just want the size of the set
-console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef']).size);
+// // Practical example
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef'];
+// // we wrap this in brackets and spread the set to turn it from set to array.
+// const uniqueStaff = [...new Set(staff)]
+// console.log(uniqueStaff)
+
+// // If we just want the size of the set
+// console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef']).size);
 
 console.log('');
 
 //////////////////// Lecture 117 ////////////////////
 console.log('LECTURE 117');
+
+// creating a map
+const rest = new Map();
+
+// adding data to the map using set
+rest.set('name', 'Classico Pizza');
+rest.set(1, 'Italy');
+rest.set(2, 'France');
+
+// Chaining sets
+rest.set('categories', ['Seafood', 'BBQ', 'Hawaiian', 'Organic',]).set('open', 11).set('close', 23).set(true, 'Yes, we are open').set(false, 'No, We are closed');
+console.log(rest)
+
+// To get values from maps using get
+console.log(rest.get('name'));
+console.log(rest.get(false));
+
+// Working with boolean values
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// Checking for keys, the size and deleting elements
+// checking for a key using has
+console.log(rest.has('name'));
+
+// deleting from a map
+console.log(rest) // before
+rest.delete(2)
+console.log(rest) // after
+
+// Checking the size
+console.log(rest.size)
+
+// using an array as a key
+const arr = [1, 2];
+// rest.set([1, 2], 'Hello There') This wont work
+rest.set(arr, 'Hello There')
+
+console.log(rest.get(arr));
+
 
 console.log('');
 
