@@ -2039,15 +2039,95 @@
                   Summary: Which Data Structure to Use?
                 </h3>
 
+                <p class="lecture-text">
+                  To help us understand which data structure to use, we first need to understand where we can receive data.
+                </p>
+
+                <p class="lecture-text">
+                  There are 3 main sources of data collection, that being, from the program itself, so data that is written directly into the source code, an example of that being a status message.
+                </p>
+
+                <p class="lecture-text">
+                  Data from UI, so data input from the user or data written in the DOM, example being a to-do list app and data from outside sources such as API's, an example of that being a recipe object.
+                </p>
+
+                <p class="lecture-text">
+                  Once we have this data, also known as the data collection or collection of data, we need a place to put it. We store this data in data structures, but there are four built-in data structures, and we need to decide which to use.
+                </p>
+
+                <p class="lecture-text">
+                  Do we just need a simple list of values?, then we will use arrays or sets, but if we need key values pairs, then we will need objects and maps. The big difference between the two is that keys allows us to describe the values, whereas a list or sets simply have values without description.
+                </p>
+
+                <p class="lecture-text">
+                  Going back to web API's, which is usually the most common source of data. Data from web API's usually come in the form of JSON formatting. JSON is essentially just text, so a long string, but can easily be converted into JavaScript objects, because it uses the same formatting as JavaScript objects and arrays.
+                </p>
+
+                <p class="lecture-text">
+                  There are other built-in data structures we didn't talk about yet, which are 'weakSets' and 'weakMaps'. However, there are non-built-in data structures that exist, especially in other programming languages, and to name a few, stacks, queues, linked lists, Trees and hash tables.
+                </p>
+
+                <p class="lecture-text">
+                  These don't matter as for now, but it's good to know they exist.
+                </p>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Arrays vs Sets
+                      // array
+                      const tasksArr = ['Code', 'Eat', 'Code', 'Sleep'];
+                      console.log(tasksArr);
+                      // ['Code', 'Eat', 'Code', 'Sleep']
+
+                      // set
+                      const tasksSets = new Set(['Code', 'Eat', 'Code', 'Sleep']);
+                      console.log(tasksSets);
+                      // {'Code', 'Eat', 'Sleep'}
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Arrays should be used when you need an ordered list, which might contain duplicates, and when you need to manipulate data. Sets on the other hand, are used when you need to work with unique values, or when higher performance is really important and of course when you want to remove duplicates from an array.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Object vs Map
+                      // Object
+                      const tasksObj = {
+                        task: 'code',
+                        date: 'today',
+                        repeat: true,
+                      };
+                      console.log(tasksObj);
+                      // {task: 'code', date: 'today', repeat: true,}
+
+                      // Map
+                      const tasksMap = new Map([
+                        ['task', 'code'], 
+                        ['date', 'today'], 
+                        [false, 'Start coding!'], 
+                      ]);
+                      console.log(tasksMap);
+                      // {task => 'code', date => 'today', repeat => true,}
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Objects were just the traditional way of writing objects, it's easier than maps to write, and we can use '.' and [] to write and read data. Whereas, map give better performance, key can have any data type, easy to iterate and easy to compute size.
+                </p>
+
+                <p class="lecture-text">
+                  However, the fact objects are just easier to write and access data make them the preferred way of writing key, values pairs. However, the main reasons are when to use which, so, you use objects when you need to include functions (methods), and when working with JSON or the 'this' keyword.
+                </p>
+
+                <p class="lecture-text">
+                  Maps are to be used when you simply need to map keys to values, or when you need keys that are not strings
+                </p>
 
                 <!-- !End of Lecture 119 -->
               </div>

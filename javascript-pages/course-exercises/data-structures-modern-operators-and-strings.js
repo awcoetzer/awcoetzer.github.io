@@ -710,41 +710,71 @@ console.log('');
 //////////////////// Lecture 118 ////////////////////
 console.log('LECTURE 118');
 
-const question = new Map([
-  ['question', 'What is the best programming language in the world?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'javaScript'],
-  ['correct', 3],
-  [true, 'Correct'],
-  [false, 'Try again'],
-]);
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'javaScript'],
+//   ['correct', 3],
+//   [true, 'Correct'],
+//   [false, 'Try again'],
+// ]);
 
-// Object.entries() method
-console.log(Object.entries(openingHours));
-const hoursMap = new Map(Object.entries(openingHours));
-console.log(hoursMap);
+// // Object.entries() method
+// console.log(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
 
-// Iterating over the map
-console.log(question.get('question'));
-for (const [key, value] of question) {
-  if (typeof key === 'number') console.log(`Your answer: ${key} : ${value}`);
-};
+// // Iterating over the map
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Your answer: ${key} : ${value}`);
+// };
 
-// let answer = Number(prompt("What's your answer?"));
-let answer = 3;
+// // let answer = Number(prompt("What's your answer?"));
+// let answer = 3;
 
-// Challenge
-console.log(question.get(answer === question.get('correct')));
+// // Challenge
+// console.log(question.get(answer === question.get('correct')));
 
-// Convert map back to an array
-console.log(question);
-console.log([...question]);
+// // Convert map back to an array
+// console.log(question);
+// console.log([...question]);
 
 console.log('');
 
 //////////////////// Lecture 119 ////////////////////
 console.log('LECTURE 119');
+
+// Arrays vs Sets
+// array
+const tasksArr = ['Code', 'Eat', 'Code', 'Sleep'];
+console.log(tasksArr);
+// ['Code', 'Eat', 'Code', 'Sleep']
+
+// set
+const tasksSets = new Set(['Code', 'Eat', 'Code', 'Sleep']);
+console.log(tasksSets);
+// {'Code', 'Eat', 'Sleep'}
+
+// Object vs Map
+// Object
+const tasksObj = {
+  task: 'code',
+  date: 'today',
+  repeat: true,
+};
+console.log(tasksObj);
+// {task: 'code', date: 'today', repeat: true,}
+
+// Map
+const tasksMap = new Map([
+  ['task', 'code'], 
+  ['date', 'today'], 
+  [false, 'Start coding!'], 
+]);
+console.log(tasksMap);
+// {task => 'code', date => 'today', repeat => true,}
 
 console.log('');
 
