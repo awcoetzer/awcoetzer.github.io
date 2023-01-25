@@ -2139,10 +2139,59 @@
                   Coding Challenge #3
                 </h3>
 
+                <p class="lecture-text">
+                  Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+                </p>
+
+                <span class="pre-heading">Your Tasks:</span>
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Create an array 'events' of the different game events that happened (no duplicates).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Compute and log the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes).
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                       Loop over 'gameEvents' and log each element to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:[FIRST HALF] 17: ⚽ GOAL
+                    </p>
+                  </li>
+                </ol>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Task 1
+                      const events = [...new Set(gameEvents.values())];
+                      console.log(events);
+                                          
+                      // Task 2
+                      gameEvents.delete(64);
+                      console.log(gameEvents);
+                                          
+                      // Task 3
+                      console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+                                          
+                      const time = [...gameEvents.keys()].pop();
+                      console.log(time);
+                                          
+                      console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`
+                      );
+                                          
+                      // Task 4
+                      for (const [min, value] of gameEvents) {
+                        const half = min <= 45 ? 'FIRST' : 'SECOND';
+                        console.log(`[${half} HALF] ${min}: ${value}`);
+                      };
                     </code>
                   </pre>
                 </div>
