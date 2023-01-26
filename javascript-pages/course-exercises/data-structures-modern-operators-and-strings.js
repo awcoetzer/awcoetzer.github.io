@@ -782,47 +782,97 @@ console.log('');
 console.log('LECTURE 120');
 console.log('Coding Challenge Three');
 
-const gameEvents = new Map([
-  [17, '⚽ GOAL'],
-  [36, '� Substitution'],
-  [47, '⚽ GOAL'],
-  [61, '� Substitution'],
-  [64, '� Yellow card'],
-  [69, '� Red card'],
-  [70, '� Substitution'],
-  [72, '� Substitution'],
-  [76, '⚽ GOAL'],
-  [80, '⚽ GOAL'],
-  [92, '� Yellow card'],
-]);
+// const gameEvents = new Map([
+//   [17, '⚽ GOAL'],
+//   [36, '� Substitution'],
+//   [47, '⚽ GOAL'],
+//   [61, '� Substitution'],
+//   [64, '� Yellow card'],
+//   [69, '� Red card'],
+//   [70, '� Substitution'],
+//   [72, '� Substitution'],
+//   [76, '⚽ GOAL'],
+//   [80, '⚽ GOAL'],
+//   [92, '� Yellow card'],
+// ]);
 
-// Task 1
-const events = [...new Set(gameEvents.values())];
-console.log(events);
+// // Task 1
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
 
-// Task 2
-gameEvents.delete(64);
-console.log(gameEvents);
+// // Task 2
+// gameEvents.delete(64);
+// console.log(gameEvents);
 
-// Task 3
-console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+// // Task 3
+// console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
 
-const time = [...gameEvents.keys()].pop();
-console.log(time);
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
 
-console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`
-);
+// console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
 
-// Task 4
-for (const [min, value] of gameEvents) {
-  const half = min <= 45 ? 'FIRST' : 'SECOND';
-  console.log(`[${half} HALF] ${min}: ${value}`);
-};
+// // Task 4
+// for (const [min, value] of gameEvents) {
+//   const half = min <= 45 ? 'FIRST' : 'SECOND';
+//   console.log(`[${half} HALF] ${min}: ${value}`);
+// };
 
 console.log('');
 
 //////////////////// Lecture 121 ////////////////////
 console.log('LECTURE 121');
+
+const airline = 'Bulgaria Air';
+const plane = 'A320'
+
+// indexing strings
+console.log(plane[0])
+console.log(plane[1])
+console.log(plane[2])
+console.log('B737'[0]);
+
+// checking the length of a string
+console.log(airline.length)
+console.log('Andre'.length)
+
+// using the indexOf() & lastIndexOf() methods
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Air'))
+
+// using the slice(begin, end) method
+console.log(airline.slice(9));
+console.log(airline.slice(9, 11));
+
+// Not harding coding index values
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.indexOf(' ') + 1)); // + 1 to remove empty space
+
+// Slice with negative numbers
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+// function incorporating the use slice
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E')
+    console.log('You got the middle seat');
+  else 
+    console.log('You got lucky');
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('1E');
+
+// Showing javascript boxing
+console.log(new String('Andre'))
+console.log(typeof new String('Andre'))
+console.log(new String('Andre').slice(1)) // the methods return back a string
 
 console.log('');
 
