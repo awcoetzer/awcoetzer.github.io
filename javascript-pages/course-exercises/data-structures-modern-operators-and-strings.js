@@ -855,7 +855,6 @@ console.log(airline.slice(-2));
 console.log(airline.slice(1, -1));
 
 // function incorporating the use slice
-
 const checkMiddleSeat = function (seat) {
   // B and E are middle seats
   const s = seat.slice(-1);
@@ -986,7 +985,8 @@ console.log(message.padStart(25, '*').padEnd(30, '*'));
 // practical example masking a credit card
 
 const maskCreditCard = function (cardNumber) {
-  const str = cardNumber + '';
+  // const str = cardNumber + '';
+  const str = String(cardNumber)
   const mask = str.slice(-4)
   return mask.padStart(str.length, '*')
 }
@@ -1019,3 +1019,4 @@ console.log('');
 console.log('LECTURE 125');
 
 console.log('');
+
