@@ -824,52 +824,52 @@ console.log('');
 //////////////////// Lecture 121 ////////////////////
 console.log('LECTURE 121');
 
-const airline = 'Bulgaria Air';
-const plane = 'A320';
+// const airline = 'Bulgaria Air';
+// const plane = 'A320';
 
-// indexing strings
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log('B737'[0]);
+// // indexing strings
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737'[0]);
 
-// checking the length of a string
-console.log(airline.length);
-console.log('Andre'.length);
+// // checking the length of a string
+// console.log(airline.length);
+// console.log('Andre'.length);
 
-// using the indexOf() & lastIndexOf() methods
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('Air'));
+// // using the indexOf() & lastIndexOf() methods
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Air'));
 
-// using the slice(begin, end) method
-console.log(airline.slice(9));
-console.log(airline.slice(9, 11));
+// // using the slice(begin, end) method
+// console.log(airline.slice(9));
+// console.log(airline.slice(9, 11));
 
-// Not harding coding index values
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.indexOf(' ') + 1)); // + 1 to remove empty space
+// // Not harding coding index values
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.indexOf(' ') + 1)); // + 1 to remove empty space
 
-// Slice with negative numbers
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+// // Slice with negative numbers
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -1));
 
-// function incorporating the use slice
-const checkMiddleSeat = function (seat) {
-  // B and E are middle seats
-  const s = seat.slice(-1);
-  if (s === 'B' || s === 'E') console.log('You got the middle seat');
-  else console.log('You got lucky');
-};
+// // function incorporating the use slice
+// const checkMiddleSeat = function (seat) {
+//   // B and E are middle seats
+//   const s = seat.slice(-1);
+//   if (s === 'B' || s === 'E') console.log('You got the middle seat');
+//   else console.log('You got lucky');
+// };
 
-checkMiddleSeat('11B');
-checkMiddleSeat('23C');
-checkMiddleSeat('1E');
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('1E');
 
-// Showing javascript boxing
-console.log(new String('Andre'));
-console.log(typeof new String('Andre'));
-console.log(new String('Andre').slice(2)); // the methods return back a string
+// // Showing javascript boxing
+// console.log(new String('Andre'));
+// console.log(typeof new String('Andre'));
+// console.log(new String('Andre').slice(2)); // the methods return back a string
 
 console.log('');
 
@@ -877,7 +877,6 @@ console.log('');
 console.log('LECTURE 122');
 
 // changing the case of a string
-
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
 
