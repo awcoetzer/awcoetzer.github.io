@@ -922,7 +922,7 @@ console.log(announcement.replace('door', 'gate'));
 console.log(announcement.replaceAll('door', 'gate'));
 
 // regular expression
-console.log(announcement.replaceAll(/door/g, 'gate'));
+console.log(announcement.replace(/door/g, 'gate'));
 
 // string methods that return booleans
 const newPlane = 'Airbus A319neo';
@@ -951,10 +951,67 @@ console.log('');
 //////////////////// Lecture 123 ////////////////////
 console.log('LECTURE 123');
 
+// the .split('') method
+console.log('this+is+a+string'.split('+'));
+console.log('Harry Potter'.split(' '));
+
+const [firstName, lastName] = 'Harry Potter'.split(' ');
+
+const newName = ['Mr.', firstName, lastName];
+console.log(newName.join(' '));
+
+// a function to capitalize names given
+const capitalizeNames = fullname => {
+  const names = fullname.toLowerCase().split(' ');
+  const capitalizedName = [];
+  for (const n of names) {
+    // capitalizedName.push(n[0].toUpperCase() + n.slice(1));
+    capitalizedName.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(capitalizedName.join(' '));
+};
+
+capitalizeNames('HARry POTter');
+capitalizeNames('RON WEASLEY');
+capitalizeNames('hermione granger');
+capitalizeNames('This is just a sentence about nothing');
+
+// padding a string
+const message = ' pad me';
+
+console.log(message.padStart(25, '*'));
+console.log(message.padEnd(25, '*'));
+console.log(message.padStart(25, '*').padEnd(30, '*'));
+
+// practical example masking a credit card
+
+const maskCreditCard = function (cardNumber) {
+  const str = cardNumber + '';
+  const mask = str.slice(-4)
+  return mask.padStart(str.length, '*')
+}
+
+console.log(maskCreditCard(1234567812345678));
+console.log(maskCreditCard(1235541564565451));
+console.log(maskCreditCard(9456812354895236));
+
+// the repeat method
+const warningMessage = 'Bad weather ... All Departures Delayed ... '
+console.log(warningMessage.repeat(5))
+
+// practice repeat method, making a tree like structure
+const christmasTree = function (sym) {
+  for (let i = 0; i <= 5; i++ ) {
+    console.log(sym.repeat(i));
+  }
+}
+
+christmasTree('🎄');
+
 console.log('');
 
 //////////////////// Lecture 124 ////////////////////
-console.log('LECTURE 124');
+console.log('LECTURE 124'.padStart(25, '- '));
 
 console.log('');
 
