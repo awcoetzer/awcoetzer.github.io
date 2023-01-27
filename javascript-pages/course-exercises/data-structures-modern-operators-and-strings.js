@@ -876,73 +876,73 @@ console.log('');
 //////////////////// Lecture 122 ////////////////////
 console.log('LECTURE 122');
 
-// changing the case of a string
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
+// // changing the case of a string
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
 
-// Practical example
-const passengerName = 'AndRE';
-const passengerLower = passengerName.toLowerCase();
-console.log(passengerName, passengerLower);
+// // Practical example
+// const passengerName = 'AndRE';
+// const passengerLower = passengerName.toLowerCase();
+// console.log(passengerName, passengerLower);
 
-const passengerCorrect =
-  passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
 
-// Challenge recreate the above in a function
-const checkName = function (firstName) {
-  return firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
-};
+// // Challenge recreate the above in a function
+// const checkName = function (firstName) {
+//   return firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+// };
 
-console.log(checkName('ANdrE'));
-console.log(checkName('SAM'));
-console.log(checkName('LUCus'));
+// console.log(checkName('ANdrE'));
+// console.log(checkName('SAM'));
+// console.log(checkName('LUCus'));
 
-// checking/comparing email
-const email = 'hello@mail.io';
-const loginEmail = '   HeLlO@mAIl.iO  \n'; // \n means enter syntax
-// const lowerEmail = loginEmail.toLowerCase();
-// const trimmedEmail = lowerEmail.trim();
+// // checking/comparing email
+// const email = 'hello@mail.io';
+// const loginEmail = '   HeLlO@mAIl.iO  \n'; // \n means enter syntax
+// // const lowerEmail = loginEmail.toLowerCase();
+// // const trimmedEmail = lowerEmail.trim();
 
-const correctEmail = loginEmail.toLowerCase().trim();
-console.log(correctEmail);
+// const correctEmail = loginEmail.toLowerCase().trim();
+// console.log(correctEmail);
 
-// replacing part of strings
-const priceEu = '499,95€';
-const priceUs = priceEu.replace('€', '$').replace(',', '.');
-console.log(priceEu, priceUs);
+// // replacing part of strings
+// const priceEu = '499,95€';
+// const priceUs = priceEu.replace('€', '$').replace(',', '.');
+// console.log(priceEu, priceUs);
 
-// can also replace entire words
-const announcement =
-  "All passengers for flight Hawaii, please go to door 2b, that's door 2b!";
+// // can also replace entire words
+// const announcement =
+//   "All passengers for flight Hawaii, please go to door 2b, that's door 2b!";
 
-console.log(announcement.replace('door', 'gate'));
-console.log(announcement.replaceAll('door', 'gate'));
+// console.log(announcement.replace('door', 'gate'));
+// console.log(announcement.replaceAll('door', 'gate'));
 
-// regular expression
-console.log(announcement.replace(/door/g, 'gate'));
+// // regular expression
+// console.log(announcement.replace(/door/g, 'gate'));
 
-// string methods that return booleans
-const newPlane = 'Airbus A319neo';
-console.log(newPlane.includes('A319'));
+// // string methods that return booleans
+// const newPlane = 'Airbus A319neo';
+// console.log(newPlane.includes('A319'));
 
-console.log(newPlane.startsWith('Air'));
+// console.log(newPlane.startsWith('Air'));
 
-if (newPlane.startsWith('Airbus') && newPlane.endsWith('neo'))
-  console.log('Part of new planes');
+// if (newPlane.startsWith('Airbus') && newPlane.endsWith('neo'))
+//   console.log('Part of new planes');
 
-// how we can use booleans methods in a practical sense
+// // how we can use booleans methods in a practical sense
 
-const checkBaggage = function (items) {
-  const baggage = items.toLowerCase();
-  if (baggage.includes('knife') || baggage.includes('gun'))
-    console.log('Sorry, but you not welcome on the plane!');
-  else console.log('Welcome Aboard');
-};
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes('knife') || baggage.includes('gun'))
+//     console.log('Sorry, but you not welcome on the plane!');
+//   else console.log('Welcome Aboard');
+// };
 
-checkBaggage('I have a bottle of water, a KNIfe and a camera');
-checkBaggage('I have some snacks, and a laptop for work');
-checkBaggage('I have a gUN for protection, and some magazines about kniFES');
+// checkBaggage('I have a bottle of water, a KNIfe and a camera');
+// checkBaggage('I have some snacks, and a laptop for work');
+// checkBaggage('I have a gUN for protection, and some magazines about kniFES');
 
 console.log('');
 
@@ -982,7 +982,6 @@ console.log(message.padEnd(25, '*'));
 console.log(message.padStart(25, '*').padEnd(30, '*'));
 
 // practical example masking a credit card
-
 const maskCreditCard = function (cardNumber) {
   // const str = cardNumber + '';
   const str = String(cardNumber)

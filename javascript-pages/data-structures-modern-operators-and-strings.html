@@ -2484,12 +2484,109 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // the .split('') method
+                      console.log('this+is+a+string'.split('+'));
+                      console.log('Harry Potter'.split(' '));
+
+                      const [firstName, lastName] = 'Harry Potter'.split(' ');
+
+                      const newName = ['Mr.', firstName, lastName];
+                      console.log(newName.join(' '));
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  The '.split()' method splits a strings based on a specified value, it also places the results in an array, which means we can even use deconstruction on it. The '.join()' method is completely opposite of split, and can join array values, or values separated by a comma, into a single string.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // a function to capitalize names given
+                      const capitalizeNames = fullname => {
+                        const names = fullname.toLowerCase().split(' ');
+                        const capitalizedName = [];
+                        for (const n of names) {
+                          // capitalizedName.push(n[0].toUpperCase() + n.slice(1));
+                          capitalizedName.push(n.replace(n[0], n[0].toUpperCase()));
+                        }
+                        console.log(capitalizedName.join(' '));
+                      };
+
+                      capitalizeNames('HARry POTter');
+                      capitalizeNames('RON WEASLEY');
+                      capitalizeNames('hermione granger');
+                      capitalizeNames('This is just a sentence about nothing');
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is an exercise to capitalize names passed into the function.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // padding a string
+                      const message = ' pad me';
+
+                      console.log(message.padStart(25, '*'));
+                      console.log(message.padEnd(25, '*'));
+                      console.log(message.padStart(25, '*').padEnd(30, '*'));
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Padding strings means to add a certain amount of characters to a string until it reaches the desired length. This is done by using two methods, '.padStart(amount, value)' and '.padEnd(amount, value)'.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // practical example masking a credit card
+                      const maskCreditCard = function (cardNumber) {
+                        // const str = cardNumber + '';
+                        const str = String(cardNumber)
+                        const mask = str.slice(-4)
+                        return mask.padStart(str.length, '*')
+                      }
+
+                      console.log(maskCreditCard(1234567812345678));
+                      console.log(maskCreditCard(1235541564565451));
+                      console.log(maskCreditCard(9456812354895236));
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is an example of how we can use padding with other methods to mask credit card numbers.
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // the repeat method
+                      const warningMessage = 'Bad weather ... All Departures Delayed ... '
+                      console.log(warningMessage.repeat(5))
+
+                      // practice repeat method, making a tree like structure
+                      const christmasTree = function (sym) {
+                        for (let i = 0; i <= 5; i++ ) {
+                          console.log(sym.repeat(i));
+                        }
+                      }
+
+                      christmasTree('🎄');
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  The '.repeat()' method repeats a string by a given value, and personal challenge to make a weird Christmas tree.
+                </p>
 
                 <!-- !End of Lecture 123 -->
               </div>
