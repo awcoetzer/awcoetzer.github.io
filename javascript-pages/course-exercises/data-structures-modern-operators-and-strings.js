@@ -949,67 +949,112 @@ console.log('');
 //////////////////// Lecture 123 ////////////////////
 console.log('LECTURE 123');
 
-// the .split('') method
-console.log('this+is+a+string'.split('+'));
-console.log('Harry Potter'.split(' '));
+// // the .split('') method
+// console.log('this+is+a+string'.split('+'));
+// console.log('Harry Potter'.split(' '));
 
-const [firstName, lastName] = 'Harry Potter'.split(' ');
+// const [firstName, lastName] = 'Harry Potter'.split(' ');
 
-const newName = ['Mr.', firstName, lastName];
-console.log(newName.join(' '));
+// const newName = ['Mr.', firstName, lastName];
+// console.log(newName.join(' '));
 
-// a function to capitalize names given
-const capitalizeNames = fullname => {
-  const names = fullname.toLowerCase().split(' ');
-  const capitalizedName = [];
-  for (const n of names) {
-    // capitalizedName.push(n[0].toUpperCase() + n.slice(1));
-    capitalizedName.push(n.replace(n[0], n[0].toUpperCase()));
-  }
-  console.log(capitalizedName.join(' '));
-};
+// // a function to capitalize names given
+// const capitalizeNames = fullname => {
+//   const names = fullname.toLowerCase().split(' ');
+//   const capitalizedName = [];
+//   for (const n of names) {
+//     // capitalizedName.push(n[0].toUpperCase() + n.slice(1));
+//     capitalizedName.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(capitalizedName.join(' '));
+// };
 
-capitalizeNames('HARry POTter');
-capitalizeNames('RON WEASLEY');
-capitalizeNames('hermione granger');
-capitalizeNames('This is just a sentence about nothing');
+// capitalizeNames('HARry POTter');
+// capitalizeNames('RON WEASLEY');
+// capitalizeNames('hermione granger');
+// capitalizeNames('This is just a sentence about nothing');
 
-// padding a string
-const message = ' pad me';
+// // padding a string
+// const message = ' pad me';
 
-console.log(message.padStart(25, '*'));
-console.log(message.padEnd(25, '*'));
-console.log(message.padStart(25, '*').padEnd(30, '*'));
+// console.log(message.padStart(25, '*'));
+// console.log(message.padEnd(25, '*'));
+// console.log(message.padStart(25, '*').padEnd(30, '*'));
 
-// practical example masking a credit card
-const maskCreditCard = function (cardNumber) {
-  // const str = cardNumber + '';
-  const str = String(cardNumber)
-  const mask = str.slice(-4)
-  return mask.padStart(str.length, '*')
-}
+// // practical example masking a credit card
+// const maskCreditCard = function (cardNumber) {
+//   // const str = cardNumber + '';
+//   const str = String(cardNumber)
+//   const mask = str.slice(-4)
+//   return mask.padStart(str.length, '*')
+// }
 
-console.log(maskCreditCard(1234567812345678));
-console.log(maskCreditCard(1235541564565451));
-console.log(maskCreditCard(9456812354895236));
+// console.log(maskCreditCard(1234567812345678));
+// console.log(maskCreditCard(1235541564565451));
+// console.log(maskCreditCard(9456812354895236));
 
-// the repeat method
-const warningMessage = 'Bad weather ... All Departures Delayed ... '
-console.log(warningMessage.repeat(5))
+// // the repeat method
+// const warningMessage = 'Bad weather ... All Departures Delayed ... '
+// console.log(warningMessage.repeat(5))
 
-// practice repeat method, making a tree like structure
-const christmasTree = function (sym) {
-  for (let i = 0; i <= 5; i++ ) {
-    console.log(sym.repeat(i));
-  }
-}
+// // practice repeat method, making a tree like structure
+// const christmasTree = function (sym) {
+//   for (let i = 0; i <= 5; i++ ) {
+//     console.log(sym.repeat(i));
+//   }
+// }
 
-christmasTree('🎄');
+// christmasTree('🎄');
 
 console.log('');
 
 //////////////////// Lecture 124 ////////////////////
-console.log('LECTURE 124'.padStart(25, '- '));
+console.log('LECTURE 124');
+console.log('Coding Challenge Four');
+
+const conversionContainerEl = document.querySelector('.conversion-container');
+conversionContainerEl.style.display = 'flex';
+conversionContainerEl.style.gap = 'var(--space-16)';
+
+const conversionTextArea = document.createElement('textArea');
+conversionTextArea.style.padding = 'var(--space-12)';
+conversionTextArea.style.border = 'none';
+conversionTextArea.style.display = 'flex';
+conversionTextArea.style.alignContent = 'center';
+conversionTextArea.style.alignItems = 'center';
+conversionTextArea.style.flex = 1;
+conversionTextArea.style.color = 'var(--clr-shade)';
+conversionTextArea.style.fontSize = 'var(--font-16)';
+conversionTextArea.style.fontWeight = 'var(--weight-500)';
+conversionTextArea.style.letterSpacing = 'var(--letter-space-n05)';
+conversionTextArea.style.lineHeight = 'var(--line-height-17)';
+conversionTextArea.style.backgroundColor = 'var(--clr-tint)';
+
+const conversionButton = document.createElement('button');
+conversionButton.textContent = 'Convert';
+conversionButton.classList.add = 'btn';
+conversionButton.style.padding = 'var(--space-16)';
+conversionButton.style.border = '1px solid var(--clr-tint)';
+conversionButton.style.color = 'var(--clr-tint)';
+conversionButton.style.fontSize = 'var(--font-16)';
+conversionButton.style.fontWeight = 'var(--weight-500)';
+conversionButton.style.letterSpacing = 'var(--letter-space-n05)';
+conversionButton.style.lineHeight = 'var(--line-height-17)';
+conversionButton.style.textTransform = 'uppercase';
+conversionButton.style.backgroundColor = 'var(--clr-shade)';
+conversionButton.style.cursor = 'pointer';
+
+conversionContainerEl.append(conversionTextArea);
+conversionContainerEl.append(conversionButton);
+
+const conversion = function (variableNames) {
+  const [first, second] = variableNames.toLowerCase().split('_');
+  const camelCasing = first + second[0].toUpperCase() + second.slice(1);
+
+  return camelCasing;
+};
+
+console.log(conversion('Some_Variable'));
 
 console.log('');
 
@@ -1017,4 +1062,3 @@ console.log('');
 console.log('LECTURE 125');
 
 console.log('');
-

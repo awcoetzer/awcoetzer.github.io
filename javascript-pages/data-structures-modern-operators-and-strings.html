@@ -1843,15 +1843,22 @@
                 </div>
 
                 <p class="lecture-text">
-                  We learn't that maps is the other new built-in data structure in JavaScript. They are more useful than sets.
+                  We learn't that maps is the other new built-in data structure
+                  in JavaScript. They are more useful than sets.
                 </p>
 
                 <p class="lecture-text">
-                  A map is a data structure to map values to keys. We know within object, keys are always strings, however with maps the keys can be any data type, including arrays, objects or even other maps.
+                  A map is a data structure to map values to keys. We know
+                  within object, keys are always strings, however with maps the
+                  keys can be any data type, including arrays, objects or even
+                  other maps.
                 </p>
 
                 <p class="lecture-text">
-                  The '.set(key, value)' method is how we add to a map, the first value is always the key and the second the value. It's important to know that the '.set()' method not only adds data to the map, but also returns it.
+                  The '.set(key, value)' method is how we add to a map, the
+                  first value is always the key and the second the value. It's
+                  important to know that the '.set()' method not only adds data
+                  to the map, but also returns it.
                 </p>
 
                 <div class="code-example">
@@ -1865,7 +1872,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  The fact that the '.set()' method returns the map, means that we can chain the set method when adding data, as seen in the above example.
+                  The fact that the '.set()' method returns the map, means that
+                  we can chain the set method when adding data, as seen in the
+                  above example.
                 </p>
 
                 <div class="code-example">
@@ -1879,7 +1888,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  To get values from maps, we use the '.get(key)' method. One thing to note about the '.get()' method is the key data type entered is important, meaning it needs to match the 'typeof' basically.
+                  To get values from maps, we use the '.get(key)' method. One
+                  thing to note about the '.get()' method is the key data type
+                  entered is important, meaning it needs to match the 'typeof'
+                  basically.
                 </p>
 
                 <div class="code-example">
@@ -1893,7 +1905,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  The example above is not really practical, but it shows the power of using booleans as keys.
+                  The example above is not really practical, but it shows the
+                  power of using booleans as keys.
                 </p>
 
                 <div class="code-example">
@@ -1915,11 +1928,17 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above are a few examples of further properties and methods that the map data structure has. Starting with the '.has(key)' method, this checks if a key is present within the map structure. Map also has the '.delete(key)' method, which, as you guessed, deletes a key value pair.
+                  Above are a few examples of further properties and methods
+                  that the map data structure has. Starting with the '.has(key)'
+                  method, this checks if a key is present within the map
+                  structure. Map also has the '.delete(key)' method, which, as
+                  you guessed, deletes a key value pair.
                 </p>
 
                 <p class="lecture-text">
-                  Furthermore, map has the '.size' property to check the size of the map, as well as the'.clear()' method to clear all values or data from the map.
+                  Furthermore, map has the '.size' property to check the size of
+                  the map, as well as the'.clear()' method to clear all values
+                  or data from the map.
                 </p>
 
                 <div class="code-example">
@@ -1936,11 +1955,14 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above we show that we can set an array as a key, but if we directly use an array as a key, if we had to call on it later, that would point to different reference types in memory.
+                  Above we show that we can set an array as a key, but if we
+                  directly use an array as a key, if we had to call on it later,
+                  that would point to different reference types in memory.
                 </p>
 
                 <p class="lecture-text">
-                  The workaround for that is to assign an array to a variable and use that.
+                  The workaround for that is to assign an array to a variable
+                  and use that.
                 </p>
 
                 <!-- !End of Lecture 117 -->
@@ -1975,7 +1997,12 @@
                 </div>
 
                 <p class="lecture-text">
-                  In the last lecture, we added values to the map using the '.set(key, value)' method, but there is a better way of doing that and the is writing the map as an array of arrays. However, when we're adding additional elements to the map, then using something like the '.set()' method is a good option.
+                  In the last lecture, we added values to the map using the
+                  '.set(key, value)' method, but there is a better way of doing
+                  that and the is writing the map as an array of arrays.
+                  However, when we're adding additional elements to the map,
+                  then using something like the '.set()' method is a good
+                  option.
                 </p>
 
                 <div class="code-example">
@@ -1990,7 +2017,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  The first example is an array of arrays, is a similar structure to that of the Object.entries() method we saw. This means there is an easy way of converting from object to maps.
+                  The first example is an array of arrays, is a similar
+                  structure to that of the Object.entries() method we saw. This
+                  means there is an easy way of converting from object to maps.
                 </p>
 
                 <div class="code-example">
@@ -2012,7 +2041,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is a challenge for a 'quiz app' that if the user had to input the answer ranging from 1 to 3 that it should output the boolean value of either true or false.
+                  Above is a challenge for a 'quiz app' that if the user had to
+                  input the answer ranging from 1 to 3 that it should output the
+                  boolean value of either true or false.
                 </p>
 
                 <div class="code-example">
@@ -2040,35 +2071,58 @@
                 </h3>
 
                 <p class="lecture-text">
-                  To help us understand which data structure to use, we first need to understand where we can receive data.
+                  To help us understand which data structure to use, we first
+                  need to understand where we can receive data.
                 </p>
 
                 <p class="lecture-text">
-                  There are 3 main sources of data collection, that being, from the program itself, so data that is written directly into the source code, an example of that being a status message.
+                  There are 3 main sources of data collection, that being, from
+                  the program itself, so data that is written directly into the
+                  source code, an example of that being a status message.
                 </p>
 
                 <p class="lecture-text">
-                  Data from UI, so data input from the user or data written in the DOM, example being a to-do list app and data from outside sources such as API's, an example of that being a recipe object.
+                  Data from UI, so data input from the user or data written in
+                  the DOM, example being a to-do list app and data from outside
+                  sources such as API's, an example of that being a recipe
+                  object.
                 </p>
 
                 <p class="lecture-text">
-                  Once we have this data, also known as the data collection or collection of data, we need a place to put it. We store this data in data structures, but there are four built-in data structures, and we need to decide which to use.
+                  Once we have this data, also known as the data collection or
+                  collection of data, we need a place to put it. We store this
+                  data in data structures, but there are four built-in data
+                  structures, and we need to decide which to use.
                 </p>
 
                 <p class="lecture-text">
-                  Do we just need a simple list of values?, then we will use arrays or sets, but if we need key values pairs, then we will need objects and maps. The big difference between the two is that keys allows us to describe the values, whereas a list or sets simply have values without description.
+                  Do we just need a simple list of values?, then we will use
+                  arrays or sets, but if we need key values pairs, then we will
+                  need objects and maps. The big difference between the two is
+                  that keys allows us to describe the values, whereas a list or
+                  sets simply have values without description.
                 </p>
 
                 <p class="lecture-text">
-                  Going back to web API's, which is usually the most common source of data. Data from web API's usually come in the form of JSON formatting. JSON is essentially just text, so a long string, but can easily be converted into JavaScript objects, because it uses the same formatting as JavaScript objects and arrays.
+                  Going back to web API's, which is usually the most common
+                  source of data. Data from web API's usually come in the form
+                  of JSON formatting. JSON is essentially just text, so a long
+                  string, but can easily be converted into JavaScript objects,
+                  because it uses the same formatting as JavaScript objects and
+                  arrays.
                 </p>
 
                 <p class="lecture-text">
-                  There are other built-in data structures we didn't talk about yet, which are 'weakSets' and 'weakMaps'. However, there are non-built-in data structures that exist, especially in other programming languages, and to name a few, stacks, queues, linked lists, Trees and hash tables.
+                  There are other built-in data structures we didn't talk about
+                  yet, which are 'weakSets' and 'weakMaps'. However, there are
+                  non-built-in data structures that exist, especially in other
+                  programming languages, and to name a few, stacks, queues,
+                  linked lists, Trees and hash tables.
                 </p>
 
                 <p class="lecture-text">
-                  These don't matter as for now, but it's good to know they exist.
+                  These don't matter as for now, but it's good to know they
+                  exist.
                 </p>
 
                 <div class="code-example">
@@ -2089,7 +2143,12 @@
                 </div>
 
                 <p class="lecture-text">
-                  Arrays should be used when you need an ordered list, which might contain duplicates, and when you need to manipulate data. Sets on the other hand, are used when you need to work with unique values, or when higher performance is really important and of course when you want to remove duplicates from an array.
+                  Arrays should be used when you need an ordered list, which
+                  might contain duplicates, and when you need to manipulate
+                  data. Sets on the other hand, are used when you need to work
+                  with unique values, or when higher performance is really
+                  important and of course when you want to remove duplicates
+                  from an array.
                 </p>
 
                 <div class="code-example">
@@ -2118,15 +2177,23 @@
                 </div>
 
                 <p class="lecture-text">
-                  Objects were just the traditional way of writing objects, it's easier than maps to write, and we can use '.' and [] to write and read data. Whereas, map give better performance, key can have any data type, easy to iterate and easy to compute size.
+                  Objects were just the traditional way of writing objects, it's
+                  easier than maps to write, and we can use '.' and [] to write
+                  and read data. Whereas, map give better performance, key can
+                  have any data type, easy to iterate and easy to compute size.
                 </p>
 
                 <p class="lecture-text">
-                  However, the fact objects are just easier to write and access data make them the preferred way of writing key, values pairs. However, the main reasons are when to use which, so, you use objects when you need to include functions (methods), and when working with JSON or the 'this' keyword.
+                  However, the fact objects are just easier to write and access
+                  data make them the preferred way of writing key, values pairs.
+                  However, the main reasons are when to use which, so, you use
+                  objects when you need to include functions (methods), and when
+                  working with JSON or the 'this' keyword.
                 </p>
 
                 <p class="lecture-text">
-                  Maps are to be used when you simply need to map keys to values, or when you need keys that are not strings
+                  Maps are to be used when you simply need to map keys to
+                  values, or when you need keys that are not strings
                 </p>
 
                 <!-- !End of Lecture 119 -->
@@ -2140,29 +2207,42 @@
                 </h3>
 
                 <p class="lecture-text">
-                  Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+                  Let's continue with our football betting app! This time, we
+                  have a map called 'gameEvents' (see below) with a log of the
+                  events that happened during the game. The values are the
+                  events themselves, and the keys are the minutes in which each
+                  event happened (a football game has 90 minutes plus some extra
+                  time).
                 </p>
 
                 <span class="pre-heading">Your Tasks:</span>
                 <ol class="lecture-list">
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Create an array 'events' of the different game events that happened (no duplicates).
+                      Create an array 'events' of the different game events that
+                      happened (no duplicates).
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+                      After the game has finished, is was found that the yellow
+                      card from minute 64 was unfair. So remove this event from
+                      the game events log.
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Compute and log the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes).
+                      Compute and log the following string to the console: "An
+                      event happened, on average, every 9 minutes" (keep in mind
+                      that a game has 90 minutes).
                     </p>
                   </li>
                   <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
-                       Loop over 'gameEvents' and log each element to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:[FIRST HALF] 17: ⚽ GOAL
+                      Loop over 'gameEvents' and log each element to the
+                      console, marking whether it's in the first half or second
+                      half (after 45 min) of the game, like this:[FIRST HALF]
+                      17: ⚽ GOAL
                     </p>
                   </li>
                 </ol>
@@ -2226,7 +2306,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above we see that we can index strings, both when stored in a variable and directly. We can also check the length, using the '.length' property, again both on the variable and string directly.
+                  Above we see that we can index strings, both when stored in a
+                  variable and directly. We can also check the length, using the
+                  '.length' property, again both on the variable and string
+                  directly.
                 </p>
 
                 <div class="code-example">
@@ -2241,7 +2324,11 @@
                 </div>
 
                 <p class="lecture-text">
-                  Strings have similar methods to that of arrays, for example the '.indexOf()' method above. '.indexOf()' returns the first occurrence of the specified value, we also have '.lastIndexOf()' method which will return the last occurrence of the specified value.
+                  Strings have similar methods to that of arrays, for example
+                  the '.indexOf()' method above. '.indexOf()' returns the first
+                  occurrence of the specified value, we also have
+                  '.lastIndexOf()' method which will return the last occurrence
+                  of the specified value.
                 </p>
 
                 <div class="code-example">
@@ -2255,11 +2342,18 @@
                 </div>
 
                 <p class="lecture-text">
-                  The '.slice(start, end)' method, slices strings based on a given numerical value, of course we do not have to hard code the value, we can also use the '.indexOf()' method to identify the index values for us. We also do not need to provide a end value, in this case, slice will return everything but where it started.
+                  The '.slice(start, end)' method, slices strings based on a
+                  given numerical value, of course we do not have to hard code
+                  the value, we can also use the '.indexOf()' method to identify
+                  the index values for us. We also do not need to provide a end
+                  value, in this case, slice will return everything but where it
+                  started.
                 </p>
 
                 <p class="lecture-text">
-                  The '.slice()' method can also receive negative numbers, keep in mind that the result of slice will always be 'end' minus 'start'.
+                  The '.slice()' method can also receive negative numbers, keep
+                  in mind that the result of slice will always be 'end' minus
+                  'start'.
                 </p>
 
                 <div class="code-example">
@@ -2273,7 +2367,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  If we don't know the index number of something, instead of hard coding it, we can use '.indexof()' to provide the values, as mentioned above.
+                  If we don't know the index number of something, instead of
+                  hard coding it, we can use '.indexof()' to provide the values,
+                  as mentioned above.
                 </p>
 
                 <div class="code-example">
@@ -2309,15 +2405,21 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above, we wrote a function for checking if your seat number is a middle seat or not, utilizing the use of the '.slice()' method.
+                  Above, we wrote a function for checking if your seat number is
+                  a middle seat or not, utilizing the use of the '.slice()'
+                  method.
                 </p>
 
                 <p class="lecture-text">
-                  This brings us to the question of how is it possible for strings to have methods?
+                  This brings us to the question of how is it possible for
+                  strings to have methods?
                 </p>
 
                 <p class="lecture-text">
-                  This is because when you use a method on a string, JavaScript automatically converts the string to a box, this process is known as boxing. It basically takes the primitive and turns it into an object.
+                  This is because when you use a method on a string, JavaScript
+                  automatically converts the string to a box, this process is
+                  known as boxing. It basically takes the primitive and turns it
+                  into an object.
                 </p>
 
                 <div class="code-example">
@@ -2332,7 +2434,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is what JavaScript uses to convert our strings to objects, when we call a method on a string. It's important to know when this operation is done, it converts the object back into a string.
+                  Above is what JavaScript uses to convert our strings to
+                  objects, when we call a method on a string. It's important to
+                  know when this operation is done, it converts the object back
+                  into a string.
                 </p>
 
                 <!-- !End of Lecture 121 -->
@@ -2356,7 +2461,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is just a method that takes in no arguments, but transforms the string to an either lower case or upper case. 
+                  Above is just a method that takes in no arguments, but
+                  transforms the string to an either lower case or upper case. 
                 </p>
 
                 <div class="code-example">
@@ -2384,7 +2490,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  The example above is how we could hypothetically fix a misspelling of a name, in this case, the passenger's name.
+                  The example above is how we could hypothetically fix a
+                  misspelling of a name, in this case, the passenger's name.
                 </p>
 
                 <div class="code-example">
@@ -2403,7 +2510,9 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above, the '.trim()' method removes all white space from the start and end of the string. With ES 2019, we now have a '.trimStart()' and '.trimEnd()'.
+                  Above, the '.trim()' method removes all white space from the
+                  start and end of the string. With ES 2019, we now have a
+                  '.trimStart()' and '.trimEnd()'.
                 </p>
 
                 <div class="code-example">
@@ -2428,11 +2537,19 @@
                 </div>
 
                 <p class="lecture-text">
-                  The above method, '.replace(x, y)', replaces the specified value of 'x' with 'y'. Note, that this method is case-sensitive and can work for single letters and entire words.
+                  The above method, '.replace(x, y)', replaces the specified
+                  value of 'x' with 'y'. Note, that this method is
+                  case-sensitive and can work for single letters and entire
+                  words.
                 </p>
 
                 <p class="lecture-text">
-                  '.replace(x, y)' only replaces the first occurrence of the value 'x', though as of recent, there is a '.replaceAll(x, y)' method that replaces all occurrences of 'x'. Though, before this was an option, people used something called regular expressions to select all occurrences of 'x'. Note, the 'g' in '/door/g' stands for global.
+                  '.replace(x, y)' only replaces the first occurrence of the
+                  value 'x', though as of recent, there is a '.replaceAll(x, y)'
+                  method that replaces all occurrences of 'x'. Though, before
+                  this was an option, people used something called regular
+                  expressions to select all occurrences of 'x'. Note, the 'g' in
+                  '/door/g' stands for global.
                 </p>
 
                 <div class="code-example">
@@ -2464,11 +2581,16 @@
                 </div>
 
                 <p class="lecture-text">
-                  The above example is to do with methods that return boolean values. The '.includes()' methods checks if a string has a specified value in it. We then have '.startsWith()' and '.endsWidth()' that checks if a string starts with and or end with a specified value.
+                  The above example is to do with methods that return boolean
+                  values. The '.includes()' methods checks if a string has a
+                  specified value in it. We then have '.startsWith()' and
+                  '.endsWidth()' that checks if a string starts with and or end
+                  with a specified value.
                 </p>
 
                 <p class="lecture-text">
-                  The function is just a demonstration of how we can use boolean methods.
+                  The function is just a demonstration of how we can use boolean
+                  methods.
                 </p>
 
                 <!-- !End of Lecture 122 -->
@@ -2497,7 +2619,11 @@
                 </div>
 
                 <p class="lecture-text">
-                  The '.split()' method splits a strings based on a specified value, it also places the results in an array, which means we can even use deconstruction on it. The '.join()' method is completely opposite of split, and can join array values, or values separated by a comma, into a single string.
+                  The '.split()' method splits a strings based on a specified
+                  value, it also places the results in an array, which means we
+                  can even use deconstruction on it. The '.join()' method is
+                  completely opposite of split, and can join array values, or
+                  values separated by a comma, into a single string.
                 </p>
 
                 <div class="code-example">
@@ -2523,7 +2649,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is an exercise to capitalize names passed into the function.
+                  Above is an exercise to capitalize names passed into the
+                  function.
                 </p>
 
                 <div class="code-example">
@@ -2540,7 +2667,10 @@
                 </div>
 
                 <p class="lecture-text">
-                  Padding strings means to add a certain amount of characters to a string until it reaches the desired length. This is done by using two methods, '.padStart(amount, value)' and '.padEnd(amount, value)'.
+                  Padding strings means to add a certain amount of characters to
+                  a string until it reaches the desired length. This is done by
+                  using two methods, '.padStart(amount, value)' and
+                  '.padEnd(amount, value)'.
                 </p>
 
                 <div class="code-example">
@@ -2562,7 +2692,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  Above is an example of how we can use padding with other methods to mask credit card numbers.
+                  Above is an example of how we can use padding with other
+                  methods to mask credit card numbers.
                 </p>
 
                 <div class="code-example">
@@ -2585,7 +2716,8 @@
                 </div>
 
                 <p class="lecture-text">
-                  The '.repeat()' method repeats a string by a given value, and personal challenge to make a weird Christmas tree.
+                  The '.repeat()' method repeats a string by a given value, and
+                  personal challenge to make a weird Christmas tree.
                 </p>
 
                 <!-- !End of Lecture 123 -->
@@ -2598,6 +2730,98 @@
                   Coding Challenge #4
                 </h3>
 
+                <p class="lecture-text">
+                  Write a program that receives a list of variable names written
+                  in underscore_case and convert them to camelCase. The input
+                  will come from a textarea inserted into the DOM (see code
+                  below to insert the elements), and conversion will happen when
+                  the button is pressed.
+                </p>
+
+                <span class="pre-heading">
+                  Test data (pasted to textarea, including spaces):
+                </span>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      underscore_case
+                        first_name
+                      Some_Variable 
+                        calculate_AGE
+                      delayed_departure
+                    </code>
+                  </pre>
+                </div>
+
+                <span class="pre-heading">
+                  Should produce this output (5 separate console.log outputs):
+                </span>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      underscoreCase      ✅
+                      firstName           ✅✅
+                      someVariable        ✅✅✅
+                      calculateAge        ✅✅✅✅
+                      delayedDeparture    ✅✅✅✅✅
+                    </code>
+                  </pre>
+                </div>
+
+                <span class="pre-heading">Hints:</span>
+
+                <ol class="lecture-list">
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description"></p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Remember which character defines a new line in the
+                      textarea 😉
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      The solution only needs to work for a variable made out of
+                      2 words, like a_b
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      Start without worrying about the ✅. Tackle that only
+                      after you have the variable name conversion working 😉
+                    </p>
+                  </li>
+                  <li class="lecture-list--item">
+                    <p class="lecture-list--item-description">
+                      This challenge is difficult on purpose, so start watching
+                      the solution in case you're stuck. Then pause and
+                      continue!
+                    </p>
+                  </li>
+                </ol>
+
+                <span class="pre-heading">
+                  Example Of How To Insert Elements In DOM:
+                </span>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      document.body.append(document.createElement('textarea'));
+                      document.body.append(document.createElement('button'));
+                    </code>
+                  </pre>
+                </div>
+
+                <div class="project">
+                  <div class="project-container conversion-container">
+                    
+                  </div>
+                </div>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
@@ -2605,8 +2829,6 @@
                     </code>
                   </pre>
                 </div>
-
-                <p class="lecture-text">CHANGE ME</p>
 
                 <!-- !End of Lecture 124 -->
               </div>
