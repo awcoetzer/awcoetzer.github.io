@@ -1034,7 +1034,6 @@ textArea.style.display = 'flex';
 textArea.style.flex = 1;
 textArea.style.font = 'inherit';
 textArea.style.fontSize = 'var(--font-16)';
-// textArea.style.fontWeight = 'var(--weight-500)';
 textArea.style.letterSpacing = 'var(--letter-space-n05)';
 textArea.style.lineHeight = 'var(--line-height-17)';
 textArea.style.color = 'var(--clr-shade)';
@@ -1057,10 +1056,15 @@ convertBtn.addEventListener('click', function () {
     const output = conversion.padEnd(20, ' ') + '✅'.repeat(i + 1);
     console.log(output);
     const newLine = document.createElement('p');
+    newLine.style.color = 'var(--clr-grey-read)';
+    newLine.style.letterSpacing = 'var(--letter-space-n05)';
+    newLine.style.lineHeight = 'var(--line-height-17)';
     newLine.textContent = output;
     outputContainerEl.append(newLine)
   };
 });
+
+
 
 console.log('');
 
