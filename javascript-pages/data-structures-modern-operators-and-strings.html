@@ -2774,9 +2774,6 @@
 
                 <ol class="lecture-list">
                   <li class="lecture-list--item">
-                    <p class="lecture-list--item-description"></p>
-                  </li>
-                  <li class="lecture-list--item">
                     <p class="lecture-list--item-description">
                       Remember which character defines a new line in the
                       textarea 😉
@@ -2837,15 +2834,15 @@
                       const conversionContainerEl = document.querySelector('.conversion-container');
                       conversionContainerEl.style.display = 'flex';
                       conversionContainerEl.style.gap = 'var(--space-16)';
-                                          
+
                       const outputContainerEl = document.querySelector('.output-container');
-                                          
+
                       const textArea = document.createElement('textArea');
                       const convertBtn = document.createElement('button');
-                                          
+
                       conversionContainerEl.append(textArea);
                       conversionContainerEl.append(convertBtn);
-                                          
+
                       // Styling of elements
                       textArea.style.minHeight = 'calc(var(--space-128) + var(--space-64))';
                       textArea.style.padding = 'var(--space-16)';
@@ -2860,11 +2857,11 @@
                       textArea.style.lineHeight = 'var(--line-height-17)';
                       textArea.style.color = 'var(--clr-shade)';
                       textArea.style.backgroundColor = 'var(--clr-tint)';
-                                          
+
                       convertBtn.textContent = 'Convert';
                       convertBtn.classList.add('btn', 'project-btn');
                       convertBtn.style.alignSelf = 'flex-end';
-                                          
+
                       // Functionality of elements
                       convertBtn.addEventListener('click', function () {
                         outputContainerEl.innerHTML = ''
