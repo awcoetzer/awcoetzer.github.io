@@ -1044,10 +1044,9 @@ convertBtn.textContent = 'Convert';
 convertBtn.classList.add('btn', 'project-btn');
 convertBtn.style.alignSelf = 'flex-end';
 
-
-
 // Functionality of elements
 convertBtn.addEventListener('click', function () {
+  outputContainerEl.innerHTML = ''
   const text = textArea.value;
   const textInput = text.toLowerCase().split('\n');
 
