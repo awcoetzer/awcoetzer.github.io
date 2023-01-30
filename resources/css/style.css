@@ -1490,6 +1490,10 @@ strong {
   z-index: 999;
 }
 
+.project:has(.output-container)::before {
+  content: 'Output';
+}
+
 .project::after {
   content: 'Project';
   position: absolute;

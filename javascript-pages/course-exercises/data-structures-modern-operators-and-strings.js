@@ -1040,8 +1040,6 @@ textArea.style.lineHeight = 'var(--line-height-17)';
 textArea.style.color = 'var(--clr-shade)';
 textArea.style.backgroundColor = 'var(--clr-tint)';
 
-textArea.textContent = `underscore_case \n  first_name \n Some_Variable \n    calculate_AGE \n delayed_departure`;
-
 convertBtn.textContent = 'Convert';
 convertBtn.classList.add('btn', 'project-btn');
 convertBtn.style.alignSelf = 'flex-end';
