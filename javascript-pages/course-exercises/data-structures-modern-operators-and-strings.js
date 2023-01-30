@@ -1064,8 +1064,6 @@ convertBtn.addEventListener('click', function () {
   };
 });
 
-
-
 console.log('');
 
 //////////////////// Lecture 125 ////////////////////
