@@ -1012,49 +1012,58 @@ console.log('');
 console.log('LECTURE 124');
 console.log('Coding Challenge Four');
 
+// Selection & Creation of elements
 const conversionContainerEl = document.querySelector('.conversion-container');
 conversionContainerEl.style.display = 'flex';
 conversionContainerEl.style.gap = 'var(--space-16)';
 
-const conversionTextArea = document.createElement('textArea');
-conversionTextArea.style.padding = 'var(--space-12)';
-conversionTextArea.style.border = 'none';
-conversionTextArea.style.display = 'flex';
-conversionTextArea.style.alignContent = 'center';
-conversionTextArea.style.alignItems = 'center';
-conversionTextArea.style.flex = 1;
-conversionTextArea.style.color = 'var(--clr-shade)';
-conversionTextArea.style.fontSize = 'var(--font-16)';
-conversionTextArea.style.fontWeight = 'var(--weight-500)';
-conversionTextArea.style.letterSpacing = 'var(--letter-space-n05)';
-conversionTextArea.style.lineHeight = 'var(--line-height-17)';
-conversionTextArea.style.backgroundColor = 'var(--clr-tint)';
+const outputContainerEl = document.querySelector('.output-container');
 
-const conversionButton = document.createElement('button');
-conversionButton.textContent = 'Convert';
-conversionButton.classList.add = 'btn';
-conversionButton.style.padding = 'var(--space-16)';
-conversionButton.style.border = '1px solid var(--clr-tint)';
-conversionButton.style.color = 'var(--clr-tint)';
-conversionButton.style.fontSize = 'var(--font-16)';
-conversionButton.style.fontWeight = 'var(--weight-500)';
-conversionButton.style.letterSpacing = 'var(--letter-space-n05)';
-conversionButton.style.lineHeight = 'var(--line-height-17)';
-conversionButton.style.textTransform = 'uppercase';
-conversionButton.style.backgroundColor = 'var(--clr-shade)';
-conversionButton.style.cursor = 'pointer';
+const textArea = document.createElement('textArea');
+const convertBtn = document.createElement('button');
 
-conversionContainerEl.append(conversionTextArea);
-conversionContainerEl.append(conversionButton);
+conversionContainerEl.append(textArea);
+conversionContainerEl.append(convertBtn);
 
-const conversion = function (variableNames) {
-  const [first, second] = variableNames.toLowerCase().split('_');
-  const camelCasing = first + second[0].toUpperCase() + second.slice(1);
+// Styling of elements
+textArea.style.minHeight = 'calc(var(--space-128) + var(--space-64))';
+textArea.style.padding = 'var(--space-16)';
+textArea.style.border = '1px solid var(--clr-shade)';
+textArea.style.borderRadius = 'var(--radius-5)';
+textArea.style.display = 'flex';
+textArea.style.flex = 1;
+textArea.style.font = 'inherit';
+textArea.style.fontSize = 'var(--font-16)';
+// textArea.style.fontWeight = 'var(--weight-500)';
+textArea.style.letterSpacing = 'var(--letter-space-n05)';
+textArea.style.lineHeight = 'var(--line-height-17)';
+textArea.style.color = 'var(--clr-shade)';
+textArea.style.backgroundColor = 'var(--clr-tint)';
 
-  return camelCasing;
-};
+textArea.textContent = `underscore_case \n  first_name \n Some_Variable \n    calculate_AGE \n delayed_departure`;
 
-console.log(conversion('Some_Variable'));
+convertBtn.textContent = 'Convert';
+convertBtn.classList.add('btn', 'project-btn');
+convertBtn.style.alignSelf = 'flex-end';
+
+
+
+// Functionality of elements
+convertBtn.addEventListener('click', function () {
+  const text = textArea.value;
+  const textInput = text.toLowerCase().split('\n');
+
+  for (const [i, name] of textInput.entries()) {
+    const textSplit = name.trim().split('_');
+    const [first, second] = textSplit;
+    const conversion = first + second.replace(second[0], second[0].toUpperCase());
+    const output = conversion.padEnd(20, ' ') + '✅'.repeat(i + 1);
+    console.log(output);
+    const newLine = document.createElement('p');
+    newLine.textContent = output;
+    outputContainerEl.append(newLine)
+  };
+});
 
 console.log('');
 
