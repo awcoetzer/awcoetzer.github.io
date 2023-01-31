@@ -1047,11 +1047,10 @@ convertBtn.style.alignSelf = 'flex-end';
 convertBtn.addEventListener('click', function () {
   outputContainerEl.innerHTML = ''
   const text = textArea.value;
-  const textInput = text.toLowerCase().split('\n');
+  const textInput = text.split('\n');
 
   for (const [i, name] of textInput.entries()) {
-    const textSplit = name.trim().split('_');
-    const [first, second] = textSplit;
+    const [first, second] = name.toLowerCase().trim().split('_');
     const conversion = first + second.replace(second[0], second[0].toUpperCase());
     const output = conversion.padEnd(20, ' ') + '✅'.repeat(i + 1);
     console.log(output);
