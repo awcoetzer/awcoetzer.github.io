@@ -2834,15 +2834,15 @@
                       const conversionContainerEl = document.querySelector('.conversion-container');
                       conversionContainerEl.style.display = 'flex';
                       conversionContainerEl.style.gap = 'var(--space-16)';
-                                          
+
                       const outputContainerEl = document.querySelector('.output-container');
-                                          
+
                       const textArea = document.createElement('textArea');
                       const convertBtn = document.createElement('button');
-                                          
+
                       conversionContainerEl.append(textArea);
                       conversionContainerEl.append(convertBtn);
-                                          
+
                       // Styling of elements
                       textArea.style.minHeight = 'calc(var(--space-128) + var(--space-64))';
                       textArea.style.padding = 'var(--space-16)';
@@ -2856,11 +2856,11 @@
                       textArea.style.lineHeight = 'var(--line-height-17)';
                       textArea.style.color = 'var(--clr-shade)';
                       textArea.style.backgroundColor = 'var(--clr-tint)';
-                                          
+
                       convertBtn.textContent = 'Convert';
                       convertBtn.classList.add('btn', 'project-btn');
                       convertBtn.style.alignSelf = 'flex-end';
-                                          
+
                       // Functionality of elements
                       convertBtn.addEventListener('click', function () {
                         outputContainerEl.innerHTML = ''
@@ -2894,15 +2894,24 @@
                   String Methods Practice
                 </h3>
 
+                <p class="lecture-text">
+                  Format the below string the the example output
+                </p>
+
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Example output
+                      // 🔴 Delayed Departure from FAO to TXL (11h25)
+                      //              Arrival from BRU to FAO (11h45)
+                      //   🔴 Delayed Arrival from HEL to FAO (12h05)
+                      //            Departure from FAO to LIS (12h30)
+
+                      const flights =
+                        '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
                     </code>
                   </pre>
                 </div>
-
-                <p class="lecture-text">CHANGE ME</p>
 
                 <!-- !End of Lecture 125 -->
               </div>

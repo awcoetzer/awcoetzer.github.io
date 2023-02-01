@@ -1045,13 +1045,14 @@ convertBtn.style.alignSelf = 'flex-end';
 
 // Functionality of elements
 convertBtn.addEventListener('click', function () {
-  outputContainerEl.innerHTML = ''
+  outputContainerEl.innerHTML = '';
   const text = textArea.value;
   const textInput = text.split('\n');
 
   for (const [i, name] of textInput.entries()) {
     const [first, second] = name.toLowerCase().trim().split('_');
-    const conversion = first + second.replace(second[0], second[0].toUpperCase());
+    const conversion =
+      first + second.replace(second[0], second[0].toUpperCase());
     const output = conversion.padEnd(20, ' ') + '✅'.repeat(i + 1);
     console.log(output);
     const newLine = document.createElement('p');
@@ -1059,13 +1060,34 @@ convertBtn.addEventListener('click', function () {
     newLine.style.letterSpacing = 'var(--letter-space-n05)';
     newLine.style.lineHeight = 'var(--line-height-17)';
     newLine.textContent = output;
-    outputContainerEl.append(newLine)
-  };
+    outputContainerEl.append(newLine);
+  }
 });
 
 console.log('');
 
 //////////////////// Lecture 125 ////////////////////
 console.log('LECTURE 125');
+
+// Example output
+// 🔴 Delayed Departure from FAO to TXL (11h25)
+//              Arrival from BRU to FAO (11h45)
+//   🔴 Delayed Arrival from HEL to FAO (12h05)
+//            Departure from FAO to LIS (12h30)
+
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+const getCode = str => str.slice(0, 3).toUpperCase();
+
+for (const flight of flights.split('+')) {
+  const [status, destinationOne, destinationTwo, time] = flight.split(';');
+  const output = `${status.startsWith('_Delayed') ? '😡' : ''} ${status
+    .replaceAll('_', ' ')
+    .trim()} from ${getCode(destinationOne)} to ${getCode(
+    destinationTwo
+  )} (${time.replace(':', 'h')})`.padStart(40);
+  console.log(output);
+}
 
 console.log('');
