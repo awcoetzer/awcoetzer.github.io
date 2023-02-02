@@ -1069,25 +1069,122 @@ console.log('');
 //////////////////// Lecture 125 ////////////////////
 console.log('LECTURE 125');
 
-// Example output
-// 🔴 Delayed Departure from FAO to TXL (11h25)
-//              Arrival from BRU to FAO (11h45)
-//   🔴 Delayed Arrival from HEL to FAO (12h05)
-//            Departure from FAO to LIS (12h30)
+// // Example output
+// // 🔴 Delayed Departure from FAO to TXL (11h25)
+// //              Arrival from BRU to FAO (11h45)
+// //   🔴 Delayed Arrival from HEL to FAO (12h05)
+// //            Departure from FAO to LIS (12h30)
 
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-const getCode = str => str.slice(0, 3).toUpperCase();
+// const getCode = str => str.slice(0, 3).toUpperCase();
 
-for (const flight of flights.split('+')) {
-  const [status, destinationOne, destinationTwo, time] = flight.split(';');
-  const output = `${status.startsWith('_Delayed') ? '😡' : ''} ${status
-    .replaceAll('_', ' ')
-    .trim()} from ${getCode(destinationOne)} to ${getCode(
-    destinationTwo
-  )} (${time.replace(':', 'h')})`.padStart(40);
-  console.log(output);
-}
+// for (const flight of flights.split('+')) {
+//   const [status, destinationOne, destinationTwo, time] = flight.split(';');
+//   const output = `${status.startsWith('_Delayed') ? '😡' : ''} ${status
+//     .replaceAll('_', ' ')
+//     .trim()} from ${getCode(destinationOne)} to ${getCode(
+//     destinationTwo
+//   )} (${time.replace(':', 'h')})`.padStart(40);
+//   console.log(output);
+// }
+
+console.log('');
+
+//////////////////// Review ////////////////////
+console.log('Review');
+
+/*
+
+  Practice:
+  - Destructing arrays
+    -- Old way of switching variables using temp & using destructing.
+    -- Unpack a function using destructuring.
+    -- Destructuring nested arrays.
+    -- Assigning a default value.
+
+  - Destructing objects
+    -- Deconstruct an object.
+    -- Set a default value as well as change the changing the variable name.
+    -- Mutate variable using object deconstructing.
+    -- Use an object for a method that will be deconstructed.
+  
+  - The spread operator
+    -- Using the spread operator inside an array literal.
+    -- Use the spread operator inside a function or method.
+    -- Create a new array built off another array, while adding to the new array.
+    -- Create a shallow copy of an array.
+    -- Merge arrays.
+    -- use the spread operator on strings.
+    -- use the spread operator with objects.
+
+  - Rest Pattern and Parameters
+    -- Use the rest operator in a deconstruction syntax.
+    -- Use the rest operator in object deconstructing.
+    -- Use the rest params in a function as well as inside the argument.
+    -- Create a shallow copy of an array.
+
+  - Short Circuiting ( && and || )
+    -- Short circuit with OR.
+    -- Use case for OR, by setting a default value.
+    -- Short circuit with AND.
+    -- Use case for AND, by executing an action.
+
+  - The nullish coalescing operator ( ?? )
+    -- Use the nullish coalescing operator.
+
+  - The logical assignment operators
+    -- Use the logical OR / AND / ??  assignment operators.
+
+  - Looping arrays, using the for of loop
+    -- Use the for of loop
+
+  - Create an enhanced object literal
+    -- Remember the 3 things that make an enhanced object literal and implement it into an abject.
+
+  - Optional chaining
+    -- Try to use optional chaining alongside the nullish coalescing operator.
+
+- Loop Objects: Keys, Values and Entries
+    -- Try to formulate looping over an object.
+
+- Sets
+    -- Create a set.
+    -- Add to the set.
+    -- Clear the set.
+    -- iterate over a set.
+    -- copy an array into a set using the spread operator.
+
+- Maps
+    -- Create a map
+    -- add to the map, while chaining sets.
+    -- get values from a map.
+    -- Try working with boolean values.
+    -- check if maps have some element of your choosing.
+    -- Delete from a map.
+    -- Checking a size.
+    -- use an array as a key.
+    -- iterate over a map.
+    -- Convert a map back to an array.
+
+- Working with strings
+    -- Index strings.
+    -- Check the length of the string.
+    -- Use indexOf & lastIndexOf.
+    -- Use slice.
+    -- Don't hard card the slice index values.
+    -- Use slice with negative numbers.
+    -- Create a function incorporating the use of slice.
+    -- Change the casing of strings, try using a function.
+    -- Replace part of strings, letters or words.
+    -- Use string methods that return booleans, includes, startsWith and endsWith.
+    -- Use the split method.
+    -- Create a function to capitalize names.
+    -- Pad strings
+    -- Repeat strings
+    -- Take a long sting and try and format it correctly.
+
+*/
 
 console.log('');
