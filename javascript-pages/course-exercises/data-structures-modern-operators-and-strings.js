@@ -1187,4 +1187,43 @@ console.log('Review');
 
 */
 
+const spells =
+  'Expelliarmus;Avada+Kedavra;Expecto+Patronum;Wingardium+Leviosa;Petrificus+Totalus;Obliviate;Riddikulus;Accio;Sectumsempra;Lumos';
+
+const theWizardingWorld = {
+  ollivanders: {
+    oak: 1,
+    hawthorn: 1,
+    reed: 1,
+    willow: 1,
+    elder: 1,
+  },
+  wizardingSchool: 'Hogwarts School of Witchcraft and Wizardry',
+  headmaster: 'Albus Dumbledore',
+  houses: ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'],
+  pets: {
+    Mooncalf: 1,
+    babyNorberta: 1,
+    Owl: 1,
+    Frog: 1,
+  },
+  curriculum: ['Transfiguration', 'Charms', 'Potions', 'History of Magic', 'Defence against the dark arts'],
+  sortingHat(...answers) {
+    console.log(answers)
+    const [wand, subject, pet] = answers;
+    console.log(wand, subject, pet);
+  },
+  spells,
+};
+
+const sortingHatQuestions = [
+  Number(prompt(`Which wand would you buy? \n1. Oak \n2. Hawthorn \n3. Reed \n4. Willow \n5. Elder`)),
+  Number(prompt(`What is your subject of choice? \n1. Transfiguration \n2. Charms \n3. Potions \n4. History of Magic \n5. Defence against the dark arts`)),
+  Number(prompt(`Which pet would you choose? \n1.Mooncalf \n2.Baby Norberta \n3. Owl \n4. Frog`)),
+];
+console.log(sortingHatQuestions)
+
+theWizardingWorld.sortingHat(sortingHatQuestions);
+
+
 console.log('');
