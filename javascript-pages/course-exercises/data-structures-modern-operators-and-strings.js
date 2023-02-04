@@ -1187,43 +1187,246 @@ console.log('Review');
 
 */
 
-const spells =
-  'Expelliarmus;Avada+Kedavra;Expecto+Patronum;Wingardium+Leviosa;Petrificus+Totalus;Obliviate;Riddikulus;Accio;Sectumsempra;Lumos';
+// const spells =
+//   'Expelliarmus;Avada+Kedavra;Expecto+Patronum;Wingardium+Leviosa;Petrificus+Totalus;Obliviate;Riddikulus;Accio;Sectumsempra;Lumos';
 
-const theWizardingWorld = {
-  ollivanders: {
-    oak: 1,
-    hawthorn: 1,
-    reed: 1,
-    willow: 1,
-    elder: 1,
-  },
-  wizardingSchool: 'Hogwarts School of Witchcraft and Wizardry',
-  headmaster: 'Albus Dumbledore',
-  houses: ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'],
-  pets: {
-    Mooncalf: 1,
-    babyNorberta: 1,
-    Owl: 1,
-    Frog: 1,
-  },
-  curriculum: ['Transfiguration', 'Charms', 'Potions', 'History of Magic', 'Defence against the dark arts'],
-  sortingHat(...answers) {
-    console.log(answers)
-    const [wand, subject, pet] = answers;
-    console.log(wand, subject, pet);
-  },
-  spells,
-};
+// const theWizardingWorld = {
+//   ollivanders: {
+//     oak: 1,
+//     hawthorn: 1,
+//     reed: 1,
+//     willow: 1,
+//     elder: 1,
+//   },
+//   wizardingSchool: 'Hogwarts School of Witchcraft and Wizardry',
+//   headmaster: 'Albus Dumbledore',
+//   houses: ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'],
+//   pets: {
+//     Mooncalf: 1,
+//     babyNorberta: 1,
+//     Owl: 1,
+//     Frog: 1,
+//   },
+//   curriculum: [
+//     'Transfiguration',
+//     'Charms',
+//     'Potions',
+//     'History of Magic',
+//     'Defence against the dark arts',
+//   ],
+//   sortingHat(...answers) {
+//     console.log(answers);
+//     const [wand, subject, pet] = answers;
+//     console.log(wand, subject, pet);
+//   },
+//   spells,
+// };
 
-const sortingHatQuestions = [
-  Number(prompt(`Which wand would you buy? \n1. Oak \n2. Hawthorn \n3. Reed \n4. Willow \n5. Elder`)),
-  Number(prompt(`What is your subject of choice? \n1. Transfiguration \n2. Charms \n3. Potions \n4. History of Magic \n5. Defence against the dark arts`)),
-  Number(prompt(`Which pet would you choose? \n1.Mooncalf \n2.Baby Norberta \n3. Owl \n4. Frog`)),
+// const sortingHatQuestions = [
+//   Number(
+//     prompt(
+//       `Which wand would you buy? \n1. Oak \n2. Hawthorn \n3. Reed \n4. Willow \n5. Elder`
+//     )
+//   ),
+//   Number(
+//     prompt(
+//       `What is your subject of choice? \n1. Transfiguration \n2. Charms \n3. Potions \n4. History of Magic \n5. Defence against the dark arts`
+//     )
+//   ),
+//   Number(
+//     prompt(
+//       `Which pet would you choose? \n1.Mooncalf \n2.Baby Norberta \n3. Owl \n4. Frog`
+//     )
+//   ),
+// ];
+// console.log(sortingHatQuestions);
+
+// console.log(theWizardingWorld.ollivanders[1]);
+
+// theWizardingWorld.sortingHat(sortingHatQuestions);
+
+const names = [
+  'Agatha',
+  'Alecto',
+  'Alicia',
+  'Amelia',
+  'Arabella',
+  'Araminta',
+  'Ariana',
+  'Augusta',
+  'Bathilda',
+  'Bertha',
+  'Betty',
+  'Cassandra',
+  'Celestina',
+  'Circe',
+  'Delphi',
+  'Dilys',
+  'Dobby',
+  'Dolores',
+  'Doris',
+  'Eileen',
+  'Eleanor',
+  'Elfrida',
+  'Elladora',
+  'Ellie',
+  'Eloise',
+  'Emma',
+  'Emmeline',
+  'Enid',
+  'Gabrielle',
+  'Gwenog',
+  'Hepzibah',
+  'Hestia',
+  'Kendra',
+  'Laura',
+  'Mafalda',
+  'Maisie',
+  'Mandy',
+  'Marjorie',
+  'Maxime',
+  'Mary',
+  'Merope',
+  'Miranda',
+  'Molly',
+  'Morag',
+  'Morgana',
+  'Muriel',
+  'Myrtle',
+  'Nagini',
+  'Narcissa',
+  'Natalie',
+  'Orla',
+  'Pansy',
+  'Penelope',
+  'Petunia',
+  'Polly',
+  'Pomona',
+  'Rita',
+  'Rolanda',
+  'Romilda',
+  'Rose',
+  'Rosmerta',
+  'Sally',
+  'Sinistra',
+  'Susan',
+  'Sybill',
+  'Veela',
+  'Victoire',
+  'Aberforth',
+  'Adalbert',
+  'Adrian',
+  'Aidan',
+  'Alberic',
+  'Albert',
+  'Alfred',
+  'Ambrosius',
+  'Amos',
+  'Amycus',
+  'Archie',
+  'Arkie',
+  'Armando',
+  'Arnold',
+  'Augustus',
+  'Barnabus',
+  'Barny',
+  'Bartemius',
+  'Basil',
+  'Bertie',
+  'Bill',
+  'Bilius',
+  'Bob',
+  'Cadmus',
+  'Charlie',
+  'Ciceron',
+  'Craig',
+  'Cuthbert',
+  'Dedalus',
+  'Dennis',
+  'Dirk',
+  'Dragomir',
+  'Dudley',
+  'Eldred',
+  'Elfric',
+  'Eric',
+  'Elphias',
+  'Ernie',
+  'Erroll',
+  'Euan',
+  'Everard',
+  'Fabian',
+  'Fenrir',
+  'Fletcher',
+  'Florean',
+  'Frank',
+  'Gellert',
+  'Gideon',
+  'Gilbert',
+  'Graham',
+  'Gregory',
+  'Gilderoy',
+  'Gordon',
+  'Hagrid',
+  'Hassan',
+  'Hengist',
+  'Herbert',
+  'Hermes',
+  'Hugo',
+  'Igor',
+  'Ivor',
+  'Karl',
+  'Kevin',
+  'Lee',
+  'Libatius',
+  'Ludo',
+  'Malcolm',
+  'Marcus',
+  'Mark',
+  'Merlin',
+  'Michael',
+  'Morfin',
+  'Newton',
+  'Nicolas',
+  'Norbert',
+  'Odo',
+  'Oliver',
+  'Owen',
+  'Paracelsus',
+  'Percival',
+  'Percy',
+  'Peter',
+  'Piers',
+  'Pius',
+  'Reginald',
+  'Regulus',
+  'Roddy',
+  'Rodolphus',
+  'Roger',
+  'Rufus',
+  'Sanguini',
+  'Scorpius',
+  'Stan',
+  'Stewart',
+  'Sturgis',
+  'Ted or Teddy',
+  'Terry',
+  'Vernon',
+  'Viktor',
+  'Vincent',
+  'Yann',
+  'Zacharias',
 ];
-console.log(sortingHatQuestions)
 
-theWizardingWorld.sortingHat(sortingHatQuestions);
+console.log(names.length)
 
+const randomNum = function () {
+  return Math.trunc(Math.random() * 169) + 1;
+}
+
+const randomName = function (names) {
+  console.log(`${names[randomNum()]} ${names[randomNum()]}`);
+}
+
+randomName(names)
 
 console.log('');
