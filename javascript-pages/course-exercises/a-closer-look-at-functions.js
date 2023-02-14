@@ -3,6 +3,35 @@
 //////////////////// Lecture 128 ////////////////////
 console.log('LECTURE 128');
 
+// Default parameters
+
+const bookings = [];
+
+const createBooking = function (
+  flightNum,
+  numPassenger = 1,
+  price = 199 * numPassenger
+) {
+  // Old way of setting default parameters
+  // numPassenger = numPassenger || 1;
+  // price = price || 199;
+
+  const booking = {
+    flightNum,
+    numPassenger,
+    price,
+  };
+
+  console.log(booking);
+  bookings.push(booking);
+};
+
+createBooking('LH123');
+createBooking('LH123', 1, 499);
+createBooking('LH123', 2);
+createBooking('LH123', 5);
+createBooking('LH123', undefined, 399);
+
 console.log('');
 
 //////////////////// Lecture 129 ////////////////////
