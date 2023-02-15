@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CHANGE ME" />
+    <link
+      rel="icon"
+      href="../resources/images/favicon/computer-illustration-64x64.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../resources/css/prism.css" />
+    <script src="../resources/javascript/prism.js"></script>
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <title>A closer look at functions &mdash; JavaScript</title>
+  </head>
+  <body>
+    <!-- !Section: Header -->
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="../index.html" class="btn main-nav-link">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="./javascript.html" class="btn main-nav-link">JavaScript</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#footer" class="btn main-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </button>
+
+      <!-- !Back to Top btn -->
+      <a href="#" class="btt-btn">
+        <ion-icon name="arrow-up-outline" class="btt-icon"></ion-icon>
+      </a>
+    </header>
+
+    <main>
+      <!-- !Section: Blog Hero -->
+      <section class="section-padding--blog section-blog-hero">
+        <div class="blog-hero">
+          <picture class="blog-hero-img-box">
+            <source
+              srcset="../resources/images/javascript/nail-illustration.webp"
+              type="image/webp" />
+            <source
+              srcset="../resources/images/javascript/nail-illustration-min.png"
+              type="image/png" />
+
+            <img
+              src="../resources/images/javascript/nail-illustration-min.png"
+              alt="Bent and hammered nail with an emoji face illustration. Done by Andre Coetzer"
+              class="blog-hero-img" />
+          </picture>
+
+          <div class="blog-hero-text-box">
+            <!-- !Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                  <a href="../index.html" class="link link--breadcrumb">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="./javascript.html" class="link link--breadcrumb">
+                    JavaScript
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a
+                    href="./a-closer-look-at-functions.html"
+                    class="link link--breadcrumb">
+                    A closer look at functions
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <span class="pre-heading">Section 10</span>
+            <h1 class="heading-primary">A closer look at functions</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- !Section Blog -->
+      <section class="section-padding--blog section-blog">
+        <div class="container--blog">
+          <div class="blog">
+            <!-- !Table of Contents -->
+            <nav class="toc">
+              <div class="toc-box">
+                <button class="toc-btn">
+                  <span class="pre-heading toc-btn-heading">
+                    Table of Contents
+                  </span>
+                  <ion-icon name="add-outline" class="toc-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="toc-icon"></ion-icon>
+                </button>
+
+                <div class="toc-hidden-box">
+                  <ul class="toc-list">
+                    <li class="toc-item">
+                      <a href="#lecture-128" class="link link--toc">
+                        Default Parameters
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-129" class="link link--toc">
+                        How Passing Arguments Works: Value vs. Reference
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-130" class="link link--toc">
+                        First-Class and Higher-Order Functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-131" class="link link--toc">
+                        Functions Accepting Callback Functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-132" class="link link--toc">
+                        Functions Returning Functions
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-133" class="link link--toc">
+                        The call and apply Methods
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-134" class="link link--toc">
+                        The bind Method
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-135" class="link link--toc">
+                        Coding Challenge #1
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-136" class="link link--toc">
+                        Immediately Invoked Function Expressions (IIFE)
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-137" class="link link--toc">Closures</a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-138" class="link link--toc">
+                        More Closure Examples
+                      </a>
+                    </li>
+                    <li class="toc-item">
+                      <a href="#lecture-139" class="link link--toc">
+                        Coding Challenge #2
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <!-- !Lectures -->
+            <div class="lectures">
+              <!-- !lecture 128 -->
+              <div id="lecture-128" class="lecture-text-box">
+                <span class="pre-heading">Lecture 128</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Default Parameters
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Default parameters
+                      const bookings = [];
+                                          
+                      const createBooking = function (
+                        flightNum,
+                        numPassenger = 1,
+                        price = 199 * numPassenger
+                      ) {
+                        // Old way of setting default parameters
+                        // numPassenger = numPassenger || 1;
+                        // price = price || 199;
+                      
+                        const booking = {
+                          flightNum,
+                          numPassenger,
+                          price,
+                        };
+                      
+                        console.log(booking);
+                        bookings.push(booking);
+                      };
+                      
+                      createBooking('LH123');
+                      createBooking('LH123', 1, 499);
+                      createBooking('LH123', 2);
+                      createBooking('LH123', 5);
+                      createBooking('LH123', undefined, 399);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above is how we can set default values for parameters in
+                  functions as well as make dynamic default parameters, though
+                  it's important to remember that JavaScript read these
+                  parameters from left to right.
+                </p>
+
+                <p class="lecture-text">
+                  We also take a look at how to skip parameters by using the
+                  keyword 'undefined'. We can think of this much like the array
+                  deconstruction, though instead of placing an empty space, we
+                  simply use the word undefined.
+                </p>
+
+                <!-- !End of Lecture 128 -->
+              </div>
+
+              <!-- !lecture 129 -->
+              <div id="lecture-129" class="lecture-text-box">
+                <span class="pre-heading">Lecture 129</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  How Passing Arguments Works: Value vs. Reference
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      const flight = 'LH999';
+                      const andre = {
+                        name: 'Andre Coetzer',
+                        passport: 1122334455,
+                      }
+
+                      const checkIn = function (flightNum, passenger) {
+                        flightNum = 'LH555';
+                        passenger.name = 'Mr. ' + passenger.name;
+                      
+                        if (passenger.passport === 1122334455) {
+                          alert('Checked In');
+                        } else {
+                          alert('Wrong Passport')
+                        }
+                      }
+
+                      checkIn(flight, andre)
+                      console.log(flight);
+                      console.log(andre.name);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above, we demonstrate how function can affect values and
+                  reference types. Like we discussed before, primitive values
+                  won't change but reference type will, as how it behaves within
+                  the memory heap.
+                </p>
+
+                <p class="lecture-text">
+                  When passing a value or object to a function it's really as if
+                  we are copying the object like so, "const flightNum = flight".
+                </p>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // example of how things can go wrong
+                      const newPassport = function (person) {
+                        person.passport =  Math.trunc(Math.random() * 1000000000);
+                      }
+
+                      newPassport(andre)
+                      checkIn(flight, andre)
+                      console.log(andre.passport);
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">
+                  Above, we show how something like this can cause issues on
+                  bigger code bases with multiple developers.
+                </p>
+
+                <!-- !End of Lecture 129 -->
+              </div>
+
+              <!-- !lecture 130 -->
+              <div id="lecture-130" class="lecture-text-box">
+                <span class="pre-heading">Lecture 130</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  First-Class and Higher-Order Functions
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 130 -->
+              </div>
+
+              <!-- !lecture 131 -->
+              <div id="lecture-131" class="lecture-text-box">
+                <span class="pre-heading">Lecture 131</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Functions Accepting Callback Functions
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 131 -->
+              </div>
+
+              <!-- !lecture 132 -->
+              <div id="lecture-132" class="lecture-text-box">
+                <span class="pre-heading">Lecture 132</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Functions Returning Functions
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 132 -->
+              </div>
+
+              <!-- !lecture 133 -->
+              <div id="lecture-133" class="lecture-text-box">
+                <span class="pre-heading">Lecture 133</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  The call and apply Methods
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 133 -->
+              </div>
+
+              <!-- !lecture 134 -->
+              <div id="lecture-134" class="lecture-text-box">
+                <span class="pre-heading">Lecture 134</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  The bind Method
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 134 -->
+              </div>
+
+              <!-- !lecture 135 -->
+              <div id="lecture-135" class="lecture-text-box">
+                <span class="pre-heading">Lecture 135</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding Challenge #1
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 135 -->
+              </div>
+
+              <!-- !lecture 136 -->
+              <div id="lecture-136" class="lecture-text-box">
+                <span class="pre-heading">Lecture 136</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Immediately Invoked Function Expressions (IIFE)
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 136 -->
+              </div>
+
+              <!-- !lecture 137 -->
+              <div id="lecture-137" class="lecture-text-box">
+                <span class="pre-heading">Lecture 137</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Closures
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 137 -->
+              </div>
+
+              <!-- !lecture 138 -->
+              <div id="lecture-138" class="lecture-text-box">
+                <span class="pre-heading">Lecture 138</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  More Closure Examples
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 138 -->
+              </div>
+
+              <!-- !lecture 139 -->
+              <div id="lecture-139" class="lecture-text-box">
+                <span class="pre-heading">Lecture 139</span>
+                <h3 class="heading-tertiary heading-tertiary--lecture">
+                  Coding Challenge #2
+                </h3>
+
+                <div class="code-example">
+                  <pre class="lecture-code-box line-numbers">
+                    <code class="lecture-code language-javascript">
+                      // Example Code Here
+                    </code>
+                  </pre>
+                </div>
+
+                <p class="lecture-text">CHANGE ME</p>
+
+                <!-- !End of Lecture 139 -->
+              </div>
+
+              <!-- !Blog Nav -->
+              <div class="blog-nav">
+                <a
+                  href="./data-structures-modern-operators-and-strings.html"
+                  class="prev-next-blog-link">
+                  <ion-icon
+                    name="arrow-back-outline"
+                    class="prev-next-icon"></ion-icon>
+
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next">
+                      Previous
+                    </span>
+                    <span class="prev-next-blog-name">
+                      Data Structures, Modern Operators and Strings
+                    </span>
+                  </div>
+                </a>
+
+                <a
+                  href="./working-with-arrays.html"
+                  class="prev-next-blog-link">
+                  <div class="prev-next-text-box">
+                    <span class="pre-heading pre-heading--prev-next">Next</span>
+                    <span class="prev-next-blog-name">Working with Arrays</span>
+                  </div>
+
+                  <ion-icon
+                    name="arrow-forward-outline"
+                    class="prev-next-icon"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- !Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <!-- !Profile -->
+          <div class="profile-col">
+            <figure class="footer-profile">
+              <img
+                src="../resources/images/main/profile-pic/me.jpg"
+                alt="A profile picture of a very handsomely bearded man"
+                class="footer-profile-img" />
+            </figure>
+            <div class="social-icons">
+              <!-- !Discord -->
+              <a
+                href="https://discordapp.com/users/871093653660106812"
+                class="social-link"
+                target="_blank"
+                data-title="Discord">
+                <ion-icon name="logo-discord" class="social-icon"></ion-icon>
+              </a>
+
+              <!-- !Github -->
+              <a
+                href="https://github.com/acoetzer"
+                class="social-link"
+                target="_blank"
+                data-title="GitHub">
+                <ion-icon name="logo-github" class="social-icon"></ion-icon>
+              </a>
+
+              <!-- !Email -->
+              <a
+                href="mailto:awcoetzer@outlook.com"
+                class="social-link"
+                target="_blank"
+                data-title="Email">
+                <ion-icon name="mail-outline" class="social-icon"></ion-icon>
+              </a>
+            </div>
+            <address class="address-text-box">
+              <p class="address">Sofia, Bulgaria</p>
+            </address>
+            <div class="copyright-text center-text">
+              <p class="copyright">
+                &copy;
+                <span id="copyright">(This is a script)</span>
+                Andre Coetzer. All rights reserved
+              </p>
+            </div>
+          </div>
+
+          <!-- !Page Links -->
+          <div class="page-links-col">
+            <span class="pre-heading footer-pre-heading">Page Links</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="#" class="link link--footer">Go to the Top &uarr;</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="./javascript.html" class="link link--footer">
+                  &larr; JavaScript
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- !Site Links -->
+          <div class="site-links-col">
+            <span class="pre-heading footer-pre-heading">Site Map</span>
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="../index.html" class="link link--footer">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../html-pages/html.html" class="link link--footer">
+                  HTML
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../css-pages/css.html" class="link link--footer">
+                  CSS
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a
+                  href="../javascript-pages/javascript.html"
+                  class="link link--footer">
+                  JavaScript
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../react-pages/react.html" class="link link--footer">
+                  React
+                </a>
+              </li>
+              <li class="footer-list-item">
+                <a href="../node-pages/node.html" class="link link--footer">
+                  Node.js
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- !Scripts -->
+    <!-- !Course Section Script -->
+    <script src="./course-exercises/a-closer-look-at-functions.js"></script>
+
+    <!-- !Standard Scripts -->
+    <script src="../resources/javascript/app-blog.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
