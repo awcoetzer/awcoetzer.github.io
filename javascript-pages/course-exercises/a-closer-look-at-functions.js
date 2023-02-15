@@ -3,68 +3,68 @@
 //////////////////// Lecture 128 ////////////////////
 console.log('LECTURE 128');
 
-// Default parameters
-const bookings = [];
+// // Default parameters
+// const bookings = [];
 
-const createBooking = function (
-  flightNum,
-  numPassenger = 1,
-  price = 199 * numPassenger
-) {
-  // Old way of setting default parameters
-  // numPassenger = numPassenger || 1;
-  // price = price || 199;
+// const createBooking = function (
+//   flightNum,
+//   numPassenger = 1,
+//   price = 199 * numPassenger
+// ) {
+//   // Old way of setting default parameters
+//   // numPassenger = numPassenger || 1;
+//   // price = price || 199;
 
-  const booking = {
-    flightNum,
-    numPassenger,
-    price,
-  };
+//   const booking = {
+//     flightNum,
+//     numPassenger,
+//     price,
+//   };
 
-  console.log(booking);
-  bookings.push(booking);
-};
+//   console.log(booking);
+//   bookings.push(booking);
+// };
 
-createBooking('LH123');
-createBooking('LH123', 1, 499);
-createBooking('LH123', 2);
-createBooking('LH123', 5);
-createBooking('LH123', undefined, 399);
+// createBooking('LH123');
+// createBooking('LH123', 1, 499);
+// createBooking('LH123', 2);
+// createBooking('LH123', 5);
+// createBooking('LH123', undefined, 399);
 
 console.log('');
 
 //////////////////// Lecture 129 ////////////////////
 console.log('LECTURE 129');
 
-const flight = 'LH999';
-const andre = {
-  name: 'Andre Coetzer',
-  passport: 1122334455,
-}
+// const flight = 'LH999';
+// const andre = {
+//   name: 'Andre Coetzer',
+//   passport: 1122334455,
+// }
 
-const checkIn = function (flightNum, passenger) {
-  flightNum = 'LH555';
-  passenger.name = 'Mr. ' + passenger.name;
+// const checkIn = function (flightNum, passenger) {
+//   flightNum = 'LH555';
+//   passenger.name = 'Mr. ' + passenger.name;
 
-  if (passenger.passport === 1122334455) {
-    alert('Checked In');
-  } else {
-    alert('Wrong Passport')
-  }
-}
+//   if (passenger.passport === 1122334455) {
+//     alert('Checked In');
+//   } else {
+//     alert('Wrong Passport')
+//   }
+// }
 
-checkIn(flight, andre)
-console.log(flight);
-console.log(andre.name);
+// checkIn(flight, andre)
+// console.log(flight);
+// console.log(andre.name);
 
-// example of how things can go wrong
-const newPassport = function (person) {
-  person.passport =  Math.trunc(Math.random() * 1000000000);
-}
+// // example of how things can go wrong
+// const newPassport = function (person) {
+//   person.passport =  Math.trunc(Math.random() * 1000000000);
+// }
 
-newPassport(andre)
-checkIn(flight, andre)
-console.log(andre.passport);
+// newPassport(andre)
+// checkIn(flight, andre)
+// console.log(andre.passport);
 
 console.log('');
 
