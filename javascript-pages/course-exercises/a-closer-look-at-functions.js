@@ -37,6 +37,36 @@ console.log('');
 //////////////////// Lecture 129 ////////////////////
 console.log('LECTURE 129');
 
+const flight = 'LH999';
+const andre = {
+  name: 'Andre Coetzer',
+  passport: 1122334455,
+}
+
+const checkIn = function (flightNum, passenger) {
+  flightNum = 'LH555';
+  passenger.name = 'Mr. ' + passenger.name;
+
+  if (passenger.passport === 1122334455) {
+    alert('Checked In');
+  } else {
+    alert('Wrong Passport')
+  }
+}
+
+checkIn(flight, andre)
+console.log(flight);
+console.log(andre.name);
+
+// example of how things can go wrong
+const newPassport = function (person) {
+  person.passport =  Math.trunc(Math.random() * 1000000000);
+}
+
+newPassport(andre)
+checkIn(flight, andre)
+console.log(andre.passport);
+
 console.log('');
 
 //////////////////// Lecture 130 ////////////////////
