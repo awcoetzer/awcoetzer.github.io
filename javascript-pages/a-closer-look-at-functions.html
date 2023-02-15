@@ -185,12 +185,44 @@
                 <div class="code-example">
                   <pre class="lecture-code-box line-numbers">
                     <code class="lecture-code language-javascript">
-                      // Example Code Here
+                      // Default parameters
+                      const bookings = [];
+                                          
+                      const createBooking = function (
+                        flightNum,
+                        numPassenger = 1,
+                        price = 199 * numPassenger
+                      ) {
+                        // Old way of setting default parameters
+                        // numPassenger = numPassenger || 1;
+                        // price = price || 199;
+                      
+                        const booking = {
+                          flightNum,
+                          numPassenger,
+                          price,
+                        };
+                      
+                        console.log(booking);
+                        bookings.push(booking);
+                      };
+                      
+                      createBooking('LH123');
+                      createBooking('LH123', 1, 499);
+                      createBooking('LH123', 2);
+                      createBooking('LH123', 5);
+                      createBooking('LH123', undefined, 399);
                     </code>
                   </pre>
                 </div>
 
-                <p class="lecture-text">CHANGE ME</p>
+                <p class="lecture-text">
+                  Above is how we can set default values for parameters in functions as well as make dynamic default parameters, though it's important to remember that JavaScript read these parameters from left to right.
+                </p>
+
+                <p class="lecture-text">
+                  We also take a look at how to skip parameters by using the keyword 'undefined'. We can think of this much like the array deconstruction, though instead of placing an empty space, we simply use the word undefined.
+                </p>
 
                 <!-- !End of Lecture 128 -->
               </div>

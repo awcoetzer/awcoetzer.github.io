@@ -4,7 +4,6 @@
 console.log('LECTURE 128');
 
 // Default parameters
-
 const bookings = [];
 
 const createBooking = function (
